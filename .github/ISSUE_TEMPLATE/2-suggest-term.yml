@@ -1,0 +1,33 @@
+name: Suggest a term
+description: A special-education term that's missing.
+labels: ["new term"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste real student information.** A public source (a regulation, state guide, or test publisher page) makes a suggestion easy to accept.
+  - type: input
+    id: term
+    attributes:
+      label: Term
+      placeholder: "e.g. \"push-in services\""
+    validations:
+      required: true
+  - type: input
+    id: variants
+    attributes:
+      label: Other forms (acronyms, older names, plurals)
+  - type: input
+    id: where
+    attributes:
+      label: Where is it used?
+      description: Nationally, or in which states?
+  - type: input
+    id: source
+    attributes:
+      label: Public source
+      description: A link to the document and the page or section. Please don't attach PDFs.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else

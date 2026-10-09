@@ -1,0 +1,659 @@
+{
+ "form_id": "NV-20261008",
+ "state": "NV",
+ "state_name": "Nevada",
+ "spedlex_version": "0.36.0",
+ "generated": "2026-10-08",
+ "items": {
+  "A1": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Is NDE Special Education Rights of Parents and Students (June 2023) still current?",
+   "text": "The Nevada document we worked from is \"NDE Special Education Rights of Parents and Students (June 2023)\" (doc 1 below). Is it still the current version? (N = it has been replaced; please give the new title or date in a comment.)"
+  },
+  "A2": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Is State of Nevada IEP form (July 2018) still current?",
+   "text": "The Nevada document we worked from is \"State of Nevada IEP form (July 2018)\" (doc 2 below). Is it still the current version? (N = it has been replaced; please give the new title or date in a comment.)"
+  },
+  "A3": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": "SPED:000218",
+   "maps_to_review": true,
+   "label": "Is \"Office of Comprehensive Student Services\" right and current?",
+   "text": "Is \"Office of Comprehensive Student Services\" (also written \"OCSS\") right and current for Nevada? Our note on it says: \"NDE's office for special education as of the 2023 notice; NDE's site now also uses an Office of Inclusive Education. Verify the current name.\" (N = wrong or out of date; please correct it in a comment.)"
+  },
+  "A4": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": "SPED:000246",
+   "maps_to_review": true,
+   "label": "Is \"State criterion-referenced test\" right and current?",
+   "text": "Is \"State criterion-referenced test\" (also written \"CRT\") right and current for Nevada? Our note on it says: \"Name from the 2018 form; Nevada's current assessment names may differ.\" (N = wrong or out of date; please correct it in a comment.)"
+  },
+  "A5": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": "SPED:000247",
+   "maps_to_review": true,
+   "label": "Is \"College and Career Readiness Assessment\" right and current?",
+   "text": "Is \"College and Career Readiness Assessment\" right and current for Nevada? Our note on it says: \"Name from the 2018 form.\" (N = wrong or out of date; please correct it in a comment.)"
+  },
+  "A6": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": "SPED:000248",
+   "maps_to_review": true,
+   "label": "Is \"Nevada Proficiency Examination Program\" right and current?",
+   "text": "Is \"Nevada Proficiency Examination Program\" right and current for Nevada? Our note on it says: \"Name from the 2018 form.\" (N = wrong or out of date; please correct it in a comment.)"
+  },
+  "A7": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Our entry says that in Nevada a due process hearing decision can be appealed to ",
+   "text": "Our entry says that in Nevada a due process hearing decision can be appealed to a \"state review officer\" (abbreviated SRO) before going to court. Is that accurate, and is that what the step is called? (N = no such step, or a different name; please explain.)"
+  },
+  "A8": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Our list treats \"advanced high school diploma\" as another name for the \"standard",
+   "text": "Our list treats \"advanced high school diploma\" as another name for the \"standard high school diploma\". Are they the same thing? (N = they are different diplomas; please explain how.)"
+  },
+  "A9": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "The state IEP form uses the term \"multisensory instruction\". We also list \"struc",
+   "text": "The state IEP form uses the term \"multisensory instruction\". We also list \"structured literacy\" as another name for it. That is common practitioner language but is not on the form. Should the two be treated as the same thing? (N = they are different; please explain.)"
+  },
+  "B1": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000003",
+   "string": "IEP committee",
+   "maps_to_review": false,
+   "label": "\"IEP committee\" = \"IEP Team\"",
+   "text": "\"IEP committee\" = \"IEP Team\""
+  },
+  "B2": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000004",
+   "string": "pupil with a disability",
+   "maps_to_review": false,
+   "label": "\"pupil with a disability\" = \"Child with a disability\"",
+   "text": "\"pupil with a disability\" = \"Child with a disability\""
+  },
+  "B3": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000007",
+   "string": "periodic reevaluation",
+   "maps_to_review": false,
+   "label": "\"periodic reevaluation\" = \"Reevaluation\"",
+   "text": "\"periodic reevaluation\" = \"Reevaluation\""
+  },
+  "B4": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000036",
+   "string": "State complaint investigation",
+   "maps_to_review": false,
+   "label": "\"State complaint investigation\" = \"State complaint\"",
+   "text": "\"State complaint investigation\" = \"State complaint\""
+  },
+  "B5": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000056",
+   "string": "mild intellectual disability",
+   "maps_to_review": false,
+   "label": "\"mild intellectual disability\" = \"Intellectual disability\"",
+   "text": "\"mild intellectual disability\" = \"Intellectual disability\""
+  },
+  "B6": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000056",
+   "string": "moderate intellectual disability",
+   "maps_to_review": false,
+   "label": "\"moderate intellectual disability\" = \"Intellectual disability\"",
+   "text": "\"moderate intellectual disability\" = \"Intellectual disability\""
+  },
+  "B7": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000056",
+   "string": "severe intellectual disability",
+   "maps_to_review": false,
+   "label": "\"severe intellectual disability\" = \"Intellectual disability\"",
+   "text": "\"severe intellectual disability\" = \"Intellectual disability\""
+  },
+  "B8": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000056",
+   "string": "profound intellectual disability",
+   "maps_to_review": false,
+   "label": "\"profound intellectual disability\" = \"Intellectual disability\"",
+   "text": "\"profound intellectual disability\" = \"Intellectual disability\""
+  },
+  "B9": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000057",
+   "string": "multiple impairments",
+   "maps_to_review": false,
+   "label": "\"multiple impairments\" = \"Multiple disabilities\"",
+   "text": "\"multiple impairments\" = \"Multiple disabilities\""
+  },
+  "B10": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000059",
+   "string": "health impairment",
+   "maps_to_review": false,
+   "label": "\"health impairment\" = \"Other health impairment\"",
+   "text": "\"health impairment\" = \"Other health impairment\""
+  },
+  "B11": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000059",
+   "string": "health impairment other than orthopedic impairment",
+   "maps_to_review": false,
+   "label": "\"health impairment other than orthopedic impairment\" = \"Other health impairment\"",
+   "text": "\"health impairment other than orthopedic impairment\" = \"Other health impairment\""
+  },
+  "B12": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000061",
+   "string": "speech and language impairment",
+   "maps_to_review": false,
+   "label": "\"speech and language impairment\" = \"Speech or language impairment\"",
+   "text": "\"speech and language impairment\" = \"Speech or language impairment\""
+  },
+  "B13": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000094",
+   "string": "self-contained program",
+   "maps_to_review": false,
+   "label": "\"self-contained program\" = \"Special class\"",
+   "text": "\"self-contained program\" = \"Special class\""
+  },
+  "B14": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000098",
+   "string": "regular class and special education class combination",
+   "maps_to_review": false,
+   "label": "\"regular class and special education class combination\" = \"Resource room\"",
+   "text": "\"regular class and special education class combination\" = \"Resource room\""
+  },
+  "B15": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000105",
+   "string": "specialized progress report",
+   "maps_to_review": false,
+   "label": "\"specialized progress report\" = \"Periodic reports on progress\"",
+   "text": "\"specialized progress report\" = \"Periodic reports on progress\""
+  },
+  "B16": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000107",
+   "string": "modification, accommodation, or support for student or personnel",
+   "maps_to_review": false,
+   "label": "\"modification, accommodation, or support for student or personnel\" = \"Program modifications or supports for school personnel\"",
+   "text": "\"modification, accommodation, or support for student or personnel\" = \"Program modifications or supports for school personnel\""
+  },
+  "B17": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000109",
+   "string": "justification for placement",
+   "maps_to_review": false,
+   "label": "\"justification for placement\" = \"Explanation of the extent of nonparticipation\"",
+   "text": "\"justification for placement\" = \"Explanation of the extent of nonparticipation\""
+  },
+  "B18": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000116",
+   "string": "positive behavioral strategies, supports and interventions",
+   "maps_to_review": false,
+   "label": "\"positive behavioral strategies, supports and interventions\" = \"Positive behavioral interventions and supports\"",
+   "text": "\"positive behavioral strategies, supports and interventions\" = \"Positive behavioral interventions and supports\""
+  },
+  "B19": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000120",
+   "string": "IEP revision without a meeting",
+   "maps_to_review": false,
+   "label": "\"IEP revision without a meeting\" = \"IEP amendment\"",
+   "text": "\"IEP revision without a meeting\" = \"IEP amendment\""
+  },
+  "B20": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000120",
+   "string": "revision to IEP",
+   "maps_to_review": false,
+   "label": "\"revision to IEP\" = \"IEP amendment\"",
+   "text": "\"revision to IEP\" = \"IEP amendment\""
+  },
+  "B21": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000122",
+   "string": "regular classroom teacher",
+   "maps_to_review": false,
+   "label": "\"regular classroom teacher\" = \"Regular education teacher\"",
+   "text": "\"regular classroom teacher\" = \"Regular education teacher\""
+  },
+  "B22": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000130",
+   "string": "targeted scientific, research-based intervention",
+   "maps_to_review": false,
+   "label": "\"targeted scientific, research-based intervention\" = \"Scientific, research-based intervention\"",
+   "text": "\"targeted scientific, research-based intervention\" = \"Scientific, research-based intervention\""
+  },
+  "B23": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000146",
+   "string": "assessment of functional behavior",
+   "maps_to_review": false,
+   "label": "\"assessment of functional behavior\" = \"Functional behavioral assessment\"",
+   "text": "\"assessment of functional behavior\" = \"Functional behavioral assessment\""
+  },
+  "B24": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000172",
+   "string": "review of evaluation data",
+   "maps_to_review": false,
+   "label": "\"review of evaluation data\" = \"Review of existing evaluation data\"",
+   "text": "\"review of evaluation data\" = \"Review of existing evaluation data\""
+  },
+  "B25": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000221",
+   "string": "eligibility statement",
+   "maps_to_review": false,
+   "label": "\"eligibility statement\" = \"Statement of eligibility\"",
+   "text": "\"eligibility statement\" = \"Statement of eligibility\""
+  },
+  "B26": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000222",
+   "string": "gifted and talented pupil",
+   "maps_to_review": false,
+   "label": "\"gifted and talented pupil\" = \"Gifted and talented\"",
+   "text": "\"gifted and talented pupil\" = \"Gifted and talented\""
+  },
+  "B27": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000223",
+   "string": "assessment of cognitive abilities",
+   "maps_to_review": false,
+   "label": "\"assessment of cognitive abilities\" = \"Cognitive abilities\"",
+   "text": "\"assessment of cognitive abilities\" = \"Cognitive abilities\""
+  },
+  "B28": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000224",
+   "string": "assessment of social and emotional condition",
+   "maps_to_review": false,
+   "label": "\"assessment of social and emotional condition\" = \"Social and emotional condition\"",
+   "text": "\"assessment of social and emotional condition\" = \"Social and emotional condition\""
+  },
+  "B29": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000227",
+   "string": "assessment of performance in current educational setting",
+   "maps_to_review": false,
+   "label": "\"assessment of performance in current educational setting\" = \"Performance in the current educational setting\"",
+   "text": "\"assessment of performance in current educational setting\" = \"Performance in the current educational setting\""
+  },
+  "B30": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000228",
+   "string": "assessment of evidence of intervention",
+   "maps_to_review": false,
+   "label": "\"assessment of evidence of intervention\" = \"Evidence of intervention\"",
+   "text": "\"assessment of evidence of intervention\" = \"Evidence of intervention\""
+  },
+  "B31": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000230",
+   "string": "interim individualized educational program",
+   "maps_to_review": false,
+   "label": "\"interim individualized educational program\" = \"Interim IEP\"",
+   "text": "\"interim individualized educational program\" = \"Interim IEP\""
+  },
+  "B32": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000234",
+   "string": "statement of parent educational concerns",
+   "maps_to_review": false,
+   "label": "\"statement of parent educational concerns\" = \"Parent educational concerns\"",
+   "text": "\"statement of parent educational concerns\" = \"Parent educational concerns\""
+  },
+  "B33": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000235",
+   "string": "statement of student's preferences and interests",
+   "maps_to_review": false,
+   "label": "\"statement of student's preferences and interests\" = \"Student preferences and interests\"",
+   "text": "\"statement of student's preferences and interests\" = \"Student preferences and interests\""
+  },
+  "B34": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000240",
+   "string": "equal opportunity for communication access",
+   "maps_to_review": false,
+   "label": "\"equal opportunity for communication access\" = \"Communication access\"",
+   "text": "\"equal opportunity for communication access\" = \"Communication access\""
+  },
+  "C1": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000172",
+   "maps_to_review": true,
+   "label": "Review of existing evaluation data",
+   "text": "\"Review of existing evaluation data\", also written \"review of evaluation data\""
+  },
+  "C2": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000198",
+   "maps_to_review": true,
+   "label": "Functional vocational evaluation",
+   "text": "\"Functional vocational evaluation\""
+  },
+  "C3": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000206",
+   "maps_to_review": true,
+   "label": "Basis of knowledge",
+   "text": "\"Basis of knowledge\""
+  },
+  "C4": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000207",
+   "maps_to_review": true,
+   "label": "Expedited due process hearing",
+   "text": "\"Expedited due process hearing\""
+  },
+  "C5": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000211",
+   "maps_to_review": true,
+   "label": "Education records",
+   "text": "\"Education records\""
+  },
+  "C6": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000212",
+   "maps_to_review": true,
+   "label": "Participating agency",
+   "text": "\"Participating agency\""
+  },
+  "C7": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000217",
+   "maps_to_review": true,
+   "label": "Nevada Department of Education",
+   "text": "\"Nevada Department of Education\", also written \"NDE\""
+  },
+  "C8": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000221",
+   "maps_to_review": true,
+   "label": "Statement of eligibility",
+   "text": "\"Statement of eligibility\", also written \"eligibility statement\""
+  },
+  "C9": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000230",
+   "maps_to_review": true,
+   "label": "Interim IEP",
+   "text": "\"Interim IEP\", also written \"interim individualized educational program\""
+  },
+  "C10": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000231",
+   "maps_to_review": true,
+   "label": "Federal placement code",
+   "text": "\"Federal placement code\""
+  },
+  "C11": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000232",
+   "maps_to_review": true,
+   "label": "Percentage of time in regular education environment",
+   "text": "\"Percentage of time in regular education environment\""
+  },
+  "C12": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000233",
+   "maps_to_review": true,
+   "label": "Statement of student strengths",
+   "text": "\"Statement of student strengths\""
+  },
+  "C13": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000234",
+   "maps_to_review": true,
+   "label": "Parent educational concerns",
+   "text": "\"Parent educational concerns\", also written \"statement of parent educational concerns\""
+  },
+  "C14": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000235",
+   "maps_to_review": true,
+   "label": "Student preferences and interests",
+   "text": "\"Student preferences and interests\", also written \"statement of student's preferences and interests\""
+  },
+  "C15": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000236",
+   "maps_to_review": true,
+   "label": "Student's vision for the future",
+   "text": "\"Student's vision for the future\""
+  },
+  "C16": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000237",
+   "maps_to_review": true,
+   "label": "Community experiences",
+   "text": "\"Community experiences\""
+  },
+  "C17": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000238",
+   "maps_to_review": true,
+   "label": "Employment and other post-school adult living objectives",
+   "text": "\"Employment and other post-school adult living objectives\""
+  },
+  "C18": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000239",
+   "maps_to_review": true,
+   "label": "Acquisition of daily living skills",
+   "text": "\"Acquisition of daily living skills\""
+  },
+  "C19": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000240",
+   "maps_to_review": true,
+   "label": "Communication access",
+   "text": "\"Communication access\", also written \"equal opportunity for communication access\""
+  },
+  "C20": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000241",
+   "maps_to_review": true,
+   "label": "Explicit, direct instruction",
+   "text": "\"Explicit, direct instruction\""
+  },
+  "C21": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000242",
+   "maps_to_review": true,
+   "label": "Alphabetic principle",
+   "text": "\"Alphabetic principle\""
+  },
+  "C22": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000243",
+   "maps_to_review": true,
+   "label": "Multisensory instruction",
+   "text": "\"Multisensory instruction\""
+  },
+  "C23": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000244",
+   "maps_to_review": true,
+   "label": "Meaning-based instruction",
+   "text": "\"Meaning-based instruction\""
+  },
+  "C24": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000245",
+   "maps_to_review": true,
+   "label": "Nevada Alternate Assessment",
+   "text": "\"Nevada Alternate Assessment\", also written \"NAA\""
+  },
+  "C25": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000249",
+   "maps_to_review": true,
+   "label": "Standard high school diploma",
+   "text": "\"Standard high school diploma\", also written \"advanced high school diploma\""
+  },
+  "C26": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000250",
+   "maps_to_review": true,
+   "label": "Adjusted high school diploma",
+   "text": "\"Adjusted high school diploma\", also written \"adjusted diploma\""
+  },
+  "C27": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000251",
+   "maps_to_review": true,
+   "label": "Alternative high school diploma",
+   "text": "\"Alternative high school diploma\""
+  },
+  "C28": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000252",
+   "maps_to_review": true,
+   "label": "Application to represent the educational interests of a student at the age of majority",
+   "text": "\"Application to represent the educational interests of a student at the age of majority\""
+  },
+  "D1": {
+   "kind": "text",
+   "part": "D",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Statewide tests and alternate assessments: which names appear on Nevada IEPs tod",
+   "text": "Statewide tests and alternate assessments: which names appear on Nevada IEPs today? (Our list has four, all taken from a 2018 state IEP form.)"
+  },
+  "D2": {
+   "kind": "text",
+   "part": "D",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Diplomas and other completion documents: which ones appear on Nevada IEPs and tr",
+   "text": "Diplomas and other completion documents: which ones appear on Nevada IEPs and transition plans? (Our list has standard, adjusted and alternative diplomas.)"
+  },
+  "D3": {
+   "kind": "text",
+   "part": "D",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Acronyms and abbreviations you see constantly in Nevada paperwork that you would",
+   "text": "Acronyms and abbreviations you see constantly in Nevada paperwork that you would expect on a list like this."
+  },
+  "D4": {
+   "kind": "text",
+   "part": "D",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Places where Nevada says something differently from the national term (a differe",
+   "text": "Places where Nevada says something differently from the national term (a different name for a category, a team, a meeting or a form)."
+  },
+  "D5": {
+   "kind": "text",
+   "part": "D",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Anything above that looks wrong, or any term that could be mistaken for a person",
+   "text": "Anything above that looks wrong, or any term that could be mistaken for a person's name or a place name."
+  },
+  "D6": {
+   "kind": "text",
+   "part": "D",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Anything else: a document we should read, or a person or organization we should ",
+   "text": "Anything else: a document we should read, or a person or organization we should ask."
+  }
+ }
+}

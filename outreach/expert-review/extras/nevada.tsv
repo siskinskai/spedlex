@@ -1,0 +1,12 @@
+# Hand-written, state-specific questions that the generator can't derive from the data.
+# Columns (tab-separated): part, kind, replaces, skip_pair, text
+#   part       key (goes in Part A) | missing (goes in Part D)
+#   kind       yn (Y/N/? bracket) | text (free-text "Answer:")
+#   replaces   a concept ID whose automatic Part A question this one supersedes (or blank)
+#   skip_pair  CONCEPT_ID|string: drop that line from Part B because this question covers it (or blank)
+#   text       the question, as one line
+key	yn	SPED:000220		Our entry says that in Nevada a due process hearing decision can be appealed to a "state review officer" (abbreviated SRO) before going to court. Is that accurate, and is that what the step is called? (N = no such step, or a different name; please explain.)
+key	yn		SPED:000249|advanced high school diploma	Our list treats "advanced high school diploma" as another name for the "standard high school diploma". Are they the same thing? (N = they are different diplomas; please explain how.)
+missing	text			Statewide tests and alternate assessments: which names appear on Nevada IEPs today? (Our list has four, all taken from a 2018 state IEP form.)
+missing	text			Diplomas and other completion documents: which ones appear on Nevada IEPs and transition plans? (Our list has standard, adjusted and alternative diplomas.)
+key	yn			The state IEP form uses the term "multisensory instruction". We also list "structured literacy" as another name for it. That is common practitioner language but is not on the form. Should the two be treated as the same thing? (N = they are different; please explain.)

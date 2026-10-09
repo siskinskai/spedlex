@@ -1,0 +1,35 @@
+name: Report a wrong term
+description: A term, citation, category or risk grade is wrong.
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste real student information** (names, IEP excerpts with identifiers, schools, dates of birth). Describe the term and cite a public document.
+  - type: input
+    id: concept
+    attributes:
+      label: Concept ID or term
+      placeholder: "SPED:000102 or \"ARD committee\""
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What's wrong?
+      options:
+        - The term isn't used this way in special education
+        - The citation doesn't support it
+        - Wrong category or parent concept
+        - It's tagged to the wrong state
+        - It could shelter a person's name (privacy risk)
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What should it be? Link a public source if you can.
+    validations:
+      required: true

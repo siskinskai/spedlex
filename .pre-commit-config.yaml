@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-added-large-files
+        args: ["--maxkb=1024"]
+        exclude: ^(data|reference)/
+  - repo: local
+    hooks:
+      - id: no-source-documents
+        name: no source documents (cite them in sources/documents.tsv instead)
+        language: fail
+        entry: "Source documents must not be committed; keep them in .sources-cache/"
+        files: '(?i)\.(pdf|docx?|rtf|odt|epub|xlsx?|pptx?)$|^[a-z]{2}-docs/|^\.sources-cache/'

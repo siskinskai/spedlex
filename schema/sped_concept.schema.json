@@ -1,0 +1,370 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/SiskinSkai/spedlex/main/schema/sped_concept.schema.json",
+  "title": "SPEDLex concept record",
+  "description": "One concept in the special-education safelist. Modeled on UMLS: a concept carries many surface strings; every string and concept traces to a source. The pii_risk block governs how the scrubber may use the strings, so the safelist can never shelter an identifier.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "concept_id",
+    "preferred_term",
+    "category",
+    "strings",
+    "sources",
+    "pii_risk",
+    "review",
+    "extraction",
+    "jurisdiction",
+    "version_added"
+  ],
+  "properties": {
+    "concept_id": {
+      "type": "string",
+      "pattern": "^SPED:\\d{6}$",
+      "description": "Stable identifier, never reused. Analogous to a UMLS CUI."
+    },
+    "preferred_term": {
+      "type": "string",
+      "minLength": 2
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "legal_procedural",
+        "disability_category",
+        "health_condition",
+        "related_service",
+        "placement_setting",
+        "iep_component",
+        "evaluation_eligibility",
+        "academic_skill",
+        "functional_skill",
+        "instrument",
+        "instrument_subtest",
+        "score_metric",
+        "accommodation_modification",
+        "discipline",
+        "transition",
+        "early_intervention",
+        "section_504",
+        "personnel_role"
+      ]
+    },
+    "definition_note": {
+      "type": "string",
+      "description": "Short definition in the project's own words. Never copied from copyrighted glossaries."
+    },
+    "broader": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^SPED:\\d{6}$"
+      },
+      "description": "Parent concepts (e.g. Audiology -> Related services)."
+    },
+    "strings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "text",
+          "string_type",
+          "match"
+        ],
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 2
+          },
+          "string_type": {
+            "type": "string",
+            "enum": [
+              "preferred",
+              "synonym",
+              "acronym",
+              "abbreviation",
+              "spelling_variant",
+              "plural",
+              "legacy"
+            ]
+          },
+          "match": {
+            "type": "string",
+            "enum": [
+              "phrase_ci",
+              "phrase_cs",
+              "token_cs"
+            ],
+            "description": "phrase_ci: whole phrase, case-insensitive. phrase_cs: whole phrase, case-sensitive (acronyms). token_cs: a single token may be protected alone; only allowed when pii_risk.level is none."
+          },
+          "regional": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^US(-[A-Z]{2})?$"
+            },
+            "description": "Jurisdictions where this surface form is in use, if narrower than the concept."
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_type",
+          "citation",
+          "retrieved"
+        ],
+        "properties": {
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "federal_regulation",
+              "federal_statute",
+              "federal_guidance",
+              "state_regulation",
+              "state_guidance",
+              "procedural_safeguards_notice",
+              "secondary_guidance",
+              "controlled_vocabulary",
+              "instrument_catalog",
+              "corpus"
+            ],
+            "description": "secondary_guidance: an advocacy organization's or a school district's summary of state rules, used when the state's own document couldn't be read. corpus: real documents such as IEPs (planned)."
+          },
+          "citation": {
+            "type": "string",
+            "description": "e.g. 34 CFR 300.34(c)(1)"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "doc_id": {
+            "type": "string",
+            "pattern": "^[a-z]{2}-[a-z0-9-]+-\\d{4}$",
+            "description": "Row of sources/documents.tsv for the document this source cites (URL, retrieval date, SHA-256 hash, archived snapshot). Optional; absent when the document is not in the manifest, e.g. a web page that was not saved."
+          },
+          "retrieved": {
+            "type": "string",
+            "format": "date"
+          },
+          "jurisdiction": {
+            "type": "string",
+            "pattern": "^US(-[A-Z]{2})?$",
+            "description": "Whose document this is: US for federal sources, US-XX for a state's. Lets a reader see which states attest a concept."
+          },
+          "assisted_by": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The AI model that helped read this source and draft the record (its API identifier, e.g. claude-opus-5-5), or 'none' if a person did it unaided. A person is responsible for every record either way."
+          }
+        }
+      }
+    },
+    "cross_maps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "system",
+          "relation"
+        ],
+        "properties": {
+          "system": {
+            "type": "string",
+            "enum": [
+              "ERIC",
+              "CEDS",
+              "ICF-CY",
+              "MeSH",
+              "SNOMEDCT",
+              "LCSH",
+              "ICD-10-CM"
+            ]
+          },
+          "code": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "relation": {
+            "type": "string",
+            "enum": [
+              "exact",
+              "broad",
+              "narrow",
+              "related",
+              "none_found",
+              "pending"
+            ]
+          }
+        }
+      },
+      "description": "Mappings to existing vocabularies. relation 'none_found' is evidence for the coverage-gap claim."
+    },
+    "pii_risk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "reasons",
+        "protect_rule"
+      ],
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": [
+            "none",
+            "low",
+            "high"
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "eponym",
+              "common_first_name",
+              "surname",
+              "place_name",
+              "common_english_word",
+              "contains_number",
+              "collides_with_scrubber_pattern"
+            ]
+          }
+        },
+        "protect_rule": {
+          "type": "string",
+          "enum": [
+            "phrase_only",
+            "phrase_or_token",
+            "never_bare"
+          ],
+          "description": "phrase_only: protect only the full string. never_bare: the risky token must never be protected outside the phrase. phrase_or_token: safe to protect alone."
+        },
+        "scrubber_collisions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Scrubber pattern/tier names that currently redact this string (filled by the collision test)."
+        },
+        "name_list_hits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Tokens that also appear in reference name lists (SSA first names, Census surnames). A hit on a single-word string makes the concept high risk."
+        },
+        "place_list_hits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "U.S. state or territory names and postal codes found in the concept's strings (reference/places). Any hit makes the concept high risk."
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "candidate",
+            "machine_validated",
+            "expert_accepted",
+            "expert_rejected",
+            "illustrative"
+          ]
+        },
+        "reviewers": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "extraction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method"
+      ],
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "regulatory_definition",
+            "regulatory_heading",
+            "regulatory_text",
+            "termhood_cvalue",
+            "instrument_harvest",
+            "manual"
+          ]
+        },
+        "score": {
+          "type": "number"
+        },
+        "corpus_frequency": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "jurisdiction": {
+      "type": "string",
+      "pattern": "^US(-[A-Z]{2})?$"
+    },
+    "version_added": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "pii_risk": {
+            "properties": {
+              "level": {
+                "const": "high"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "strings": {
+            "items": {
+              "properties": {
+                "match": {
+                  "not": {
+                    "const": "token_cs"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1396 @@
+key	concept_id	preferred_term	status
+fape	SPED:000001	Free appropriate public education	active
+iep	SPED:000002	Individualized education program	active
+iep_team	SPED:000003	IEP Team	active
+cwd	SPED:000004	Child with a disability	active
+consent	SPED:000005	Parental consent	active
+evaluation	SPED:000006	Evaluation	active
+reeval	SPED:000007	Reevaluation	active
+excess_costs	SPED:000008	Excess costs	active
+lep	SPED:000009	Limited English proficient	active
+lea	SPED:000010	Local educational agency	active
+sea	SPED:000011	State educational agency	active
+esa	SPED:000012	Educational service agency	active
+native_language	SPED:000013	Native language	active
+pti	SPED:000014	Parent training and information center	active
+pii	SPED:000015	Personally identifiable information	active
+public_agency	SPED:000016	Public agency	active
+services_plan	SPED:000017	Services plan	active
+universal_design	SPED:000018	Universal design	active
+ward	SPED:000019	Ward of the State	active
+homeless	SPED:000020	Homeless children	active
+school_day	SPED:000021	School day	active
+child_find	SPED:000022	Child find	active
+feog	SPED:000023	Full educational opportunity goal	active
+esy	SPED:000024	Extended school year services	active
+lre	SPED:000025	Least restrictive environment	active
+continuum	SPED:000026	Continuum of alternative placements	active
+nonacademic	SPED:000027	Nonacademic services	active
+nonacademic_settings	SPED:000028	Nonacademic settings	active
+pwn	SPED:000029	Prior written notice	active
+safeguards_notice	SPED:000030	Procedural safeguards notice	active
+iee	SPED:000031	Independent educational evaluation	active
+mediation	SPED:000032	Mediation	active
+dp_complaint	SPED:000033	Due process complaint	active
+resolution	SPED:000034	Resolution meeting	active
+dp_hearing	SPED:000035	Impartial due process hearing	active
+state_complaint	SPED:000036	State complaint	active
+stay_put	SPED:000037	Child's status during proceedings	active
+surrogate	SPED:000038	Surrogate parent	active
+age_majority	SPED:000039	Transfer of rights at age of majority	active
+ppps	SPED:000040	Parentally-placed private school children with disabilities	active
+equitable	SPED:000041	Equitable services	active
+disprop	SPED:000042	Significant disproportionality	active
+nimas	SPED:000043	National Instructional Materials Accessibility Standard	active
+at_device	SPED:000044	Assistive technology device	active
+at_service	SPED:000045	Assistive technology service	active
+special_ed	SPED:000046	Special education	active
+sdi	SPED:000047	Specially designed instruction	active
+travel_training	SPED:000048	Travel training	active
+voc_ed	SPED:000049	Vocational education	active
+pe	SPED:000050	Physical education	active
+autism	SPED:000051	Autism	active
+deafblind	SPED:000052	Deaf-blindness	active
+deafness	SPED:000053	Deafness	active
+ed	SPED:000054	Emotional disturbance	active
+hi	SPED:000055	Hearing impairment	active
+id	SPED:000056	Intellectual disability	active
+md	SPED:000057	Multiple disabilities	active
+oi	SPED:000058	Orthopedic impairment	active
+ohi	SPED:000059	Other health impairment	active
+sld	SPED:000060	Specific learning disability	active
+sli	SPED:000061	Speech or language impairment	active
+tbi	SPED:000062	Traumatic brain injury	active
+vi	SPED:000063	Visual impairment including blindness	active
+dd	SPED:000064	Developmental delay	active
+adhd	SPED:000065	Attention deficit hyperactivity disorder	active
+tourette	SPED:000066	Tourette syndrome	active
+epilepsy	SPED:000067	Epilepsy	active
+sickle	SPED:000068	Sickle cell anemia	active
+dyslexia	SPED:000069	Dyslexia	active
+aphasia	SPED:000070	Developmental aphasia	active
+perceptual	SPED:000071	Perceptual disabilities	active
+mbd	SPED:000072	Minimal brain dysfunction	active
+adaptive	SPED:000073	Adaptive behavior	active
+adverse	SPED:000074	Adversely affects educational performance	active
+related	SPED:000075	Related services	active
+audiology	SPED:000076	Audiology	active
+counseling	SPED:000077	Counseling services	active
+early_id	SPED:000078	Early identification and assessment of disabilities in children	active
+interpreting	SPED:000079	Interpreting services	active
+cart	SPED:000080	Communication access realtime translation	active
+medical	SPED:000081	Medical services	active
+ot	SPED:000082	Occupational therapy	active
+om	SPED:000083	Orientation and mobility services	active
+parent_training	SPED:000084	Parent counseling and training	active
+pt	SPED:000085	Physical therapy	active
+psych	SPED:000086	Psychological services	active
+recreation	SPED:000087	Recreation	active
+rehab	SPED:000088	Rehabilitation counseling services	active
+nursing	SPED:000089	School health services and school nurse services	active
+social_work	SPED:000090	Social work services in schools	active
+slp	SPED:000091	Speech-language pathology services	active
+transport	SPED:000092	Transportation	active
+regular_class	SPED:000093	Regular class	active
+special_class	SPED:000094	Special class	active
+special_school	SPED:000095	Special school	active
+home_instr	SPED:000096	Home instruction	active
+hospital_instr	SPED:000097	Instruction in hospitals and institutions	active
+resource_room	SPED:000098	Resource room	active
+itinerant	SPED:000099	Itinerant instruction	active
+residential	SPED:000100	Residential placement	active
+nondisabled	SPED:000101	Nondisabled peers	active
+plaafp	SPED:000102	Present levels of academic achievement and functional performance	active
+annual_goals	SPED:000103	Measurable annual goals	active
+sto	SPED:000104	Benchmarks or short-term objectives	active
+progress	SPED:000105	Periodic reports on progress	active
+saas	SPED:000106	Supplementary aids and services	active
+program_mods	SPED:000107	Program modifications or supports for school personnel	active
+prr	SPED:000108	Peer-reviewed research	active
+removal_expl	SPED:000109	Explanation of the extent of nonparticipation	active
+test_accom	SPED:000110	Testing accommodations	active
+alt_assess	SPED:000111	Alternate assessment	active
+fld	SPED:000112	Frequency, location, and duration	active
+postsecondary	SPED:000113	Measurable postsecondary goals	active
+transition	SPED:000114	Transition services	active
+course_study	SPED:000115	Courses of study	active
+pbis	SPED:000116	Positive behavioral interventions and supports	active
+braille	SPED:000117	Instruction in Braille	active
+comm_mode	SPED:000118	Language and communication mode	active
+annual_review	SPED:000119	Annual review	active
+amendment	SPED:000120	IEP amendment	active
+gen_curr	SPED:000121	General education curriculum	active
+gen_teacher	SPED:000122	Regular education teacher	active
+sped_teacher	SPED:000123	Special education teacher	active
+lea_rep	SPED:000124	Representative of the public agency	active
+eval_interp	SPED:000125	Individual who can interpret the instructional implications of evaluation results	active
+screening	SPED:000126	Screening for instructional purposes	active
+eligibility	SPED:000127	Eligibility determination	active
+discrepancy	SPED:000128	Severe discrepancy	active
+rti	SPED:000129	Response to scientific, research-based intervention	active
+srbi	SPED:000130	Scientific, research-based intervention	active
+psw	SPED:000131	Pattern of strengths and weaknesses	active
+exclusionary	SPED:000132	Exclusionary factors	active
+data_doc	SPED:000133	Data-based documentation of repeated assessments	active
+observation	SPED:000134	Classroom observation	active
+oral_expr	SPED:000135	Oral expression	active
+listen_comp	SPED:000136	Listening comprehension	active
+written_expr	SPED:000137	Written expression	active
+basic_reading	SPED:000138	Basic reading skill	active
+fluency	SPED:000139	Reading fluency skills	active
+reading_comp	SPED:000140	Reading comprehension	active
+math_calc	SPED:000141	Mathematics calculation	active
+math_ps	SPED:000142	Mathematics problem solving	active
+cop	SPED:000143	Change of placement	active
+mdr	SPED:000144	Manifestation determination	active
+iaes	SPED:000145	Interim alternative educational setting	active
+fba	SPED:000146	Functional behavioral assessment	active
+bip	SPED:000147	Behavioral intervention plan	active
+code_conduct	SPED:000148	Code of student conduct	active
+special_circ	SPED:000149	Special circumstances	active
+sbi	SPED:000150	Serious bodily injury	active
+controlled	SPED:000151	Controlled substance	active
+illegal_drug	SPED:000152	Illegal drug	active
+weapon	SPED:000153	Dangerous weapon	active
+ifsp	SPED:000154	Individualized family service plan	active
+itd	SPED:000155	Infant or toddler with a disability	active
+part_c_transition	SPED:000156	Transition from Part C to preschool programs	active
+tea	SPED:000157	Texas Education Agency	active
+tec	SPED:000158	Texas Education Code	active
+tac	SPED:000159	Texas Administrative Code	active
+legal_fw	SPED:000160	Legal Framework for the Child-Centered Special Education Process	active
+spedtex	SPED:000161	Special Education Information Center	active
+overview_form	SPED:000162	Overview of Special Education for Parents	active
+model_iep	SPED:000163	Model IEP form	active
+state_panel	SPED:000164	State advisory panel	active
+iep_facil	SPED:000165	IEP facilitation	active
+ard_recess	SPED:000166	ARD recess and reconvene	active
+disagree_stmt	SPED:000167	Written statement of disagreement	active
+lpac	SPED:000168	Language Proficiency Assessment Committee	active
+sst	SPED:000169	Campus-based student support team	active
+teks	SPED:000170	Texas Essential Knowledge and Skills	active
+ncec	SPED:000171	Noncategorical early childhood	active
+reed	SPED:000172	Review of existing evaluation data	active
+eval_report	SPED:000173	Evaluation report	active
+suspected	SPED:000174	Suspected disability	active
+revoke	SPED:000175	Revocation of consent	active
+dys_instr	SPED:000176	Dyslexia instruction	active
+related_dis	SPED:000177	Related disorders	active
+dys_handbook	SPED:000178	Dyslexia Handbook	active
+autism_strat	SPED:000179	Strategies for students with autism	active
+ext_ed_prog	SPED:000180	Extended educational programming	active
+in_home_cbt	SPED:000181	In-home and community-based training	active
+staff_ratio	SPED:000182	Staff-to-child ratio	active
+social_skills	SPED:000183	Social skills supports and strategies	active
+futures	SPED:000184	Futures planning	active
+daily_sched	SPED:000185	Daily schedules with minimal unstructured time	active
+ecc	SPED:000186	Expanded core curriculum	active
+comp_skills	SPED:000187	Compensatory skills	active
+concept_dev	SPED:000188	Concept development	active
+sensory_eff	SPED:000189	Sensory efficiency	active
+optical	SPED:000190	Optical devices	active
+social_int	SPED:000191	Social interaction skills	active
+rec_leisure	SPED:000192	Recreation and leisure enjoyment	active
+tvi	SPED:000193	Teacher of students with visual impairments	active
+tdhh	SPED:000194	Teacher of students who are deaf or hard of hearing	active
+regression	SPED:000195	Severe or substantial regression	active
+sdm	SPED:000196	Supported decision-making agreement	active
+cie	SPED:000197	Competitive integrated employment	active
+fve	SPED:000198	Functional vocational evaluation	active
+self_det	SPED:000199	Self-determination	active
+sop	SPED:000200	Summary of academic achievement and functional performance	active
+postsec_ed	SPED:000201	Postsecondary education	active
+eci	SPED:000202	Early Childhood Intervention	active
+ecse	SPED:000203	Early childhood special education	active
+daep	SPED:000204	Disciplinary alternative education program	active
+expellable	SPED:000205	Expellable offense	active
+basis_know	SPED:000206	Basis of knowledge	active
+exp_hearing	SPED:000207	Expedited due process hearing	active
+cum_removal	SPED:000208	Cumulative removals	active
+foster	SPED:000209	Foster parent	active
+uhy	SPED:000210	Unaccompanied homeless youth	active
+ed_records	SPED:000211	Education records	active
+part_agency	SPED:000212	Participating agency	active
+ferpa	SPED:000213	Family Educational Rights and Privacy Act	active
+idea	SPED:000214	Individuals with Disabilities Education Act	active
+s504	SPED:000215	Section 504	active
+ada	SPED:000216	Americans with Disabilities Act	active
+nde	SPED:000217	Nevada Department of Education	active
+ocss	SPED:000218	Office of Comprehensive Student Services	active
+nac	SPED:000219	Nevada Administrative Code	active
+sro	SPED:000220	State review officer	active
+statement_elig	SPED:000221	Statement of eligibility	active
+gifted	SPED:000222	Gifted and talented	active
+cog	SPED:000223	Cognitive abilities	active
+socemo	SPED:000224	Social and emotional condition	active
+devfx	SPED:000225	Developmental functioning	active
+cba	SPED:000226	Classroom-based assessment	active
+pces	SPED:000227	Performance in the current educational setting	active
+eoi	SPED:000228	Evidence of intervention	active
+consult	SPED:000229	Collaborative or consulting services	active
+interim_iep	SPED:000230	Interim IEP	active
+fed_place_code	SPED:000231	Federal placement code	active
+pct_regular	SPED:000232	Percentage of time in regular education environment	active
+strengths	SPED:000233	Statement of student strengths	active
+parent_concerns	SPED:000234	Parent educational concerns	active
+prefs	SPED:000235	Student preferences and interests	active
+vision_future	SPED:000236	Student's vision for the future	active
+comm_exp	SPED:000237	Community experiences	active
+post_school	SPED:000238	Employment and other post-school adult living objectives	active
+daily_living	SPED:000239	Acquisition of daily living skills	active
+comm_access	SPED:000240	Communication access	active
+explicit	SPED:000241	Explicit, direct instruction	active
+alpha_principle	SPED:000242	Alphabetic principle	active
+multisensory	SPED:000243	Multisensory instruction	active
+meaning_based	SPED:000244	Meaning-based instruction	active
+naa	SPED:000245	Nevada Alternate Assessment	active
+crt	SPED:000246	State criterion-referenced test	active
+ccra	SPED:000247	College and Career Readiness Assessment	active
+nvpep	SPED:000248	Nevada Proficiency Examination Program	active
+std_diploma	SPED:000249	Standard high school diploma	active
+adj_diploma	SPED:000250	Adjusted high school diploma	active
+alt_diploma	SPED:000251	Alternative high school diploma	active
+aom_rep	SPED:000252	Application to represent the educational interests of a student at the age of majority	active
+staar	SPED:000253	State of Texas Assessments of Academic Readiness	active
+staar_alt2	SPED:000254	STAAR Alternate 2	active
+staar_sp	SPED:000255	STAAR Spanish	active
+eoc	SPED:000256	End-of-course assessment	active
+telpas	SPED:000257	Texas English Language Proficiency Assessment System	active
+telpas_alt	SPED:000258	TELPAS Alternate	active
+sig_cog	SPED:000259	Most significant cognitive disability	active
+alt2_partreq	SPED:000260	STAAR Alternate 2 Participation Requirements form	active
+med_exc	SPED:000261	Medical exception	active
+naar	SPED:000262	No authentic academic response	active
+prereq	SPED:000263	Prerequisite skills	active
+essence	SPED:000264	Essence statement	active
+resp_mode	SPED:000265	Response mode	active
+tide	SPED:000266	Test Information Distribution Engine	active
+peims	SPED:000267	Public Education Information Management System	active
+acc_feat	SPED:000268	Accessibility features	active
+des_sup	SPED:000269	Designated supports	active
+acc_req	SPED:000270	Accommodation Request Form	active
+tts	SPED:000271	Text-to-speech	active
+stt	SPED:000272	Speech-to-text	active
+word_pred	SPED:000273	Word prediction	active
+spell_check	SPED:000274	Spell check	active
+calc_aids	SPED:000275	Calculation aids	active
+asl	SPED:000276	American Sign Language	active
+rbd	SPED:000277	Refreshable braille display	active
+cls	SPED:000278	Content and language supports	active
+supp_mat	SPED:000279	Supplementary materials	active
+extra_day	SPED:000280	Extra day	active
+complex_tr	SPED:000281	Complex transcribing	active
+basic_tr	SPED:000282	Basic transcribing	active
+math_scribe	SPED:000283	Mathematics scribe	active
+isr	SPED:000284	Individualized structured reminders	active
+large_print	SPED:000285	Large print	active
+manip_mat	SPED:000286	Manipulating test materials	active
+math_manip	SPED:000287	Mathematics manipulatives	active
+oral_admin	SPED:000288	Oral and signed administration	active
+supp_aids	SPED:000289	Supplemental aids	active
+line_reader	SPED:000290	Line reader	active
+dysgraphia	SPED:000291	Dysgraphia	active
+dys_screen	SPED:000292	Dyslexia screening	active
+reading_instr	SPED:000293	Reading instrument	active
+at_risk_dys	SPED:000294	At risk for dyslexia	active
+mdt	SPED:000295	Multidisciplinary team	active
+ldt	SPED:000296	Licensed dyslexia therapist	active
+calt	SPED:000297	Certified academic language therapist	active
+dys_provider	SPED:000298	Provider of dyslexia instruction	active
+tda	SPED:000299	Texas Dyslexia Academies	active
+rbd_prog	SPED:000300	Reading by Design	active
+ida	SPED:000301	International Dyslexia Association	active
+alta	SPED:000302	Academic Language Therapy Association	active
+imslec	SPED:000303	International Multisensory Structured Language Education Council	active
+twice_ex	SPED:000304	Twice-exceptional	active
+three_cue	SPED:000305	Three-cueing	active
+accel_read	SPED:000306	Accelerated reading instruction	active
+tier1	SPED:000307	Tier 1 instruction	active
+phon_aware	SPED:000308	Phonological awareness	active
+phon_mem	SPED:000309	Phonological memory	active
+ran	SPED:000310	Rapid automatized naming	active
+orth_proc	SPED:000311	Orthographic processing	active
+letter_know	SPED:000312	Letter knowledge	active
+decoding	SPED:000313	Decoding	active
+word_recog	SPED:000314	Word recognition	active
+prosody	SPED:000315	Prosody	active
+vwm	SPED:000316	Verbal working memory	active
+proc_speed	SPED:000317	Processing speed	active
+spelling	SPED:000318	Spelling	active
+ssa	SPED:000319	Sound-symbol association	active
+syllab	SPED:000320	Syllabication	active
+orthography	SPED:000321	Orthography	active
+morphology	SPED:000322	Morphology	active
+syntax	SPED:000323	Syntax	active
+diag_teach	SPED:000324	Diagnostic teaching	active
+synthetic	SPED:000325	Synthetic instruction	active
+analytic	SPED:000326	Analytic instruction	active
+handwriting	SPED:000327	Handwriting	active
+legibility	SPED:000328	Legibility	active
+letter_form	SPED:000329	Letter formation	active
+graphomotor	SPED:000330	Graphomotor skills	active
+fine_motor	SPED:000331	Fine motor skills	active
+motor_plan	SPED:000332	Motor planning	active
+transcription	SPED:000333	Transcription skills	active
+keyboarding	SPED:000334	Keyboarding	active
+sentence_con	SPED:000335	Sentence construction	active
+ext_time	SPED:000336	Extended time	active
+vdoe	SPED:000337	Virginia Department of Education	active
+va_regs	SPED:000338	Regulations Governing Special Education Programs for Children with Disabilities in Virginia	active
+va_odr	SPED:000339	Office of Dispute Resolution and Administrative Services	active
+ombud	SPED:000340	Parent Ombudsman for Special Education	active
+peatc	SPED:000341	Parent Educational Advocacy Training Center	active
+seac	SPED:000342	Local special education advisory committee	active
+csa	SPED:000343	Children's Services Act	active
+cpmt	SPED:000344	Community policy and management team	active
+fapt	SPED:000345	Family assessment and planning team	active
+vsdb	SPED:000346	Virginia School for the Deaf and the Blind	active
+state_ops	SPED:000347	State-operated programs	active
+level1	SPED:000348	Level I services	active
+level2	SPED:000349	Level II services	active
+coteach	SPED:000350	Co-teaching	active
+isd	SPED:000351	Integrated service delivery	active
+home_based	SPED:000352	Home-based instruction	active
+home_tutor	SPED:000353	Home tutoring	active
+long_term_pl	SPED:000354	Long-term placement	active
+init_place	SPED:000355	Initial placement	active
+change_ident	SPED:000356	Change in identification	active
+comparable	SPED:000357	Comparable services	active
+nimac	SPED:000358	National Instructional Materials Access Center	active
+implant	SPED:000359	Surgically implanted medical device	active
+sped_admin	SPED:000360	Special education administrator	active
+para	SPED:000361	Paraprofessional	active
+hqt	SPED:000362	Highly qualified special education teacher	active
+service_coord	SPED:000363	Service coordinator	active
+st_removal	SPED:000364	Short-term removal	active
+lt_removal	SPED:000365	Long-term removal	active
+dis_harass	SPED:000366	Disability harassment	active
+audio_rec	SPED:000367	Audio recording of meetings	active
+emancipated	SPED:000368	Emancipated minor	active
+sol	SPED:000369	Standards of Learning	active
+vaap	SPED:000370	Virginia Alternate Assessment Program	active
+vesol	SPED:000371	Virginia Essentialized Standards of Learning	active
+trans_assess	SPED:000372	Age-appropriate transition assessments	active
+interagency	SPED:000373	Interagency responsibilities and linkages	active
+adv_studies	SPED:000374	Advanced Studies Diploma	active
+applied_studies	SPED:000375	Applied Studies Diploma	active
+mod_std	SPED:000376	Modified Standard Diploma	active
+cert_completion	SPED:000377	Certificate of Program Completion	active
+ged	SPED:000378	General Educational Development certificate	active
+std_credit	SPED:000379	Standard credit	active
+ver_credit	SPED:000380	Verified credit	active
+lavc	SPED:000381	Locally awarded verified credit	active
+splavc	SPED:000382	Special Permission Locally Awarded Verified Credit	active
+credit_accom	SPED:000383	Credit accommodations	active
+subst_tests	SPED:000384	Substitute tests	active
+exp_retake	SPED:000385	Expedited retake	active
+cde	SPED:000386	California Department of Education	active
+cde_sed	SPED:000387	Special Education Division	active
+oah	SPED:000388	Office of Administrative Hearings	active
+ca_ec	SPED:000389	California Education Code	active
+ca_ccr	SPED:000390	California Code of Regulations, Title 5	active
+selpa	SPED:000391	Special Education Local Plan Area	active
+fec	SPED:000392	Family Empowerment Center	active
+adr	SPED:000393	Alternative dispute resolution	active
+assess_plan	SPED:000394	Assessment plan	active
+nondisc	SPED:000395	Nondiscriminatory assessment	active
+state_sp_sch	SPED:000396	State special schools	active
+calpads	SPED:000397	California Longitudinal Pupil Achievement Data System	active
+workability	SPED:000398	WorkAbility I	active
+rsp	SPED:000399	Resource specialist program	active
+nps	SPED:000400	Nonpublic, nonsectarian school	active
+npa	SPED:000401	Nonpublic, nonsectarian agency	active
+telecom	SPED:000402	Instruction using telecommunication	active
+vision_svc	SPED:000403	Vision services	active
+driver	SPED:000404	Specialized driver training instruction	active
+low_inc	SPED:000405	Specialized services for low-incidence disabilities	active
+artic	SPED:000406	Articulation disorder	active
+voice	SPED:000407	Abnormal voice	active
+fluency_dis	SPED:000408	Fluency disorder	active
+lang_dis	SPED:000409	Language disorder	active
+caaspp	SPED:000410	California Assessment of Student Performance and Progress	active
+caa	SPED:000411	California Alternate Assessments	active
+cast	SPED:000412	California Science Test	active
+csa_ca	SPED:000413	California Spanish Assessment	active
+elpac	SPED:000414	English Language Proficiency Assessments for California	active
+alt_elpac	SPED:000415	Alternate ELPAC	active
+ccc	SPED:000416	Core Content Connectors	active
+eld_conn	SPED:000417	ELD Connectors	active
+univ_tools	SPED:000418	Universal tools	active
+unlisted	SPED:000419	Unlisted resources	active
+ca_alt_path	SPED:000420	Alternative pathway to a high school diploma	active
+nysed	SPED:000421	New York State Education Department	active
+nysed_ose	SPED:000422	Office of Special Education	active
+cpse	SPED:000423	Committee on Preschool Special Education	active
+cdrc	SPED:000424	Community Dispute Resolution Center	active
+sro_form_a	SPED:000425	Notice of Intention to Seek Review	active
+sro_form_b	SPED:000426	Notice of Request for Review	active
+gal	SPED:000427	Guardian ad litem	active
+consult_teacher	SPED:000428	Consultant teacher services	active
+ict	SPED:000429	Integrated co-teaching services	active
+sc_15_1	SPED:000430	15:1 special class	active
+sc_12_1	SPED:000431	12:1 special class	active
+sc_12_1_1	SPED:000432	12:1+1 special class	active
+sc_8_1_1	SPED:000433	8:1+1 special class	active
+sc_6_1_1	SPED:000434	6:1+1 special class	active
+approved_priv	SPED:000435	Approved private school	active
+change_prog	SPED:000436	Change in program	active
+tss	SPED:000437	Transitional support services	active
+dss	SPED:000438	Declassification support services	active
+preschool_swd	SPED:000439	Preschool student with a disability	active
+seit	SPED:000440	Special education itinerant teacher services	active
+approved_presch	SPED:000441	Approved preschool program	active
+fullday_presch	SPED:000442	Full-day preschool program	active
+ind_psych	SPED:000443	Individual psychological evaluation	active
+social_hist	SPED:000444	Social history	active
+approved_eval	SPED:000445	Approved evaluator	active
+aversive	SPED:000446	Aversive intervention	active
+nysaa	SPED:000447	New York State Alternate Assessment	active
+regents_exam	SPED:000448	Regents examinations	active
+regents_dip	SPED:000449	Regents diploma	active
+local_dip	SPED:000450	Local diploma	active
+safety_net	SPED:000451	Safety net	active
+supt_det	SPED:000452	Superintendent determination	active
+cdos	SPED:000453	Career Development and Occupational Studies Commencement Credential	active
+sacc	SPED:000454	Skills and Achievement Commencement Credential	active
+cbt	SPED:000455	Computer-based testing	active
+separate_loc	SPED:000456	Separate location	active
+small_group	SPED:000457	Small group administration	active
+indiv_admin	SPED:000458	Individual administration	active
+revised_fmt	SPED:000459	Revised test format	active
+graphic_org	SPED:000460	Graphic organizer	active
+scribe_use	SPED:000461	Use of a scribe	active
+word_proc	SPED:000462	Use of a word processor	active
+ans_any	SPED:000463	Answers recorded in any manner	active
+formula_sheet	SPED:000464	Mathematical formula sheet	active
+biling_gloss	SPED:000465	Bilingual glossary	active
+fldoe	SPED:000466	Florida Department of Education	active
+doah	SPED:000467	Division of Administrative Hearings	active
+fl_fac	SPED:000468	Florida Administrative Code	active
+exc_student	SPED:000469	Exceptional student	active
+ep_gifted	SPED:000470	Educational plan	active
+ese_center	SPED:000471	ESE center	active
+alt_std_consent	SPED:000472	Consent for instruction in alternate academic achievement standards	active
+access_points	SPED:000473	Access points	active
+access_courses	SPED:000474	Access courses	active
+emp_trans	SPED:000475	Employment transition plan	active
+acad_emp	SPED:000476	Mastery of academic and employment competencies	active
+defer_dip	SPED:000477	Deferral of diploma	active
+faa	SPED:000478	Florida Alternate Assessment	active
+fast	SPED:000479	Florida Assessment of Student Thinking	active
+best	SPED:000480	Benchmarks for Excellent Student Thinking	active
+gen_ed_int	SPED:000481	General education intervention procedures	active
+prek_cwd	SPED:000482	Prekindergarten children with disabilities	active
+est_cond	SPED:000483	Established conditions	active
+vpk	SPED:000484	Voluntary Prekindergarten	active
+sis_vpk	SPED:000485	Specialized instructional services	active
+fes	SPED:000486	Family Empowerment Scholarship	active
+mckay	SPED:000487	John M. McKay Scholarship for Students with Disabilities	active
+gardiner	SPED:000488	Gardiner Scholarship	active
+pde	SPED:000489	Pennsylvania Department of Education	active
+bse	SPED:000490	Bureau of Special Education	active
+odr_pa	SPED:000491	Office for Dispute Resolution	active
+consultline	SPED:000492	Special Education ConsultLine	active
+dcmp	SPED:000493	Division of Compliance Monitoring and Planning	active
+iu	SPED:000494	Intermediate unit	active
+ch14	SPED:000495	22 Pa. Code Chapter 14	active
+peal	SPED:000496	Parent Education and Advocacy Leadership Center	active
+pen	SPED:000497	Parent Education Network	active
+pte	SPED:000498	Permission to Evaluate	active
+type_support	SPED:000499	Type of support	active
+level_support	SPED:000500	Level of support	active
+mech_restraint	SPED:000501	Mechanical restraints	active
+exit_sped	SPED:000502	Exiting special education	active
+pssa	SPED:000503	Pennsylvania System of School Assessment	active
+keystone	SPED:000504	Keystone Exams	active
+pasa	SPED:000505	Pennsylvania Alternate System of Assessment	active
+dlm	SPED:000506	Dynamic Learning Maps	active
+act158	SPED:000507	Act 158 pathways to graduation	active
+ls	SPED:000508	Learning support	active
+lss	SPED:000509	Life skills support	active
+es	SPED:000510	Emotional support	active
+dhhs	SPED:000511	Deaf and hearing impaired support	active
+bvis	SPED:000512	Blind and visually impaired support	active
+sls	SPED:000513	Speech and language support	active
+phs	SPED:000514	Physical support	active
+aus	SPED:000515	Autistic support	active
+mds	SPED:000516	Multiple disabilities support	active
+isbe	SPED:000517	Illinois State Board of Education	active
+il_school_code	SPED:000518	Illinois School Code	active
+domain	SPED:000519	Domain	active
+qbs	SPED:000520	Qualified bilingual specialist	active
+less_common_lang	SPED:000521	Less common language	active
+vital_docs	SPED:000522	Vital Documents List	active
+student_record	SPED:000523	Student record	active
+dlm_aa	SPED:000524	Dynamic Learning Maps Alternate Assessment	active
+access_ell	SPED:000525	ACCESS for ELLs	active
+delegation	SPED:000526	Delegation of Rights	active
+restraint	SPED:000527	Physical restraint	active
+time_out	SPED:000528	Time out	active
+inclusive	SPED:000529	Inclusive education	active
+gen_ed_env	SPED:000530	General education environment	active
+nonpublic_fac	SPED:000531	Nonpublic facility	active
+prehearing	SPED:000532	Pre-hearing conference	active
+cfc	SPED:000533	Child and Family Connections	active
+family_matters	SPED:000534	Family Matters Parent Training and Information Center	active
+arc_il	SPED:000535	The Arc of Illinois	active
+parent_mentor	SPED:000536	Parent mentor	active
+istac	SPED:000537	Illinois Statewide Technical Assistance Center	active
+il_drs	SPED:000538	Division of Rehabilitation Services	active
+rosas_law	SPED:000539	Rosa's Law	active
+autistic_dis	SPED:000540	Autistic disorder	active
+asperger	SPED:000541	Asperger's disorder	active
+pdd	SPED:000542	Pervasive developmental disorder	active
+cdd	SPED:000543	Childhood disintegrative disorder	active
+rett	SPED:000544	Rett syndrome	active
+dese_ma	SPED:000545	Massachusetts Department of Elementary and Secondary Education	active
+bsea	SPED:000546	Bureau of Special Education Appeals	active
+prs	SPED:000547	Problem Resolution System	active
+pqa	SPED:000548	Program Quality Assurance	active
+ch766	SPED:000549	Chapter 766	active
+cmr28	SPED:000550	603 CMR 28.00	active
+masshealth	SPED:000551	MassHealth	active
+fcsn	SPED:000552	Federation for Children with Special Needs	active
+sensory_imp	SPED:000553	Sensory impairment	active
+neuro_imp	SPED:000554	Neurological impairment	active
+eff_progress	SPED:000555	Effective progress	active
+team_chair	SPED:000556	Team Chairperson	active
+in_district	SPED:000557	In-district program	active
+out_district	SPED:000558	Out-of-district program	active
+pre_eval_conf	SPED:000559	Pre-evaluation conference	active
+home_assess	SPED:000560	Home assessment	active
+spec_assess	SPED:000561	Specialist assessment	active
+ch688	SPED:000562	Chapter 688 referral	active
+tpf	SPED:000563	Transition Planning Form	active
+mcas	SPED:000564	Massachusetts Comprehensive Assessment System	active
+mcas_alt	SPED:000565	MCAS Alternate Assessment	active
+ma_frameworks	SPED:000566	Massachusetts Curriculum Frameworks	active
+mde_mn	SPED:000567	Minnesota Department of Education	active
+conciliation	SPED:000568	Conciliation conference	active
+iiip	SPED:000569	Individualized Interagency Intervention Plan	active
+cultural_liaison	SPED:000570	Cultural liaison	active
+func_skills	SPED:000571	Functional skills	active
+voc_eval	SPED:000572	Vocational evaluation	active
+tech_adequate	SPED:000573	Technically adequate instrument	active
+sig_change	SPED:000574	Significant change in program or placement	active
+resident_dist	SPED:000575	Resident district	active
+indirect_svc	SPED:000576	Indirect services	active
+team_override	SPED:000577	Team override	active
+mca	SPED:000578	Minnesota Comprehensive Assessments	active
+mtas	SPED:000579	Minnesota Test of Academic Skills	active
+dese_mo	SPED:000580	Missouri Department of Elementary and Secondary Education	active
+mo_ose	SPED:000581	Missouri Office of Special Education	active
+mo_state_plan	SPED:000582	Missouri State Plan for Special Education	active
+mpact	SPED:000583	Missouri Parents Act	active
+mo_pa	SPED:000584	Missouri Protection and Advocacy Services	active
+mssd	SPED:000585	Missouri Schools for the Severely Disabled	active
+mo_blind	SPED:000586	Missouri School for the Blind	active
+mo_deaf	SPED:000587	Missouri School for the Deaf	active
+ssd_stl	SPED:000588	Special School District of St. Louis County	active
+prof_judgment	SPED:000589	Professional judgment	active
+mo_map	SPED:000590	Missouri Assessment Program	active
+mapa	SPED:000591	Missouri Assessment Program-Alternate	active
+ess_elements	SPED:000592	Essential Elements	active
+mls	SPED:000593	Missouri Learning Standards	active
+ldoe	SPED:000594	Louisiana Department of Education	active
+b1508	SPED:000595	Bulletin 1508	active
+b1530	SPED:000596	Bulletin 1530	active
+pupil_appraisal	SPED:000597	Pupil appraisal	active
+exceptionality	SPED:000598	Exceptionality	active
+talented	SPED:000599	Talented	active
+leap_connect	SPED:000600	LEAP Connect	active
+la_connectors	SPED:000601	Louisiana Connectors	active
+la_standards	SPED:000602	Louisiana Student Standards	active
+alds	SPED:000603	Achievement Level Descriptors	active
+ksde	SPED:000604	Kansas State Department of Education	active
+sets	SPED:000605	Special Education and Title Services	active
+secea	SPED:000606	Special Education for Exceptional Children Act	active
+ks_handbook	SPED:000607	Kansas Special Education Process Handbook	active
+kesa	SPED:000608	Kansas Education Systems Accreditation	active
+families_together	SPED:000609	Families Together	active
+kmtss	SPED:000610	Kansas MTSS and Alignment	active
+elig_indicators	SPED:000611	Eligibility indicators	active
+two_prong	SPED:000612	Two-prong test	active
+material_change	SPED:000613	Material change in services	active
+subst_change	SPED:000614	Substantial change in placement	active
+interrelated	SPED:000615	Interrelated	active
+eyc	SPED:000616	Eligible young child	active
+age_beginners	SPED:000617	Age of beginners	active
+school_entity	SPED:000618	School entity	active
+ei_agency	SPED:000619	Early intervention agency	active
+ch16	SPED:000620	22 Pa. Code Chapter 16	active
+giep	SPED:000621	Gifted Individualized Education Plan	active
+gmdt	SPED:000622	Gifted Multidisciplinary Team	active
+gme	SPED:000623	Gifted Multidisciplinary Evaluation	active
+usbe	SPED:000624	Utah State Board of Education	active
+ut_rules	SPED:000625	USBE Special Education Rules	active
+usdb	SPED:000626	Utah Schools for the Deaf and the Blind	active
+ut_parent_center	SPED:000627	Utah Parent Center	active
+dlc_ut	SPED:000628	Disability Law Center	active
+state_dir	SPED:000629	State Director of Special Education	active
+uradd	SPED:000630	Utah Registry of Autism and Developmental Disabilities	active
+carson_smith	SPED:000631	Carson Smith Special Needs Scholarship	active
+snos	SPED:000632	Special Needs Opportunity Scholarship Program	active
+func_perf	SPED:000633	Functional performance	active
+sor	SPED:000634	Science of Reading	active
+slt	SPED:000635	Speech-Language Technician	active
+service_animal	SPED:000636	Service animal	active
+utah_core	SPED:000637	Utah Core Standards	active
+ospi	SPED:000638	Office of Superintendent of Public Instruction	active
+wac392	SPED:000639	Chapter 392-172A WAC	active
+pave	SPED:000640	Partnerships for Action, Voices for Empowerment	active
+dcyf	SPED:000641	Department of Children, Youth, and Families	active
+wa_aim	SPED:000642	Washington Access to Instruction and Measurement	active
+apf	SPED:000643	Access Point Frameworks	active
+grad_pathway	SPED:000644	Graduation pathway	active
+tdoe	SPED:000645	Tennessee Department of Education	active
+functional_delay	SPED:000646	Functional delay	active
+lba	SPED:000647	Licensed behavior analyst	active
+tcap	SPED:000648	Tennessee Comprehensive Assessment Program	active
+tcap_alt	SPED:000649	TCAP-Alt	active
+msaa	SPED:000650	Multi-State Alternate Assessment	active
+tn_standards	SPED:000651	Tennessee Academic Standards	active
+idaho_doe	SPED:000652	Idaho Department of Education	active
+id_manual	SPED:000653	Idaho Special Education Manual	active
+id_dr	SPED:000654	Special Education Dispute Resolution	active
+ipul	SPED:000655	Idaho Parents Unlimited	active
+dri	SPED:000656	Disability Rights Idaho	active
+consent_assess	SPED:000657	Written Notice and Consent for Assessment	active
+isat	SPED:000658	Idaho Standards Achievement Test	active
+id_content	SPED:000659	Idaho Content Standards	active
+iesdb	SPED:000660	Idaho Educational Services for the Deaf and the Blind	active
+id_itp	SPED:000661	Infant/Toddler Program	active
+medicaid_sbs	SPED:000662	Medicaid school-based services	active
+ode_or	SPED:000663	Oregon Department of Education	active
+or_eso	SPED:000664	Office of Enhancing Student Opportunities	active
+ei_ecse	SPED:000665	Early Intervention/Early Childhood Special Education	active
+esd	SPED:000666	Education service district	active
+audiological_assess	SPED:000667	Audiological assessment	active
+vision_exam	SPED:000668	Vision examination	active
+sheltered	SPED:000669	Sheltered workshop	active
+drot	SPED:000670	Disability Rights Oregon	active
+fact_or	SPED:000671	FACT Oregon	active
+orext	SPED:000672	Oregon Extended Assessment	active
+eaf	SPED:000673	Essentialized Assessment Frameworks	active
+osas	SPED:000674	Oregon Statewide Assessment System	active
+qa_or	SPED:000675	Qualified Assessor	active
+gadoe	SPED:000676	Georgia Department of Education	active
+gnets	SPED:000677	Georgia Network for Educational and Therapeutic Support	active
+therapeutic_sup	SPED:000678	Therapeutic supports	active
+resa	SPED:000679	Regional Educational Service Agency	active
+glrs	SPED:000680	Georgia Learning Resources System	active
+zoned_school	SPED:000681	Zoned school	active
+agency_placed	SPED:000682	Agency-placed students	active
+gaa2	SPED:000683	Georgia Alternate Assessment 2.0	active
+gse	SPED:000684	Georgia Standards of Excellence	active
+ga_milestones	SPED:000685	Georgia Milestones Assessment System	active
+dc_osse	SPED:000686	Office of the State Superintendent of Education	active
+dc_sco	SPED:000687	State Complaint Office	active
+dc_odr	SPED:000688	Office of Dispute Resolution	active
+dc_osse_dot	SPED:000689	Division of Transportation	active
+dc_pcsb	SPED:000690	District of Columbia Public Charter School Board	active
+dc_cfsa	SPED:000691	Child and Family Services Agency	active
+dc_dyrs	SPED:000692	Department of Youth Rehabilitation Services	active
+dc_dhcf	SPED:000693	Department of Health Care Finance	active
+dc_dbh	SPED:000694	Department of Behavioral Health	active
+dc_dds	SPED:000695	Department on Disability Services	active
+dc_rsa	SPED:000696	Rehabilitation Services Administration	active
+dc_ombuds	SPED:000697	Office of the Ombudsman for Public Education	active
+dc_sped_hub	SPED:000698	DC Special Education Hub	active
+dc_osa	SPED:000699	Office of the Student Advocate	active
+dc_aje	SPED:000700	Advocates for Justice and Education	active
+dc_strong_start	SPED:000701	Strong Start DC Early Intervention Program	active
+dc_special_programs	SPED:000702	Special Programs	active
+dc_ch30	SPED:000703	5-A DCMR Chapter 30	active
+dc_language_access	SPED:000704	D.C. Language Access Act of 2004	active
+dc_sfasa	SPED:000705	Student Fair Access to School Act of 2018	active
+dc_hhi_act	SPED:000706	Students' Right to Home and Hospital Instruction Act of 2020	active
+dc_dyslexia_act	SPED:000707	Addressing Dyslexia and Other Reading Difficulties Amendment Act of 2020	active
+dc_pcs_lea	SPED:000708	Public charter school LEA	active
+dc_lea_right	SPED:000709	LEA-of-right	active
+dc_stage5	SPED:000710	Stage 5 enrollment	active
+primary_disability	SPED:000711	Primary disability	active
+secondary_disability	SPED:000712	Secondary disability	active
+cbm	SPED:000713	Curriculum-based measurement	active
+fva	SPED:000714	Functional vision assessment	active
+lma	SPED:000715	Learning media assessment	active
+dc_dwa	SPED:000716	Documented written agreement	active
+dc_speech_only	SPED:000717	Speech-only IEP	active
+dedicated_aide	SPED:000718	Dedicated aide	active
+comp_services	SPED:000719	Compensatory services	active
+critical_skill	SPED:000720	Critical skill	active
+dc_mfs	SPED:000721	Medically Fragile Students	active
+dc_sts	SPED:000722	Structured Transportation Supports	active
+dc_asp	SPED:000723	Accessing Special Programs	active
+dc_service_location	SPED:000724	Service location	active
+dc_outside_lea	SPED:000725	Placement outside of the LEA	active
+dc_nonpublic	SPED:000726	Nonpublic special education school or program	active
+dc_coa	SPED:000727	Certificate of approval	active
+prtf	SPED:000728	Psychiatric residential treatment facility	active
+dc_iep_coc	SPED:000729	IEP Certificate of Completion	active
+dc_diploma_notice	SPED:000730	Notice of Change in Diploma Type	active
+graduation_plan	SPED:000731	Graduation plan	active
+dc_educ_rep	SPED:000732	Educational representative	active
+dc_parent_obs	SPED:000733	Parent observation	active
+dc_hod	SPED:000734	Hearing Officer Determination	active
+seclusion	SPED:000735	Seclusion	active
+prone_restraint	SPED:000736	Prone restraint	active
+chem_restraint	SPED:000737	Chemical restraint	active
+fade_plan	SPED:000738	BIP fade plan	active
+informal_removal	SPED:000739	Informal removal	active
+dc_cape	SPED:000740	DC CAPE Next	active
+ccss	SPED:000741	Common Core State Standards	active
+ngss	SPED:000742	Next Generation Science Standards	active
+essa	SPED:000743	Every Student Succeeds Act	active
+mi_mde	SPED:000744	Michigan Department of Education	active
+mi_isd	SPED:000745	Intermediate school district	active
+mi_isd_plan	SPED:000746	Intermediate school district plan	active
+mi_psa	SPED:000747	Public school academy	active
+mi_pac	SPED:000748	Parent advisory committee	active
+mi_moahr	SPED:000749	Michigan Office of Administrative Hearings and Rules	active
+mi_offer_fape	SPED:000750	Notice of an offer of a free appropriate public education	active
+mi_operating_district	SPED:000751	Operating district	active
+mi_instr_services	SPED:000752	Instructional services	active
+mi_juvenile	SPED:000753	Youth placed in a juvenile detention facility	active
+mi_tc	SPED:000754	Teacher consultant	active
+mi_departmentalize	SPED:000755	Departmentalization of special education programs	active
+mi_sci_program	SPED:000756	Severe cognitive impairment program	active
+mi_sxi_program	SPED:000757	Severe multiple impairments program	active
+mi_slp_provider	SPED:000758	Authorized provider of speech and language services	active
+mi_msd	SPED:000759	Michigan School for the Deaf	active
+school_social_worker	SPED:000760	School social worker	active
+transition_coord	SPED:000761	Transition coordinator	active
+worksite_learning	SPED:000762	Worksite-based learning	active
+mi_access	SPED:000763	MI-Access	active
+mi_fi	SPED:000764	Functional Independence	active
+mi_si	SPED:000765	Supported Independence	active
+mi_ace	SPED:000766	Alternate content expectations	active
+mi_mstep	SPED:000767	M-STEP	active
+nj_doe	SPED:000768	New Jersey Department of Education	active
+nj_osepdr	SPED:000769	Office of Special Education Policy and Dispute Resolution	active
+nj_county_office	SPED:000770	County office of education	active
+nj_dboe	SPED:000771	District board of education	active
+nj_csssd	SPED:000772	County special services school district	active
+nj_esc	SPED:000773	Educational services commission	active
+nj_jointure	SPED:000774	Jointure commission	active
+nj_cbvi	SPED:000775	New Jersey Commission for the Blind and Visually Impaired	active
+nj_oal	SPED:000776	Office of Administrative Law	active
+nj_span	SPED:000777	Statewide Parent Advocacy Network	active
+nj_drnj	SPED:000778	Disability Rights New Jersey	active
+nj_dvrs	SPED:000779	Division of Vocational Rehabilitation Services	active
+nj_ddd	SPED:000780	Division of Developmental Disabilities	active
+nj_csoc	SPED:000781	Children's System of Care	active
+nj_ddhh	SPED:000782	Division of the Deaf and Hard of Hearing	active
+nj_dds	SPED:000783	Division of Disability Services	active
+nj_sepag	SPED:000784	Special Education Parent Advisory Group	active
+nj_ldtc	SPED:000785	Learning disabilities teacher-consultant	active
+nj_sls	SPED:000786	Speech-language specialist	active
+referral	SPED:000787	Referral	active
+nj_social_maladj	SPED:000788	Social maladjustment	active
+nj_eligible_sls	SPED:000789	Eligible for speech-language services	active
+nj_icr	SPED:000790	In-class resource program	active
+nj_pullout	SPED:000791	Pull-out replacement resource program	active
+nj_supp_instr	SPED:000792	Supplementary instruction	active
+nj_njsls	SPED:000793	New Jersey Student Learning Standards	active
+nj_emergent	SPED:000794	Emergent relief	active
+cbi	SPED:000795	Community-Based Instruction	active
+nj_sle	SPED:000796	Structured learning experience	active
+nh_doe	SPED:000797	New Hampshire Department of Education	active
+nh_bsess	SPED:000798	Bureau of Special Education Support	active
+nh_olh	SPED:000799	Office of Legislation and Hearings	active
+nh_dcyf	SPED:000800	Division for Children, Youth and Families	active
+nh_ose_advocate	SPED:000801	Office of the Special Education Advocate	active
+nh_pic	SPED:000802	Parent Information Center	active
+nhseis	SPED:000803	New Hampshire Special Education Information System	active
+nh_sau	SPED:000804	School administrative unit	active
+nh_collab	SPED:000805	Collaborative program	active
+nh_sending	SPED:000806	Sending district	active
+nh_receiving	SPED:000807	Receiving district	active
+nh_chartered	SPED:000808	Chartered public school	active
+nh_public_academy	SPED:000809	Public academy	active
+nh_private_provider	SPED:000810	Private provider of special education	active
+home_education	SPED:000811	Home education	active
+nh_abi	SPED:000812	Acquired brain injury	active
+nh_func_blind	SPED:000813	Functionally blind	active
+nh_qual_examiner	SPED:000814	Qualified examiner	active
+nh_saif	SPED:000815	Specialist in the assessment of intellectual functioning	active
+school_psych	SPED:000816	School psychologist	active
+nh_assoc_school_psych	SPED:000817	Associate school psychologist	active
+nh_fcess	SPED:000818	Family centered early supports and services	active
+nh_admin_case_mgmt	SPED:000819	Administrative case management	active
+nh_neutral_conf	SPED:000820	Neutral conference	active
+nh_committed_juvenile	SPED:000821	Committed juvenile student	active
+ct_csde	SPED:000822	Connecticut State Department of Education	active
+ct_due_process_unit	SPED:000823	Due process unit	active
+ct_resc	SPED:000824	Regional Educational Service Center	active
+ct_serc	SPED:000825	State Education Resource Center	active
+ct_cpac	SPED:000826	Connecticut Parent Advocacy Center	active
+ct_oec	SPED:000827	Office of Early Childhood	active
+ct_b23	SPED:000828	Birth to Three System	active
+ct_ads	SPED:000829	Department of Aging and Disability Services	active
+ct_besb	SPED:000830	Bureau of Education and Services for the Blind	active
+ct_brs	SPED:000831	Bureau of Rehabilitation Services	active
+ct_dds	SPED:000832	Department of Developmental Services	active
+ct_dmhas	SPED:000833	Department of Mental Health and Addiction Services	active
+ct_dcf	SPED:000834	Department of Children and Families	active
+ct_boe	SPED:000835	Board of education	active
+ct_unified	SPED:000836	Unified school district	active
+ct_tech_hs	SPED:000837	Technical high school system	active
+ct_private_sped	SPED:000838	Private special education program	active
+ct_child_req_sped	SPED:000839	Child requiring special education	active
+ct_ela	SPED:000840	Extraordinary learning ability	active
+ct_otca	SPED:000841	Outstanding talent in the creative arts	active
+ct_trial_placement	SPED:000842	Trial placement for diagnostic purposes	active
+ct_medically_complex	SPED:000843	Medically complex	active
+ct_srbi	SPED:000844	Scientific Research-Based Intervention	retired
+ct_ctaa	SPED:000845	Connecticut Alternate Assessment	active
+ct_ctas	SPED:000846	Connecticut Alternate Science	active
+ct_ccs	SPED:000847	Connecticut Core Standards	active
+aba	SPED:000848	Applied behavior analysis	active
+ct_advisory_opinion	SPED:000849	Advisory opinion	active
+oh_dew	SPED:000850	Ohio Department of Education and Workforce	active
+oh_oec	SPED:000851	Office for Exceptional Children	active
+oh_sst	SPED:000852	State Support Team	active
+oh_ocecd	SPED:000853	Ohio Coalition for the Education of Children with Disabilities	active
+oh_county_bdd	SPED:000854	County board of developmental disabilities	active
+oh_odys	SPED:000855	Ohio Department of Youth Services	active
+oh_jvsd	SPED:000856	Joint vocational school district	active
+oh_district_of_service	SPED:000857	School district of service	active
+charter_school	SPED:000858	Charter school	active
+oh_chartered_nonpublic	SPED:000859	Chartered nonpublic school	active
+oh_state_res_school	SPED:000860	State residential school	retired
+oh_osd	SPED:000861	Ohio School for the Deaf	active
+oh_ossb	SPED:000862	Ohio State School for the Blind	active
+oh_ohi_major	SPED:000863	Other health impairment - major	active
+oh_ohi_minor	SPED:000864	Other health impairment - minor	active
+oh_intervention_specialist	SPED:000865	Intervention specialist	active
+oh_ttw	SPED:000866	Transition to Work endorsement	active
+oh_admin_review	SPED:000867	Administrative review	active
+oh_early_complaint	SPED:000868	Early complaint resolution	active
+oh_autism_scholarship	SPED:000869	Autism Scholarship Program	active
+oh_jon_peterson	SPED:000870	Jon Peterson Special Needs Scholarship Program	active
+nc_dpi	SPED:000871	North Carolina Department of Public Instruction	active
+nc_ecd	SPED:000872	Exceptional Children Division	active
+nc_ecac	SPED:000873	Exceptional Children's Assistance Center	active
+nc_psu	SPED:000874	Public school unit	active
+nc_comp_assess	SPED:000875	Comprehensive assessment system	active
+nc_sps	SPED:000876	Systematic problem-solving process	active
+nc_recp	SPED:000877	Regular Early Childhood Program	active
+nc_general_skills	SPED:000878	Special Education General Skills	active
+nc_targeted_skills	SPED:000879	Special Education Targeted Skills	active
+nc_sustained_support	SPED:000880	Special Education Sustained Support	active
+nc_intensive_needs	SPED:000881	Special Education Intensive Needs	active
+nc_ocs	SPED:000882	Occupational Course of Study	active
+hi_doe	SPED:000883	Hawai'i State Department of Education	active
+hi_ossss	SPED:000884	Office of Student Support Services	active
+hi_esb	SPED:000885	Exceptional Support Branch	active
+hi_mcb	SPED:000886	Monitoring and Compliance Branch	active
+hi_cmp	SPED:000887	Complaints Management Program	active
+hi_cas	SPED:000888	Complex Area Superintendent	active
+hi_conciliation	SPED:000889	Conciliation	retired
+hi_ldah	SPED:000890	Leadership in Disabilities & Achievement of Hawaii	active
+hi_drc	SPED:000891	Hawaii Disability Rights Center	active
+hi_spin	SPED:000892	Special Parent Information Network	active
+hi_ccc	SPED:000893	Community Children's Council Office	active
+hi_hfaa	SPED:000894	Hawaii Families as Allies	active
+mtss	SPED:000895	Multi-tiered system of support	active
+in_doe	SPED:000896	Indiana Department of Education	active
+in_dse	SPED:000897	Division of special education	active
+in_oalp	SPED:000898	Office of Administrative Law Proceedings	active
+in_insource	SPED:000899	IN*SOURCE	active
+in_idr	SPED:000900	Indiana Disability Rights	active
+in_isbvi	SPED:000901	Indiana School for the Blind and Visually Impaired	active
+in_isd	SPED:000902	Indiana School for the Deaf	active
+in_school_corp	SPED:000903	School corporation	active
+in_legal_settlement	SPED:000904	Legal settlement	active
+in_sepd	SPED:000905	Special education planning district	active
+in_article7	SPED:000906	Article 7	active
+in_student_legal_age	SPED:000907	Student of legal age	active
+in_transition_iep	SPED:000908	Transition IEP	active
+in_teacher_record	SPED:000909	Teacher of record	active
+in_teacher_service	SPED:000910	Teacher of service	active
+in_consult_collab	SPED:000911	Consultation and collaboration	active
+job_coach	SPED:000912	Job coach	active
+systematic_obs	SPED:000913	Systematic observation	active
+in_choice_scholarship	SPED:000914	Choice scholarship	active
+in_csep	SPED:000915	Choice special education plan	active
+az_doe	SPED:000916	Arizona Department of Education	active
+az_ess	SPED:000917	Exceptional Student Services	active
+az_dru	SPED:000918	Dispute Resolution Unit	active
+az_encircle	SPED:000919	Encircle Families	active
+az_dra	SPED:000920	Disability Rights Arizona	active
+az_azeip	SPED:000921	Arizona Early Intervention Program	active
+az_ahcccs	SPED:000922	Arizona Health Care Cost Containment System	active
+az_accom_school	SPED:000923	Accommodation school	active
+az_boundaries	SPED:000924	Boundaries of responsibility	active
+az_private_sped_school	SPED:000925	Private special education school	active
+az_mdssi	SPED:000926	Multiple disabilities with severe sensory impairment	active
+az_psd	SPED:000927	Preschool severe delay	active
+az_grad_date	SPED:000928	Estimated date of graduation	active
+az_azsci	SPED:000929	Arizona Science Test	active
+in_scols	SPED:000930	School corporation of legal settlement	active
+in_first_steps	SPED:000931	First Steps	active
+in_istar	SPED:000932	Indiana Standards Tool for Alternative Reporting	active
+md_msde	SPED:000933	Maryland State Department of Education	active
+md_deises	SPED:000934	Division of Early Intervention and Special Education Services	active
+md_mitp	SPED:000935	Maryland Infants and Toddlers Program	active
+md_extended_ifsp	SPED:000936	Extended IFSP	active
+md_fss_coord	SPED:000937	Local Family Support Services Coordinator	active
+md_seed	SPED:000938	SEED School	active
+md_msb	SPED:000939	Maryland School for the Blind	active
+md_msd	SPED:000940	Maryland School for the Deaf	active
+md_mdh	SPED:000941	Maryland Department of Health	active
+md_djs	SPED:000942	Department of Juvenile Services	active
+md_labor	SPED:000943	Maryland Department of Labor	active
+md_mam	SPED:000944	Maryland Accommodations Manual	active
+md_moiep	SPED:000945	Maryland Online IEP	active
+md_lcp	SPED:000946	Learning Continuity Plan	active
+md_emergency	SPED:000947	Emergency conditions	active
+md_hs_diploma	SPED:000948	Maryland High School Diploma	active
+ak_deed	SPED:000949	Alaska Department of Education and Early Development	active
+ak_tls	SPED:000950	Division of Teaching and Learning Support	active
+ak_abdhh	SPED:000951	Advisory Board for the Deaf and Hard of Hearing	active
+ak_dfcs	SPED:000952	Department of Family and Community Services	active
+ak_ilp	SPED:000953	Alaska Infant Learning Program	active
+ak_sems	SPED:000954	Alaska Special Education Mediation Services	active
+ak_sesa	SPED:000955	Special Education Service Agency	active
+ak_ssg	SPED:000956	Stone Soup Group	active
+ak_dlc	SPED:000957	Disability Law Center of Alaska	active
+ak_links	SPED:000958	LINKS Mat-Su Parent Resource Center	active
+ak_admin_complaint_form	SPED:000959	Notice of Administrative Complaint	active
+ak_dp_request_form	SPED:000960	Notice of Request for Due Process Hearing	active
+ak_aa_checklist	SPED:000961	Alternate Assessment Participation Checklist	active
+fasd	SPED:000962	Fetal alcohol spectrum disorder	active
+unilateral_pl	SPED:000963	Unilateral placement	active
+pullout	SPED:000964	Pull-out	active
+gross_motor	SPED:000965	Gross motor	active
+iq	SPED:000966	Intelligence quotient	active
+norm_ref	SPED:000967	Norm-referenced test	active
+al_alsde	SPED:000968	Alabama State Department of Education	active
+al_sboe	SPED:000969	Alabama State Board of Education	active
+al_adrs	SPED:000970	Alabama Department of Rehabilitation Services	active
+al_aeis	SPED:000971	Alabama's Early Intervention System	active
+al_crs	SPED:000972	Children's Rehabilitation Services	active
+al_medicaid	SPED:000973	Alabama State Medicaid Agency	active
+al_adap	SPED:000974	Alabama Disabilities Advocacy Program	active
+al_apec	SPED:000975	Alabama Parent Education Center	active
+al_ric	SPED:000976	Regional Inservice Center	active
+al_sets	SPED:000977	Special Education Tracking System	active
+al_invite	SPED:000978	Notice and Invitation to a Meeting/Consent for Agency Participation	active
+al_nci	SPED:000979	Notice and Consent for Initial Evaluation	active
+al_reeval_notice	SPED:000980	Notice of IEP Team's Decision Regarding Reevaluation	active
+al_elig_notice	SPED:000981	Notice and Eligibility Decision Regarding Special Education Services	active
+al_consent_svc	SPED:000982	Notice and Consent for the Provision of Special Education Services	active
+al_sif	SPED:000983	Special Instructional Factors	active
+al_acc_checklist	SPED:000984	IEP Accommodations Checklist	active
+al_persons_resp	SPED:000985	Persons Responsible for IEP Implementation	active
+al_ecec	SPED:000986	Environmental, Cultural, and/or Economic Concerns	active
+al_ffi	SPED:000987	Family Focus Interview	active
+al_neo	SPED:000988	Natural Environment Observation	active
+al_elpp	SPED:000989	Early Learning Progress Profile	active
+al_predicted	SPED:000990	Predicted achievement model	active
+al_aaa	SPED:000991	Alabama Alternate Assessment	active
+al_aaa_pdd	SPED:000992	Alabama Alternate Assessment Program Participation Decision Documentation	active
+al_ext_std	SPED:000993	Alabama Extended Standards	active
+al_aas	SPED:000994	Alabama Alternate Achievement Standards	active
+al_dev_std	SPED:000995	Alabama Developmental Standards for Preschool Children	active
+al_trans_std	SPED:000996	Alabama Transition Standards	active
+al_cos	SPED:000997	Alabama Course of Study	active
+al_ccrs	SPED:000998	College and Career Ready Standards	active
+al_ahsd	SPED:000999	Alabama High School Diploma	active
+al_gen_path	SPED:001000	General Education Pathway	active
+al_ess_path	SPED:001001	Essentials Pathway	active
+al_aas_path	SPED:001002	Alternate Achievement Standards Pathway	active
+al_aod	SPED:001003	Alabama Occupational Diploma	active
+al_ahsge	SPED:001004	Alabama High School Graduation Exam	active
+al_post_survey	SPED:001005	Alabama Post-School Outcomes Survey	active
+al_grst	SPED:001006	Gifted Referrals Screening Team	active
+al_edt	SPED:001007	Eligibility Determination Team	active
+al_matrix	SPED:001008	Matrix of Multiple Criteria	active
+al_gep	SPED:001009	Gifted Education Plan	active
+psychometrist	SPED:001010	Psychometrist	active
+indiv_intel	SPED:001011	Individual intellectual evaluation	active
+ceis	SPED:001012	Coordinated early intervening services	active
+cceis	SPED:001013	Comprehensive coordinated early intervening services	active
+osep	SPED:001014	Office of Special Education Programs	active
+bcba	SPED:001015	Board-Certified Behavior Analyst	active
+sbmh	SPED:001016	School based mental health	active
+vr_services	SPED:001017	Vocational rehabilitation services	active
+bus_susp	SPED:001018	Bus suspension	active
+iss	SPED:001019	In-school suspension	active
+carnegie	SPED:001020	Carnegie unit	active
+head_start	SPED:001021	Head Start	active
+sb_iep	SPED:001022	Standards-based IEP	active
+ar_ade	SPED:001023	Arkansas Department of Education	active
+ar_dese	SPED:001024	Arkansas Division of Elementary and Secondary Education	active
+ar_seu	SPED:001025	Special Education Unit of the Division of Elementary and Secondary Education	active
+ar_psych_board	SPED:001026	Arkansas Psychology Board	active
+ar_counsel_board	SPED:001027	Arkansas Board of Examiners in Counseling	active
+ar_slp_board	SPED:001028	Board of Examiners in Speech-Language Pathology and Audiology	active
+ar_esvi	SPED:001029	Educational Services for the Visually Impaired	active
+ar_ideas	SPED:001030	ArkansasIDEAS	active
+ar_ats	SPED:001031	Arkansas Transition Services	active
+ar_ida_office	SPED:001032	IDEA Data and Research Office	active
+ar_abc	SPED:001033	Arkansas Better Chance	active
+ar_combo_rs	SPED:001034	Combination resource services/special class services	active
+ar_combo_sr	SPED:001035	Combination special class services/resource services	active
+ar_integrated	SPED:001036	Integrated classroom	active
+ar_day_treatment	SPED:001037	School-based day treatment services	active
+ar_instr_day	SPED:001038	Instructional day	active
+ar_edu_examiner	SPED:001039	Educational examiner	active
+ar_school_psych_spec	SPED:001040	School psychology specialist	active
+ar_psych_examiner	SPED:001041	Psychological examiner	active
+ar_student_evaluator	SPED:001042	Student evaluator	active
+edu_interpreter	SPED:001043	Educational interpreter	active
+dbps	SPED:001044	Data-based problem solving	active
+core_acad	SPED:001045	Core academic subjects	active
+sbr	SPED:001046	Scientifically based research	active
+record_access	SPED:001047	Record of access	active
+child_outcomes	SPED:001048	Early Childhood Outcomes	active
+act_aspire	SPED:001049	ACT Aspire	active
+nsttac	SPED:001050	National Secondary Transition Technical Assistance Center	active
+i13_checklist	SPED:001051	Indicator 13 Checklist	active
+ar_notice_conf	SPED:001052	Notice of Conference	active
+ar_referral_conf	SPED:001053	Referral conference	active
+ar_epc	SPED:001054	Evaluation/Programming Conference	active
+ar_sld_form	SPED:001055	Specific Learning Disability Eligibility Determination form	active
+ar_temp_iep	SPED:001056	Temporary IEP	active
+ar_sched_services	SPED:001057	Schedule of Services	active
+ar_seecp	SPED:001058	Special Education Early Childhood Program	active
+ar_ecse_k	SPED:001059	Early Childhood Special Education to Kindergarten Transition Process	active
+ar_pao	SPED:001060	Public Agency Official	active
+ar_aas	SPED:001061	Arkansas Academic Standards	active
+ar_elp_std	SPED:001062	Arkansas English Language Proficiency standards	active
+ar_cdels	SPED:001063	Arkansas Child Development and Early Learning Standards	active
+ar_rti	SPED:001064	RTI Arkansas	active
+ar_dys_guide	SPED:001065	Dyslexia Resource Guide	active
+ar_sld_tam	SPED:001066	Arkansas Technical Assistance Manual: Identification of Children with Specific Learning Disabilities	active
+ar_aa_manual	SPED:001067	Arkansas Alternate Assessment Participation Manual	active
+ar_alt_pathway	SPED:001068	Alternate Pathway to Graduation	active
+child_count	SPED:001069	Child Count	active
+in_esa	SPED:001070	Indiana education scholarship account	active
+in_esa_plan	SPED:001071	Education scholarship account education service plan	active
+in_ichamp	SPED:001072	Indiana Complaint, Hearing, and Mediation Process	active
+expedited_eval	SPED:001073	Expedited evaluation	active
+print_disability	SPED:001074	Student with a print disability	active
+virtual_instr	SPED:001075	Virtual instruction	active
+coms	SPED:001076	Certified Orientation and Mobility Specialist	active
+statewide_assess	SPED:001077	Statewide assessment	active
+az_asdb	SPED:001078	Arizona Schools for the Deaf and the Blind	active
+az_inst_voucher	SPED:001079	Institutional voucher	active
+az_hsd	SPED:001080	Home school district	active
+az_spa	SPED:001081	State Placing Agency	active
+co_cde	SPED:001082	Colorado Department of Education	active
+co_essu	SPED:001083	Exceptional Student Services Unit	active
+co_board	SPED:001084	Colorado State Board of Education	active
+co_ofs	SPED:001085	Office of Facility Schools	active
+co_ecea	SPED:001086	Exceptional Children's Educational Act	active
+co_cdec	SPED:001087	Department of Early Childhood	active
+co_lco	SPED:001088	Local Coordinating Organization	active
+co_upk	SPED:001089	Universal Preschool Program	active
+co_au	SPED:001090	Administrative unit	active
+co_aur	SPED:001091	Administrative unit of residence	active
+co_aua	SPED:001092	Administrative unit of attendance	active
+co_alt_au	SPED:001093	Alternative administrative unit	active
+co_multi_au	SPED:001094	Multi-district administrative unit	active
+co_boces	SPED:001095	Board of Cooperative Services	active
+co_csi	SPED:001096	State Charter School Institute	active
+co_charter_network	SPED:001097	Charter school network	active
+co_charter_collab	SPED:001098	Charter school collaborative	active
+co_approved_facility	SPED:001099	Approved facility school	active
+co_online_school	SPED:001100	Multidistrict online school	active
+co_sop_csdb	SPED:001101	Colorado School for the Deaf and the Blind	active
+co_sco	SPED:001102	State Complaints Officer	active
+co_oac	SPED:001103	Office of Administrative Courts	active
+co_dpar	SPED:001104	Dispute Prevention and Assisted Resolution Supervisor	active
+co_ppra	SPED:001105	Protection of Persons from Restraint Act	active
+co_tjp	SPED:001106	Transformative Justice Project	active
+co_peak	SPED:001107	PEAK Parent Center	active
+co_show_tell	SPED:001108	Show and Tell Corporation	active
+co_thrive	SPED:001109	THRIVE Center	active
+co_dlc	SPED:001110	Disability Law Colorado	active
+co_arc	SPED:001111	The Arc of Colorado	active
+ocr	SPED:001112	Office for Civil Rights	active
+s504_coord	SPED:001113	504 Coordinator	active
+counsel_youth	SPED:001114	Counsel for Youth	active
+co_comm_plan	SPED:001115	Communication Plan	active
+co_lmp	SPED:001116	Learning Media Plan	active
+co_literacy_mode	SPED:001117	Literacy mode	active
+co_abbrev_day	SPED:001118	Abbreviated school day	active
+co_abbrev_sched	SPED:001119	Abbreviated school day schedule	active
+co_child_find_coord	SPED:001120	Child find coordinator	active
+co_building_referral	SPED:001121	Building level referral	active
+co_nonsig_change	SPED:001122	Nonsignificant change in program/services	active
+co_sig_change	SPED:001123	Significant change in placement	active
+co_comp_plan	SPED:001124	Comprehensive Plan	active
+co_seta	SPED:001125	Special Education Temporary Authorization	active
+co_eipa	SPED:001126	Educational Interpreter Performance Assessment	active
+co_state_iep	SPED:001127	State Recommended IEP	active
+co_service_delivery	SPED:001128	Service Delivery Statement	active
+co_rec_placement	SPED:001129	Recommended Placement in the Least Restrictive Environment	active
+co_special_factors	SPED:001130	Consideration of Special Factors	active
+co_ps_plan	SPED:001131	Postsecondary Transition Plan	active
+co_invite_agencies	SPED:001132	Consent to Invite Agencies Related to Transition	active
+notice_meeting	SPED:001133	Notice of Meeting	active
+co_eeo	SPED:001134	Extended Evidence Outcomes	active
+co_cas	SPED:001135	Colorado Academic Standards	active
+co_eic	SPED:001136	Early Intervention Colorado	active
+co_eldg	SPED:001137	Early Learning and Development Guidelines	active
+co_insurance_model	SPED:001138	Insurance model	active
+co_contracted_model	SPED:001139	Contracted model	active
+co_combo_model	SPED:001140	Combination/modified insurance model	active
+co_alp	SPED:001141	Advanced Learning Plan	active
+co_early_access	SPED:001142	Early Access	active
+de_doe	SPED:001143	Delaware Department of Education	active
+de_regs	SPED:001144	14 DE Admin. Code 922 to 929	active
+de_pic	SPED:001145	Parent Information Center of Delaware	active
+de_dsd	SPED:001146	Delaware School for the Deaf	active
+de_dap	SPED:001147	Delaware Autism Program	active
+de_dscyf	SPED:001148	Department of Services for Children, Youth and Their Families	active
+de_dhss	SPED:001149	Department of Health and Social Services	active
+de_prison_ed	SPED:001150	Prison Education Program	active
+de_relative_caregiver	SPED:001151	Relative Caregiver's School Authorization	active
+de_secretary	SPED:001152	Secretary of Education	active
+de_ed_class	SPED:001153	Educational classification	active
+ansd	SPED:001154	Auditory Neuropathy Spectrum Disorder	active
+abr	SPED:001155	Auditory Brainstem Response	active
+cortical_vi	SPED:001156	Cortical vision impairment	active
+de_emp_first	SPED:001157	Employment First Policy	active
+de_12month	SPED:001158	Twelve-month program	active
+de_daas	SPED:001159	Diploma of Alternate Achievement Standards	active
+de_ecr	SPED:001160	Exceptional Children Resources	active
+de_sparc	SPED:001161	Special Education Partnership for the Amicable Resolution of Conflict	active
+de_drd	SPED:001162	Disability Rights Delaware	active
+draft_iep	SPED:001163	Draft IEP	active
+de_hearing_panel	SPED:001164	Hearing panel	active
+de_med_form	SPED:001165	Request for Special Education Mediation Form	active
+de_dp_form	SPED:001166	Due Process Complaint Form and Request for Due Process Hearing	active
+de_sc_form	SPED:001167	Special Education State Complaint Form	active
+de_cdw	SPED:001168	Child Development Watch	active
+educ_diag	SPED:001169	Educational Diagnostician	active
+de_dcas	SPED:001170	Delaware Comprehensive Assessment System	active
+de_dstp	SPED:001171	DE Student Testing Program	active
+de_dati	SPED:001172	Delaware Assistive Technology Initiative	active
+de_ssp	SPED:001173	Student Success Plan	active
+de_dvr	SPED:001174	Division of Vocational Rehabilitation	active
+de_ddds	SPED:001175	Developmental Disabilities Services	active
+case_by_case	SPED:001176	Case-by-case determination	active
+oss	SPED:001177	Out-of-school suspension	active
+de_gacec	SPED:001178	Governor's Advisory Council for Exceptional Citizens	active
+cprc	SPED:001179	Community Parent Resource Center	active
+ia_doe	SPED:001180	Iowa Department of Education	active
+ia_dlr	SPED:001181	Division of Learning and Results	active
+ia_blss	SPED:001182	Bureau of Learner Strategies and Supports	active
+ia_aea	SPED:001183	Area education agency	active
+ia_boee	SPED:001184	Board of Educational Examiners	active
+ia_iac	SPED:001185	Iowa Administrative Code	active
+ia_rules	SPED:001186	Iowa Administrative Rules of Special Education	active
+ia_ask	SPED:001187	ASK Resource Center	active
+ia_dri	SPED:001188	Disability Rights Iowa	active
+ia_fep	SPED:001189	Family & Educator Partnership	active
+ia_i3	SPED:001190	Iowa IDEA Information	active
+ia_ivrs	SPED:001191	Iowa Vocational Rehabilitation Services	active
+ia_tap	SPED:001192	Transition Alliance Program	active
+ia_dhs	SPED:001193	Department of Human Services	active
+ia_hhs	SPED:001194	Iowa Department of Health and Human Services	active
+ia_idph	SPED:001195	Iowa Department of Public Health	active
+ia_chsc	SPED:001196	Child Health Specialty Clinics	active
+ia_dcch	SPED:001197	Division of Child and Community Health	active
+ia_isd	SPED:001198	Iowa School for the Deaf	active
+ia_early_access	SPED:001199	Iowa Early ACCESS	active
+ia_eci	SPED:001200	Early Childhood Iowa	active
+ia_swvpp	SPED:001201	Statewide Voluntary Preschool Program	active
+ia_fsmp	SPED:001202	Family support mentoring program	active
+ia_eligible_individual	SPED:001203	Eligible individual	active
+ia_dioe	SPED:001204	Disability in obtaining an education	active
+ia_spm	SPED:001205	Systematic progress monitoring	active
+ia_trial_placement	SPED:001206	Trial placement	active
+ia_classroom_clearance	SPED:001207	Classroom clearance	active
+ia_accredited_np	SPED:001208	Accredited nonpublic school	active
+ia_instr_svc	SPED:001209	Special education instructional services	active
+ia_delivery_system	SPED:001210	Delivery system for instructional services	active
+ia_support_svc	SPED:001211	Special education support services	active
+multicat	SPED:001212	Multicategorical	active
+ia_asst_director	SPED:001213	Assistant director of special education	active
+ia_sped_consultant	SPED:001214	Special education consultant	active
+ia_ed_strategist	SPED:001215	Educational strategist	active
+ia_media_specialist	SPED:001216	Special education media specialist	active
+ia_sped_nurse	SPED:001217	Special education nurse	active
+ia_wec	SPED:001218	Work experience coordinator	active
+ia_psych_asst	SPED:001219	Psychology assistant	active
+ia_vision_asst	SPED:001220	Vision assistant	active
+audiologist	SPED:001221	Audiologist	active
+occ_therapist	SPED:001222	Occupational therapist	active
+phys_therapist	SPED:001223	Physical therapist	active
+speech_path	SPED:001224	Speech-language pathologist	active
+audiometrist	SPED:001225	Audiometrist	active
+ot_assistant	SPED:001226	Occupational therapy assistant	active
+pt_assistant	SPED:001227	Physical therapist assistant	active
+slp_assistant	SPED:001228	Speech-language pathology assistant	active
+ehdi	SPED:001229	Early hearing detection and intervention program	active
+cil	SPED:001230	Center for independent living	active
+aac	SPED:001231	Augmentative and alternative communication	active
+cyshcn	SPED:001232	Children and youth with special health care needs	active
+ihp	SPED:001233	Individual health plan	active
+dyscalculia	SPED:001234	Dyscalculia	active
+ia_med_form	SPED:001235	Model Form: Request for Mediation	active
+ia_dp_form	SPED:001236	Model Form: Due Process Complaint (Request for Due Process Hearing)	active
+ia_sc_form	SPED:001237	Model Form: IDEA State Complaint	active
+wy_wde	SPED:001238	Wyoming Department of Education	active
+wy_sepd	SPED:001239	Special Education Programs Division	active
+wy_uplift	SPED:001240	UPLIFT	active
+wy_ddd	SPED:001241	Developmental Disabilities Division	active
+wy_ieu	SPED:001242	Intermediate educational unit	active
+wy_dfs	SPED:001243	Department of Family Services	active
+wy_swdf	SPED:001244	Wyoming Severe Discrepancy Formula	active
+wy_dev_preschool	SPED:001245	Developmental preschool center	active
+interdistrict_placement	SPED:001246	Inter-district placement	active
+court_placement	SPED:001247	Court-ordered placement	active
+wv_wvde	SPED:001248	West Virginia Department of Education	active
+wv_wvbe	SPED:001249	West Virginia Board of Education	active
+wv_dhhr	SPED:001250	West Virginia Department of Health and Human Resources	active
+wv_birth_to_three	SPED:001251	WV Birth to Three	active
+wv_osp	SPED:001252	West Virginia Department of Education, Office of Special Education	active
+wv_dfps	SPED:001253	Division of Federal Programs & Support	active
+wv_advisory_council	SPED:001254	West Virginia Advisory Council for the Education of Exceptional Children	active
+wv_pti	SPED:001255	West Virginia Parent Training and Information	active
+wv_perc	SPED:001256	Parent/Educator Resource Center	active
+wv_drs	SPED:001257	West Virginia Division of Rehabilitation Services	active
+wv_wvsdb	SPED:001258	West Virginia Schools for the Deaf and the Blind	active
+wv_sdt	SPED:001259	West Virginia Schools of Diversion and Transition	active
+wv_registry	SPED:001260	West Virginia Registry of Interpreters	active
+wv_policy_2419	SPED:001261	Policy 2419	active
+wv_policy_4350	SPED:001262	Policy 4350	active
+wv_policy_4373	SPED:001263	Policy 4373	active
+wv_wveis	SPED:001264	West Virginia Education Information System	active
+wv_online_iep	SPED:001265	WVDE Online IEP	active
+wv_taaes	SPED:001266	Temporary Assessment Accommodations Entry System	active
+wv_rcsp	SPED:001267	West Virginia Results and Compliance System Procedures	active
+wv_wvtss	SPED:001268	West Virginia Tiered System of Support	active
+wv_wvmap	SPED:001269	West Virginia Measures of Academic Progress	active
+wv_wvgsa	SPED:001270	West Virginia General Summative Assessment	active
+wv_alt_summative	SPED:001271	West Virginia Alternate Summative Assessment	active
+wv_participation_guidelines	SPED:001272	Participation Guidelines for West Virginia State Assessments	active
+wv_ccrs	SPED:001273	West Virginia College- and Career-Readiness Standards	active
+wv_aaas	SPED:001274	West Virginia Alternate Academic Achievement Standards	active
+wv_prek	SPED:001275	West Virginia Pre-K	active
+wv_b8_survey	SPED:001276	IDEA Indicator B-8 Parent Involvement Survey	active
+wv_ec_report	SPED:001277	Eligibility Committee Report	active
+wv_sld_team_report	SPED:001278	SLD Team Report	active
+wv_reeval_determination	SPED:001279	Reevaluation Determination form	active
+wv_eval_request_notice	SPED:001280	Notice of Individual Evaluation/Reevaluation Request	active
+wv_three_prong	SPED:001281	Three-prong test of eligibility	active
+wv_primary_exceptionality	SPED:001282	Primary exceptionality	active
+wv_psych_adjustment	SPED:001283	Psychological adjustment disorder	active
+wv_underachievement	SPED:001284	Underachievement	active
+wv_hurgp	SPED:001285	Historically under-represented gifted population	active
+wv_fle	SPED:001286	Functional Listening Evaluation	active
+wv_severity_levels	SPED:001287	Severity Levels for Adaptive Functioning	active
+wv_fcas	SPED:001288	Functional Communication Assessment Summary	active
+wv_spas	SPED:001289	Speech Production Assessment Summary	active
+wv_vas	SPED:001290	Voice Assessment Summary	active
+social_comm_dis	SPED:001291	Social communication disorder	active
+cluttering	SPED:001292	Cluttering	active
+cognitive_referencing	SPED:001293	Cognitive referencing	active
+language_sample	SPED:001294	Language sample analysis	active
+dynamic_assessment	SPED:001295	Dynamic assessment	active
+pcc	SPED:001296	Percentage of consonants correct	active
+dsm5	SPED:001297	Diagnostic and Statistical Manual of Mental Disorders	active
+wv_geft	SPED:001298	General Education: Full-Time	active
+wv_gept	SPED:001299	General Education: Part-Time	active
+wv_separate_class	SPED:001300	Special Education: Separate Class	active
+wv_out_of_school_env	SPED:001301	Special Education: Out-of-School Environment	active
+wv_correctional	SPED:001302	Special Education: Correctional Facilities	active
+service_provider_location	SPED:001303	Service provider location	active
+wv_see	SPED:001304	Special education environment	active
+wv_shared_models	SPED:001305	Shared instructional models	active
+wv_case_mgmt	SPED:001306	Case management	active
+wv_close_supervision	SPED:001307	Close adult supervision	active
+wv_pep	SPED:001308	Personalized Education Plan	active
+wv_targeted_iep	SPED:001309	Targeted IEP review	active
+wv_in_lieu	SPED:001310	IEP Team Member In-Lieu-of Attendance Report	active
+wv_darf	SPED:001311	Disciplinary Action Review Form	active
+expulsion	SPED:001312	Expulsion	active
+wv_early_resolution	SPED:001313	Early resolution	active
+wv_ver_early_resolution	SPED:001314	Verification of Early Resolution	active
+meeting_encourage_mediation	SPED:001315	Meeting to encourage mediation	active
+agreement_review_period	SPED:001316	Agreement review period	active
+attorneys_fees	SPED:001317	Attorneys' fees	active
+civil_action	SPED:001318	Civil action	active
+destruction_pii	SPED:001319	Destruction of information	active
+public_benefits_consent	SPED:001320	Parental consent to access public benefits or insurance	active
+general_supervision	SPED:001321	General supervision	active
+spp	SPED:001322	State Performance Plan	active
+apr	SPED:001323	Annual Performance Report	active
+intervener	SPED:001324	Intervener	active
+wv_esli	SPED:001325	Educational Sign Language Interpreter	active
+wv_sign_support	SPED:001326	Sign Support Specialist	active
+wv_eccat	SPED:001327	Early Childhood Classroom Assistant Teacher	active
+aprn	SPED:001328	Advanced practice registered nurse	active
+physician_assistant	SPED:001329	Physician assistant	active
+pre_ets	SPED:001330	Pre-employment transition services	active
+supported_employment	SPED:001331	Supported employment	active
+hats	SPED:001332	Hearing assistive technology system	active
+cic	SPED:001333	Clean intermittent catheterization	active
+nm_ped	SPED:001334	New Mexico Public Education Department	active
+nm_sed	SPED:001335	PED Special Education Division	active
+nm_cyfd	SPED:001336	Children, Youth and Families Department	active
+nm_nmac	SPED:001337	New Mexico Administrative Code	active
+nm_6312	SPED:001338	6.31.2 NMAC	active
+nm_dhh_bor	SPED:001339	NM Deaf/Hard of Hearing Education Bill of Rights	active
+nm_stars	SPED:001340	STARS	active
+nm_dvr	SPED:001341	New Mexico Division of Vocational Rehabilitation	active
+nm_pro	SPED:001342	Parents Reaching Out	active
+nm_epics	SPED:001343	Education for Parents of Indian Children with Special Needs	active
+nm_families_asap	SPED:001344	Families ASAP	active
+nm_drnm	SPED:001345	Disability Rights New Mexico	active
+nm_nadlc	SPED:001346	Native American Disability Law Center	active
+educational_decision_maker	SPED:001347	Educational decision-maker	active
+nm_ed_jurisdiction	SPED:001348	Educational jurisdiction	active
+nm_ssep	SPED:001349	State-supported educational program	active
+nm_nmsd	SPED:001350	New Mexico School for the Deaf	active
+nm_nmsbvi	SPED:001351	New Mexico School for the Blind and Visually Impaired	active
+dual_discrepancy	SPED:001352	Dual discrepancy	active
+nm_team	SPED:001353	New Mexico Technical Evaluation and Assessment Manual	active
+nm_sfe	SPED:001354	New Mexico Standards for Excellence	active
+nm_eps	SPED:001355	Expanded performance standards	active
+nm_student_profile	SPED:001356	Student profile	active
+nm_level_service	SPED:001357	Level of service	active
+nm_continuing_iep	SPED:001358	Continuing or transition IEP	active
+nm_comm_considerations	SPED:001359	Addendum for Students who are Deaf or Hard of Hearing	active
+nm_esy_addendum	SPED:001360	Addendum for Determining Eligibility for Extended School Year Services	active
+nm_nmaa	SPED:001361	New Mexico Alternate Assessment	active
+nm_aa_addendum	SPED:001362	Addendum for Determining Eligibility for the New Mexico Alternate Assessment	active
+nm_prq	SPED:001363	Parent Report Questionnaire	active
+nm_consent_form	SPED:001364	Parent Consent Form for Educational Evaluation	active
+nm_pwn_meeting	SPED:001365	Prior Written Notice of IEP Meeting	active
+nm_elig_form	SPED:001366	Determination of Eligibility for Special Education Services	active
+nm_sld_form	SPED:001367	Determining the Existence of a Specific Learning Disability	active
+nm_student_bor	SPED:001368	Student Bill of Rights	active
+nm_lifespan	SPED:001369	Life Span Transition Planning	active
+nm_nsp	SPED:001370	Next-Step Plan	active
+nm_diploma	SPED:001371	New Mexico Diploma of Excellence	active
+nm_std_pos	SPED:001372	Standard program of study	active
+nm_ability_pos	SPED:001373	Ability program of study	active
+nm_modified_pos	SPED:001374	Modified program of study	active
+nm_career_pos	SPED:001375	Career Readiness Alternative Graduation Option	active
+nm_cct	SPED:001376	Conditional certificate of transition	active
+nm_doc	SPED:001377	Demonstration of competency	active
+nm_nmge	SPED:001378	New Mexico Graduation Exam	active
+nm_sba	SPED:001379	Standards-Based Assessment	active
+nm_asr	SPED:001380	New Mexico Assessment of Science Readiness	active
+placeholder_phonological_awareness	SPED:900001	Phonological awareness (placeholder; now attested by the Texas Dyslexia Handbook)	retired
+exec_fn	SPED:900002	Executive functioning	active
+wisc5	SPED:900003	Wechsler Intelligence Scale for Children, Fifth Edition	active
+wj4ach	SPED:900004	Woodcock-Johnson IV Tests of Achievement	active
+ctopp2	SPED:900005	Comprehensive Test of Phonological Processing, Second Edition	active
+rsn	SPED:900006	Rapid Symbol Naming	active
+brief2	SPED:900007	Behavior Rating Inventory of Executive Function, Second Edition	active
+vineland3	SPED:900008	Vineland Adaptive Behavior Scales, Third Edition	active
+kabc2	SPED:900009	Kaufman Assessment Battery for Children, Second Edition	active
+std_score	SPED:900010	Standard score	active
+pct_rank	SPED:900011	Percentile rank	active
+scaled	SPED:900012	Scaled score	active
+placeholder_extended_time	SPED:900013	Extended time (placeholder; now attested by the Texas Dyslexia Handbook)	retired
+pref_seat	SPED:900014	Preferential seating	active
+ortongill	SPED:900015	Orton-Gillingham approach	active

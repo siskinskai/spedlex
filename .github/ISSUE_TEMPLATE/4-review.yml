@@ -1,0 +1,25 @@
+name: Review records
+description: Confirm or reject terms without editing files.
+labels: ["review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reviewing. For each record, check that the term is used this way and that the citation supports it. A maintainer will copy your decisions into `sources/reviews.tsv`.
+  - type: input
+    id: background
+    attributes:
+      label: Your special-education background
+      placeholder: "e.g. school psychologist, 8 years, Texas"
+    validations:
+      required: true
+  - type: textarea
+    id: decisions
+    attributes:
+      label: Decisions
+      description: One per line, as concept ID, accept or reject, and a note (required for reject).
+      placeholder: |
+        SPED:000102 accept matches 300.320(a)(1)
+        SPED:000677 reject term not found on the cited page
+    validations:
+      required: true

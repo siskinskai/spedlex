@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "spedlex"
+version = "0.45.0"
+description = "An open, cited vocabulary of U.S. special-education terms that lets de-identification tools protect children's privacy without destroying meaning."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT (code); CC-BY-4.0 (data)" }
+authors = [{ name = "SPEDLex contributors" }]
+keywords = ["special education", "IEP", "IDEA", "de-identification", "PII", "safelist", "terminology"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Text Processing :: Linguistic",
+  "Intended Audience :: Education",
+  "Intended Audience :: Science/Research",
+]
+dependencies = []
+
+[project.optional-dependencies]
+build = ["jsonschema>=4.18"]
+dev = ["jsonschema>=4.18", "pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/SiskinSkai/spedlex"
+Explorer = "https://SiskinSkai.github.io/spedlex/"
+Issues = "https://github.com/SiskinSkai/spedlex/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["spedlex"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"data/spedlex.jsonl" = "spedlex/_data/spedlex.jsonl"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

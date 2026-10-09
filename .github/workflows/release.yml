@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]" build
+      - run: python -m spedlex.build --check && pytest -q
+      - name: Check the tag matches the package version
+        run: |
+          v=$(python -c "import spedlex; print(spedlex.__version__)")
+          test "v$v" = "${GITHUB_REF_NAME}" || { echo "tag ${GITHUB_REF_NAME} != v$v"; exit 1; }
+      - run: python -m build
+      - name: Bundle the data
+        run: |
+          mkdir -p spedlex-data-${GITHUB_REF_NAME}
+          cp data/* schema/sped_concept.schema.json docs/SOURCES.md docs/DATA_CARD.md LICENSE-DATA spedlex-data-${GITHUB_REF_NAME}/
+          zip -r spedlex-data-${GITHUB_REF_NAME}.zip spedlex-data-${GITHUB_REF_NAME}
+      - uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            dist/*
+            spedlex-data-*.zip

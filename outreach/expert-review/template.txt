@@ -1,0 +1,103 @@
+# SPEDLex expert-review request: the wording of the email.
+#
+# Edit the words freely. Do not rename the {{PLACEHOLDERS}} or the "@@" lines:
+# tools/expert_review.py fills the first and assembles the email from the
+# second. Lines that start with "#" are comments and never reach the email.
+# Details: outreach/expert-review/README.md
+
+@@ subject
+Could you spend {{MINUTES_A}} minutes checking {{STATE}} special-education terms? (reply by email)
+
+@@ opening
+Dear {{GREETING}},
+
+My name is {{SENDER}}. I'm helping with SPEDLex, a free, open-source project, and I'm writing because I need someone who knows {{STATE}} special education from the inside. You can answer everything below by replying to this email. There is nothing to install, no account to create, and no website to learn.
+
+If you only have {{MINUTES_A}} minutes, Part A is the most useful thing you can do. Everything after it is a bonus (about {{MINUTES}} minutes for the whole thing).
+
+@@ what
+WHAT SPEDLEX IS
+
+Parents, teachers and advocates increasingly use AI tools to understand an evaluation report, prepare for an IEP meeting, or draft a letter. But those documents are full of a child's private information. The safe way to use an AI tool is to remove the personal details (names, birth dates, school) from the document first, before anything is pasted in.
+
+The software that does this has a hard time with special education, because it can't tell a child's name from the jargon. A careful tool blacks out "ARD committee" or "present levels" along with the names, and the AI can no longer make sense of the document. A careless tool lets a name slip through.
+
+SPEDLex is the missing piece: an open, cited list of special-education terms (the federal ones, plus each state's own names for things) that these tools can consult. They remove the child's identity and leave the vocabulary alone. Every entry cites the regulation or state document it came from. The list contains no student information of any kind. It currently holds {{N_CONCEPTS}} terms across {{N_STATES}} jurisdictions (states and D.C.), and {{STATE}} is one of them.
+
+If the list is right, a family can use an AI tool to understand their child's paperwork without exposing their child. That is the whole point.
+
+@@ why
+WHY WE NEED YOUR EXPERTISE
+
+The {{STATE}} entries were drafted by an AI model (the project says so openly) reading {{STATE}}'s published documents: {{DOC_LIST}}. Automated tests check the data's structure and safety rules. But no independent expert in {{STATE}} special education has confirmed it yet. Across the whole project, {{N_EXPERT}} of {{N_CONCEPTS}} entries have been confirmed by an expert.
+
+Only a person in the field can tell us:
+  - whether a term is really used in {{STATE}} the way a document suggests,
+  - whether a form or a name is still current (some documents we used are years old),
+  - whether two different names mean the same thing in practice, and
+  - what is missing, because the paperwork families actually see is not always what the published rules describe.
+
+A wrong entry hurts in both directions: a tool may expose something it should have hidden, or black out something a family needed to read.
+
+Of the {{N_STATE}} {{STATE}} entries, {{N_VALIDATED}} are already checked against the text of a regulation, so we aren't asking whether those terms exist (Part B asks only about {{STATE}}'s names for some of them). {{N_CAND}} are "candidates": read from a form or notice, never confirmed by a person. Those are what we need you for.
+
+@@ how
+HOW TO ANSWER
+
+  1. Hit Reply and keep this message in your reply. Just type in the
+     brackets.
+  2. Put Y (yes), N (no) or ? (not sure) inside the brackets, like [Y].
+  3. To add a comment or a correction, start a new line under the item with
+     "Comment:". Corrections are the most valuable thing you can send.
+  4. Skip anything you like. Partial answers are welcome. If you have only
+     a few minutes, do Part A and stop.
+  5. Please don't include anything about a real student: no names, schools,
+     birth dates or text from a real IEP. Tell us about terms, not children.
+
+You don't need to open any document. Answer from your own experience. The documents we used are listed at the end if you want to check one.
+
+WHAT HAPPENS TO YOUR ANSWERS: a maintainer enters them in the project's public review log. Terms you confirm are marked "expert-accepted". Terms you correct are fixed or removed. Crediting you is entirely your choice (see "Credit" below). If you opt in, your name and role are written into the review log, which is part of the open dataset and stays public. We'll also add you to the project's CONTRIBUTORS list on GitHub. If you choose, your affiliation appears there too, but never in the review log. If you'd rather not be named, we record you as anonymous. The data is open (CC BY 4.0).
+
+@@ about
+ABOUT YOU (so we can weigh your answers)
+
+Name:
+Role (teacher, school psychologist, SLP, administrator, advocate, parent, attorney, other):
+Setting and years in {{STATE}} special education:
+Affiliation (organization; shown only if you choose A below):
+
+Credit. Put A, B or C in the brackets:   [   ]
+  A = list me by name, role and affiliation
+  B = list me by name and role only
+  C = keep me anonymous (your answers still count)
+
+@@ part_a
+PART A. KEY QUESTIONS ({{N_A}})
+
+The points where the list most needs a person's judgment.
+
+@@ part_b
+PART B. SAME THING, DIFFERENT NAME? ({{N_B}})
+
+Each line says that the {{STATE}} name on the left is another name for the term on the right. Y = people in {{STATE}} really use it that way. N = they don't, or it means something different (please say what in a comment).
+
+@@ part_c
+PART C. REAL TERM? ({{N_C}})
+
+Each of these appears in a {{STATE}} form or notice. Y = it is a real term in {{STATE}} special-education paperwork and the description is about right. N = it's wrong, obsolete or not used (please say why in a comment).
+
+@@ part_d
+PART D. WHAT ARE WE MISSING? ({{N_D}})
+
+Free text. A few words is fine. Type your answer after "Answer:".
+
+@@ close
+Thank you. You are helping make AI tools safer for the families who rely on them. If a colleague knows {{STATE}} better than you on any of this, please forward this email. They can reply to me directly.
+
+{{SIGNATURE}}
+
+@@ default_d
+Acronyms and abbreviations you see constantly in {{STATE}} paperwork that you would expect on a list like this.
+Places where {{STATE}} says something differently from the national term (a different name for a category, a team, a meeting or a form).
+Anything above that looks wrong, or any term that could be mistaken for a person's name or a place name.
+Anything else: a document we should read, or a person or organization we should ask.

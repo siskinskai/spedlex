@@ -1,0 +1,27 @@
+name: Add a state
+description: Claim a state so two people don't work on the same one.
+labels: ["new state"]
+body:
+  - type: input
+    id: state
+    attributes:
+      label: State
+    validations:
+      required: true
+  - type: textarea
+    id: docs
+    attributes:
+      label: Links to the documents you plan to read
+      description: Safeguards notice, parent or IEP guide, special-education rule, plus any assessment or diploma pages. Please give links and don't attach PDFs.
+  - type: input
+    id: model
+    attributes:
+      label: AI model you plan to use, if any
+      placeholder: "e.g. claude-opus-5-5, gpt-5, none"
+  - type: checkboxes
+    id: ack
+    attributes:
+      label: Before you start
+      options:
+        - label: I've read the "Adding a state" section of CONTRIBUTING.md
+          required: true

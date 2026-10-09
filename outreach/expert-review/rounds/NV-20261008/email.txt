@@ -1,0 +1,334 @@
+Subject: Could you spend 10 minutes checking Nevada special-education terms? (reply by email)
+
+Dear [FIRST NAME],
+
+My name is [YOUR NAME]. I'm helping with SPEDLex, a free, open-source project, and I'm writing because I need someone who knows Nevada special education from the inside. You can answer everything below by replying to this email. There is nothing to install, no account to create, and no website to learn.
+
+If you only have 10 minutes, Part A is the most useful thing you can do. Everything after it is a bonus (about 35 minutes for the whole thing).
+
+==============================================================================
+
+WHAT SPEDLEX IS
+
+Parents, teachers and advocates increasingly use AI tools to understand an evaluation report, prepare for an IEP meeting, or draft a letter. But those documents are full of a child's private information. The safe way to use an AI tool is to remove the personal details (names, birth dates, school) from the document first, before anything is pasted in.
+
+The software that does this has a hard time with special education, because it can't tell a child's name from the jargon. A careful tool blacks out "ARD committee" or "present levels" along with the names, and the AI can no longer make sense of the document. A careless tool lets a name slip through.
+
+SPEDLex is the missing piece: an open, cited list of special-education terms (the federal ones, plus each state's own names for things) that these tools can consult. They remove the child's identity and leave the vocabulary alone. Every entry cites the regulation or state document it came from. The list contains no student information of any kind. It currently holds 1,019 terms across 32 jurisdictions (states and D.C.), and Nevada is one of them.
+
+If the list is right, a family can use an AI tool to understand their child's paperwork without exposing their child. That is the whole point.
+
+==============================================================================
+
+WHY WE NEED YOUR EXPERTISE
+
+The Nevada entries were drafted by an AI model (the project says so openly) reading Nevada's published documents: NDE Special Education Rights of Parents and Students (June 2023); State of Nevada IEP form (July 2018); NDE special education policies page; rule sections cited as "NAC ...". Automated tests check the data's structure and safety rules. But no independent expert in Nevada special education has confirmed it yet. Across the whole project, 0 of 1,019 entries have been confirmed by an expert.
+
+Only a person in the field can tell us:
+  - whether a term is really used in Nevada the way a document suggests,
+  - whether a form or a name is still current (some documents we used are years old),
+  - whether two different names mean the same thing in practice, and
+  - what is missing, because the paperwork families actually see is not always what the published rules describe.
+
+A wrong entry hurts in both directions: a tool may expose something it should have hidden, or black out something a family needed to read.
+
+Of the 87 Nevada entries, 54 are already checked against the text of a regulation, so we aren't asking whether those terms exist (Part B asks only about Nevada's names for some of them). 33 are "candidates": read from a form or notice, never confirmed by a person. Those are what we need you for.
+
+==============================================================================
+
+HOW TO ANSWER
+
+  1. Hit Reply and keep this message in your reply. Just type in the
+     brackets.
+  2. Put Y (yes), N (no) or ? (not sure) inside the brackets, like [Y].
+  3. To add a comment or a correction, start a new line under the item with
+     "Comment:". Corrections are the most valuable thing you can send.
+  4. Skip anything you like. Partial answers are welcome. If you have only
+     a few minutes, do Part A and stop.
+  5. Please don't include anything about a real student: no names, schools,
+     birth dates or text from a real IEP. Tell us about terms, not children.
+
+You don't need to open any document. Answer from your own experience. The documents we used are listed at the end if you want to check one.
+
+WHAT HAPPENS TO YOUR ANSWERS: a maintainer enters them in the project's public review log. Terms you confirm are marked "expert-accepted". Terms you correct are fixed or removed. Crediting you is entirely your choice (see "Credit" below). If you opt in, your name and role are written into the review log, which is part of the open dataset and stays public. We'll also add you to the project's CONTRIBUTORS list on GitHub. If you choose, your affiliation appears there too, but never in the review log. If you'd rather not be named, we record you as anonymous. The data is open (CC BY 4.0).
+
+==============================================================================
+
+ABOUT YOU (so we can weigh your answers)
+
+Name:
+Role (teacher, school psychologist, SLP, administrator, advocate, parent, attorney, other):
+Setting and years in Nevada special education:
+Affiliation (organization; shown only if you choose A below):
+
+Credit. Put A, B or C in the brackets:   [   ]
+  A = list me by name, role and affiliation
+  B = list me by name and role only
+  C = keep me anonymous (your answers still count)
+
+==============================================================================
+
+PART A. KEY QUESTIONS (9)
+
+The points where the list most needs a person's judgment.
+
+A1.  [   ] The Nevada document we worked from is "NDE Special Education Rights
+           of Parents and Students (June 2023)" (doc 1 below). Is it still the
+           current version? (N = it has been replaced; please give the new
+           title or date in a comment.)
+           Comment:
+
+A2.  [   ] The Nevada document we worked from is "State of Nevada IEP form
+           (July 2018)" (doc 2 below). Is it still the current version? (N =
+           it has been replaced; please give the new title or date in a
+           comment.)
+           Comment:
+
+A3.  [   ] Is "Office of Comprehensive Student Services" (also written "OCSS")
+           right and current for Nevada? Our note on it says: "NDE's office
+           for special education as of the 2023 notice; NDE's site now also
+           uses an Office of Inclusive Education. Verify the current name." (N
+           = wrong or out of date; please correct it in a comment.)
+           Comment:
+
+A4.  [   ] Is "State criterion-referenced test" (also written "CRT") right and
+           current for Nevada? Our note on it says: "Name from the 2018 form;
+           Nevada's current assessment names may differ." (N = wrong or out of
+           date; please correct it in a comment.)
+           Comment:
+
+A5.  [   ] Is "College and Career Readiness Assessment" right and current for
+           Nevada? Our note on it says: "Name from the 2018 form." (N = wrong
+           or out of date; please correct it in a comment.)
+           Comment:
+
+A6.  [   ] Is "Nevada Proficiency Examination Program" right and current for
+           Nevada? Our note on it says: "Name from the 2018 form." (N = wrong
+           or out of date; please correct it in a comment.)
+           Comment:
+
+A7.  [   ] Our entry says that in Nevada a due process hearing decision can be
+           appealed to a "state review officer" (abbreviated SRO) before going
+           to court. Is that accurate, and is that what the step is called? (N
+           = no such step, or a different name; please explain.)
+           Comment:
+
+A8.  [   ] Our list treats "advanced high school diploma" as another name for
+           the "standard high school diploma". Are they the same thing? (N =
+           they are different diplomas; please explain how.)
+           Comment:
+
+A9.  [   ] The state IEP form uses the term "multisensory instruction". We
+           also list "structured literacy" as another name for it. That is
+           common practitioner language but is not on the form. Should the two
+           be treated as the same thing? (N = they are different; please
+           explain.)
+           Comment:
+
+==============================================================================
+
+PART B. SAME THING, DIFFERENT NAME? (34)
+
+Each line says that the Nevada name on the left is another name for the term on the right. Y = people in Nevada really use it that way. N = they don't, or it means something different (please say what in a comment).
+
+B1.  [   ] "IEP committee" = "IEP Team" (doc 1, p. 3)
+B2.  [   ] "pupil with a disability" = "Child with a disability" (NAC 388.093)
+B3.  [   ] "periodic reevaluation" = "Reevaluation" (NAC 388.440)
+B4.  [   ] "State complaint investigation" = "State complaint" (doc 1, pp.
+           9-10)
+B5.  [   ] "mild intellectual disability" = "Intellectual disability" (NAC
+           388.410)
+B6.  [   ] "moderate intellectual disability" = "Intellectual disability" (NAC
+           388.410)
+B7.  [   ] "severe intellectual disability" = "Intellectual disability" (NAC
+           388.410)
+B8.  [   ] "profound intellectual disability" = "Intellectual disability" (NAC
+           388.410)
+B9.  [   ] "multiple impairments" = "Multiple disabilities" (NAC 388.065)
+B10. [   ] "health impairment" = "Other health impairment" (NAC 388.402)
+B11. [   ] "health impairment other than orthopedic impairment" = "Other
+           health impairment" (NAC 388.402)
+B12. [   ] "speech and language impairment" = "Speech or language impairment"
+           (NAC 388.125)
+B13. [   ] "self-contained program" = "Special class" (doc 2, p. 10)
+B14. [   ] "regular class and special education class combination" = "Resource
+           room" (doc 2, p. 10)
+B15. [   ] "specialized progress report" = "Periodic reports on progress" (doc
+           2, p. 8)
+B16. [   ] "modification, accommodation, or support for student or personnel"
+           = "Program modifications or supports for school personnel" (doc 2,
+           p. 8)
+B17. [   ] "justification for placement" = "Explanation of the extent of
+           nonparticipation" (doc 2, p. 10)
+B18. [   ] "positive behavioral strategies, supports and interventions" =
+           "Positive behavioral interventions and supports" (NAC 388.077)
+B19. [   ] "IEP revision without a meeting" = "IEP amendment" (doc 2, p. 1)
+B20. [   ] "revision to IEP" = "IEP amendment" (doc 2, p. 1)
+B21. [   ] "regular classroom teacher" = "Regular education teacher" (NAC
+           388.095)
+B22. [   ] "targeted scientific, research-based intervention" = "Scientific,
+           research-based intervention" (NAC 388.325)
+B23. [   ] "assessment of functional behavior" = "Functional behavioral
+           assessment" (NAC 388.386)
+B24. [   ] "review of evaluation data" = "Review of existing evaluation data"
+           (NAC 388.336)
+B25. [   ] "eligibility statement" = "Statement of eligibility" (doc 3,
+           eligibility forms)
+B26. [   ] "gifted and talented pupil" = "Gifted and talented" (NAC 388.435)
+B27. [   ] "assessment of cognitive abilities" = "Cognitive abilities" (NAC
+           388.031)
+B28. [   ] "assessment of social and emotional condition" = "Social and
+           emotional condition" (NAC 388.111)
+B29. [   ] "assessment of performance in current educational setting" =
+           "Performance in the current educational setting" (NAC 388.075)
+B30. [   ] "assessment of evidence of intervention" = "Evidence of
+           intervention" (NAC 388.385)
+B31. [   ] "interim individualized educational program" = "Interim IEP" (doc
+           2, p. 1)
+B32. [   ] "statement of parent educational concerns" = "Parent educational
+           concerns" (doc 2, p. 3)
+B33. [   ] "statement of student's preferences and interests" = "Student
+           preferences and interests" (doc 2, p. 3)
+B34. [   ] "equal opportunity for communication access" = "Communication
+           access" (doc 2, p. 4)
+
+==============================================================================
+
+PART C. REAL TERM? (28)
+
+Each of these appears in a Nevada form or notice. Y = it is a real term in Nevada special-education paperwork and the description is about right. N = it's wrong, obsolete or not used (please say why in a comment).
+
+C1.  [   ] "Review of existing evaluation data", also written "review of
+           evaluation data" (NAC 388.336)
+
+C2.  [   ] "Functional vocational evaluation" (doc 2, p. 6)
+
+C3.  [   ] "Basis of knowledge" (doc 1, pp. 22-23)
+
+C4.  [   ] "Expedited due process hearing" (doc 1, pp. 21-22)
+
+C5.  [   ] "Education records" (doc 1, p. 6)
+
+C6.  [   ] "Participating agency" (NAC 388.073)
+
+C7.  [   ] "Nevada Department of Education", also written "NDE" (doc 1, p. 1)
+
+C8.  [   ] "Statement of eligibility", also written "eligibility statement"
+           (doc 3, eligibility forms)
+           Our description: Nevada's per-category eligibility form, e.g.
+           'Statement of Eligibility - Specific Learning Disabilities'.
+
+C9.  [   ] "Interim IEP", also written "interim individualized educational
+           program" (doc 2, p. 1)
+           Our description: National usage, e.g. for transfer students (34 CFR
+           300.323(e)).
+
+C10. [   ] "Federal placement code" (doc 2, p. 1)
+
+C11. [   ] "Percentage of time in regular education environment" (doc 2, p.
+           10)
+
+C12. [   ] "Statement of student strengths" (doc 2, p. 3)
+
+C13. [   ] "Parent educational concerns", also written "statement of parent
+           educational concerns" (doc 2, p. 3)
+           Our description: Federal requirement to consider the parents'
+           concerns (34 CFR 300.324(a)(1)(ii)).
+
+C14. [   ] "Student preferences and interests", also written "statement of
+           student's preferences and interests" (doc 2, p. 3)
+
+C15. [   ] "Student's vision for the future" (doc 2, p. 5)
+
+C16. [   ] "Community experiences" (doc 2, p. 6)
+           Our description: Transition-services component under 34 CFR
+           300.43(a)(2).
+
+C17. [   ] "Employment and other post-school adult living objectives" (doc 2,
+           p. 6)
+
+C18. [   ] "Acquisition of daily living skills" (doc 2, p. 6)
+
+C19. [   ] "Communication access", also written "equal opportunity for
+           communication access" (doc 2, p. 4)
+           Our description: From the special factors Nevada adds for students
+           who are deaf or hard of hearing.
+
+C20. [   ] "Explicit, direct instruction" (doc 2, p. 4)
+
+C21. [   ] "Alphabetic principle" (doc 2, p. 4)
+
+C22. [   ] "Multisensory instruction" (doc 2, p. 4)
+           Our description: 'Structured literacy' is practitioner usage, not
+           from the form.
+
+C23. [   ] "Meaning-based instruction" (doc 2, p. 4)
+
+C24. [   ] "Nevada Alternate Assessment", also written "NAA" (doc 2, p. 5)
+
+C25. [   ] "Standard high school diploma", also written "advanced high school
+           diploma" (doc 2, p. 5)
+
+C26. [   ] "Adjusted high school diploma", also written "adjusted diploma"
+           (doc 2, p. 5)
+           Our description: Earned by completing IEP requirements.
+
+C27. [   ] "Alternative high school diploma" (doc 2, p. 5)
+           Our description: Federal concept (ESSA) for students assessed on
+           the alternate assessment.
+
+C28. [   ] "Application to represent the educational interests of a student at
+           the age of majority" (doc 3, age-of-majority form)
+
+==============================================================================
+
+PART D. WHAT ARE WE MISSING? (6)
+
+Free text. A few words is fine. Type your answer after "Answer:".
+
+D1.  Statewide tests and alternate assessments: which names appear on Nevada
+     IEPs today? (Our list has four, all taken from a 2018 state IEP form.)
+     Answer:
+
+D2.  Diplomas and other completion documents: which ones appear on Nevada IEPs
+     and transition plans? (Our list has standard, adjusted and alternative
+     diplomas.)
+     Answer:
+
+D3.  Acronyms and abbreviations you see constantly in Nevada paperwork that
+     you would expect on a list like this.
+     Answer:
+
+D4.  Places where Nevada says something differently from the national term (a
+     different name for a category, a team, a meeting or a form).
+     Answer:
+
+D5.  Anything above that looks wrong, or any term that could be mistaken for a
+     person's name or a place name.
+     Answer:
+
+D6.  Anything else: a document we should read, or a person or organization we
+     should ask.
+     Answer:
+
+==============================================================================
+
+Thank you. You are helping make AI tools safer for the families who rely on them. If a colleague knows Nevada better than you on any of this, please forward this email. They can reply to me directly.
+
+[YOUR NAME]
+Reply to: [YOUR EMAIL]
+
+==============================================================================
+SPEDLex: https://github.com/SiskinSkai/spedlex
+Browse every term: https://SiskinSkai.github.io/spedlex/
+
+Documents we used for Nevada:
+  [1] NDE Special Education Rights of Parents and Students (June 2023)
+      https://webapp-strapi-paas-prod-nde-001.azurewebsites.net/uploads/Special_Education_Rights_Of_Parents_And_Students_English_4c259d5e86.pdf
+  [2] State of Nevada IEP form (July 2018)
+      https://webapp-strapi-paas-prod-nde-001.azurewebsites.net/uploads/IEP_Form_1_44a0c4d762.pdf
+  [3] NDE special education policies page
+      https://doe.nv.gov/offices/office-of-comprehensive-student-services/policies-and-procedures
+  Rule sections cited by number (for example NAC 388.093) are in the state's administrative code.
+
+Form ID: NV-20261008 (SPEDLex v0.36.0). Please leave this line in your reply.

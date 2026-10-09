@@ -1,0 +1,528 @@
+<title>SPEDLex Seed Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column of working panels, like a reviewer's binder: record anatomy, browser, coverage, scrubber order. */
+:root {
+  --bg: #f4f6f8;
+  --panel: #ffffff;
+  --ink: #18212d;
+  --muted: #5a6676;
+  --rule: #d9dfe6;
+  --accent: #245a86;
+  --accent-soft: #e3edf6;
+  --none: #3f7a5a;  --none-bg: #e4f1e9;
+  --low: #8a6510;   --low-bg: #f6edd5;
+  --high: #a23a2e;  --high-bg: #f7e1dd;
+  --illus: #6b5a99; --illus-bg: #ece8f6;
+  --tx: #a0522d;    --tx-bg: #f5e6dc;
+  --nv: #4f7a2b;    --nv-bg: #e6efda;
+  --va: #8a3c6b;    --va-bg: #f4e3ec;
+  --ca: #9a6b00;    --ca-bg: #f6ecd2;
+  --ny: #2f6f73;    --ny-bg: #dcefef;
+  --fl: #b4532a;    --fl-bg: #f8e3d8;
+  --pa: #3d5aa8;    --pa-bg: #e2e8f7;
+  --il: #6a7f1e;    --il-bg: #ebf0d6;
+  --display: "Newsreader", Georgia, serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11161d; --panel: #18202a; --ink: #e3e8ee; --muted: #9aa6b4; --rule: #2a3542;
+  --accent: #7fb2de; --accent-soft: #1d2e3f;
+  --none: #84c7a1; --none-bg: #19302a; --low: #e0bc68; --low-bg: #352b14;
+  --high: #ee9283; --high-bg: #3a1f1b; --illus: #b7a8e6; --illus-bg: #28223c;
+  --tx: #e4a27c; --tx-bg: #3a2519;
+  --nv: #a9cf7f; --nv-bg: #22301a;
+  --va: #e29ac4; --va-bg: #36202d;
+  --ca: #e8c25e; --ca-bg: #342a10;
+  --ny: #7fd0d4; --ny-bg: #173336;
+  --fl: #f0a27f; --fl-bg: #3a2216;
+  --pa: #9db3ee; --pa-bg: #1d2640;
+  --il: #c3d97a; --il-bg: #262d12;
+  color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11161d; --panel: #18202a; --ink: #e3e8ee; --muted: #9aa6b4; --rule: #2a3542;
+  --accent: #7fb2de; --accent-soft: #1d2e3f;
+  --none: #84c7a1; --none-bg: #19302a; --low: #e0bc68; --low-bg: #352b14;
+  --high: #ee9283; --high-bg: #3a1f1b; --illus: #b7a8e6; --illus-bg: #28223c;
+  --tx: #e4a27c; --tx-bg: #3a2519;
+  --nv: #a9cf7f; --nv-bg: #22301a;
+  --va: #e29ac4; --va-bg: #36202d;
+  --ca: #e8c25e; --ca-bg: #342a10;
+  --ny: #7fd0d4; --ny-bg: #173336;
+  --fl: #f0a27f; --fl-bg: #3a2216;
+  --pa: #9db3ee; --pa-bg: #1d2640;
+  --il: #c3d97a; --il-bg: #262d12;
+  color-scheme: dark }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--body); }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 64px; display: grid; gap: 36px; }
+h1, h2 { font-family: var(--display); font-weight: 600; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h1 { font-size: 2.1rem; line-height: 1.15; }
+h2 { font-size: 1.45rem; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow { font: 500 0.72rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.09em; color: var(--accent); }
+.muted { color: var(--muted); }
+code, .mono { font-family: var(--mono); font-size: 0.86em; }
+a { color: var(--accent); }
+section { display: grid; gap: 14px; min-width: 0; }
+.panel { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+
+header { display: grid; gap: 14px; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px 28px; font-variant-numeric: tabular-nums; }
+.stat b { display: block; font: 600 1.35rem/1.2 var(--body); }
+.stat span { font-size: 0.8rem; color: var(--muted); }
+
+/* Record anatomy */
+.anatomy { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+.anatomy > div { padding: 18px 20px; min-width: 0; }
+.anatomy > div + div { border-left: 1px solid var(--rule); }
+.field { display: grid; gap: 3px; padding-block: 9px; border-bottom: 1px dashed var(--rule); }
+.field:last-child { border-bottom: 0; }
+.fname { font: 500 0.78rem/1.3 var(--mono); color: var(--accent); }
+.fval { font-size: 0.92rem; overflow-wrap: anywhere; }
+.fval .chip { white-space: normal; line-height: 1.25; max-width: 100%; }
+.field { min-width: 0; }
+.why h3 { font: 600 0.95rem/1.3 var(--body); margin: 0 0 4px; }
+.why { display: grid; gap: 14px; align-content: start; }
+.why p { font-size: 0.9rem; }
+
+/* Chips */
+.chip { display: inline-flex; align-items: center; gap: 4px; font: 500 0.72rem/1 var(--mono); padding: 4px 7px; border-radius: 3px; white-space: nowrap; background: var(--accent-soft); color: var(--accent); }
+.chip.none { background: var(--none-bg); color: var(--none); }
+.chip.low { background: var(--low-bg); color: var(--low); }
+.chip.high { background: var(--high-bg); color: var(--high); }
+.chip.illus { background: var(--illus-bg); color: var(--illus); }
+.chip.tx { background: var(--tx-bg); color: var(--tx); }
+.chip.st { background: var(--accent-soft); color: var(--accent); }
+.chip.cand { background: transparent; color: var(--muted); border: 1px dashed var(--rule); padding: 3px 6px; }
+.bar-tx { background: var(--tx); }
+.bar-nv { background: var(--nv); }
+.bar-va { background: var(--va); }
+.bar-ca { background: var(--ca); }
+.bar-ny { background: var(--ny); }
+.bar-fl { background: var(--fl); } .bar-pa { background: var(--pa); } .bar-il { background: var(--il); }
+.chip.fl { background: var(--fl-bg); color: var(--fl); }
+.chip.pa { background: var(--pa-bg); color: var(--pa); }
+.chip.il { background: var(--il-bg); color: var(--il); }
+.chip.ny { background: var(--ny-bg); color: var(--ny); }
+.chip.ca { background: var(--ca-bg); color: var(--ca); }
+.chip.va { background: var(--va-bg); color: var(--va); }
+.chip.nv { background: var(--nv-bg); color: var(--nv); }
+.txgrid h3 { display: flex; gap: 8px; align-items: center; }
+table.cmp { border-collapse: collapse; width: 100%; min-width: 1520px; font-size: 0.88rem; }
+table.cmp th { text-align: left; font: 500 0.72rem var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--muted); padding: 10px 14px; border-bottom: 1px solid var(--rule); }
+table.cmp td { padding: 8px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table.cmp tr:last-child td { border-bottom: 0; }
+table.cmp td:first-child { font-weight: 500; }
+table.cmp td.same { color: var(--muted); }
+.txgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; }
+.txgrid > div { padding: 16px 18px; display: grid; gap: 6px; align-content: start; border-bottom: 1px solid var(--rule); }
+.txgrid > div:nth-child(odd) { border-right: 1px solid var(--rule); }
+.txgrid > div:last-child { border-bottom: 0; }
+.txgrid > div:last-child:nth-child(odd) { grid-column: 1 / -1; border-right: 0; }
+.txgrid > div:nth-last-child(2):nth-child(even) { border-bottom: 0; }
+.txgrid h3 { margin: 0; font: 600 0.95rem var(--body); }
+.txgrid p { font-size: 0.88rem; }
+.pairs { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); font-size: 0.86rem; }
+.pairs span { padding: 5px 0; border-bottom: 1px dashed var(--rule); }
+.pairs .h { font: 500 0.7rem var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+@media (max-width: 720px) { .txgrid { grid-template-columns: 1fr; } .txgrid > div:nth-child(odd) { border-right: 0; } .txgrid > div:nth-last-child(2):nth-child(even) { border-bottom: 1px solid var(--rule); } }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* Browser */
+.controls { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+.controls label { font-size: 0.8rem; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+input[type=search], select { font: 0.9rem var(--body); color: var(--ink); background: var(--bg); border: 1px solid var(--rule); border-radius: 4px; padding: 7px 9px; }
+input[type=search] { flex: 1 1 220px; min-width: 0; }
+input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
+.seg button { font: 500 0.78rem var(--body); background: transparent; color: var(--muted); border: 0; padding: 7px 10px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--rule); }
+.seg button[aria-pressed=true] { background: var(--accent-soft); color: var(--accent); }
+.count { font-size: 0.8rem; color: var(--muted); font-variant-numeric: tabular-nums; margin-left: auto; }
+.list { max-height: 560px; overflow-y: auto; }
+.row { border-bottom: 1px solid var(--rule); }
+.row:last-child { border-bottom: 0; }
+.row > button { width: 100%; text-align: left; display: grid; grid-template-columns: 110px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 10px 16px; background: none; border: 0; color: inherit; font: inherit; cursor: pointer; border-left: 3px solid transparent; }
+.row > button:hover { background: var(--accent-soft); }
+.row.risk-high > button { border-left-color: var(--high); }
+.row.risk-low > button { border-left-color: var(--low); }
+.cid { font: 0.76rem var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.term { font-weight: 500; min-width: 0; }
+.term small { display: block; font: 0.76rem var(--mono); color: var(--muted); font-weight: 400; }
+.detail { padding: 4px 16px 16px 125px; display: grid; gap: 10px; font-size: 0.88rem; }
+.detail table { border-collapse: collapse; width: 100%; font-size: 0.84rem; }
+.detail th { text-align: left; font: 500 0.72rem var(--mono); text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); padding: 4px 8px 4px 0; border-bottom: 1px solid var(--rule); }
+.detail td { padding: 5px 8px 5px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.tablewrap { overflow-x: auto; }
+.kv { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 4px 12px; }
+.kv dt { color: var(--muted); font-size: 0.8rem; }
+.kv dd { margin: 0; overflow-wrap: anywhere; }
+.empty { padding: 24px 16px; color: var(--muted); }
+
+/* Coverage */
+.cov { display: grid; }
+.cov-row { display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1.3fr); gap: 14px; align-items: center; padding: 9px 16px; border-bottom: 1px solid var(--rule); font-size: 0.88rem; }
+.cov-row:last-child { border-bottom: 0; }
+.cov-row.head { font: 500 0.72rem var(--mono); text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.bar { display: flex; align-items: center; gap: 8px; font-variant-numeric: tabular-nums; }
+.bar-track { flex: 1; height: 10px; display: flex; background: var(--bg); border-radius: 2px; overflow: hidden; }
+.bar-seed { background: var(--accent); }
+.bar-illus { background: var(--illus); opacity: 0.75; }
+.bar-n { min-width: 2.4em; text-align: right; font: 0.8rem var(--mono); }
+.next { color: var(--muted); }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.8rem; color: var(--muted); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+
+/* Pipeline order */
+.order { display: grid; gap: 0; }
+.tier { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 14px; padding: 13px 16px; border-bottom: 1px solid var(--rule); align-items: start; }
+.tier:last-child { border-bottom: 0; }
+.tier .n { font: 600 0.9rem var(--mono); color: var(--muted); }
+.tier.new { background: var(--accent-soft); }
+.tier.new .n { color: var(--accent); }
+.tier h3 { margin: 0 0 2px; font: 600 0.95rem var(--body); }
+.tier p { font-size: 0.86rem; color: var(--muted); }
+.subhead { margin: 8px 0 0; font: 600 1rem var(--body); }
+.finding { padding: 16px 18px; border-left: 3px solid var(--high); display: grid; gap: 6px; }
+.finding h3 { margin: 0; font: 600 0.95rem var(--body); }
+.finding p { font-size: 0.9rem; }
+
+@media (max-width: 720px) {
+  .anatomy { grid-template-columns: 1fr; }
+  .anatomy > div + div { border-left: 0; border-top: 1px solid var(--rule); }
+  .row > button { grid-template-columns: minmax(0, 1fr) auto; }
+  .row > button .cid { grid-column: 1 / -1; }
+  .detail { padding-left: 16px; }
+  .cov-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .cov-row .next { grid-column: 1 / -1; }
+  .cov-row.head .next { display: none; }
+  .tier { grid-template-columns: 26px minmax(0, 1fr); }
+  .tier .chip { grid-column: 2; justify-self: start; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">SPEDLex · v<span id="ver"></span> · 34 CFR Part 300 + <span id="nstates"></span> states · <a href="https://github.com/SiskinSkai/spedlex">GitHub</a> · <a href="https://github.com/SiskinSkai/spedlex/tree/main/data">Download the data</a></div>
+    <h1>A safelist for special-education vocabulary</h1>
+    <p class="muted">Caregivers increasingly use AI tools to understand IEPs and evaluations. Doing that safely means removing the child's personal information first, with a de-identification tool. Those tools need to know which words are special-education terms that must survive, and no standard vocabulary told them. SPEDLex is that vocabulary. The core comes from the IDEA Part B regulations. Each state layer is drawn from that state's procedural safeguards notice, its family or IEP guide, and its special education regulations. Every concept carries its surface forms, every source that attests it, and a privacy-risk grade that tells a scrubber when it may protect the term. Purple rows are placeholders for later harvests.</p>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <section aria-labelledby="h-anatomy">
+    <div class="eyebrow">The unit of the list</div>
+    <h2 id="h-anatomy">Anatomy of one concept record</h2>
+    <div class="panel anatomy">
+      <div id="anatomy-fields"></div>
+      <div class="why">
+        <div><h3>Concept, not word</h3><p>One ID holds the regulatory phrase, the acronym, and the older forms that still appear in IEPs. An IEP that says "PLOP" and one that says "present levels" resolve to the same thing.</p></div>
+        <div><h3>Case rule per string</h3><p>Phrases match case-insensitively. Acronyms match case-sensitively, so "ED" is protected while the name "Ed" is not.</p></div>
+        <div><h3>Citation on every record</h3><p>Each record points to a CFR paragraph. A reviewer can open the source in one click, and the count of terms with no MeSH or SNOMED mapping becomes the measured gap.</p></div>
+        <div><h3>Risk grade decides protection</h3><p><code>phrase_or_token</code> terms are safe anywhere. <code>never_bare</code> terms like "Tourette" or "Kaufman" are protected only inside their full phrase, so a surname is never sheltered.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-browse">
+    <div class="eyebrow">All records</div>
+    <h2 id="h-browse">Browse the list</h2>
+    <div class="panel">
+      <div class="controls">
+        <input type="search" id="q" placeholder="Search terms, acronyms, citations" aria-label="Search">
+        <label for="cat">Category <select id="cat"><option value="">All</option></select></label>
+        <div class="seg" role="group" aria-label="Risk filter" id="risk">
+          <button type="button" data-v="" aria-pressed="true">Any risk</button>
+          <button type="button" data-v="none" aria-pressed="false">None</button>
+          <button type="button" data-v="low" aria-pressed="false">Low</button>
+          <button type="button" data-v="high" aria-pressed="false">High</button>
+        </div>
+        <div class="seg" role="group" aria-label="Record status" id="status">
+          <button type="button" data-v="" aria-pressed="true">All</button>
+          <button type="button" data-v="seed" aria-pressed="false">Regulatory</button>
+          <button type="button" data-v="illus" aria-pressed="false">Illustrative</button>
+        </div>
+        <label for="juris">State <select id="juris"><option value="">All</option><option value="fed">Federal only</option></select></label>
+        <span class="count" id="count"></span>
+      </div>
+      <div class="list" id="list"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-states">
+    <div class="eyebrow">State layers</div>
+    <h2 id="h-states">What the states added</h2>
+    <p class="muted">Each state was first read from three documents: its procedural safeguards notice, its main IEP document, and its eligibility rule. Texas attested 96 concepts and 60 were new. Nevada attested 87 and 36 were new. Virginia attested 108 and 49 were new. That is more than Nevada because Virginia's regulation defines many terms of its own. Even so, more than half of what Virginia uses was already in the list. Most of its new records are diplomas, credits, and Virginia agencies. California attested 95 and only 35 were new. Of the other 60, 51 came straight from the federal core, because California's rules track federal wording closely. Its distinct vocabulary sits in services and structures (DIS, RSP, SELPA, nonpublic schools). New York attested 117 and 45 were new. It reused 58 federal concepts and 8 testing accommodations first sourced from Texas. Its new vocabulary is committees, class ratios, Regents credentials, and preschool services.</p>
+    <p class="muted">Florida attested 75 concepts (23 new), Pennsylvania 57 (28 new), and Illinois 79 (28 new). By the eighth state, half to two-thirds of the concepts a state uses are already in the list. What stays new is each state's agencies, forms, assessments, credentials, and its own way of naming placements.</p>
+    <p class="muted">The next seven states added far less. Massachusetts attested 61 concepts (22 new), Minnesota 50 (13), Missouri 42 (14), Louisiana 42 (10), Kansas 46 (12), Utah 73 (14), and Washington 40 (7). A second Pennsylvania pass added 8 records for preschool and gifted terms. The new records are almost all state agencies, assessment names, and each state's own disability labels.</p>
+    <p class="muted">Tennessee attested 36 concepts (7 new), Idaho 44 (11), Oregon 60 (13), and Georgia 44 (10). Across nineteen states, each new state now adds about ten concepts.</p>
+    <p class="muted">A second Texas pass read TEA's 2025–26 STAAR Alternate 2 and Accommodations educator guides and the 2024 Dyslexia Handbook. It attested 112 concepts and 84 were new, almost all reading and writing skills and testing supports. Procedural vocabulary is converging across states. Skill and testing vocabulary is a separate, larger pool that the regulations never touch.</p>
+    <div class="panel tablewrap">
+      <table class="cmp">
+        <thead><tr><th>Federal term</th><th>Texas</th><th>Nevada</th><th>Virginia</th><th>California</th><th>New York</th><th>Florida</th><th>Pennsylvania</th><th>Illinois</th></tr></thead>
+        <tbody>
+          <tr><td>IEP Team</td><td>ARD committee</td><td>IEP committee</td><td>IEP Team, but a separate eligibility group may decide eligibility</td><td class="same">same</td><td>Committee on Special Education (CSE), or CPSE for preschool</td><td>IEP team, though the rule says "individual educational plan"</td><td class="same">same</td><td class="same">same</td></tr>
+          <tr><td>Child with a disability</td><td class="same">same</td><td>Pupil with a disability</td><td class="same">same</td><td>Individuals with exceptional needs</td><td>Student with a disability, or preschool student with a disability</td><td>Exceptional student, which includes gifted</td><td class="same">same</td><td class="same">same</td></tr>
+          <tr><td>Hearing impairment</td><td>Deaf or hard of hearing</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td>Deaf or hard-of-hearing</td><td class="same">same</td><td class="same">same</td></tr>
+          <tr><td>Emotional disturbance</td><td>Emotional disability</td><td>Same in the body. The rule heading still says "serious emotional disturbance"</td><td>Emotional disability</td><td class="same">same</td><td>Emotional disability</td><td>Emotional/behavioral disabilities (E/BD)</td><td class="same">same</td><td>Emotional disability</td></tr>
+          <tr><td>Intellectual disability</td><td class="same">same</td><td>Mild, moderate, severe, profound. The rule heading still says "mental retardation"</td><td>Same, but the regulation still defines "mental retardation"</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td>Same, but the 2008 guide still says "mental retardation"</td><td>Same, and the guide notes the former term</td></tr>
+          <tr><td>Speech or language impairment</td><td>Speech impairment</td><td>Speech and language impairment</td><td class="same">same</td><td>Language or speech disorder, with four subtypes</td><td class="same">same</td><td>Separate speech impairment and language impairment rules</td><td class="same">same</td><td class="same">same</td></tr>
+          <tr><td>Other health impairment</td><td class="same">same</td><td>Health impairment</td><td class="same">same</td><td class="same">same</td><td>Other health-impairment</td><td class="same">same</td><td class="same">same</td><td class="same">same</td></tr>
+          <tr><td>Multiple disabilities</td><td class="same">same</td><td>Multiple impairments, which requires an intellectual disability</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td class="same">none found</td><td class="same">same</td><td class="same">same</td></tr>
+          <tr><td>Developmental delay</td><td>Plus a Noncategorical early childhood category</td><td class="same">same</td><td>Ages 2 through 6</td><td>Not among the categories in 5 CCR §3030</td><td>Not a school-age classification. Preschoolers are a "preschool student with a disability"</td><td>Ages 3 through 9</td><td class="same">none found</td><td class="same">same</td></tr>
+          <tr><td>Behavioral intervention plan</td><td>Behavior improvement plan</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td>Behavior management plan (2008 guide)</td><td class="same">same</td></tr>
+          <tr><td>Appeal of a hearing decision</td><td>Straight to court</td><td>State review officer first (two-tier)</td><td>Straight to court</td><td>Straight to court. The Office of Administrative Hearings runs hearings</td><td>State review officer first (two-tier). An impartial hearing officer (IHO) runs hearings</td><td>Straight to court. The Division of Administrative Hearings runs hearings</td><td>Straight to court. Hearings go through the Office for Dispute Resolution</td><td>Straight to court</td></tr>
+          <tr><td>Special class</td><td class="same">same</td><td>Self-contained program</td><td class="same">same</td><td>Special day class (SDC)</td><td>Special class by ratio, e.g. 12:1+1</td><td class="same">none found</td><td>Type plus level of support, e.g. full-time life skills support</td><td class="same">none found</td></tr>
+          <tr><td>Related services</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td>Designated instruction and services (DIS)</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td class="same">same</td></tr>
+          <tr><td>Evaluation</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td>Assessment, with an assessment plan for consent</td><td>Individual evaluation</td><td class="same">same</td><td>Evaluation Report (ER), after a Permission to Evaluate</td><td>Evaluation planned by domain</td></tr>
+          <tr><td>Local educational agency</td><td>School district</td><td>School district</td><td>School division</td><td>School district, inside a SELPA</td><td>School district</td><td>School district</td><td>School district, with intermediate units</td><td>School district</td></tr>
+          <tr><td>Alternate assessment</td><td>STAAR Alternate 2</td><td>Nevada Alternate Assessment</td><td>VAAP, on the Essentialized Standards of Learning</td><td>California Alternate Assessments, on Core Content Connectors</td><td>New York State Alternate Assessment (NYSAA)</td><td>Florida Alternate Assessment (formerly FSAA), on access points</td><td>PASA, using Dynamic Learning Maps</td><td>Dynamic Learning Maps (DLM-AA)</td></tr>
+          <tr><td>Diploma through IEP goals</td><td class="same">none found</td><td>Adjusted diploma</td><td>Applied Studies Diploma</td><td>Alternative pathway diploma for students eligible for the CAA</td><td>None. NYSAA students earn the Skills and Achievement Commencement Credential</td><td>Standard diploma through access courses or academic and employment competencies</td><td class="same">none found</td><td class="same">none found</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="font-size:.85rem">"Same" means the state's documents use the federal term or no different term turned up. "None found" means the documents reviewed don't describe one.</p>
+    <h3 class="subhead">Seven more states</h3>
+    <div class="panel tablewrap">
+      <table class="cmp">
+        <thead><tr><th>Federal term</th><th>Massachusetts</th><th>Minnesota</th><th>Missouri</th><th>Louisiana</th><th>Kansas</th><th>Utah</th><th>Washington</th></tr></thead>
+        <tbody>
+          <tr><td>IEP Team</td><td>Team</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td class="same">same</td></tr>
+          <tr><td>Child with a disability</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td>Exceptionality, which includes gifted and talented</td><td>Exceptional child, which includes gifted</td><td class="same">same</td><td class="same">same</td></tr>
+          <tr><td>Hearing impairment</td><td>Sensory impairment: hearing impairment/deaf</td><td>Deaf and hard of hearing</td><td>Hearing impairment and deafness</td><td>Deaf and/or hard of hearing</td><td class="same">same</td><td>Hearing loss including deafness</td><td>Deafness (including hard of hearing)</td></tr>
+          <tr><td>Emotional disturbance</td><td>Emotional impairment</td><td>Emotional or behavioral disorders</td><td class="same">same</td><td class="same">same</td><td>Emotional disability</td><td>Emotional-behavioral disability</td><td>Emotional/behavioral disability</td></tr>
+          <tr><td>Intellectual disability</td><td>Intellectual impairment</td><td>Developmental cognitive disability (DCD)</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td class="same">same</td></tr>
+          <tr><td>Speech or language impairment</td><td>Communication impairment</td><td class="same">same</td><td>Split into language impairment, sound system disorder, speech/fluency, speech/voice</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td class="same">same</td></tr>
+          <tr><td>Other health impairment</td><td>Health impairment</td><td>Other health disabilities</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td class="same">same</td></tr>
+          <tr><td>Orthopedic impairment</td><td>Physical impairment</td><td>Physically impaired</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td class="same">same</td><td class="same">same</td></tr>
+          <tr><td>Multiple disabilities</td><td class="same">none found</td><td>Severely multiply impaired</td><td class="same">same</td><td class="same">same</td><td class="same">none found</td><td class="same">same</td><td class="same">same</td></tr>
+          <tr><td>Developmental delay</td><td>Ages 3 through 9</td><td>Intervention services, ages 3 through 6</td><td>Young child with a developmental delay, ages 3 to 5</td><td class="same">same</td><td class="same">same</td><td>Ages 3 to the ninth birthday</td><td>Ages 3 through 9</td></tr>
+          <tr><td>Appeal of a hearing decision</td><td>Hearings by the Bureau of Special Education Appeals</td><td class="same">none found</td><td class="same">none found</td><td class="same">none found</td><td>Review officer first (two-tier)</td><td class="same">none found</td><td>Straight to court. An administrative law judge at OAH runs hearings</td></tr>
+          <tr><td>Alternate assessment</td><td>MCAS-Alt</td><td>MTAS, now called the Alt MCA</td><td>MAP-A (Dynamic Learning Maps)</td><td>LEAP Connect</td><td class="same">none found</td><td>Dynamic Learning Maps (Essential Elements)</td><td>WA-AIM</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="subhead">Four more states</h3>
+    <div class="panel tablewrap">
+      <table class="cmp" style="min-width:760px">
+        <thead><tr><th>Federal term</th><th>Tennessee</th><th>Idaho</th><th>Oregon</th><th>Georgia</th></tr></thead>
+        <tbody>
+          <tr><td>Hearing impairment</td><td class="same">same</td><td>Deaf or hard of hearing</td><td>Deaf or hard of hearing</td><td>Deaf/hard of hearing</td></tr>
+          <tr><td>Emotional disturbance</td><td class="same">same</td><td>Emotional behavioral disorder</td><td>Emotional behavior disability</td><td>Emotional and behavioral disorder</td></tr>
+          <tr><td>Intellectual disability</td><td>Same, plus a separate functional delay category</td><td class="same">same</td><td class="same">same</td><td>Mild, moderate, severe, or profound</td></tr>
+          <tr><td>Speech or language impairment</td><td class="same">same</td><td>Split into Speech or Language Impairment: Language and: Speech</td><td class="same">same</td><td>Speech-language impairment</td></tr>
+          <tr><td>Multiple disabilities</td><td class="same">same</td><td class="same">same</td><td class="same">none found</td><td class="same">none found</td></tr>
+          <tr><td>Developmental delay</td><td>Ages 3:0 through 9:11</td><td class="same">same</td><td class="same">same</td><td>Significant developmental delay</td></tr>
+          <tr><td>Gifted</td><td>Intellectually gifted, counted as a disability category</td><td class="same">none found</td><td class="same">none found</td><td class="same">none found</td></tr>
+          <tr><td>Appeal of a hearing decision</td><td>Hearings by an administrative law judge</td><td class="same">none found</td><td>Hearings by an administrative law judge</td><td>Administrative law judge or hearing officer</td></tr>
+          <tr><td>Alternate assessment</td><td>TCAP-Alt (MSAA for ELA and math)</td><td>Alternate assessment on Core Content Connectors</td><td>Oregon Extended Assessment (ORExt)</td><td>GAA 2.0, leading to a state-defined alternate diploma</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="panel txgrid">
+      <div><h3><span class="chip tx">TX</span> Texas</h3><p>Sources: TEA's January 2025 Notice of Procedural Safeguards and Parent's Guide to the ARD Process, 19 TAC §89.1040, the 2025–26 STAAR Alternate 2 and Accommodations educator guides, and the 2024 Dyslexia Handbook. Texas-only additions include the ARD recess-and-reconvene rule, the autism strategies, DAEP, LPAC, TEKS, STAAR and STAAR Alternate 2 with its medical exception and NAAR forms, TELPAS, TIDE, the Extra Day support, licensed dyslexia therapists, and the Texas Dyslexia Academies.</p></div>
+      <div><h3><span class="chip nv">NV</span> Nevada</h3><p>Sources: NDE's June 2023 parent rights notice, the statewide IEP form (July 2018), and NAC chapter 388. Nevada has no parent guide, so the IEP form stands in. Its additions include adjusted and alternative diplomas, the Nevada Alternate Assessment, the dyslexia instruction checklist, extra special factors for deaf students, and the state review officer.</p></div>
+      <div><h3><span class="chip va">VA</span> Virginia</h3><p>Sources: VDOE's procedural safeguards notice (the 2013 Town Hall copy, because the 2024 edition could not be read), the Virginia Family's Guide (May 2023), the definitions in 8VAC20-81-10, the VAAP parent FAQ, and a Fairfax County summary of diploma credit rules. Virginia-only additions include Level I and Level II services, the Children's Services Act teams (CPMT, FAPT), "school division", the eligibility group, SOL, VAAP and VESOL, the Applied Studies and Advanced Studies diplomas, verified credits and SPLAVC, and the right to audio record meetings.</p></div>
+      <div><h3><span class="chip ca">CA</span> California</h3><p>Sources: CDE's Notice of Procedural Safeguards (June 2022, as posted by the Office of Administrative Hearings), 5 CCR §3030, Education Code §§56361 and 56363, and CDE pages on alternate assessment, testing supports, the AB 181 diploma pathway, and equitable services. California-only additions include SELPAs, designated instruction and services, the resource specialist program, nonpublic schools and agencies, Family Empowerment Centers, OAH, the assessment plan, CAASPP and the California Alternate Assessments, ELPAC, unlisted resources, and the speech subtypes. Student study teams, ITPs, ERMHS, and Behavior Emergency Reports are routine in California IEPs but did not appear in these sources.</p></div>
+      <div><h3><span class="chip ny">NY</span> New York</h3><p>Sources: NYSED's Procedural Safeguards Notice (July 2017, still current), 8 NYCRR §§200.1 and 200.6, and NYSED pages on graduation credentials, preschool itinerant services, and testing accommodations (updated Sept. 2025). New York-only additions include the CSE and CPSE, consultant teacher and integrated co-teaching services, special classes by ratio (15:1 to 6:1+1), SEIT and §4410 preschool programs, transitional and declassification support services, the Office of State Review and its forms, Community Dispute Resolution Centers, NYSAA, Regents exams and diplomas, safety nets, superintendent determination, and the CDOS and Skills and Achievement credentials. BOCES, the IESP, and the CSE parent member did not appear in these sources.</p></div>
+      <div><h3><span class="chip fl">FL</span> Florida</h3><p>Sources: the Florida procedural safeguards notice (Aug. 2021, district copy), Fla. Admin. Code R. 6A-6.03411 and the chapter 6A-6 rule headings, FDOE's alternate assessment page, and R. 6A-1.09963 on graduation (amended Sept. 2025). Florida-only additions include exceptional student education (ESE), the gifted educational plan, ESE centers, access points and access courses, the Florida Alternate Assessment (renamed from FSAA), FAST and B.E.S.T., DOAH, VPK specialized instructional services, and the Family Empowerment, McKay, and Gardiner scholarships.</p></div>
+      <div><h3><span class="chip pa">PA</span> Pennsylvania</h3><p>Sources: PDE's Parent Guide to Special Education (2008, the only statewide guide found), 22 Pa. Code §14.105, the state NOREP/PWN form, and PDE's dispute resolution and assessment pages. The full safeguards notice was not found online. Pennsylvania-only additions include the NOREP, Permission to Evaluate, nine types of support and three levels (with all 27 combinations stored as phrases), intermediate units, the Office for Dispute Resolution, ConsultLine, PSSA, Keystone Exams, PASA, and Act 158 graduation pathways.</p></div>
+      <div><h3><span class="chip il">IL</span> Illinois</h3><p>Sources: ISBE's Parent Guide (May 2025) and 23 Ill. Adm. Code §226.75. ISBE's procedural safeguards form timed out. Illinois-only additions include ISBE, evaluation domains, the qualified bilingual specialist and Vital Documents List, the DLM-AA, Delegation of Rights at 18, isolated time out, nonpublic facilities, Child and Family Connections, Family Matters, and parent mentors. The guide also lists older autism diagnoses (Asperger's, PDD-NOS, Rett), which are kept with eponym protection.</p></div>
+      <div><h3><span class="chip st">MA</span> Massachusetts</h3><p>DESE's Parent's Notice of Procedural Safeguards (May 2025), 603 CMR 28.02, and the FCSN parent guide. Massachusetts renames most categories (intellectual, emotional, communication, physical, and health impairment, plus sensory and neurological impairment) and uses an "effective progress" eligibility test. Also added: BSEA, the Problem Resolution System, Chapter 766, Chapter 688 referrals, MCAS and MCAS-Alt.</p></div>
+      <div><h3><span class="chip st">MN</span> Minnesota</h3><p>Minn. R. 3525 eligibility headings and definitions, Minn. Stat. §125A.091, and a district testing policy (the state notice could not be read). Added: developmental cognitive disability, severely multiply impaired, DAPE, the conciliation conference, the IIIP, team override, MCA and MTAS.</p></div>
+      <div><h3><span class="chip st">MO</span> Missouri</h3><p>MPACT's category list, an old DESE safeguards summary, and DESE pages on MAP-A and the state schools. The current notice and parent guide links were dead. Missouri splits speech into four categories and adds Missouri Schools for the Severely Disabled, the State Plan, MAP and MAP-A, and the Special School District of St. Louis County.</p></div>
+      <div><h3><span class="chip st">LA</span> Louisiana</h3><p>Bulletin 1508 (the Pupil Appraisal Handbook) section headings and LDOE's LEAP Connect guide. No state safeguards notice was found. Added: the School Building Level Committee, pupil appraisal, the "talented" exceptionality, LEAP Connect, and Louisiana Connectors.</p></div>
+      <div><h3><span class="chip st">KS</span> Kansas</h3><p>KSDE's parent rights notice (2020) and Process Handbook (updated 2025). Kansas is two-tier, with a review officer, and counts gifted as an exceptionality. Added: material change in services, substantial change in placement, General Education Intervention, education advocate, SETS, interrelated programs, and Families Together.</p></div>
+      <div><h3><span class="chip st">UT</span> Utah</h3><p>USBE's safeguards notice (2023) and Special Education Rules (2023). Added: USBE, Utah Schools for the Deaf and the Blind, the Utah Parent Center, the Speech-Language Technician, Science of Reading, and the Carson Smith scholarship, an eponym kept only as a full phrase.</p></div>
+      <div><h3><span class="chip st">WA</span> Washington</h3><p>OSPI's safeguards notice (2022), WAC 392-172A-01035, and the WA-AIM page. Washington folds hard of hearing into deafness, calls state complaints "community complaints", and sends hearings to its own Office of Administrative Hearings. Added: OSPI, PAVE, WA-AIM, Access Point Frameworks, and graduation pathways.</p></div>
+      <div><h3><span class="chip st">TN</span> Tennessee</h3><p>Rule 0520-01-09-.02 and -.03, an Arc Tennessee overview of safeguards, and the TCAP-Alt fact sheet. Tennessee counts "functional delay" and "intellectually gifted" as disability categories. Added: TCAP, TCAP-Alt, the Multi-State Alternate Assessment, and the licensed behavior analyst.</p></div>
+      <div><h3><span class="chip st">ID</span> Idaho</h3><p>The Idaho Procedural Safeguards Notice (2026) and Special Education Manual (2024). Idaho splits speech or language impairment into "Language" and "Speech". Added: the Idaho Department of Education, Idaho Parents Unlimited, ISAT, the combined Written Notice and Consent for Assessment, IESDB, and informal conflict resolution.</p></div>
+      <div><h3><span class="chip st">OR</span> Oregon</h3><p>OAR 581-015-2000, ODE's K-21 safeguards notice, and the ORExt page. Oregon runs Part C and preschool together as EI/ECSE and serves districts through education service districts. Added: ORExt, Essentialized Assessment Frameworks, OSAS, FACT Oregon, and the "sheltered workshop" term still in the rule.</p></div>
+      <div><h3><span class="chip st">GA</span> Georgia</h3><p>Rule 160-4-7 (eligibility, safeguards, dispute resolution, GNETS) and GaDOE's alternate diploma page. The Parent Rights notice could not be read. Added: GNETS, RESAs, GLRS, significant developmental delay, the eligibility report, GAA 2.0, Georgia Milestones, and the Georgia Standards of Excellence.</p></div>
+      <div><h3>Class ratios are numbers</h3><p>New York names special classes by ratio: "12:1+1" is twelve students, one teacher, one aide. They are protected only as exact strings with word boundaries, so "12:1" never matches inside a time like 12:15, and none trip the scrubber's phone, ZIP, or dose patterns.</p></div>
+      <div><h3>Name dictionaries contain state names</h3><p>Common first-name lists include "Virginia", "Florida", "Georgia", and "Carolina". A scrubber that uses one will turn "Virginia Alternate Assessment Program" into "[NAME] Alternate Assessment Program". Either protect the full phrases first, as SPEDLex does, or remove state names from the dictionary and rely on a household-names list to catch a student who really is named Georgia. "Rosa" (Rosa's Law) is the same problem with no easy fix, so the phrase stays protected.</p></div>
+      <div><h3>Dyslexia vocabulary now has sources</h3><p>The handbook's evaluation domains and instruction components gave cited records for phonological awareness, rapid automatized naming, orthographic processing, decoding, prosody, syllabication, and morphology, plus dysgraphia and its handwriting, graphomotor, and transcription areas. Phonological awareness and extended time were placeholders until now. "Standard protocol dyslexia instruction" is kept as a legacy string, since HB 3928 dropped the distinction but older IEPs still use it.</p></div>
+      <div><h3>Legacy terms are current text</h3><p>Nevada's rule headings still read "mental retardation" and "serious emotional disturbance", amended as recently as 2019. A safelist that dropped outdated labels would strip the state's own citations from an IEP.</p></div>
+      <div><h3>Names, places, and acronyms</h3><p>Texas added REED (Reed), ADA (Ada), TEA (tea), IDA (Ida), ALTA (Alta), and TIDE (tide), all protected only as all-caps matches. Acronyms also collide across states: CSA is Virginia's Children's Services Act and the California Spanish Assessment, NPS is a California nonpublic school as well as a common abbreviation for the safeguards notice, and DESE names both the Massachusetts and Missouri education departments. "Texas", "Nevada", and "Virginia" are all given names in the SSA list, and "SOL" is too, so a place-name list belongs in review. Nevada's form codes services as A, C, or D, and single letters are never safelisted. "SRO" means state review officer in Nevada hearings but school resource officer in discipline records.</p></div>
+    </div>
+    <p class="muted" style="font-size:.85rem">State records sourced from PDFs have review status "candidate": page numbers came from a text extraction. Records from the Texas and Nevada administrative codes were checked against the rule text. Nevada's IEP form is dated 2018, so its state-assessment names may be outdated.</p>
+  </section>
+
+  <section aria-labelledby="h-cov">
+    <div class="eyebrow">Where the remaining terms come from</div>
+    <h2 id="h-cov">Coverage by category</h2>
+    <p class="muted">Counts are concepts, not strings. The regulations give a dense, citable core. Skill constructs, instruments, and score language barely appear in them and come from the corpus and instrument harvests.</p>
+    <div class="legend"><span><i style="background:var(--accent)"></i>34 CFR 300 seed</span><span><i style="background:var(--tx)"></i>added from a state</span><span><i style="background:var(--illus);opacity:.75"></i>illustrative placeholder</span></div>
+    <div class="panel cov" id="cov"></div>
+  </section>
+
+  <section aria-labelledby="h-order">
+    <div class="eyebrow">Integrating with a scrubber</div>
+    <h2 id="h-order">Where the safelist runs</h2>
+    <p class="muted">The safelist has to run before any redaction tier. Otherwise a name dictionary can redact "Johnson" out of "Woodcock-Johnson IV" before the safelist ever sees the phrase. Protected spans are masked, the scrubber runs unchanged, then the spans are restored. The Python package's <code>Safelist.protect()</code> does the masking and restoring. The steps below show a typical layered scrubber.</p>
+    <div class="panel order">
+      <div class="tier new"><div class="n">0</div><div><h3>Safelist protection</h3><p>Longest phrase first. Mask each matched span with a placeholder the later patterns cannot match. <code>never_bare</code> concepts match only as full phrases.</p></div><span class="chip">SPEDLex</span></div>
+      <div class="tier"><div class="n">1</div><div><h3>Household names</h3><p>The names of the people in the document always win over the safelist, so a child named "Braille" is still redacted. Pass them as <code>household_names</code> and any safelist string containing one is dropped.</p></div><span class="chip">scrubber</span></div>
+      <div class="tier"><div class="n">2</div><div><h3>Pattern-based PII/PHI</h3><p>Phone, SSN, email, titles with names, addresses, record IDs, medication doses. <code>data/collision_report.csv</code> lists every safelist string a reference scrubber's patterns would hit.</p></div><span class="chip">scrubber</span></div>
+      <div class="tier"><div class="n">3</div><div><h3>Name dictionary</h3><p>Lowest confidence, and the step the safelist mainly shields domain terms from: Woodcock-Johnson, Rosa's Law, and state names inside agency and test names.</p></div><span class="chip">scrubber</span></div>
+      <div class="tier"><div class="n">4</div><div><h3>Fail-closed unknown-token pass</h3><p>Optional. Anything not in the safelist, MeSH, SNOMED, or a general-English lexicon is stripped. This is where a safelist earns its keep: without it, IEP vocabulary is destroyed.</p></div><span class="chip">optional</span></div>
+    </div>
+  </section>
+  <footer class="muted" style="font-size:.85rem;margin:48px 0 24px;border-top:1px solid var(--rule);padding-top:16px">
+    SPEDLex is an open project. Code is MIT-licensed and the data is CC BY 4.0. Found a wrong term or a missing one?
+    <a href="https://github.com/SiskinSkai/spedlex/issues/new/choose">Open an issue</a> or read
+    <a href="https://github.com/SiskinSkai/spedlex/blob/main/CONTRIBUTING.md">how to contribute</a>.
+    Methodology: <a href="https://github.com/SiskinSkai/spedlex/blob/main/docs/METHODOLOGY.md">docs/METHODOLOGY.md</a>.
+    This list is a research tool, not legal advice, and protecting a term never guarantees a document is free of identifiers.
+  </footer>
+</div>
+
+<script>
+const DATA = __DATA__;
+
+const NEXT = {
+  legal_procedural: "More state notices. Each adds agency, office, and code names",
+  disability_category: "Complete federally. Add state labels such as 'emotional/behavioral disability'",
+  health_condition: "Already in SNOMED CT and MeSH. Cross-map, don't rebuild",
+  related_service: "State service-code lists and IEP forms",
+  placement_setting: "EDFacts educational-environment categories, state placement codes",
+  iep_component: "State IEP forms and IEP-writing manuals",
+  evaluation_eligibility: "State eligibility criteria documents",
+  academic_skill: "Reading and writing now covered by the Dyslexia Handbook. Math and oral language still open",
+  functional_skill: "Termhood extraction and ICF-CY cross-map",
+  instrument: "Test indexes and publisher catalogs",
+  instrument_subtest: "Publisher catalogs, eligibility reports",
+  score_metric: "Evaluation reports in the corpus",
+  accommodation_modification: "Texas testing supports covered. Classroom accommodations come from real IEPs",
+  discipline: "Mostly complete from 300.530–536",
+  transition: "Diploma and credit names differ by state. More states needed",
+  early_intervention: "34 CFR Part 303 (Part C)",
+  section_504: "34 CFR Part 104 and OCR guidance. State notices name only the statutes",
+  personnel_role: "State IEP forms (signature blocks)"
+};
+const CAT_ORDER = Object.keys(NEXT);
+const label = c => c.replace(/_/g, " ").replace(/^./, s => s.toUpperCase()).replace(/^Iep\b/, "IEP").replace(/\b504\b/, "504");
+const isIllus = r => r.review.status === "illustrative";
+const STATES = __STATES__;
+const STATS = __STATS__;
+const STATE_BY_VERSION = Object.fromEntries(STATES.flatMap(s => s.v.map(v => [v, s.c])));
+const isStateSrc = s => (s.jurisdiction || "US") !== "US";
+const layer = r => isIllus(r) ? "illus" : (STATE_BY_VERSION[r.version_added] || "fed");
+const stateNew = r => !isIllus(r) && layer(r) !== "fed";
+const touchedBy = (r, st) => r.jurisdiction === st.j || r.sources.some(s => s.jurisdiction === st.j) ||
+  r.strings.some(s => (s.regional || []).includes(st.j));
+const statesOf = r => STATES.filter(st => touchedBy(r, st));
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+
+// Stats
+document.getElementById("ver").textContent = STATS.version;
+document.getElementById("nstates").textContent = STATS.states;
+(() => {
+  const seed = DATA.filter(r => !isIllus(r));
+  const fed = seed.filter(r => layer(r) === "fed").length;
+  const states = seed.filter(r => r.sources.some(isStateSrc)).length;
+  const risk = l => seed.filter(r => r.pii_risk.level === l).length;
+  const items = [[fed, "federal concepts"], [seed.length - fed, `added from ${STATES.length} states`], [states, "attested by a state"], [seed.reduce((n, r) => n + r.strings.length, 0), "surface strings"], [risk("high"), "high-risk concepts"], [seed.filter(r => r.pii_risk.scrubber_collisions.length).length, `hit by the ${STATS.collision_adapter} reference scrubber`]];
+  document.getElementById("stats").innerHTML = items.map(([n, l]) => `<div class="stat"><b>${n}</b><span>${l}</span></div>`).join("");
+})();
+
+// Anatomy
+(() => {
+  const r = DATA.find(x => x.preferred_term.startsWith("Present levels"));
+  const f = (name, val) => `<div class="field"><div class="fname">${name}</div><div class="fval">${val}</div></div>`;
+  const strs = `<div class="chips">${r.strings.map(s => `<span class="chip" title="${s.string_type} · ${s.match}">${esc(s.text)}</span>`).join("")}</div>`;
+  const src = r.sources[0];
+  document.getElementById("anatomy-fields").innerHTML =
+    f("concept_id", `<span class="mono">${r.concept_id}</span>`) +
+    f("preferred_term", esc(r.preferred_term)) +
+    f("category", label(r.category)) +
+    f("strings[ ]", strs + `<div class="muted" style="font-size:.78rem;margin-top:6px">Hover a chip for its type and match rule.</div>`) +
+    f("sources[0].citation", `<a href="${src.url}" target="_blank" rel="noopener">${esc(src.citation)}</a>`) +
+    f("cross_maps", r.cross_maps.map(c => `${c.system}: ${c.relation}`).join(", ")) +
+    f("pii_risk", `<span class="chip ${r.pii_risk.level}">${r.pii_risk.level}</span> <span class="mono">${r.pii_risk.protect_rule}</span>`) +
+    f("review.status", `<span class="mono">${r.review.status}</span>`);
+})();
+
+// Browser
+const state = { q: "", cat: "", risk: "", status: "", juris: "" };
+const catSel = document.getElementById("cat");
+CAT_ORDER.filter(c => DATA.some(r => r.category === c)).forEach(c => catSel.insertAdjacentHTML("beforeend", `<option value="${c}">${label(c)}</option>`));
+
+function detail(r) {
+  const rows = r.strings.map(s => `<tr><td>${esc(s.text)}${s.regional ? ` <span class="muted">(${s.regional.join(", ")})</span>` : ""}</td><td class="mono">${s.string_type}</td><td class="mono">${s.match}</td></tr>`).join("");
+  const hits = [...r.pii_risk.scrubber_collisions, ...(r.pii_risk.name_list_hits || [])];
+  const broader = (r.broader || []).map(id => { const p = DATA.find(x => x.concept_id === id); return p ? esc(p.preferred_term) : id; }).join(", ");
+  return `<div class="detail">
+    <div class="tablewrap"><table><thead><tr><th>String</th><th>Type</th><th>Match</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <dl class="kv">
+      <dt>Sources</dt><dd>${r.sources.map(s => s.url ? `<a href="${s.url}" target="_blank" rel="noopener">${esc(s.citation)}</a>` : esc(s.citation)).join("<br>")}</dd>
+      <dt>Jurisdiction</dt><dd class="mono">${r.jurisdiction}</dd>
+      ${broader ? `<dt>Broader</dt><dd>${broader}</dd>` : ""}
+      <dt>Risk</dt><dd><span class="chip ${r.pii_risk.level}">${r.pii_risk.level}</span> <span class="mono">${r.pii_risk.protect_rule}</span>${r.pii_risk.reasons.length ? ` · ${r.pii_risk.reasons.join(", ")}` : ""}</dd>
+      ${hits.length ? `<dt>Name/pattern hits</dt><dd class="mono" style="font-size:.78rem">${hits.map(esc).join("<br>")}</dd>` : ""}
+      <dt>Cross-maps</dt><dd>${r.cross_maps.map(c => `${c.system}${c.label ? ` “${esc(c.label)}”` : ""}: ${c.relation}`).join("; ")}</dd>
+      <dt>Extraction</dt><dd class="mono">${r.extraction.method}</dd>
+      ${r.definition_note ? `<dt>Note</dt><dd>${esc(r.definition_note)}</dd>` : ""}
+      ${r.review.notes ? `<dt>Review</dt><dd>${esc(r.review.notes)}</dd>` : ""}
+    </dl></div>`;
+}
+
+function render() {
+  const q = state.q.trim().toLowerCase();
+  const rows = DATA.filter(r =>
+    (!state.cat || r.category === state.cat) &&
+    (!state.risk || r.pii_risk.level === state.risk) &&
+    (!state.status || (state.status === "illus") === isIllus(r)) &&
+    (!state.juris || (state.juris === "fed" ? layer(r) === "fed" : touchedBy(r, STATES.find(s => s.c === state.juris)))) &&
+    (!q || r.strings.some(s => s.text.toLowerCase().includes(q)) || r.sources.some(s => s.citation.toLowerCase().includes(q)) || r.concept_id.toLowerCase().includes(q)));
+  document.getElementById("count").textContent = `${rows.length} of ${DATA.length}`;
+  const list = document.getElementById("list");
+  if (!rows.length) { list.innerHTML = `<div class="empty">No concepts match. Clear the search or pick another category.</div>`; return; }
+  list.innerHTML = rows.map(r => {
+    const others = r.strings.filter(s => s.string_type !== "preferred").slice(0, 4).map(s => s.text).join(" · ");
+    const statusChip = (isIllus(r) ? `<span class="chip illus">illustrative</span>` : "") + statesOf(r).map(st => `<span class="chip st ${st.c}" title="${st.name}">${st.c.toUpperCase()}</span>`).join("") + (r.review.status === "candidate" ? `<span class="chip cand">to verify</span>` : "");
+    return `<div class="row risk-${r.pii_risk.level}" data-id="${r.concept_id}">
+      <button type="button" aria-expanded="false"><span class="cid">${r.concept_id}</span>
+      <span class="term">${esc(r.preferred_term)}<small>${esc(others || r.sources[0].citation)}</small></span>
+      <span class="chips">${statusChip}<span class="chip ${r.pii_risk.level}">${r.pii_risk.level}</span></span></button></div>`;
+  }).join("");
+}
+document.getElementById("list").addEventListener("click", e => {
+  const btn = e.target.closest(".row > button"); if (!btn) return;
+  const row = btn.parentElement; const open = btn.getAttribute("aria-expanded") === "true";
+  const existing = row.querySelector(".detail");
+  if (open) { existing && existing.remove(); btn.setAttribute("aria-expanded", "false"); return; }
+  row.insertAdjacentHTML("beforeend", detail(DATA.find(r => r.concept_id === row.dataset.id)));
+  btn.setAttribute("aria-expanded", "true");
+});
+document.getElementById("q").addEventListener("input", e => { state.q = e.target.value; render(); });
+catSel.addEventListener("change", e => { state.cat = e.target.value; render(); });
+const jurisSel = document.getElementById("juris");
+STATES.forEach(st => jurisSel.insertAdjacentHTML("beforeend", `<option value="${st.c}">${st.name}</option>`));
+jurisSel.addEventListener("change", e => { state.juris = e.target.value; render(); });
+for (const id of ["risk", "status"]) {
+  document.getElementById(id).addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    e.currentTarget.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    state[id] = b.dataset.v; render();
+  });
+}
+render();
+
+// Coverage
+(() => {
+  const counts = CAT_ORDER.map(c => ({ c, seed: DATA.filter(r => r.category === c && layer(r) === "fed").length,
+    st: DATA.filter(r => r.category === c && stateNew(r)).length, ill: DATA.filter(r => r.category === c && isIllus(r)).length }));
+  const max = Math.max(...counts.map(x => x.seed + x.st + x.ill));
+  document.getElementById("cov").innerHTML =
+    `<div class="cov-row head"><span>Category</span><span>Concepts</span><span class="next">Next source</span></div>` +
+    counts.map(x => `<div class="cov-row"><span>${label(x.c)}</span>
+      <span class="bar"><span class="bar-track"><span class="bar-seed" style="width:${x.seed / max * 100}%"></span><span class="bar-tx" style="width:${x.st / max * 100}%"></span><span class="bar-illus" style="width:${x.ill / max * 100}%"></span></span><span class="bar-n">${x.seed + x.st}${x.ill ? `+${x.ill}` : ""}</span></span>
+      <span class="next">${NEXT[x.c]}</span></div>`).join("");
+})();
+</script>

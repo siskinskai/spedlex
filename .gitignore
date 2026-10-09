@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+dist/
+build/
+*.egg-info/
+site/index.html
+.DS_Store
+
+# Source documents are cited, never committed. See CONTRIBUTING.md,
+# "Cite sources; don't copy them". Local copies live in .sources-cache/.
+.sources-cache/
+*-docs/
+*.pdf
+*.PDF
+*.doc
+*.docx
+*.rtf
+*.odt
+*.epub
