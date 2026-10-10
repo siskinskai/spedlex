@@ -1523,6 +1523,9 @@ stimulability	SPED:001521	Stimulability	active
 corrected_age	SPED:001522	Corrected age	active
 asha	SPED:001523	American Speech-Language-Hearing Association	active
 icd	SPED:001524	International Statistical Classification of Diseases and Related Health Problems	active
+ky_kbe	SPED:001525	Kentucky Board of Education	active
+ueb	SPED:001526	Unified English Braille	active
+nemeth	SPED:001527	Nemeth Code	active
 placeholder_phonological_awareness	SPED:900001	Phonological awareness (placeholder; now attested by the Texas Dyslexia Handbook)	retired
 exec_fn	SPED:900002	Executive functioning	active
 wisc5	SPED:900003	Wechsler Intelligence Scale for Children, Fifth Edition	active

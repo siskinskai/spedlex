@@ -162,8 +162,8 @@ state modules in `sources/states/` say which documents could not be read and why
 
 | Document | Type | Records |
 |---|---|---|
-| [707 KAR 1:002 (history note through eff. 7-5-2023)](https://apps.legislature.ky.gov/law/kar/downloads/docs/14098/document.engrossed.pdf) | state regulation | 93 |
-| [KY-SPIN](https://www.education.ky.gov/specialed/excep/Documents/Youth-IEP.pdf) | secondary guidance | 51 |
+| [707 KAR 1:002 (history note through eff. 7-5-2023)](https://apps.legislature.ky.gov/law/kar/downloads/docs/14098/document.engrossed.pdf) | state regulation | 94 |
+| [KY-SPIN](https://www.education.ky.gov/specialed/excep/Documents/Youth-IEP.pdf) | secondary guidance | 53 |
 | [Kentucky Department of Education](https://www.education.ky.gov/specialed/excep/GuidanceResources/Documents/IDEASpecialEducationProcess.pdf) | state guidance | 18 |
 | [Kentucky Department of Education](https://www.education.ky.gov/specialed/excep/GuidanceResources/Documents/Procedural_Safeguards_Notice.pdf) | procedural safeguards notice | 31 |
 

@@ -32,6 +32,13 @@ are partly raster images (pp. 17, 19, 21), so the words on those pages were
 read from the text layer only and cited when the wording was clear.
 
 Records from the rule text are 'machine_validated'; the others are 'candidate'.
+
+Audited 2026-10-10 (provenance/ky/ky-layer-audit-2026-10-10.md): every entry
+confirmed. Fixes from the audit: "mental disability" is typed as a synonym
+(it is the rule's current category name, not an older form); added "social
+work services in school" (Section 1(51)), "SAS" (Youth Guide p. 37),
+"Infinite Campus" (GUIDE p. 1), the Kentucky Board of Education (rule
+preamble), and Unified English Braille and Nemeth Code (Youth Guide p. 21).
 """
 
 RULE_URL = "https://apps.legislature.ky.gov/law/kar/downloads/docs/14098/document.engrossed.pdf"
@@ -77,7 +84,7 @@ STRINGS = [
     ("ed", [("emotional-behavioral disability", S, KY)], R(24)),
     ("ed", [("emotional-behavior disability", S, KY)], R(5)),
     ("hi", [], R(29)),
-    ("id", [("mental disability", L, KY), ("mild mental disability", S, KY), ("functional mental disability", S, KY),
+    ("id", [("mental disability", S, KY), ("mild mental disability", S, KY), ("functional mental disability", S, KY),
             ("MMD", A, KY), ("FMD", A, KY)], R(37)),
     ("md", [], R(39)),
     ("oi", [], R(41)),
@@ -124,7 +131,7 @@ STRINGS = [
     ("pt", [], R(51)), ("ot", [], R(51)), ("recreation", [], R(51)), ("early_id", [], R(51)),
     ("counseling", [], R(51)), ("rehab", [], R(51)), ("om", [], R(51)), ("medical", [], R(51)),
     ("transport", [], R(51)),
-    ("nursing", [], R(51)), ("social_work", [], R(51)), ("parent_training", [], R(51)),
+    ("nursing", [], R(51)), ("social_work", [("social work services in school", V, None)], R(51)), ("parent_training", [], R(51)),
     ("sbi", [], R(54)),
     ("services_plan", [], R(55)),
     ("special_ed", [], R(56)),
@@ -191,7 +198,7 @@ STRINGS = [
     ("cbm", [], Y(32)),
     ("fluency", [], Y(32)),
     ("sdi", [], Y(34)),
-    ("saas", [], Y(37)),
+    ("saas", [("SAS", A, KY)], Y(37)),
     ("graphic_org", [], Y(37)), ("ext_time", [], Y(37)), ("large_print", [], Y(37)), ("calc_aids", [], Y(37)),
     ("sto", [("short-term instructional objectives", S, KY), ("short term instructional objectives", S, KY)], Y(40)),
     ("test_accom", [], Y(43)),
@@ -225,8 +232,11 @@ CONCEPTS = [
      {**KYJ, "flags": ["place_name"]}),
     ("ky_ksd", "Kentucky School for the Deaf", "placement_setting", [("KSD", A, KY)], R(36),
      {**KYJ, "flags": ["place_name"]}),
-    ("ky_ksis", "Kentucky Student Information System", "legal_procedural", [("KSIS", A, KY)], G(1), KYJ),
+    ("ky_ksis", "Kentucky Student Information System", "legal_procedural", [("KSIS", A, KY), ("Infinite Campus", S, KY)], G(1),
+     {**KYJ, "note": "The guide says KSIS is 'also known as Infinite Campus (IC)', the vendor's product name; 'IC' is not recorded."}),
     ("ky_spin", "Kentucky Special Parent Involvement Network", "legal_procedural", [("KY-SPIN", A, KY)], G(6), KYJ),
+    ("ky_kbe", "Kentucky Board of Education", "legal_procedural", [],
+     src("RULE", "NECESSITY, FUNCTION, AND CONFORMITY (preamble)"), {**KYJ, "broader": "sea"}),
     ("ky_kar", "Kentucky Administrative Regulations", "legal_procedural", [("KAR", A, KY), ("KARs", P, KY)], G(1), KYJ),
     # Kentucky rule terms
     ("ky_sped_mentor", "Special education mentor", "personnel_role", [], R(57),
@@ -243,6 +253,9 @@ CONCEPTS = [
      [("functional hearing, listening and communication", AB, KY),
       ("functional hearing, listening, communication assessment", V, KY)],
      src("YOUTH", "p. 16 (also p. 15; the Special Education Process guide, p. 4, has the third form)"), {}),
+    ("ueb", "Unified English Braille", "accommodation_modification", [("UEB", A, None)], Y(21), {"broader": "braille"}),
+    ("nemeth", "Nemeth Code", "accommodation_modification", [], Y(21),
+     {"broader": "braille", "flags": ["eponym"], "note": "Braille code for mathematics and science, named for Abraham Nemeth. The bare surname is not recorded."}),
     ("wioa", "Workforce Innovation and Opportunity Act", "transition", [("WIOA", A, None)], Y(47), {}),
     ("smart_goals", "SMART goals", "iep_component", [("S.M.A.R.T. goals", V, None)], Y(25),
      {"flags": ["common_english_word"]}),
