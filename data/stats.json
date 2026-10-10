@@ -74,8 +74,8 @@
   },
   "by_risk": {
     "high": 346,
-    "low": 249,
-    "none": 1071
+    "low": 264,
+    "none": 1056
   },
   "by_review_status": {
     "candidate": 887,

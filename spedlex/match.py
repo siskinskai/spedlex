@@ -13,6 +13,9 @@ Rules applied (docs/METHODOLOGY.md explains why):
   * In a never_bare concept, a single-word string is skipped unless it is an
     all-caps acronym: "Kaufman" alone is never protected, though
     "Kaufman Assessment Battery for Children" is.
+  * A two-letter all-caps string listed in pii_risk.possible_initials ("LS",
+    "OT") is skipped unless the caller confirms it in confirmed_acronyms,
+    because it could be a student's initials ("LS will...").
   * Any string containing a household name is dropped, so a child named
     Georgia or Braille is still redacted.
   * A match that is a month name or abbreviation ("APR", "May", "Sept") is
@@ -57,7 +60,8 @@ class Match:
 
 
 class Safelist:
-    def __init__(self, records, jurisdictions=None, household_names=(), statuses=DEFAULT_STATUSES):
+    def __init__(self, records, jurisdictions=None, household_names=(), statuses=DEFAULT_STATUSES,
+                 confirmed_acronyms=()):
         """
         records          output of load()
         jurisdictions    e.g. {"US-TX"}: keep federal terms plus these states'.
@@ -66,9 +70,14 @@ class Safelist:
                          containing one is dropped.
         statuses         review statuses to include. Add "illustrative" to
                          include placeholders.
+        confirmed_acronyms  two-letter acronyms the user has confirmed are
+                         acronyms, not initials, in this document (e.g.
+                         {"LS"}). Any other possible_initials string is not
+                         protected, so the scrubber redacts it.
         """
         keep_j = None if jurisdictions is None else {"US", *jurisdictions}
         household = {n.lower() for n in household_names}
+        confirmed = frozenset(confirmed_acronyms)
         self._concepts = {}
         entries = {}  # (text, case_sensitive) -> concept_id
         for r in records:
@@ -77,6 +86,7 @@ class Safelist:
             if keep_j is not None and r["jurisdiction"] not in keep_j:
                 continue
             never_bare = r["pii_risk"]["protect_rule"] == "never_bare"
+            initials = {p["text"] for p in r["pii_risk"].get("possible_initials", [])} - confirmed
             for s in r["strings"]:
                 text = s["text"]
                 if keep_j is not None and s.get("regional") and not set(s["regional"]) & keep_j:
@@ -84,6 +94,8 @@ class Safelist:
                 words = _WORD.findall(text)
                 cs = s["match"] in ("phrase_cs", "token_cs")
                 if never_bare and len(words) == 1 and not (cs and text.isupper()):
+                    continue
+                if text in initials:
                     continue
                 if household & {re.sub(r"['’]s$", "", w).lower() for w in words}:
                     continue

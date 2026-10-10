@@ -184,6 +184,26 @@ Any other duplicate is an error and fails the build.
 **Single letters are never safelisted.** Nevada's IEP form codes services as
 A, C or D. Protecting those would shelter initials.
 
+**Two-letter acronyms are protected only when confirmed.** IEPs often refer
+to a student by initials ("LS will attend speech twice weekly"). In
+Mississippi "LS" is also speech or language impairment, and "DB" is
+deaf-blindness. Nationally, LD, OT, PT, ID and HI are all both acronyms and
+possible initials. The two can't be told apart from the text alone, so
+SPEDLex keeps these strings but lists each one in
+`pii_risk.possible_initials`, with `ask_in`: the jurisdictions where it is an
+acronym. `ask_in` is the string's `regional` tags if it has any (LS and DB:
+`US-MS`). Otherwise it is the concept's jurisdiction, and `US` means every
+state (LD, OT). A scrubber working on a document from one of those
+jurisdictions can ask the user whether the string is an acronym. A string
+the user confirms is protected. Anything else is redacted when it stands
+alone, whether nobody was asked, the state is unknown, or the state is not
+listed. The rule covers every string of exactly two capital letters. It does
+not cover three-letter acronyms yet (see [ROADMAP.md](ROADMAP.md)). A longer
+string that contains a two-letter acronym ("EC Report",
+"IQ-achievement discrepancy") is still protected as usual. This rule was
+adopted on 2026-10-10 after the Mississippi audit
+(`provenance/ms/ms-layer-audit-2026-10-10.md`) and the consistency audit.
+
 **Permanent IDs.** Concept IDs (`SPED:000102`) live in
 `data/concept_ids.tsv`. They never change and are never reused. A removed
 concept is marked `retired` and its ID stays reserved. IDs from 900001 up
@@ -223,7 +243,7 @@ The build checks each string against five things:
 | Level | When | Rule | Meaning |
 |---|---|---|---|
 | `high` | A single-word string is itself a name, a string contains a U.S. place name, the concept carries an eponym or place-name flag, or the scrubber's name dictionary fires | `never_bare` | The risky word is protected only inside its full phrase. "Kaufman Assessment Battery for Children" is protected. "Kaufman" alone never is. |
-| `low` | Any other name-list hit, scrubber hit, number or flag | `phrase_only` | Protect only the full string. |
+| `low` | Any other name-list hit, scrubber hit, number or flag, or a two-letter all-caps string (`possible_initials`) | `phrase_only` | Protect only the full string. |
 | `none` | Nothing found | `phrase_or_token` | Safe to protect wherever it appears. |
 
 **The all-caps exemption.** "LEA", "ADA", "IDA", "REED", "TEA" and "CAP" are also
@@ -231,8 +251,9 @@ given names. The list stores them as case-sensitive acronyms, so protecting
 "LEA" cannot shelter "Lea". The case rule is the guard. These strings are
 graded `low`, not `high`. The same rule covers postal codes that are also
 special-education acronyms: "ID", "MD", "HI", "VI" and "PR" (percentile
-rank) are protected only in capitals and are never read as places on their
-own.
+rank) match only in capitals and are never read as places on their own.
+Being two letters long, they are also possible initials, so they are
+protected only when the user confirms them (§4).
 
 **Household names always win.** A tool using SPEDLex should pass in the names
 of the people in the document. The matcher drops any safelist string that
@@ -252,7 +273,9 @@ the scrubber, which may redact it. Over-redaction is the safe direction.
 a first name or surname from the reference lists on its own, such as "Rosa"
 or "Johnson" written as a name. The only name-shaped strings it protects are
 a fixed, reviewed set of all-caps acronyms. A new one fails CI until a
-reviewer adds it on purpose. See `tests/test_match.py`.
+reviewer adds it on purpose. Unless the user confirms it, the matcher
+never protects a bare two-letter all-caps string, which could be initials.
+See `tests/test_match.py`.
 
 **What scrubber collisions revealed.** The reference scrubber's first-name
 dictionary contained "Virginia", "Florida", "Georgia" and "Carolina". It

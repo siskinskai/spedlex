@@ -86,7 +86,7 @@ nothing here is tied to any one tool or model.
 | States | 42: AK, AL, AR, AZ, CA, CO, CT, DC, DE, FL, GA, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, ME, MI, MN, MO, MS, NC, NH, NJ, NM, NV, NY, OH, OR, PA, TN, TX, UT, VA, WA, WV, WY |
 | Documents cited | 204, listed in [docs/SOURCES.md](docs/SOURCES.md) |
 | Review status | 779 checked against regulation text, 887 candidates awaiting a human check, 0 expert-accepted |
-| Privacy risk | 1071 none, 249 low, 346 high |
+| Privacy risk | 1056 none, 264 low, 346 high |
 
 13 more records are **illustrative placeholders** for later work
 (test instruments, score terms). They're marked and excluded by default.

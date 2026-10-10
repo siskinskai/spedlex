@@ -56,6 +56,22 @@ Options:
 | `jurisdictions` | `None` (all) | Keep federal concepts plus these states'. Drop strings tagged only to other states. |
 | `household_names` | none | Drop any string containing one of these words, in any case. This is deliberately conservative. A student named Ed also drops the acronym "ED", because forms often print names in capitals. |
 | `statuses` | candidate, machine_validated, expert_accepted | Add `"illustrative"` to include placeholders. Remove `"candidate"` for the reviewed core only. |
+| `confirmed_acronyms` | none | Two-letter acronyms the user has confirmed are acronyms, not initials, in this document, e.g. `{"LS"}`. Every other string in `pii_risk.possible_initials` is left unprotected, so your scrubber can redact it. |
+
+**Two-letter acronyms and initials.** "LS" is Mississippi's acronym for
+speech or language impairment, but "LS will attend..." may be a student's
+initials. Each record lists such strings in `pii_risk.possible_initials`, with
+`ask_in`: the jurisdictions where the string is an acronym (`US` means every
+state). The CSV has the same list in its `ask_if_initials_in` column. A
+scrubber can ask the user, when the document comes from one of those
+jurisdictions, and pass the confirmed strings in. Don't ask outside those
+jurisdictions. If nobody answers, leave the string unconfirmed so it gets
+redacted.
+
+```python
+# A Mississippi document; the user said "LS" is the disability acronym here.
+safelist = Safelist.from_default(jurisdictions={"US-MS"}, confirmed_acronyms={"LS"})
+```
 
 `load(path)` returns the raw records if you want to build your own matcher.
 
@@ -76,16 +92,20 @@ Read `data/spedlex.jsonl` (or `data/spedlex.csv`) and apply these rules.
    skip any string that is a single word, unless it is all capitals and
    case-sensitive. "Kaufman" is skipped. "KABC-II" and the full test name
    are kept.
-6. **Household names.** Skip any string containing a household name as a word.
-7. **Months in dates.** Skip a match whose text (minus a trailing period) is
+6. **Possible initials.** Skip any string listed in the record's
+   `pii_risk.possible_initials` unless the user has confirmed it is an
+   acronym. Ask only for documents from a jurisdiction in its `ask_in`
+   list (`US` means any state).
+7. **Household names.** Skip any string containing a household name as a word.
+8. **Months in dates.** Skip a match whose text (minus a trailing period) is
    a month name or abbreviation (January to December; Jan, Feb, Mar, Apr,
    Jun, Jul, Aug, Sep, Sept, Oct, Nov, Dec) if a digit comes directly before
    it, allowing spaces and `. , / -` and an ordinal suffix ("14th"), or
    directly after it, allowing an optional period and spaces and `, / -`.
    "APR 14, 2015" is skipped; "its APR to OSEP" is kept.
-8. **Longest match wins.** Collect all matches and take the longest first.
+9. **Longest match wins.** Collect all matches and take the longest first.
    Drop any match that overlaps one already taken.
-9. **Placeholders.** Replace each span with something your scrubber can't
+10. **Placeholders.** Replace each span with something your scrubber can't
    match. The Python matcher uses one character from Unicode's
    Supplementary Private Use Area-A (U+F0000 upward) per span.
 

@@ -6,6 +6,24 @@ patch for corrections and reviews. Concept IDs never change between versions.
 
 ## [Unreleased]
 
+Two-letter acronyms and initials, drafted with Claude Opus 5.5
+(`claude-opus-5-5`) and awaiting the maintainer's check. This answers the
+policy question in the Mississippi audit and the consistency audit. IEPs
+often use a student's initials ("LS will..."), and 18 of the 26 two-letter
+all-caps acronyms (LS, DB, LD, OT, PT, ID, HI and others) were protected as
+bare tokens. They stay in the lexicon. `spedlex/risk.py` now lists every
+two-letter all-caps string in a new `pii_risk.possible_initials` field. Each
+entry has `ask_in`: the jurisdictions where it is an acronym (its regional
+tags, or else the concept's jurisdiction; `US` means every state). A scrubber
+can ask the user there. These concepts are graded at least `low`, which moves
+15 concepts from `none`. The `Safelist` matcher no longer protects a bare
+two-letter acronym unless the caller passes it in the new `confirmed_acronyms`
+argument. Longer strings that contain one are unaffected. The CSV gains an
+`ask_if_initials_in` column, and the JSON schema adds the field and the
+`possible_initials` reason. The Lexicon (terminology helpers) is unchanged.
+Three-letter acronyms are not covered yet (ROADMAP). Tests in
+`tests/test_match.py`; METHODOLOGY §4 and §5, USING and SCHEMA are updated.
+
 ## [0.51.0] - 2026-10-10
 
 Re-read the early layers' sources (0.51.0), drafted with Claude Opus 5.5

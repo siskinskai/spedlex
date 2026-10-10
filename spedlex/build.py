@@ -127,7 +127,7 @@ def federal_records(reg, register, adapter):
             }],
             "cross_maps": [{"system": s, **({"label": lbl} if lbl else {}), "relation": r}
                            for s, lbl, r in opts.get("xmap", [])] or [{"system": "MeSH", "relation": "pending"}],
-            "pii_risk": assess_risk(strings, flags[key], adapter),
+            "pii_risk": assess_risk(strings, flags[key], adapter, "US"),
             "review": {"status": "machine_validated", "reviewers": 0},
             "extraction": {"method": "regulatory_definition" if "(" in cit or cit in ("300.17", "300.22") else "regulatory_heading"},
             "jurisdiction": "US",
@@ -166,7 +166,7 @@ def apply_layer(mod, records, keys, flags, reg, register, adapter):
                 continue
             rec["strings"].append(s)
             have[norm(s)] = s
-        rec["pii_risk"] = assess_risk(rec["strings"], flags.get(key, []), adapter)
+        rec["pii_risk"] = assess_risk(rec["strings"], flags.get(key, []), adapter, rec["jurisdiction"])
 
     for key, pref, *_ in mod.CONCEPTS:
         if key in keys:
@@ -182,7 +182,7 @@ def apply_layer(mod, records, keys, flags, reg, register, adapter):
             "strings": strs,
             "sources": [{**source, "retrieved": retrieved, "jurisdiction": mod.JURISDICTION, "assisted_by": mod.ASSISTED_BY}],
             "cross_maps": [{"system": "ERIC", "relation": "pending"}],
-            "pii_risk": assess_risk(strs, opts.get("flags", []), adapter),
+            "pii_risk": assess_risk(strs, opts.get("flags", []), adapter, opts.get("jurisdiction", "US")),
             "review": {"status": opts.get("status", "machine_validated" if is_reg else "candidate"), "reviewers": 0,
                        **({} if is_reg else {"notes": "Page reference from text extraction; confirm against the PDF."})},
             "extraction": {"method": "regulatory_heading" if is_reg else "manual"},
@@ -216,7 +216,7 @@ def illustrative_records(reg, register, adapter):
             "sources": [{"source_type": stype, "citation": "ILLUSTRATIVE: placeholder for a later harvest",
                          "retrieved": federal.RETRIEVED, "assisted_by": federal.ASSISTED_BY}],
             "cross_maps": [{"system": "ERIC", "relation": "pending"}],
-            "pii_risk": assess_risk(strings, flags, adapter),
+            "pii_risk": assess_risk(strings, flags, adapter, "US"),
             "review": {"status": "illustrative", "reviewers": 0,
                        "notes": "Shows the shape of later-phase records; not attested by a regulation or state source yet."},
             "extraction": {"method": method},
@@ -451,14 +451,16 @@ def render(records, reg, adapter):
     key_of = {cid: key for key, (cid, _, _) in reg.rows.items()}
     w.writerow(["concept_id", "key", "preferred_term", "category", "string", "string_type", "match", "regional",
                 "jurisdictions_attesting", "first_citation", "pii_level", "protect_rule", "review_status",
-                "disfavored", "usage_note"])
+                "disfavored", "usage_note", "ask_if_initials_in"])
     for r in records:
         juris = sorted({s.get("jurisdiction", "") for s in r["sources"]} - {""})
         for s in r["strings"]:
             w.writerow([r["concept_id"], key_of[r["concept_id"]], r["preferred_term"], r["category"], s["text"], s["string_type"], s["match"],
                         " ".join(s.get("regional", [])), " ".join(juris), r["sources"][0]["citation"],
                         r["pii_risk"]["level"], r["pii_risk"]["protect_rule"], r["review"]["status"],
-                        "yes" if s.get("disfavored") else "", s.get("usage_note", "")])
+                        "yes" if s.get("disfavored") else "", s.get("usage_note", ""),
+                        " ".join(next((p["ask_in"] for p in r["pii_risk"].get("possible_initials", [])
+                                       if p["text"] == s["text"]), []))])
     files["data/spedlex.csv"] = buf.getvalue()
 
     buf = io.StringIO()
