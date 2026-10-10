@@ -6,6 +6,24 @@ patch for corrections and reviews. Concept IDs never change between versions.
 
 ## [Unreleased]
 
+Adds the Mississippi layer (`mississippi`, US-MS, 0.49.0) from Mississippi
+State Board of Education Policy Chapter 74, Rule 74.19 (the 2013 text as
+posted by the Mississippi Department of Education), the 2025 Procedural
+Safeguards notice, the Procedures for Policy 74.19 Volume I (child find,
+evaluation and eligibility), the IEP Development Guidance (2020) and the
+Educator Guide to Special Education (V5). It attests 364 concepts and adds 65
+(27 machine_validated, 38 candidate): the Mississippi Department of
+Education and its Office of Special Education, state agencies and schools
+named in the documents, the Mississippi Occupational and Alternate Diplomas,
+the MAAP, MAAP-A and other state assessments and standards, state IEP and
+monitoring forms, the Results-Driven Accountability determinations, and
+general terms such as co-teaching models, check-in/check-out and audiology
+screening terms. **Merge order: Kentucky (0.47.0), Maine (0.48.0), then
+Mississippi (0.49.0).** The version numbers and the coverage totals
+(40 added, 16 pending) assume the first two are merged. Source PDFs are not
+committed; they are listed in `sources/documents.tsv` and held in
+`.sources-cache/ms/`. The Safelist and its matching rules are unchanged.
+
 Adds terminology helpers and the `disfavored` flag (0.46.0). SPEDLex's records
 already list every form a concept takes, tagged to the states whose
 documents use it; the new `spedlex.Lexicon` exposes that to AI and writing
