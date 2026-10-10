@@ -178,7 +178,7 @@ state modules in `sources/states/` say which documents could not be read and why
 
 | Document | Type | Records |
 |---|---|---|
-| [05-071 Chapter 101](https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/Special%20Services%20-%20MUSER%20-%208.21.2024.pdf) | state regulation | 150 |
+| [05-071 Chapter 101](https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/Special%20Services%20-%20MUSER%20-%208.21.2024.pdf) | state regulation | 155 |
 
 ## Maryland (US-MD)
 

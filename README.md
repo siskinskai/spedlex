@@ -81,12 +81,12 @@ nothing here is tied to any one tool or model.
 
 | | |
 |---|---|
-| Concepts | 1,524: 156 from 34 CFR Part 300, 1368 added by state layers |
-| Surface strings | 3,326 (phrases, acronyms, plurals, legacy and regional forms): 1,147 tagged to the states that use them, 22 older forms, 3 flagged as disfavored |
+| Concepts | 1,530: 156 from 34 CFR Part 300, 1374 added by state layers |
+| Surface strings | 3,342 (phrases, acronyms, plurals, legacy and regional forms): 1,149 tagged to the states that use them, 22 older forms, 3 flagged as disfavored |
 | States | 42: AK, AL, AR, AZ, CA, CO, CT, DC, DE, FL, GA, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, ME, MI, MN, MO, MS, NC, NH, NJ, NM, NV, NY, OH, OR, PA, TN, TX, UT, VA, WA, WV, WY |
 | Documents cited | 199, listed in [docs/SOURCES.md](docs/SOURCES.md) |
-| Review status | 749 checked against regulation text, 775 candidates awaiting a human check, 0 expert-accepted |
-| Privacy risk | 983 none, 223 low, 318 high |
+| Review status | 755 checked against regulation text, 775 candidates awaiting a human check, 0 expert-accepted |
+| Privacy risk | 985 none, 227 low, 318 high |
 
 13 more records are **illustrative placeholders** for later work
 (test instruments, score terms). They're marked and excluded by default.

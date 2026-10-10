@@ -68,6 +68,7 @@ SPED:000094,Special class,machine_validated,low,name_list,surname:self <- 'self-
 SPED:000094,Special class,machine_validated,low,name_list,surname:self <- 'self-contained program'
 SPED:000094,Special class,machine_validated,low,name_list,surname:day <- 'special day class'
 SPED:000094,Special class,machine_validated,low,name_list,surname:self <- 'self-contained special education class'
+SPED:000094,Special class,machine_validated,low,name_list,surname:self <- 'self-contained special classrooms'
 SPED:000095,Special school,machine_validated,low,name_list,surname:day <- 'special education day program'
 SPED:000095,Special school,machine_validated,low,name_list,surname:day <- 'separate day school'
 SPED:000095,Special school,machine_validated,low,name_list,"surname:day <- 'special day school, private'"
@@ -913,6 +914,13 @@ SPED:001440,IEP case manager,machine_validated,low,name_list,surname:case <- 'IE
 SPED:001446,Early childhood program,machine_validated,low,name_list,first:Early <- 'Early childhood program'
 SPED:001446,Early childhood program,machine_validated,low,name_list,surname:Early <- 'Early childhood program'
 SPED:001458,Bone tuberculosis,machine_validated,low,name_list,surname:Bone <- 'Bone tuberculosis'
+SPED:001531,Targeted case management,machine_validated,low,name_list,first:case <- 'Targeted case management'
+SPED:001531,Targeted case management,machine_validated,low,name_list,surname:case <- 'Targeted case management'
+SPED:001531,Targeted case management,machine_validated,low,name_list,first:Case <- 'Medicaid Targeted Case Management'
+SPED:001531,Targeted case management,machine_validated,low,name_list,surname:Case <- 'Medicaid Targeted Case Management'
+SPED:001532,Rehabilitation Engineering and Assistive Technology Society of North America,machine_validated,low,name_list,first:North <- 'Rehabilitation Engineering and Assistive Technology Society of North America'
+SPED:001532,Rehabilitation Engineering and Assistive Technology Society of North America,machine_validated,low,name_list,surname:North <- 'Rehabilitation Engineering and Assistive Technology Society of North America'
+SPED:001532,Rehabilitation Engineering and Assistive Technology Society of North America,machine_validated,low,name_list,first:America <- 'Rehabilitation Engineering and Assistive Technology Society of North America'
 SPED:001460,Mississippi Department of Education,machine_validated,high,place_list,place:Mississippi <- 'Mississippi Department of Education'
 SPED:001461,"Mississippi Department of Education, Office of Special Education",machine_validated,high,place_list,"place:Mississippi <- 'Mississippi Department of Education, Office of Special Education'"
 SPED:001462,Division of Parent Outreach,candidate,low,name_list,surname:Parent <- 'Division of Parent Outreach'

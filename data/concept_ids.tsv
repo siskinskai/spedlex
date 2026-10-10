@@ -1526,6 +1526,12 @@ icd	SPED:001524	International Statistical Classification of Diseases and Related
 ky_kbe	SPED:001525	Kentucky Board of Education	active
 ueb	SPED:001526	Unified English Braille	active
 nemeth	SPED:001527	Nemeth Code	active
+fas	SPED:001528	Fetal alcohol syndrome	active
+esea	SPED:001529	Elementary and Secondary Education Act	active
+special_instruction	SPED:001530	Special instruction	active
+tcm	SPED:001531	Targeted case management	active
+resna	SPED:001532	Rehabilitation Engineering and Assistive Technology Society of North America	active
+me_cbhs	SPED:001533	Children's Behavioral Health Services	active
 placeholder_phonological_awareness	SPED:900001	Phonological awareness (placeholder; now attested by the Texas Dyslexia Handbook)	retired
 exec_fn	SPED:900002	Executive functioning	active
 wisc5	SPED:900003	Wechsler Intelligence Scale for Children, Fifth Edition	active

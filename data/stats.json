@@ -1,12 +1,12 @@
 {
   "version": "0.49.0",
-  "concepts": 1524,
+  "concepts": 1530,
   "illustrative_placeholders": 13,
   "federal_concepts": 156,
-  "strings": 3326,
+  "strings": 3342,
   "disfavored_strings": 3,
   "legacy_strings": 22,
-  "regional_strings": 1147,
+  "regional_strings": 1149,
   "states": 42,
   "state_codes": [
     "AK",
@@ -58,13 +58,13 @@
     "accommodation_modification": 60,
     "disability_category": 26,
     "discipline": 37,
-    "early_intervention": 46,
+    "early_intervention": 47,
     "evaluation_eligibility": 125,
     "functional_skill": 17,
-    "health_condition": 41,
+    "health_condition": 42,
     "iep_component": 159,
     "instrument": 20,
-    "legal_procedural": 504,
+    "legal_procedural": 508,
     "personnel_role": 91,
     "placement_setting": 153,
     "related_service": 40,
@@ -74,16 +74,16 @@
   },
   "by_risk": {
     "high": 318,
-    "low": 223,
-    "none": 983
+    "low": 227,
+    "none": 985
   },
   "by_review_status": {
     "candidate": 775,
-    "machine_validated": 749
+    "machine_validated": 755
   },
   "sources_by_assisting_model": {
     "claude-opus-5-5": 4104,
-    "claude-sonnet-5-5": 1460
+    "claude-sonnet-5-5": 1465
   },
   "collision_adapter": "scrub",
   "concepts_with_scrubber_collisions": 3

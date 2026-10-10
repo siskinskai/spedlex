@@ -28,6 +28,15 @@ the large finance tables in Section XVIII (state subsidy and tuition formulas)
 were scanned for named programs and offices, not read line by line.
 
 Records from the rule text are 'machine_validated'.
+
+Audited 2026-10-10 (provenance/me/me-layer-audit-2026-10-10.md): every entry
+confirmed. Fixes from the audit: the rule's "fetal alcohol syndrome"
+(Section VII(1)(A)) is its own concept under fetal alcohol spectrum disorder
+rather than an attestation of it; added the singular and variant forms the
+rule uses for homeless child, parentally placed private school child, the
+least restrictive environment, the continuum and self-contained classrooms;
+and added ESEA, special instruction (Part C), targeted case management,
+RESNA and Children's Behavioral Health Services.
 """
 
 RULE_URL = "https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/Special%20Services%20-%20MUSER%20-%208.21.2024.pdf"
@@ -61,13 +70,13 @@ STRINGS = [
     ("iep_team", [], R("Section II(14)", 6)),
     ("func_perf", [], R("Section II(15)", 6)),
     ("gen_ed_int", [], R("Section II(16)", 6)),
-    ("homeless", [], R("Section II(17)", 6)),
+    ("homeless", [("homeless child", V, None)], R("Section II(17)", 6)),
     ("iee", [], R("Section II(18)", 7)),
     ("lea", [], R("Section II(21)", 7)),
     ("program_mods", [], R("Section II(22)", 7)),
     ("native_language", [], R("Section II(24)", 8)),
     ("surrogate", [], R("Section II(25)", 8)),
-    ("ppps", [], R("Section II(26)", 8)),
+    ("ppps", [("parentally placed private school child", V, None)], R("Section II(26)", 8)),
     ("pbis", [("positive reinforcement interventions and supports", S, ME)], R("Section II(27)", 9)),
     ("postsecondary", [], R("Section II(28)", 9)),
     ("public_agency", [], R("Section II(30)", 9)),
@@ -115,18 +124,17 @@ STRINGS = [
     ("perceptual", [], R("Section VII(2)(L)", 84)),
     ("tbi", [], R("Section VII(2)(M)", 89)),
     ("vi", [], R("Section VII(2)(N)", 90)),
-    ("fasd", [], R("Section VII(1)(A)", 72)),
     ("sdi", [], R("Section X(2)(A)(2)", 111)),
     ("consult", [], R("Section X(2)(A)(1)", 111)),
     ("slp", [], R("Section X(2)(A)(3)", 113)),
     ("esy", [], R("Section X(2)(A)(7)", 119)),
     ("hqt", [], R("Section X(2)(A)(6)", 115)),
-    ("lre", [], R("Section X(2)(B)", 120)),
-    ("continuum", [], R("Section X(2)(B)", 120)),
+    ("lre", [("least restrictive educational environment", V, ME)], R("Section X(2)(B)", 120)),
+    ("continuum", [("continuum of alternate placements", V, None)], R("Section X(2)(B)", 120)),
     ("itinerant", [], R("Section X(2)(B)", 121)),
     ("head_start", [("Headstart", V, None)], R("Section X(2)(C)(1)", 121)),
     ("resource_room", [], R("Section X(2)(C)(2)", 123)),
-    ("special_class", [], R("Section X(2)(C)(2)", 123)),
+    ("special_class", [("self-contained special classrooms", P, None)], R("Section X(2)(C)(2)", 123)),
     ("residential", [], R("Section X(2)(C)(2)", 124)),
     ("home_instr", [], R("Section X(2)(C)(2)", 124)),
     ("related", [], R("Section XI", 126)),
@@ -199,6 +207,18 @@ CONCEPTS = [
     ("cerebral_palsy", "Cerebral palsy", "health_condition", [], R("Section VII(2)(I)", 81), {"broader": "oi"}),
     ("poliomyelitis", "Poliomyelitis", "health_condition", [], R("Section VII(2)(I)", 81), {"broader": "oi"}),
     ("bone_tuberculosis", "Bone tuberculosis", "health_condition", [], R("Section VII(2)(I)", 81), {"broader": "oi"}),
+    ("fas", "Fetal alcohol syndrome", "health_condition", [], R("Section VII(1)(A)", 72), {"broader": "fasd"}),
+    ("esea", "Elementary and Secondary Education Act", "legal_procedural",
+     [("ESEA", A, None), ("Elementary and Secondary Education Act of 1965", V, None)], R("Section II(33)", 10),
+     {"note": "Both forms are in the rule: Section II(33), p. 10 ('(ESEA)') and p. 13 ('Act of 1965 (ESEA)')."}),
+    ("special_instruction", "Special instruction", "early_intervention", [], R("Section II(38)", 11),
+     {"flags": ["common_english_word"], "note": "The Part C early intervention service (34 CFR 303.13(b)(14)); the rule defines it for children B-2."}),
+    ("tcm", "Targeted case management", "legal_procedural", [("Medicaid Targeted Case Management", S, None), ("TCM", A, ME)],
+     R("Section XVIII(1)(A)", 197), {}),
+    ("resna", "Rehabilitation Engineering and Assistive Technology Society of North America", "legal_procedural",
+     [("RESNA", A, None)], R("Section XI", 136),
+     {"note": "The acronym is in Section XI, p. 136; the full name is in the Section XVIII staff table, p. 201."}),
+    ("me_cbhs", "Children's Behavioral Health Services", "legal_procedural", [], R("Section II(40)", 11), {**MEJ, "broader": "me_dhhs"}),
     ("schizophrenia", "Schizophrenia", "health_condition", [], R("Section VII(2)(E)", 79), {"broader": "ed"}),
 ]
 
