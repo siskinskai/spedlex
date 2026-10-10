@@ -226,7 +226,7 @@ The build checks each string against five things:
 | `low` | Any other name-list hit, scrubber hit, number or flag | `phrase_only` | Protect only the full string. |
 | `none` | Nothing found | `phrase_or_token` | Safe to protect wherever it appears. |
 
-**The all-caps exemption.** "LEA", "ADA", "IDA", "REED" and "TEA" are also
+**The all-caps exemption.** "LEA", "ADA", "IDA", "REED", "TEA" and "CAP" are also
 given names. The list stores them as case-sensitive acronyms, so protecting
 "LEA" cannot shelter "Lea". The case rule is the guard. These strings are
 graded `low`, not `high`. The same rule covers postal codes that are also

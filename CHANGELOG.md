@@ -6,6 +6,30 @@ patch for corrections and reviews. Concept IDs never change between versions.
 
 ## [Unreleased]
 
+Adds the Kentucky layer (`kentucky`, US-KY, 0.47.0) from 707 KAR 1:002
+(Definitions), KDE's Part B Procedural Safeguards Notice, KDE's IDEA Part B
+Special Education Process guide (reviewed April 2025) and KY-SPIN's A Youth
+Guide to the IEP (2025). It attests 167 concepts and adds 24 (6
+machine_validated, 18 candidate): the Kentucky Department of Education (KDE)
+and its Office of Special Education and Early Learning, the Division of IDEA
+Monitoring and Results, the Exceptional Children Appeals Board (ECAB), the
+Kentucky School for the Blind and School for the Deaf, the Kentucky Student
+Information System, KY-SPIN, the Kentucky Administrative Regulations, the
+Kentucky Summative Assessment and its alternate (AKSA), the Cabinet for Health
+and Family Services and the Department of Juvenile Justice, the special
+education mentor, corrective action plans, compliance monitoring reports and
+the Program of Studies, plus seven concepts that exist outside Kentucky
+(functional hearing, listening and communication assessment, WIOA, SMART goals
+and the methods of measurement). Kentucky's Admissions and Release Committee
+(ARC) is recorded under IEP Team, and its "mental disability" category (mild
+and functional) under intellectual disability. Only 707 KAR 1:002 was
+available from the rules, and no Wayback snapshots were recorded. Drafted with
+Claude Sonnet 5.5 (`claude-sonnet-5-5`); `prompts/audit-layer.md` has not yet
+been run (report in `provenance/ky/ky-layer-report-2026-10-09.md`). The acronym
+"CAP" (corrective action plan) is also a first name; it is case-sensitive and
+is added to the known all-caps collisions in `tests/test_match.py`, pending
+reviewer confirmation.
+
 Adds terminology helpers and the `disfavored` flag (0.46.0). SPEDLex's records
 already list every form a concept takes, tagged to the states whose
 documents use it; the new `spedlex.Lexicon` exposes that to AI and writing
