@@ -1570,6 +1570,104 @@ nc_futureready_core	SPED:001568	FutureReady Core Course of Study	active
 gepa	SPED:001569	General Education Provisions Act	active
 mi_ose	SPED:001570	Michigan Department of Education Office of Special Education	active
 mi_sems	SPED:001571	Special Education Mediation Services	active
+tx_hhsc	SPED:001572	Texas Health and Human Services Commission	active
+tx_sboe	SPED:001573	Texas State Board of Education	active
+tx_complaints_unit	SPED:001574	Special Education Complaints Unit	active
+tx_mediation_program	SPED:001575	Special Mediation Program	active
+tx_beyond_eci	SPED:001576	Beyond ECI	active
+tx_family_code	SPED:001577	Texas Family Code	active
+tx_parent_family_training	SPED:001578	Parent/family training and support	active
+tx_comm_interventions	SPED:001579	Communication interventions	active
+tx_staff_support	SPED:001580	Professional educator/staff support	active
+discrete_trial	SPED:001581	Discrete-trial training	active
+visual_supports	SPED:001582	Visual supports	active
+lssp	SPED:001583	Licensed specialist in school psychology	active
+dyslexia_screener	SPED:001584	Dyslexia screener	active
+remedial_reading_teacher	SPED:001585	Remedial reading teacher	active
+om_eval	SPED:001586	Orientation and mobility evaluation	active
+low_vision_eval	SPED:001587	Clinical low vision evaluation	active
+sem	SPED:001588	Standard error of measurement	active
+play_based_assess	SPED:001589	Play-based assessment	active
+written_translation	SPED:001590	Written translation	active
+dual_enrollment	SPED:001591	Dual enrollment	active
+ca_ber	SPED:001592	Behavioral emergency report	active
+emergency_intervention	SPED:001593	Emergency intervention	active
+ca_systematic_bip	SPED:001594	Systematic behavioral intervention plan	active
+locked_seclusion	SPED:001595	Locked seclusion	active
+ca_complaint_support_unit	SPED:001596	Complaint Support Unit	active
+ca_isa	SPED:001597	Individual Services Agreement	active
+ca_master_contract	SPED:001598	Master contract	active
+sphcs	SPED:001599	Specialized physical health care services	active
+ca_specified_placement	SPED:001600	Specified education placement	active
+ca_temp_phys_disability	SPED:001601	Temporary physical disability	active
+ca_ctc	SPED:001602	California Commission on Teacher Credentialing	active
+ca_sspi	SPED:001603	California State Superintendent of Public Instruction	active
+ca_contracting_agency	SPED:001604	Contracting education agency	active
+ca_linguistic_goals	SPED:001605	Linguistically appropriate goals, objectives, and programs	active
+ca_wic	SPED:001606	Welfare and Institutions Code	active
+ca_year_round	SPED:001607	Year-round school program	active
+ny_ocfs	SPED:001608	Office of Children and Family Services	active
+ny_statewide_coord	SPED:001609	Statewide Coordinator for Special Education	active
+ny_supt_hearing	SPED:001610	Superintendent's hearing	active
+ny_ssl	SPED:001611	Social Services Law	active
+ny_fca	SPED:001612	Family Court Act	active
+ny_education_law	SPED:001613	Education Law	active
+ny_usny	SPED:001614	University of the State of New York	active
+class_size	SPED:001615	Class size	active
+sd_reading_instr	SPED:001616	Specially designed reading instruction	active
+ny_seven_day_residential	SPED:001617	Seven-day residential program	active
+ny_state_supported_school	SPED:001618	State-supported school	active
+fl_beess	SPED:001619	Bureau of Exceptional Education and Student Services	active
+fl_extraordinary_exemption	SPED:001620	Extraordinary exemption	active
+fl_statutes	SPED:001621	Florida Statutes	active
+prot_advocacy	SPED:001622	Protection and advocacy agency	active
+pattan	SPED:001623	Pennsylvania Training and Technical Assistance Network	active
+pa_waive_reeval	SPED:001624	Agreement to Waive Reevaluation	active
+pa_phrc	SPED:001625	Pennsylvania Human Relations Commission	active
+pa_eisa	SPED:001626	Early Intervention Services System Act	active
+pa_mawa	SPED:001627	Mutually agreed-upon written arrangement	active
+pa_avts	SPED:001628	Area vocational-technical school	active
+cyber_charter	SPED:001629	Cyber charter school	active
+personal_care_assistant	SPED:001630	Personal care assistant	active
+transliterator	SPED:001631	Qualified transliterator	active
+pbsp	SPED:001632	Positive behavior support plan	active
+pa_sped_plan	SPED:001633	Special education plan	active
+caseload	SPED:001634	Caseload	active
+pa_sbap	SPED:001635	School-based access program	active
+pa_chartered_deaf_blind	SPED:001636	Chartered schools for the deaf and blind	active
+home_language_survey	SPED:001637	Home Language Survey	active
+preferred_language	SPED:001638	Preferred language	active
+qualified_interpreter	SPED:001639	Qualified interpreter	active
+interpretation_services	SPED:001640	Interpretation services	active
+il_qualified_specialist	SPED:001641	Qualified specialist	active
+il_notif_conference	SPED:001642	Parent/Guardian Notification of Conference	active
+il_notif_conf_recs	SPED:001643	Parent/Guardian Notification of Conference Recommendations	active
+il_consent_placement	SPED:001644	Consent for Placement	active
+il_date_of_referral	SPED:001645	Date of referral	active
+chronic_absence	SPED:001646	Chronic absence	active
+ebi	SPED:001647	Evidence-based interventions	active
+il_dyslexia_guide	SPED:001648	The Dyslexia Guide: A Handbook for Parents, Educators, and Students	active
+ga_bcw	SPED:001649	Babies Can't Wait	active
+masspac	SPED:001650	Massachusetts Association of Special Education Parent Advisory Councils	active
+ma_pal	SPED:001651	Parent Professional Advocacy League	active
+ma_mcb	SPED:001652	Massachusetts Commission for the Blind	active
+ma_mcdhh	SPED:001653	Massachusetts Commission for the Deaf and Hard of Hearing	active
+ma_mrc	SPED:001654	Massachusetts Rehabilitation Commission	active
+ma_dmh	SPED:001655	Massachusetts Department of Mental Health	active
+ma_dph	SPED:001656	Massachusetts Department of Public Health	active
+ma_dss	SPED:001657	Massachusetts Department of Social Services	active
+ma_eohhs	SPED:001658	Executive Office of Health and Human Services	active
+ma_btp	SPED:001659	Bureau of Transitional Planning	active
+ma_sliding_fee	SPED:001660	Sliding fee scale	active
+instructional_supports	SPED:001661	Instructional supports	active
+ma_student_vision	SPED:001662	Student vision	active
+ma_era	SPED:001663	Massachusetts Education Reform Act	active
+wa_wac	SPED:001664	Washington Administrative Code	active
+wa_rcw	SPED:001665	Revised Code of Washington	active
+parent_initiated_eval	SPED:001666	Parent-initiated evaluation	active
+or_oya	SPED:001667	Oregon Youth Authority	active
+mn_tses	SPED:001668	Total special education system	active
+mn_pelsb	SPED:001669	Professional Educator Licensing and Standards Board	active
 placeholder_phonological_awareness	SPED:900001	Phonological awareness (placeholder; now attested by the Texas Dyslexia Handbook)	retired
 exec_fn	SPED:900002	Executive functioning	active
 wisc5	SPED:900003	Wechsler Intelligence Scale for Children, Fifth Edition	active

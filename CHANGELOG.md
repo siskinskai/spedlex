@@ -6,6 +6,20 @@ patch for corrections and reviews. Concept IDs never change between versions.
 
 ## [Unreleased]
 
+Re-read the early layers' sources (0.51.0), drafted with Claude Opus 5.5
+(`claude-opus-5-5`) and awaiting the maintainer's check. The text of the
+documents the 19 Oct. 3 layers cite, plus a few more sections of the same rules,
+was read again for terms the first pass missed. It adds `texas_supplement`,
+`california_supplement`, `new_york_supplement`, `florida_supplement`,
+`pennsylvania_supplement_2`, `illinois_supplement`, `georgia_supplement`,
+`massachusetts_supplement`, `washington_supplement`, `oregon_supplement` and
+`minnesota_supplement`: 98 concepts and 10 strings, among them California's
+behavioral emergency report, Texas's LSSP and autism-strategy terms, New York's
+superintendent's hearing, Florida's BEESS, PaTTAN, Georgia's Babies Can't Wait
+and Massachusetts state agencies. The sources were read through a web fetch,
+not from saved copies, so every new record is `candidate` and cites by URL;
+see `provenance/early-layers-reread-2026-10-10.md`.
+
 Audits and consistency additions (0.50.0), drafted with Claude Opus 5.5
 (`claude-opus-5-5`) and awaiting the maintainer's check. `prompts/audit-layer.md`
 was run on the Kentucky, Maine and Mississippi layers (audits in

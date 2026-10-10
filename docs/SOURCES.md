@@ -48,14 +48,17 @@ state modules in `sources/states/` say which documents could not be read and why
 
 | Document | Type | Records |
 |---|---|---|
+| [5 CCR §3001](https://www.law.cornell.edu/regulations/california/5-CCR-3001) | state regulation | 10 |
 | [5 CCR §3030](https://www.law.cornell.edu/regulations/california/5-CCR-3030) | state regulation | 18 |
 | [CDE Alternate Assessment IEP Team Guidance](https://www.cde.ca.gov/TA/tg/ca/caaiepteamrev.asp) | state guidance | 7 |
 | [CDE Equitable Services for Students with Disabilities page](https://www.cde.ca.gov/Sp/se/qa/pssummary.asp) | state guidance | 4 |
-| [CDE Notice of Procedural Safeguards (rev. June 2022)](https://www.dgs.ca.gov/en/OAH/Case-Types/Special-Education/Resources/Page-Content/Special-Education-Resources-List-Folder/Notice-of-Procedural-Safeguards) | procedural safeguards notice | 26 |
+| [CDE Notice of Procedural Safeguards (rev. June 2022)](https://www.dgs.ca.gov/en/OAH/Case-Types/Special-Education/Resources/Page-Content/Special-Education-Resources-List-Folder/Notice-of-Procedural-Safeguards) | procedural safeguards notice | 30 |
 | [CDE Student Accessibility Resources](https://www.cde.ca.gov/TA/TG/ca/accesssupport.asp) | state guidance | 8 |
 | [CDE letter](https://www.cde.ca.gov/sp/se/om082523.asp) | state guidance | 4 |
+| [Cal. Educ. Code §56026](https://california.public.law/codes/ca_educ_code_section_56026) | state regulation | 1 |
 | [Cal. Educ. Code §56361](https://california.public.law/codes/ca_educ_code_section_56361) | state regulation | 8 |
 | [Cal. Educ. Code §56363](https://california.public.law/codes/ca_educ_code_section_56363) | state regulation | 20 |
+| [Cal. Educ. Code §56521.1](https://california.public.law/codes/ca_educ_code_section_56521.1) | state regulation | 4 |
 
 ## Colorado (US-CO)
 
@@ -99,8 +102,8 @@ state modules in `sources/states/` say which documents could not be read and why
 | [FDOE Florida Alternate Assessment page](https://fldoe.org/accountability/assessments/k-12-student-assessment/fl-alternate-assessment.stml) | state guidance | 6 |
 | [Fla. Admin. Code R. 6A-1.09963](https://state-rules.com/florida/fac/6A-1.09963/) | state regulation | 5 |
 | [Fla. Admin. Code R. 6A-6.03011; Fla. Admin. Code R. 6A-6.03012; Fla. Admin. Code R. 6A-6.030121; ...](https://regulations.justia.com/states/florida/6/6a/chapter-6a-6) | state regulation | 27 |
-| [Fla. Admin. Code R. 6A-6.03411](https://www.law.cornell.edu/regulations/florida/Fla-Admin-Code-Ann-R-6A-6-03411) | state regulation | 22 |
-| [Part B Procedural Safeguards Notice: Florida (Aug. 2021)](https://www.indianriverschools.org//Userfiles/DBFiles/server_1549441/202110/48743347/procedural_safeguards_notice_florida.pdf) | procedural safeguards notice | 15 |
+| [Fla. Admin. Code R. 6A-6.03411](https://www.law.cornell.edu/regulations/florida/Fla-Admin-Code-Ann-R-6A-6-03411) | state regulation | 23 |
+| [Part B Procedural Safeguards Notice: Florida (Aug. 2021)](https://www.indianriverschools.org//Userfiles/DBFiles/server_1549441/202110/48743347/procedural_safeguards_notice_florida.pdf) | procedural safeguards notice | 18 |
 
 ## Georgia (US-GA)
 
@@ -108,6 +111,7 @@ state modules in `sources/states/` say which documents could not be read and why
 |---|---|---|
 | [Ga. Comp. R. & Regs. 160-4-7-.01; Ga. Comp. R. & Regs. 160-4-7-.03; Ga. Comp. R. & Regs. 160-4-7-.04; ...](https://regulations.justia.com/states/georgia/department-160/chapter-160-4/subject-160-4-7) | state regulation | 8 |
 | [Ga. Comp. R. & Regs. 160-4-7-.05](https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-160-4-7-.05) | state regulation | 15 |
+| [Ga. Comp. R. & Regs. 160-4-7-.06](https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-160-4-7-.06) | state regulation | 1 |
 | [Ga. Comp. R. & Regs. 160-4-7-.09](https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-160-4-7-.09) | state regulation | 6 |
 | [Ga. Comp. R. & Regs. 160-4-7-.12](https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-160-4-7-.12) | state regulation | 5 |
 | [Ga. Comp. R. & Regs. 160-4-7-.15](https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-160-4-7-.15) | state regulation | 4 |
@@ -132,8 +136,8 @@ state modules in `sources/states/` say which documents could not be read and why
 
 | Document | Type | Records |
 |---|---|---|
-| [23 Ill. Adm. Code §226.75](https://www.law.cornell.edu/regulations/illinois/IL-Admin-Code-23-226-75) | state regulation | 18 |
-| [ISBE Parent Guide](https://www.isbe.net/Documents/Parent-Guide-Special-Ed.pdf) | state guidance | 61 |
+| [23 Ill. Adm. Code §226.75](https://www.law.cornell.edu/regulations/illinois/IL-Admin-Code-23-226-75) | state regulation | 24 |
+| [ISBE Parent Guide](https://www.isbe.net/Documents/Parent-Guide-Special-Ed.pdf) | state guidance | 68 |
 
 ## Indiana (US-IN)
 
@@ -200,7 +204,7 @@ state modules in `sources/states/` say which documents could not be read and why
 |---|---|---|
 | [603 CMR 28.02](https://www.doe.mass.edu/lawsregs/603CMR28.html?section=02) | state regulation | 23 |
 | [DESE Parent's Notice of Procedural Safeguards (updated May 2025)](https://www.doe.mass.edu/specialeducation/families/prb/pnps.pdf) | procedural safeguards notice | 23 |
-| [FCSN/Massachusetts DOE](https://www.mass.gov/doc/a-parents-guide-to-special-education/download) | state guidance | 15 |
+| [FCSN/Massachusetts DOE](https://www.mass.gov/doc/a-parents-guide-to-special-education/download) | state guidance | 30 |
 
 ## Michigan (US-MI)
 
@@ -215,7 +219,7 @@ state modules in `sources/states/` say which documents could not be read and why
 
 | Document | Type | Records |
 |---|---|---|
-| [Minn. R. 3525.0210; Minn. R. 3525.0550; Minn. R. 3525.0850; ...](https://www.revisor.mn.gov/rules/3525/full) | state regulation | 25 |
+| [Minn. R. 3525.0210; Minn. R. 3525.0550; Minn. R. 3525.0850; ...](https://www.revisor.mn.gov/rules/3525/full) | state regulation | 27 |
 | [Minn. R. 3525.1325; Minn. R. 3525.1327; Minn. R. 3525.1329; ...](https://regulations.justia.com/states/minnesota/agency-129/chapter-3525/entrance-and-exit-criteria) | state regulation | 16 |
 | [Minn. Stat. §125A.091](https://www.revisor.mn.gov/statutes/cite/125A.091) | state regulation | 4 |
 | [Minnesota district Policy 615](https://www.isd622.org/about/policies/policy/~board/policies/post/615) | secondary guidance | 5 |
@@ -316,10 +320,10 @@ state modules in `sources/states/` say which documents could not be read and why
 
 | Document | Type | Records |
 |---|---|---|
-| [8 NYCRR §200.1](https://regulations.justia.com/states/new-york/title-8/chapter-ii/subchapter-p/part-200/section-200-1/) | state regulation | 63 |
-| [8 NYCRR §200.6](https://regulations.justia.com/states/new-york/title-8/chapter-ii/subchapter-p/part-200/section-200-6/) | state regulation | 7 |
+| [8 NYCRR §200.1](https://regulations.justia.com/states/new-york/title-8/chapter-ii/subchapter-p/part-200/section-200-1/) | state regulation | 64 |
+| [8 NYCRR §200.6](https://regulations.justia.com/states/new-york/title-8/chapter-ii/subchapter-p/part-200/section-200-6/) | state regulation | 11 |
 | [NYSED Graduation Requirements and Exiting Credentials for Students with Disabilities](https://www.nysed.gov/special-education/information-related-graduation-requirements-and-exiting-credentials-students) | state guidance | 8 |
-| [NYSED Procedural Safeguards Notice (July 2017)](https://www.nysed.gov/sites/default/files/special-education/nysed-procedural-safeguards-notice-july-2017.pdf) | procedural safeguards notice | 15 |
+| [NYSED Procedural Safeguards Notice (July 2017)](https://www.nysed.gov/sites/default/files/special-education/nysed-procedural-safeguards-notice-july-2017.pdf) | procedural safeguards notice | 22 |
 | [NYSED SEIT Services and Related Services for Preschool Students with Disabilities](https://nysed.gov/special-education/special-education-itinerant-teacher-seit-services-and-related-services-preschool) | state guidance | 2 |
 | [NYSED Testing Accommodations for Students with Disabilities (updated Sept. 2025)](https://www.nysed.gov/sites/default/files/programs/special-education/testing-accommodations-guide.pdf) | state guidance | 22 |
 
@@ -343,17 +347,17 @@ state modules in `sources/states/` say which documents could not be read and why
 |---|---|---|
 | [OAR 581-015-2000](https://www.law.cornell.edu/regulations/oregon/Or-Admin-Code-SS-581-015-2000) | state regulation | 38 |
 | [ODE Oregon Extended Assessment (ORExt) page](https://www.oregon.gov/ode/educator-resources/assessment/AltAssessment/Pages/default.aspx) | state guidance | 7 |
-| [ODE Procedural Safeguards Notice K-21 (2020-21)](https://www.oregon.gov/ode/students-and-family/SpecialEducation/publications/Documents/proceduralsafeguards/englishk21.pdf) | procedural safeguards notice | 15 |
+| [ODE Procedural Safeguards Notice K-21 (2020-21)](https://www.oregon.gov/ode/students-and-family/SpecialEducation/publications/Documents/proceduralsafeguards/englishk21.pdf) | procedural safeguards notice | 16 |
 
 ## Pennsylvania (US-PA)
 
 | Document | Type | Records |
 |---|---|---|
-| [22 Pa. Code §14.101](https://www.law.cornell.edu/regulations/pennsylvania/22-Pa-Code-SS-14-101) | state regulation | 11 |
-| [22 Pa. Code §14.105](https://law.cornell.edu/regulations/pennsylvania/22-Pa-Code-SS-14-105) | state regulation | 11 |
+| [22 Pa. Code §14.101](https://www.law.cornell.edu/regulations/pennsylvania/22-Pa-Code-SS-14-101) | state regulation | 15 |
+| [22 Pa. Code §14.105](https://law.cornell.edu/regulations/pennsylvania/22-Pa-Code-SS-14-105) | state regulation | 18 |
 | [22 Pa. Code §16.1](https://www.law.cornell.edu/regulations/pennsylvania/22-Pa-Code-SS-16-1) | state regulation | 6 |
 | [PDE NOREP/PWN form (rev. Oct. 2014)](https://www.iu9.org/accnt_742651/site_742652/Documents/NOREP-PWN.pdf) | state guidance | 4 |
-| [PDE Pennsylvania Parent Guide to Special Education (July 2008)](https://www.cityhigh.org/Files/Content/Parental%2DResources/PA-Parent-Guide-To-SPED-for-School-Age.pdf) | state guidance | 28 |
+| [PDE Pennsylvania Parent Guide to Special Education (July 2008)](https://www.cityhigh.org/Files/Content/Parental%2DResources/PA-Parent-Guide-To-SPED-for-School-Age.pdf) | state guidance | 31 |
 | [PDE Special Education Dispute Resolution page](https://www.pa.gov/agencies/education/programs-and-services/instruction/elementary-and-secondary-education/special-education/state-complaints-and-dispute-resolution.html) | state guidance | 7 |
 | [PDE Statewide Assessment for Students with Disabilities page](https://www.pa.gov/agencies/education/programs-and-services/instruction/elementary-and-secondary-education/special-education/assessment.html) | state guidance | 7 |
 
@@ -370,10 +374,11 @@ state modules in `sources/states/` say which documents could not be read and why
 
 | Document | Type | Records |
 |---|---|---|
-| [19 TAC §89.1040](https://www.law.cornell.edu/regulations/texas/19-Tex-Admin-Code-SS-89-1040) | state regulation | 7 |
+| [19 TAC §89.1040](https://www.law.cornell.edu/regulations/texas/19-Tex-Admin-Code-SS-89-1040) | state regulation | 16 |
+| [19 TAC §89.1055](https://www.law.cornell.edu/regulations/texas/19-Tex-Admin-Code-SS-89-1055) | state regulation | 5 |
 | [TEA Dyslexia Handbook (2024 update)](https://tea.texas.gov/academics/special-student-populations/special-education/texas-dyslexia-handbook.pdf) | state guidance | 67 |
-| [TEA Notice of Procedural Safeguards (Jan. 2025)](https://spedtex.tea.texas.gov/sites/spedtex.tea.texas.gov/files/2026-05/English%20Notice%20of%20Procedural%20Safeguards%20-%20English%202025%20ACC.pdf) | procedural safeguards notice | 23 |
-| [TEA Parent's Guide to the ARD Process (Jan. 2025)](https://spedtex.tea.texas.gov/sites/spedtex.tea.texas.gov/files/2026-05/ARD%20Guide%202025%20-%20English%20-%20ACC.pdf) | state guidance | 66 |
+| [TEA Notice of Procedural Safeguards (Jan. 2025)](https://spedtex.tea.texas.gov/sites/spedtex.tea.texas.gov/files/2026-05/English%20Notice%20of%20Procedural%20Safeguards%20-%20English%202025%20ACC.pdf) | procedural safeguards notice | 27 |
+| [TEA Parent's Guide to the ARD Process (Jan. 2025)](https://spedtex.tea.texas.gov/sites/spedtex.tea.texas.gov/files/2026-05/ARD%20Guide%202025%20-%20English%20-%20ACC.pdf) | state guidance | 71 |
 | [TEA STAAR Accommodations Educator Guide (2025-26)](https://tea.texas.gov/data-reports/test-administration/2025-2026-staar-accommodations-educator-guide.pdf) | state guidance | 30 |
 | [TEA STAAR Alternate 2 Educator Guide (2025-26)](https://tea2.tea.texas.gov/data-reports/test-administration/2025-2026-staar-alternate-2-educator-guide.pdf) | state guidance | 15 |
 
@@ -400,7 +405,7 @@ state modules in `sources/states/` say which documents could not be read and why
 
 | Document | Type | Records |
 |---|---|---|
-| [OSPI Notice of Special Education Procedural Safeguards (Mar. 2022)](https://ospi.k12.wa.us/sites/default/files/2023-08/proceduralsafeguards.pdf) | procedural safeguards notice | 22 |
+| [OSPI Notice of Special Education Procedural Safeguards (Mar. 2022)](https://ospi.k12.wa.us/sites/default/files/2023-08/proceduralsafeguards.pdf) | procedural safeguards notice | 25 |
 | [OSPI WA-AIM page](https://ospi.k12.wa.us/student-success/testing/state-testing/assessment-students-cognitive-disabilities-wa-aim) | state guidance | 5 |
 | [WAC 392-172A-01035](https://app.leg.wa.gov/wac/default.aspx?cite=392-172A-01035) | state regulation | 13 |
 
