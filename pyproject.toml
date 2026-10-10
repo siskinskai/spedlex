@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "spedlex"
-version = "0.49.0"
+version = "0.50.0"
 description = "An open, cited vocabulary of U.S. special-education terms: lets de-identification tools protect children's privacy without destroying meaning, and helps AI and writing tools name terms consistently across states."
 readme = "README.md"
 requires-python = ">=3.9"

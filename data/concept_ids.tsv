@@ -1543,6 +1543,33 @@ act_test	SPED:001541	American College Test	active
 ela	SPED:001542	English language arts	active
 srt	SPED:001543	Speech reception threshold	active
 ms_cmhc	SPED:001544	Regional Community Mental Health Centers	active
+oh_operating_standards	SPED:001545	Operating Standards for the Education of Children with Disabilities	active
+oh_oac	SPED:001546	Ohio Administrative Code	active
+oh_orc	SPED:001547	Ohio Revised Code	active
+oh_odjfs	SPED:001548	Ohio Department of Job and Family Services	active
+oh_sutq	SPED:001549	Step Up to Quality	active
+oh_nonchartered	SPED:001550	Non-chartered nonpublic school	active
+oh_ps_sped_class	SPED:001551	Public school preschool special education class	active
+oh_ps_gened_class	SPED:001552	Public school preschool general education class	active
+oh_ps_integrated	SPED:001553	Public school preschool integrated class	active
+oh_np_preschool	SPED:001554	Non-public school preschool program	active
+reg_ec_setting	SPED:001555	Regular early childhood setting	active
+reeval_team	SPED:001556	Re-evaluation team	active
+reader_services	SPED:001557	Reader services	active
+mckinney_vento	SPED:001558	McKinney-Vento Homeless Assistance Act	active
+rehab_act	SPED:001559	Rehabilitation Act of 1973	active
+subavg_gif	SPED:001560	Significantly sub average general intellectual functioning	active
+adaptive_deficits	SPED:001561	Deficits in adaptive behavior	active
+nc_sbe	SPED:001562	North Carolina State Board of Education	active
+nc_djjdp	SPED:001563	Department of Juvenile Justice and Delinquency Prevention	active
+nc_lea_self_assessment	SPED:001564	LEA Self-Assessment	active
+nc_dev_day	SPED:001565	Developmental Day Centers	active
+nc_irt	SPED:001566	Individual Residential Treatment	active
+nc_extended_content	SPED:001567	Extended Content Standards	active
+nc_futureready_core	SPED:001568	FutureReady Core Course of Study	active
+gepa	SPED:001569	General Education Provisions Act	active
+mi_ose	SPED:001570	Michigan Department of Education Office of Special Education	active
+mi_sems	SPED:001571	Special Education Mediation Services	active
 placeholder_phonological_awareness	SPED:900001	Phonological awareness (placeholder; now attested by the Texas Dyslexia Handbook)	retired
 exec_fn	SPED:900002	Executive functioning	active
 wisc5	SPED:900003	Wechsler Intelligence Scale for Children, Fifth Edition	active

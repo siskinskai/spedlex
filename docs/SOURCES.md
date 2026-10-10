@@ -208,7 +208,7 @@ state modules in `sources/states/` say which documents could not be read and why
 |---|---|---|
 | [MDE](https://www.michigan.gov/mde/-/media/Project/Websites/mde/specialeducation/iep/IEP_Development_SpecialEducationProgramsServices.pdf) | state guidance | 4 |
 | [MDE MI-Access page](https://www.michigan.gov/mde/services/student-assessment/mi-access) | state guidance | 7 |
-| [MDE Procedural Safeguards Notice (updated 10/16/18)](https://www.michigan.gov/mde/-/media/Project/Websites/mde/specialeducation/proc-safe/Procedural_Safeguards_Notice.pdf) | procedural safeguards notice | 5 |
+| [MDE Procedural Safeguards Notice (updated 10/16/18)](https://www.michigan.gov/mde/-/media/Project/Websites/mde/specialeducation/proc-safe/Procedural_Safeguards_Notice.pdf) | procedural safeguards notice | 8 |
 | [Mich Admin Code](https://www.michigan.gov/mde/-/media/Project/Websites/mde/specialeducation/MI-rules/MARSE-R3401701toR3401873.pdf) | state regulation | 77 |
 
 ## Minnesota (US-MN)
@@ -327,15 +327,15 @@ state modules in `sources/states/` say which documents could not be read and why
 
 | Document | Type | Records |
 |---|---|---|
-| [NC Policies Governing Services for Children with Disabilities](https://www.dpi.nc.gov/policies-governing-students-children-disabilities/download?attachment) | state regulation | 35 |
+| [NC Policies Governing Services for Children with Disabilities](https://www.dpi.nc.gov/policies-governing-students-children-disabilities/download?attachment) | state regulation | 46 |
 | [NCDPI Notice of Procedural Safeguards (July 2026)](https://www.dpi.nc.gov/documents/publications/catalog/ec145-parent-rights-responsibilities-procedural-safeguards-english/open) | procedural safeguards notice | 4 |
 
 ## Ohio (US-OH)
 
 | Document | Type | Records |
 |---|---|---|
-| [DEW A Guide to Parent Rights in Special Education (Apr. 2025)](https://education.ohio.gov/getattachment/Topics/Special-Education/Federal-and-State-Requirements/Operational-Standards-and-Guidance/Parent-Rights-Document-2025.pdf.aspx?lang=en-US) | procedural safeguards notice | 10 |
-| [Ohio Adm.Code 3301-51-01; Ohio Adm.Code 3301-51-05; Ohio Adm.Code 3301-51-06; ...](https://education.ohio.gov/getattachment/Topics/Special-Education/Federal-and-State-Requirements/Operational-Standards-and-Guidance/Operating-Standards-Booklet-June-2025.pdf.aspx?lang=en-US) | state regulation | 37 |
+| [DEW A Guide to Parent Rights in Special Education (Apr. 2025)](https://education.ohio.gov/getattachment/Topics/Special-Education/Federal-and-State-Requirements/Operational-Standards-and-Guidance/Parent-Rights-Document-2025.pdf.aspx?lang=en-US) | procedural safeguards notice | 13 |
+| [Ohio Adm.Code 3301-51-01; Ohio Adm.Code 3301-51-01 (Operating Standards booklet; Ohio Adm.Code 3301-51-01(B)(10) (Operating Standards booklet; ...](https://education.ohio.gov/getattachment/Topics/Special-Education/Federal-and-State-Requirements/Operational-Standards-and-Guidance/Operating-Standards-Booklet-June-2025.pdf.aspx?lang=en-US) | state regulation | 53 |
 
 ## Oregon (US-OR)
 

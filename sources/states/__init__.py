@@ -56,4 +56,7 @@ LAYERS = [
     "kentucky",
     "maine",
     "mississippi",
+    "ohio_supplement",
+    "north_carolina_supplement",
+    "michigan_supplement",
 ]

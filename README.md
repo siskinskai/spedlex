@@ -77,16 +77,16 @@ the data, a reference matcher and the terminology helpers are below, and
 nothing here is tied to any one tool or model.
 
 <!-- stats:start -->
-## What's in it (v0.49.0)
+## What's in it (v0.50.0)
 
 | | |
 |---|---|
-| Concepts | 1,541: 156 from 34 CFR Part 300, 1385 added by state layers |
-| Surface strings | 3,366 (phrases, acronyms, plurals, legacy and regional forms): 1,150 tagged to the states that use them, 23 older forms, 3 flagged as disfavored |
+| Concepts | 1,568: 156 from 34 CFR Part 300, 1412 added by state layers |
+| Surface strings | 3,406 (phrases, acronyms, plurals, legacy and regional forms): 1,162 tagged to the states that use them, 25 older forms, 3 flagged as disfavored |
 | States | 42: AK, AL, AR, AZ, CA, CO, CT, DC, DE, FL, GA, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, ME, MI, MN, MO, MS, NC, NH, NJ, NM, NV, NY, OH, OR, PA, TN, TX, UT, VA, WA, WV, WY |
 | Documents cited | 199, listed in [docs/SOURCES.md](docs/SOURCES.md) |
-| Review status | 756 checked against regulation text, 785 candidates awaiting a human check, 0 expert-accepted |
-| Privacy risk | 993 none, 229 low, 319 high |
+| Review status | 779 checked against regulation text, 789 candidates awaiting a human check, 0 expert-accepted |
+| Privacy risk | 1005 none, 237 low, 326 high |
 
 13 more records are **illustrative placeholders** for later work
 (test instruments, score terms). They're marked and excluded by default.
