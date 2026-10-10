@@ -1,13 +1,13 @@
 {
-  "version": "0.47.0",
-  "concepts": 1401,
+  "version": "0.48.0",
+  "concepts": 1456,
   "illustrative_placeholders": 13,
   "federal_concepts": 156,
-  "strings": 3121,
+  "strings": 3205,
   "disfavored_strings": 3,
   "legacy_strings": 22,
-  "regional_strings": 1085,
-  "states": 40,
+  "regional_strings": 1106,
+  "states": 41,
   "state_codes": [
     "AK",
     "AL",
@@ -30,6 +30,7 @@
     "LA",
     "MA",
     "MD",
+    "ME",
     "MI",
     "MN",
     "MO",
@@ -50,38 +51,38 @@
     "WV",
     "WY"
   ],
-  "documents_cited": 193,
+  "documents_cited": 194,
   "by_category": {
-    "academic_skill": 77,
+    "academic_skill": 78,
     "accommodation_modification": 57,
     "disability_category": 26,
     "discipline": 36,
-    "early_intervention": 42,
-    "evaluation_eligibility": 117,
+    "early_intervention": 46,
+    "evaluation_eligibility": 120,
     "functional_skill": 17,
-    "health_condition": 29,
+    "health_condition": 41,
     "iep_component": 152,
     "instrument": 10,
-    "legal_procedural": 463,
-    "personnel_role": 84,
-    "placement_setting": 134,
+    "legal_procedural": 482,
+    "personnel_role": 89,
+    "placement_setting": 144,
     "related_service": 40,
-    "score_metric": 2,
+    "score_metric": 3,
     "section_504": 3,
     "transition": 112
   },
   "by_risk": {
-    "high": 279,
-    "low": 211,
-    "none": 911
+    "high": 292,
+    "low": 218,
+    "none": 946
   },
   "by_review_status": {
     "candidate": 735,
-    "machine_validated": 666
+    "machine_validated": 721
   },
   "sources_by_assisting_model": {
     "claude-opus-5-5": 4104,
-    "claude-sonnet-5-5": 943
+    "claude-sonnet-5-5": 1093
   },
   "collision_adapter": "scrub",
   "concepts_with_scrubber_collisions": 3

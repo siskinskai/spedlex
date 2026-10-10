@@ -1403,6 +1403,61 @@ meas_method	SPED:001401	Methods of measurement	active
 meas_direct	SPED:001402	Direct measure	active
 meas_indirect	SPED:001403	Indirect measure	active
 meas_authentic	SPED:001404	Authentic assessment	active
+me_muser	SPED:001405	Maine Unified Special Education Regulation	active
+me_cds	SPED:001406	Child Development Services	active
+me_doe	SPED:001407	Maine Department of Education	active
+me_state_agency_client	SPED:001408	State agency client	active
+me_psp	SPED:001409	Primary service provider	active
+me_ed_tech	SPED:001410	Educational technician	active
+me_tutorial	SPED:001411	Tutorial instruction	active
+me_special_purpose_school	SPED:001412	Special purpose private school	active
+me_general_purpose_school	SPED:001413	General purpose private school	active
+me_special_purpose_service	SPED:001414	Special purpose service	active
+me_regional_program	SPED:001415	Regional special education program	active
+me_eut	SPED:001416	Education in the Unorganized Territories	active
+me_mssm	SPED:001417	Maine School of Science and Mathematics	active
+me_nta	SPED:001418	Neurocognitive Testing Assistant	active
+me_psych_board	SPED:001419	Board of Examiners of Psychologists	active
+me_mepa	SPED:001420	Maine Psychological Association	active
+me_slp_board	SPED:001421	Maine Board of Speech, Audiology and Hearing	active
+me_counsel_board	SPED:001422	Maine State Board of Counseling Professionals Licensure	active
+me_mpf	SPED:001423	Maine Parent Federation	active
+me_drc	SPED:001424	Disability Rights Center	active
+me_smpa	SPED:001425	Southern Maine Parent Awareness	active
+me_kids_legal	SPED:001426	KIDS LEGAL	active
+me_due_process_office	SPED:001427	Due Process Office	active
+me_due_process_coord	SPED:001428	Due Process Coordinator	active
+me_notif_placement	SPED:001429	Notification of Placement for Children with Disabilities	active
+me_learning_results	SPED:001430	Maine's Learning Results	active
+housse	SPED:001431	HOUSSE	active
+me_atp	SPED:001432	Assistive technology professional	active
+me_dhhs	SPED:001433	Maine Department of Health and Human Services	active
+me_doc	SPED:001434	Department of Corrections	active
+me_dol	SPED:001435	Maine Department of Labor	active
+me_bvr	SPED:001436	Bureau of Vocational Rehabilitation	active
+me_long_creek	SPED:001437	Long Creek Youth Development Center	active
+me_mountain_view	SPED:001438	Mountain View Youth Development Center	active
+me_b2	SPED:001439	Birth to under age three	active
+iep_case_manager	SPED:001440	IEP case manager	active
+informed_clinical_opinion	SPED:001441	Informed clinical opinion	active
+diagnostic_impression	SPED:001442	Diagnostic impression	active
+composite_score	SPED:001443	Composite score	active
+formative_assessment	SPED:001444	Formative assessment	active
+sb_interventions	SPED:001445	Scientifically based interventions	active
+early_childhood_program	SPED:001446	Early childhood program	active
+reverse_mainstream	SPED:001447	Reverse mainstream	active
+asthma	SPED:001448	Asthma	active
+diabetes	SPED:001449	Diabetes	active
+hemophilia	SPED:001450	Hemophilia	active
+lead_poisoning	SPED:001451	Lead poisoning	active
+leukemia	SPED:001452	Leukemia	active
+nephritis	SPED:001453	Nephritis	active
+rheumatic_fever	SPED:001454	Rheumatic fever	active
+heart_condition	SPED:001455	Heart condition	active
+cerebral_palsy	SPED:001456	Cerebral palsy	active
+poliomyelitis	SPED:001457	Poliomyelitis	active
+bone_tuberculosis	SPED:001458	Bone tuberculosis	active
+schizophrenia	SPED:001459	Schizophrenia	active
 placeholder_phonological_awareness	SPED:900001	Phonological awareness (placeholder; now attested by the Texas Dyslexia Handbook)	retired
 exec_fn	SPED:900002	Executive functioning	active
 wisc5	SPED:900003	Wechsler Intelligence Scale for Children, Fifth Edition	active

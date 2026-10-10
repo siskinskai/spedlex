@@ -174,6 +174,12 @@ state modules in `sources/states/` say which documents could not be read and why
 | [LDOE Parent Guide to the LEAP Connect Assessments (rev. Dec. 2024)](https://doe.louisiana.gov/docs/default-source/assessment/parent-guide-to-leap-connect.pdf) | state guidance | 8 |
 | [La. Admin. Code tit. 28](https://regulations.justia.com/states/louisiana/title-28/part-ci) | state regulation | 34 |
 
+## Maine (US-ME)
+
+| Document | Type | Records |
+|---|---|---|
+| [05-071 Chapter 101](https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/Special%20Services%20-%20MUSER%20-%208.21.2024.pdf) | state regulation | 150 |
+
 ## Maryland (US-MD)
 
 | Document | Type | Records |
