@@ -77,16 +77,16 @@ the data, a reference matcher and the terminology helpers are below, and
 nothing here is tied to any one tool or model.
 
 <!-- stats:start -->
-## What's in it (v0.46.0)
+## What's in it (v0.47.0)
 
 | | |
 |---|---|
-| Concepts | 1,377: 156 from 34 CFR Part 300, 1221 added by state layers |
-| Surface strings | 3,046 (phrases, acronyms, plurals, legacy and regional forms): 1,043 tagged to the states that use them, 21 older forms, 3 flagged as disfavored |
-| States | 39: AK, AL, AR, AZ, CA, CO, CT, DC, DE, FL, GA, HI, IA, ID, IL, IN, KS, LA, MA, MD, MI, MN, MO, NC, NH, NJ, NM, NV, NY, OH, OR, PA, TN, TX, UT, VA, WA, WV, WY |
-| Documents cited | 189, listed in [docs/SOURCES.md](docs/SOURCES.md) |
-| Review status | 660 checked against regulation text, 717 candidates awaiting a human check, 0 expert-accepted |
-| Privacy risk | 901 none, 206 low, 270 high |
+| Concepts | 1,401: 156 from 34 CFR Part 300, 1245 added by state layers |
+| Surface strings | 3,120 (phrases, acronyms, plurals, legacy and regional forms): 1,084 tagged to the states that use them, 22 older forms, 3 flagged as disfavored |
+| States | 40: AK, AL, AR, AZ, CA, CO, CT, DC, DE, FL, GA, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, MI, MN, MO, NC, NH, NJ, NM, NV, NY, OH, OR, PA, TN, TX, UT, VA, WA, WV, WY |
+| Documents cited | 193, listed in [docs/SOURCES.md](docs/SOURCES.md) |
+| Review status | 666 checked against regulation text, 735 candidates awaiting a human check, 0 expert-accepted |
+| Privacy risk | 912 none, 210 low, 279 high |
 
 13 more records are **illustrative placeholders** for later work
 (test instruments, score terms). They're marked and excluded by default.

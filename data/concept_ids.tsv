@@ -1379,6 +1379,30 @@ nm_doc	SPED:001377	Demonstration of competency	active
 nm_nmge	SPED:001378	New Mexico Graduation Exam	active
 nm_sba	SPED:001379	Standards-Based Assessment	active
 nm_asr	SPED:001380	New Mexico Assessment of Science Readiness	active
+ky_kde	SPED:001381	Kentucky Department of Education	active
+ky_oseel	SPED:001382	Office of Special Education and Early Learning	active
+ky_idea_monitoring	SPED:001383	Division of IDEA Monitoring and Results	active
+ky_ecab	SPED:001384	Exceptional Children Appeals Board	active
+ky_chfs	SPED:001385	Cabinet for Health and Family Services	active
+ky_djj	SPED:001386	Department of Juvenile Justice	active
+ky_ksb	SPED:001387	Kentucky School for the Blind	active
+ky_ksd	SPED:001388	Kentucky School for the Deaf	active
+ky_ksis	SPED:001389	Kentucky Student Information System	active
+ky_spin	SPED:001390	Kentucky Special Parent Involvement Network	active
+ky_kar	SPED:001391	Kentucky Administrative Regulations	active
+ky_sped_mentor	SPED:001392	Special education mentor	active
+ky_cap	SPED:001393	Corrective action plan	active
+ky_compliance_report	SPED:001394	Compliance monitoring report	active
+ky_program_of_studies	SPED:001395	Program of Studies	active
+ky_ksa	SPED:001396	Kentucky Summative Assessment	active
+ky_aksa	SPED:001397	Alternative Kentucky Summative Assessment	active
+func_hearing_assess	SPED:001398	Functional hearing, listening, and communication assessment	active
+wioa	SPED:001399	Workforce Innovation and Opportunity Act	active
+smart_goals	SPED:001400	SMART goals	active
+meas_method	SPED:001401	Methods of measurement	active
+meas_direct	SPED:001402	Direct measure	active
+meas_indirect	SPED:001403	Indirect measure	active
+meas_authentic	SPED:001404	Authentic assessment	active
 placeholder_phonological_awareness	SPED:900001	Phonological awareness (placeholder; now attested by the Texas Dyslexia Handbook)	retired
 exec_fn	SPED:900002	Executive functioning	active
 wisc5	SPED:900003	Wechsler Intelligence Scale for Children, Fifth Edition	active

@@ -158,6 +158,15 @@ state modules in `sources/states/` say which documents could not be read and why
 | [KSDE Kansas Special Education Process Handbook (updated Mar. 2025)](https://www.ksde.gov/Portals/0/SES/PH/PH-complete.pdf) | state guidance | 18 |
 | [KSDE Parent Rights in Special Education (Feb. 2020)](https://www.ksde.gov/docs/default-source/sets/proceduralsafeguardskansas_english.pdf) | procedural safeguards notice | 28 |
 
+## Kentucky (US-KY)
+
+| Document | Type | Records |
+|---|---|---|
+| [707 KAR 1:002 (history note through eff. 7-5-2023)](https://apps.legislature.ky.gov/law/kar/downloads/docs/14098/document.engrossed.pdf) | state regulation | 93 |
+| [KY-SPIN](https://www.education.ky.gov/specialed/excep/Documents/Youth-IEP.pdf) | secondary guidance | 51 |
+| [Kentucky Department of Education](https://www.education.ky.gov/specialed/excep/GuidanceResources/Documents/IDEASpecialEducationProcess.pdf) | state guidance | 18 |
+| [Kentucky Department of Education](https://www.education.ky.gov/specialed/excep/GuidanceResources/Documents/Procedural_Safeguards_Notice.pdf) | procedural safeguards notice | 31 |
+
 ## Louisiana (US-LA)
 
 | Document | Type | Records |
