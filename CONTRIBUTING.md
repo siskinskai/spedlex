@@ -3,7 +3,8 @@
 SPEDLex is an open, cited vocabulary of U.S. special-education terms.
 De-identification tools use it to remove a child's personal information from
 IEPs, evaluations and other special-education documents. The terms that give
-those documents meaning stay in, so caregivers can use AI tools safely. The
+those documents meaning stay in, so caregivers can use AI tools safely. AI
+and writing tools also use it to name terms the way each state does. The
 [README](README.md) has the full background.
 
 Thank you for helping. SPEDLex is only as good as the people who check it.
@@ -20,7 +21,8 @@ school names or dates of birth. Describe the term and cite a public document.
 | A special educator, school psychologist, SLP, advocate or parent | Confirm or reject terms | [Reviewing records](#reviewing-records) |
 | Anyone who spotted a problem | Report a wrong, missing or risky term | Issue forms: *Report a wrong term*, *Suggest a term* |
 | Comfortable reading state documents | Add a state | [Adding a state](#adding-a-state) |
-| A developer | Port the matcher, add an adapter, improve the build | [Development](#development) |
+| A developer | Port the matcher or lexicon, add an adapter, improve the build | [Development](#development) |
+| Anyone who knows a term was replaced in law | Flag it as disfavored | [Flagging a disfavored term](#flagging-a-disfavored-term) |
 
 ## Using an AI model
 
@@ -217,6 +219,28 @@ tell you which). Never change a concept's key or delete it outright. To
 remove a concept, delete its entry and mark its row `retired` in
 `data/concept_ids.tsv` (the one hand edit allowed in `data/`). Its ID is
 never reused.
+
+## Flagging a disfavored term
+
+Some forms shouldn't be used in new writing any more: the law replaced them
+("mental retardation" became "intellectual disability" under Rosa's Law), or
+an agency stopped using them because they were considered stigmatizing.
+SPEDLex keeps matching these forms, because older documents use them, and
+flags them so AI and writing tools can avoid them.
+
+To flag one, add a row to `sources/disfavored.tsv` (tab-separated):
+
+| Column | Contents |
+|---|---|
+| `key` | The concept's key (the `key` column of `data/spedlex.csv`). |
+| `string` | The string exactly as it appears on the concept. It can't be the preferred term. |
+| `usage_note` | One or two sentences in your own words: why, and what to say instead. |
+| `basis` | The statute, rule or published agency decision, cited so a reader can find it. |
+| `assisted_by` | The model that helped, or `none`. |
+
+Then rebuild and run the tests. A renamed agency, program or test is not
+disfavored; it is a `legacy` string. If you're not sure, open an issue with
+the *Report a wrong term* form instead.
 
 ## Pull request checklist
 

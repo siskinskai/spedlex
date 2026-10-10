@@ -1,8 +1,8 @@
 # SPEDLex
 
-**An open, cited vocabulary of U.S. special-education terms, so privacy tools can remove a child's personal information from a document without destroying what the document says.**
+**An open, cited vocabulary of U.S. special-education terms, so privacy tools can remove a child's personal information from a document without destroying what the document says, and AI tools can name each term the way the reader's state does.**
 
-[Explore the list](https://SiskinSkai.github.io/spedlex/) · [Download the data](data/) · [Methodology](docs/METHODOLOGY.md) · [Contribute](CONTRIBUTING.md)
+[Explore the list](https://SiskinSkai.github.io/spedlex/) · [Download the data](data/) · [Use it with AI tools](docs/USING-WITH-AI.md) · [Methodology](docs/METHODOLOGY.md) · [Contribute](CONTRIBUTING.md)
 
 [![CI](https://github.com/SiskinSkai/spedlex/actions/workflows/ci.yml/badge.svg)](https://github.com/SiskinSkai/spedlex/actions/workflows/ci.yml)
 
@@ -37,6 +37,34 @@ the regulation or state document that uses it. It carries a grade that says
 how safely a tool can protect it without ever protecting a person's name.
 Any de-identification tool can use it.
 
+### The same vocabulary helps any AI tool that works with special education
+
+To tell a term from a name, each record already holds everything an
+official document calls the concept, which states use which name, the older
+names, and a citation. That is also what an AI assistant needs to get the
+wording right, and what general models often get wrong:
+
+- **Name things the way the reader's state does.** Texas's "ARD committee",
+  New York's "CSE", Connecticut's "PPT" and Indiana's "case conference
+  committee" are all the federal "IEP Team". A tool that knows the reader's
+  state can answer in that state's words.
+- **Expand acronyms correctly.** CDE is a different agency in California and
+  Colorado; SED means something different in New York and New Mexico.
+- **Avoid outdated and disfavored terms.** Older forms are marked, and the
+  few that shouldn't be used in new writing ("mental retardation") are
+  flagged with the law that replaced them, while still being recognized in
+  older documents.
+- **Ground answers in sources.** A tool can attach a short, cited glossary
+  of the terms in a document to its prompt, instead of relying on the
+  model's memory.
+- **Keep terms intact** in search, plain-language rewriting and
+  translation, and build test sets from cited, state-specific terms.
+
+[docs/USING-WITH-AI.md](docs/USING-WITH-AI.md) shows how, with a Python
+API, a command line and an MCP server any compatible assistant can call.
+Privacy stays first: everything runs locally, and the terms survive
+de-identification, so a tool can scrub a document and still explain it.
+
 **If you're a parent or caregiver,** SPEDLex isn't an app you run. It's a
 building block inside the tools that protect your child's information. You
 can still help. [The explorer](https://SiskinSkai.github.io/spedlex/) shows
@@ -45,16 +73,16 @@ every term. If your state's word for something is missing or wrong, the
 minute and need no technical knowledge.
 
 **If you build privacy or AI tools** for families, schools or researchers,
-the data and a reference matcher are below, and nothing here is tied to any
-one tool.
+the data, a reference matcher and the terminology helpers are below, and
+nothing here is tied to any one tool or model.
 
 <!-- stats:start -->
-## What's in it (v0.45.0)
+## What's in it (v0.46.0)
 
 | | |
 |---|---|
 | Concepts | 1,377: 156 from 34 CFR Part 300, 1221 added by state layers |
-| Surface strings | 3,046 (phrases, acronyms, plurals, legacy and regional forms) |
+| Surface strings | 3,046 (phrases, acronyms, plurals, legacy and regional forms): 1,043 tagged to the states that use them, 21 older forms, 3 flagged as disfavored |
 | States | 39: AK, AL, AR, AZ, CA, CO, CT, DC, DE, FL, GA, HI, IA, ID, IL, IN, KS, LA, MA, MD, MI, MN, MO, NC, NH, NJ, NM, NV, NY, OH, OR, PA, TN, TX, UT, VA, WA, WV, WY |
 | Documents cited | 189, listed in [docs/SOURCES.md](docs/SOURCES.md) |
 | Review status | 660 checked against regulation text, 717 candidates awaiting a human check, 0 expert-accepted |
@@ -115,6 +143,21 @@ pattern can match, so your existing de-identification step runs unchanged. See
 [docs/USING.md](docs/USING.md) for the rules the matcher applies and how to
 port them.
 
+**AI and writing tools:**
+
+```python
+from spedlex import Lexicon
+
+lex = Lexicon.from_default(jurisdiction="NY")  # the reader's state
+lex.lookup("ARD committee")[0]["use_for_reader"]   # 'Committee on Special Education'
+issues = lex.check(model_draft)                    # disfavored, older, other-state, ambiguous terms
+context = lex.glossary(document_text)              # a short, cited glossary for the prompt
+```
+
+The same functions are on the command line (`spedlex check draft.txt
+--state TX`) and in an MCP server (`pip install "spedlex[mcp] @ git+https://github.com/SiskinSkai/spedlex"`,
+then `spedlex-mcp`). See [docs/USING-WITH-AI.md](docs/USING-WITH-AI.md).
+
 ## How it was built
 
 1. **Federal core.** Every defined term, heading and list item in the IDEA
@@ -127,7 +170,11 @@ port them.
    (Social Security Administration), common surnames (U.S. Census) and the
    patterns a typical scrubber uses. A concept whose strings could shelter
    a real name is only ever protected as a full phrase.
-4. **Review.** Records start as `candidate` or `machine_validated` and move
+4. **Usage.** Older forms are typed `legacy`. A short, curated list in
+   `sources/disfavored.tsv` flags forms that shouldn't be used in new
+   writing, each with the law or rule behind it. Both are still matched,
+   because older documents use them.
+5. **Review.** Records start as `candidate` or `machine_validated` and move
    to `expert_accepted` when a special-education professional confirms them.
 
 [docs/METHODOLOGY.md](docs/METHODOLOGY.md) explains each step, the
@@ -170,7 +217,9 @@ you. Coding agents also read [AGENTS.md](AGENTS.md).
 - **Not a de-identification tool** by itself. It's the vocabulary such tools
   need.
 - **Not legal advice** or an authoritative glossary. It records how terms
-  are used, with citations, not what they mean in law.
+  are used, with citations, not what they mean in law. An AI tool that uses
+  it should say so, show the citation, and send people to the source for
+  meaning.
 - **Not complete.** Most states, D.C. and the territories aren't covered yet,
   and neither are Part C, Section 504 or test instruments. See
   [docs/ROADMAP.md](docs/ROADMAP.md).
@@ -201,13 +250,15 @@ data/            the published list (built, so don't edit by hand)
   concept_ids.tsv  permanent ID registry
   collision_report.csv  strings that hit a name list or scrubber pattern
 sources/         what the list is built from
+  disfavored.tsv strings flagged as not for new writing, with their basis
   federal.py     34 CFR Part 300 core
   states/        one module per state layer, with its sources in the docstring
   documents.tsv  manifest of source documents: URL, hash, archived snapshot
 provenance/xx/   layer reports and audits for each state (our own notes)
 .sources-cache/  local copies of source documents (git ignores it; never committed)
 tools/           add a state, fetch and verify sources, build the site
-spedlex/         Python package: build pipeline, risk grading, matcher
+spedlex/         Python package: build pipeline, risk grading, matcher (match.py),
+                 terminology helpers (lexicon.py), command line, MCP server
 schema/          JSON Schema for a concept record
 reference/names/ name lists used for risk grading
 site/            the explorer page

@@ -6,6 +6,33 @@ patch for corrections and reviews. Concept IDs never change between versions.
 
 ## [Unreleased]
 
+Adds terminology helpers and the `disfavored` flag (0.46.0). SPEDLex's records
+already list every form a concept takes, tagged to the states whose
+documents use it; the new `spedlex.Lexicon` exposes that to AI and writing
+tools: `lookup` (what a term names and what the reader's state calls it),
+`annotate` (every term in a text, with citations), `check` (disfavored,
+older, other-state and ambiguous terms, with suggestions) and `glossary` (a
+short cited glossary for a model's prompt). The same functions are on the
+command line (`python -m spedlex`, or `spedlex` once installed) and in an
+optional MCP server (`spedlex[mcp]`, `spedlex-mcp`; Python 3.10+). New
+guide: `docs/USING-WITH-AI.md`. The Safelist and its matching rules are
+unchanged.
+
+Strings may now carry `disfavored: true` with a `usage_note` and a
+`usage_basis` (new optional schema fields, so a minor version). The flags
+come from a new curated file, `sources/disfavored.tsv`; the build fails if a
+row names an unknown concept or string, or the preferred term. Three strings
+are flagged, drafted with Claude Opus 5.5 (`claude-opus-5-5`) and awaiting
+the maintainer's check: "mental retardation" (Rosa's Law, 2010), "serious
+emotional disturbance" (IDEA Amendments of 1997) and New Jersey's
+"auditorily handicapped". Disfavored strings are still protected from
+redaction. `data/spedlex.csv` gains two last columns, `disfavored` and
+`usage_note`; `data/stats.json` gains `disfavored_strings`, `legacy_strings`
+and `regional_strings`. The explorer strikes through disfavored forms.
+README, METHODOLOGY, SCHEMA, USING, DATA_CARD, ROADMAP, AGENTS.md,
+CONTRIBUTING.md, CITATION.cff and `prompts/add-state.md` (v1.4) describe the
+wider use. No concept, string or ID changed.
+
 Initial public commit of v0.45.0. Earlier development history (Oct 3-9, 2026,
 drafted with claude-opus-5-5 and claude-sonnet-5-5) is kept privately. Source
 documents (PDFs, saved pages, OCR text) are no longer stored in the repository:

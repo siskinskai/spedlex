@@ -34,6 +34,13 @@ a large item.
   most widely attested concepts.
 - **Cross-maps.** Map concepts to MeSH, SNOMED CT, ERIC, CEDS and ICF-CY.
   Every `none_found` is evidence for the gap SPEDLex fills.
+- **More usage flags.** Extend `sources/disfavored.tsv` where a statute,
+  rule or agency decision replaced a term, and mark more `legacy` forms.
+  Each row needs a basis and a person's check.
+- **State-preferred forms.** Some states have renamed a federal category in
+  their own rules (New York's "emotional disability", 2022). A way to mark a
+  state's current preferred form, not just a form it uses, would sharpen the
+  terminology helpers.
 - **Broader name lists.** Name lists that better represent recent immigrant
   families, to tighten risk grading.
 
@@ -45,6 +52,10 @@ a large item.
 
 ## Tooling
 
-- A JavaScript matcher with the same conformance tests.
+- A JavaScript matcher and lexicon with the same conformance tests, for
+  browser-only tools.
+- An evaluation set built from the regional strings: cited questions that
+  test whether a model knows each state's term.
+- Example integrations for common AI frameworks (retrieval, guardrails).
 - A Hugging Face dataset mirror.
 - Integrations or example configs for common open-source scrubbers.

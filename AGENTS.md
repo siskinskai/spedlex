@@ -10,7 +10,9 @@ SPEDLex is a cited, privacy-graded safelist of U.S. special-education terms.
 De-identification tools use it to avoid redacting terms like "ARD committee"
 or "PLAAFP" when they remove a child's personal information from a document,
 so that caregivers (parents, guardians, educators, advocates) can use AI
-tools with special-education documents safely.
+tools with special-education documents safely. The same records also serve
+AI and writing tools that need to name terms consistently across states
+(`spedlex/lexicon.py`, docs/USING-WITH-AI.md).
 
 The worst possible bug is a change that lets the safelist protect a person's
 name. The second worst is an uncited or invented term.
@@ -33,6 +35,11 @@ name. The second worst is an uncited or invented term.
   person. Adding it to the known list is a reviewer's decision.
 - **Never write to `sources/reviews.tsv` on your own.** It records human
   expert decisions only.
+- **Add a row to `sources/disfavored.tsv` only when the person asks,** and
+  only with a basis you can show from a document they gave you or a public
+  law or rule: a statute or rule that replaced the term, or an agency's
+  published decision. A renamed program or agency is `legacy`, not
+  disfavored. Never set `disfavored` in a layer module.
 - **Record your involvement.** Set `ASSISTED_BY` in any layer module you
   draft to your model's API identifier.
 - **Never commit source documents.** That means PDFs, Word files, saved web
@@ -56,10 +63,14 @@ sources/federal.py        34 CFR Part 300 core (SEED) and placeholders (ILLUSTRA
 sources/states/*.py       one module per state layer (_template.py shows the format)
 sources/states/__init__.py  LAYERS: the order layers are applied
 sources/reviews.tsv       human review decisions
+sources/disfavored.tsv    strings flagged as not for new writing, with their basis
 sources/documents.tsv     source manifest: URL, hash and Wayback snapshot of every document read
 spedlex/build.py          builds data/ from sources/ and checks it
 spedlex/risk.py           privacy-risk grading
-spedlex/match.py          reference matcher (Safelist)
+spedlex/match.py          reference matcher (Safelist), for de-identification
+spedlex/lexicon.py        terminology helpers (Lexicon): lookup, annotate, check, glossary
+spedlex/__main__.py       command line (python -m spedlex)
+spedlex/mcp_server.py     optional MCP server over the Lexicon (needs the mcp extra)
 spedlex/adapters/         scrubber collision adapters
 data/                     built outputs and the permanent ID registry
 provenance/<xx>/          layer reports and audits (our own work, not source text)
@@ -88,6 +99,9 @@ python tools/fetch_sources.py      # download the source documents into .sources
   first source tell you which), rebuild, and run the tests.
 - **Change matching or risk logic:** update `docs/METHODOLOGY.md` and
   `docs/USING.md` in the same change, and add a test.
+- **Change the Lexicon:** update `docs/USING-WITH-AI.md` and
+  `tests/test_lexicon.py`. Keep the Safelist's behaviour unchanged; the two
+  share matching rules but answer different questions.
 
 ## When you finish
 

@@ -9,6 +9,7 @@ Inputs
   sources/federal.py         34 CFR Part 300 core and illustrative placeholders
   sources/states/*.py        one module per state layer, applied in LAYERS order
   sources/reviews.tsv        human review decisions
+  sources/disfavored.tsv     strings flagged as no longer acceptable in new writing
   sources/documents.tsv      manifest of source documents (URL, hash, snapshot); records cite rows by doc_id
   data/concept_ids.tsv       permanent key -> concept_id registry
   schema/sped_concept.schema.json
@@ -269,6 +270,43 @@ def apply_reviews(records, path=ROOT / "sources" / "reviews.tsv"):
             rev.pop("notes", None)
 
 
+DISFAVORED_COLUMNS = ["key", "string", "usage_note", "basis", "assisted_by"]
+
+
+def apply_disfavored(records, keys, path=ROOT / "sources" / "disfavored.tsv"):
+    """Flag strings from sources/disfavored.tsv as disfavored.
+
+    Columns: key, string, usage_note, basis, assisted_by. The string must
+    already exist on the concept (it stays matched: older documents use it)
+    and may not be the concept's preferred term; to retire a preferred term,
+    change the concept's preferred term instead.
+    """
+    if not path.exists():
+        return
+    by_id = {r["concept_id"]: r for r in records}
+    lines = path.read_text(encoding="utf-8").splitlines()
+    if not lines or lines[0].split("\t") != DISFAVORED_COLUMNS:
+        raise SystemExit(f"disfavored.tsv: header must be exactly: {chr(9).join(DISFAVORED_COLUMNS)}")
+    for n, line in enumerate(lines[1:], start=2):
+        if not line.strip():
+            continue
+        cols = line.split("\t")
+        if len(cols) != len(DISFAVORED_COLUMNS):
+            raise SystemExit(f"disfavored.tsv line {n}: expected {len(DISFAVORED_COLUMNS)} columns, got {len(cols)}")
+        key, text, note, basis, assisted = (c.strip() for c in cols)
+        if key not in keys:
+            raise SystemExit(f"disfavored.tsv line {n}: unknown concept key {key!r}")
+        if not (note and basis and assisted):
+            raise SystemExit(f"disfavored.tsv line {n}: usage_note, basis and assisted_by are all required")
+        rec = by_id[keys[key]]
+        hits = [s for s in rec["strings"] if s["text"] == text]
+        if not hits:
+            raise SystemExit(f"disfavored.tsv line {n}: {text!r} is not a string of {key!r}")
+        if hits[0]["string_type"] == "preferred":
+            raise SystemExit(f"disfavored.tsv line {n}: {text!r} is {key!r}'s preferred term; change the preferred term instead")
+        hits[0].update({"disfavored": True, "usage_note": note, "usage_basis": basis})
+
+
 def build(adapter, register=False):
     reg = Registry()
     records, keys, flags = federal_records(reg, register, adapter)
@@ -284,6 +322,7 @@ def build(adapter, register=False):
             r["broader"] = [keys[k] for k in pending]
             if "definition_note" in r:  # keep the field order the files have always used
                 r["definition_note"] = r.pop("definition_note")
+    apply_disfavored(records, keys)
     records += illustrative_records(reg, register, adapter)
     apply_reviews(records)
     seen = {r["concept_id"] for r in records}
@@ -411,13 +450,15 @@ def render(records, reg, adapter):
     w = csv.writer(buf, lineterminator="\n")
     key_of = {cid: key for key, (cid, _, _) in reg.rows.items()}
     w.writerow(["concept_id", "key", "preferred_term", "category", "string", "string_type", "match", "regional",
-                "jurisdictions_attesting", "first_citation", "pii_level", "protect_rule", "review_status"])
+                "jurisdictions_attesting", "first_citation", "pii_level", "protect_rule", "review_status",
+                "disfavored", "usage_note"])
     for r in records:
         juris = sorted({s.get("jurisdiction", "") for s in r["sources"]} - {""})
         for s in r["strings"]:
             w.writerow([r["concept_id"], key_of[r["concept_id"]], r["preferred_term"], r["category"], s["text"], s["string_type"], s["match"],
                         " ".join(s.get("regional", [])), " ".join(juris), r["sources"][0]["citation"],
-                        r["pii_risk"]["level"], r["pii_risk"]["protect_rule"], r["review"]["status"]])
+                        r["pii_risk"]["level"], r["pii_risk"]["protect_rule"], r["review"]["status"],
+                        "yes" if s.get("disfavored") else "", s.get("usage_note", "")])
     files["data/spedlex.csv"] = buf.getvalue()
 
     buf = io.StringIO()
@@ -455,7 +496,9 @@ def readme_with_stats(st):
         "|---|---|",
         f"| Concepts | {st['concepts']:,}: {st['federal_concepts']} from 34 CFR Part 300, "
         f"{st['concepts'] - st['federal_concepts']} added by state layers |",
-        f"| Surface strings | {st['strings']:,} (phrases, acronyms, plurals, legacy and regional forms) |",
+        f"| Surface strings | {st['strings']:,} (phrases, acronyms, plurals, legacy and regional forms): "
+        f"{st['regional_strings']:,} tagged to the states that use them, {st['legacy_strings']} older forms, "
+        f"{st['disfavored_strings']} flagged as disfavored |",
         f"| States | {st['states']}: {', '.join(st['state_codes'])} |",
         f"| Documents cited | {st['documents_cited']}, listed in [docs/SOURCES.md](docs/SOURCES.md) |",
         f"| Review status | {reviewed.get('machine_validated', 0)} checked against regulation text, "
@@ -481,6 +524,9 @@ def stats(records, adapter):
         "illustrative_placeholders": len(records) - len(real),
         "federal_concepts": sum(1 for r in real if r["version_added"] == federal.VERSION_ADDED),
         "strings": sum(len(r["strings"]) for r in real),
+        "disfavored_strings": sum(1 for r in real for s in r["strings"] if s.get("disfavored")),
+        "legacy_strings": sum(1 for r in real for s in r["strings"] if s["string_type"] == "legacy"),
+        "regional_strings": sum(1 for r in real for s in r["strings"] if s.get("regional")),
         "states": len(juris),
         "state_codes": [j[3:] for j in juris],
         "documents_cited": len({"34 CFR Part 300" if s["source_type"] == "federal_regulation" else (s.get("url") or s["citation"])

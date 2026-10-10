@@ -210,7 +210,7 @@ input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px s
   <header>
     <div class="eyebrow">SPEDLex · v<span id="ver"></span> · 34 CFR Part 300 + <span id="nstates"></span> states · <a href="https://github.com/SiskinSkai/spedlex">GitHub</a> · <a href="https://github.com/SiskinSkai/spedlex/tree/main/data">Download the data</a></div>
     <h1>A safelist for special-education vocabulary</h1>
-    <p class="muted">Caregivers increasingly use AI tools to understand IEPs and evaluations. Doing that safely means removing the child's personal information first, with a de-identification tool. Those tools need to know which words are special-education terms that must survive, and no standard vocabulary told them. SPEDLex is that vocabulary. The core comes from the IDEA Part B regulations. Each state layer is drawn from that state's procedural safeguards notice, its family or IEP guide, and its special education regulations. Every concept carries its surface forms, every source that attests it, and a privacy-risk grade that tells a scrubber when it may protect the term. Purple rows are placeholders for later harvests.</p>
+    <p class="muted">Caregivers increasingly use AI tools to understand IEPs and evaluations. Doing that safely means removing the child's personal information first, with a de-identification tool. Those tools need to know which words are special-education terms that must survive, and no standard vocabulary told them. SPEDLex is that vocabulary. The core comes from the IDEA Part B regulations. Each state layer is drawn from that state's procedural safeguards notice, its family or IEP guide, and its special education regulations. Every concept carries its surface forms, every source that attests it, and a privacy-risk grade that tells a scrubber when it may protect the term. The same records tell AI and writing tools what each state calls a concept (Texas's ARD committee is New York's CSE) and which older terms to avoid; struck-through forms are disfavored. Purple rows are placeholders for later harvests.</p>
     <div class="stats" id="stats"></div>
   </header>
 
@@ -435,13 +435,13 @@ document.getElementById("nstates").textContent = STATS.states;
 (() => {
   const r = DATA.find(x => x.preferred_term.startsWith("Present levels"));
   const f = (name, val) => `<div class="field"><div class="fname">${name}</div><div class="fval">${val}</div></div>`;
-  const strs = `<div class="chips">${r.strings.map(s => `<span class="chip" title="${s.string_type} · ${s.match}">${esc(s.text)}</span>`).join("")}</div>`;
+  const strs = `<div class="chips">${r.strings.map(s => `<span class="chip" title="${s.string_type} · ${s.match}${s.disfavored ? " · disfavored: " + esc(s.usage_note) : ""}">${s.disfavored ? "<s>" + esc(s.text) + "</s>" : esc(s.text)}</span>`).join("")}</div>`;
   const src = r.sources[0];
   document.getElementById("anatomy-fields").innerHTML =
     f("concept_id", `<span class="mono">${r.concept_id}</span>`) +
     f("preferred_term", esc(r.preferred_term)) +
     f("category", label(r.category)) +
-    f("strings[ ]", strs + `<div class="muted" style="font-size:.78rem;margin-top:6px">Hover a chip for its type and match rule.</div>`) +
+    f("strings[ ]", strs + `<div class="muted" style="font-size:.78rem;margin-top:6px">Hover a chip for its type and match rule. Struck-through forms are disfavored: still recognized in older documents, not for new writing.</div>`) +
     f("sources[0].citation", `<a href="${src.url}" target="_blank" rel="noopener">${esc(src.citation)}</a>`) +
     f("cross_maps", r.cross_maps.map(c => `${c.system}: ${c.relation}`).join(", ")) +
     f("pii_risk", `<span class="chip ${r.pii_risk.level}">${r.pii_risk.level}</span> <span class="mono">${r.pii_risk.protect_rule}</span>`) +
@@ -454,7 +454,7 @@ const catSel = document.getElementById("cat");
 CAT_ORDER.filter(c => DATA.some(r => r.category === c)).forEach(c => catSel.insertAdjacentHTML("beforeend", `<option value="${c}">${label(c)}</option>`));
 
 function detail(r) {
-  const rows = r.strings.map(s => `<tr><td>${esc(s.text)}${s.regional ? ` <span class="muted">(${s.regional.join(", ")})</span>` : ""}</td><td class="mono">${s.string_type}</td><td class="mono">${s.match}</td></tr>`).join("");
+  const rows = r.strings.map(s => `<tr><td>${esc(s.text)}${s.regional ? ` <span class="muted">(${s.regional.join(", ")})</span>` : ""}${s.disfavored ? `<div class="muted" style="font-size:.78rem">Disfavored: ${esc(s.usage_note)}</div>` : ""}</td><td class="mono">${s.string_type}${s.disfavored ? " · disfavored" : ""}</td><td class="mono">${s.match}</td></tr>`).join("");
   const hits = [...r.pii_risk.scrubber_collisions, ...(r.pii_risk.name_list_hits || [])];
   const broader = (r.broader || []).map(id => { const p = DATA.find(x => x.concept_id === id); return p ? esc(p.preferred_term) : id; }).join(", ");
   return `<div class="detail">

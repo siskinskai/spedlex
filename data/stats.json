@@ -1,9 +1,12 @@
 {
-  "version": "0.45.0",
+  "version": "0.46.0",
   "concepts": 1377,
   "illustrative_placeholders": 13,
   "federal_concepts": 156,
   "strings": 3046,
+  "disfavored_strings": 3,
+  "legacy_strings": 21,
+  "regional_strings": 1043,
   "states": 39,
   "state_codes": [
     "AK",

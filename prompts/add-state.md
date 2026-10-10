@@ -1,6 +1,8 @@
 <!--
 prompt: add-state
-version: 1.3 (2026-10-09)
+version: 1.4 (2026-10-10)
+changes in 1.4: forms a document says were replaced as offensive or by rule are listed in the report
+  under "Possibly disfavored" for a person to flag in sources/disfavored.tsv
 changes in 1.3: documents live in .sources-cache/{{xx}}/ and are never saved or pasted into the repository;
   the module cites each by doc_id and the output includes sources/documents.tsv rows;
   the report goes to provenance/{{xx}}/
@@ -139,6 +141,12 @@ type `L`, and is listed in the report as uncertain.
 variant, `AB` abbreviation or short form, `P` plural, `L` legacy (outdated
 but still in current text. Keep these).
 
+**Disfavored forms:** if a document says a term was replaced because it was
+offensive or stigmatizing, or a rule replaced it, record the string as
+usual (usually type `L`) and list it in the report under "Possibly
+disfavored", with the page that says so. Don't flag it yourself: a person
+adds it to `sources/disfavored.tsv`.
+
 **Regional tag (TAG):** define `{{XX}} = ["US-{{XX}}"]` near the top of the
 module, as EXAMPLE does, and use it for strings used only in {{STATE}}.
 Forms used nationally get `None`.
@@ -190,6 +198,8 @@ hash or a URL. `doc_id` is `{{xx}}-<short-slug>-<year>`, lowercase.
 4. Anything risky: acronyms that are also given names (e.g. ADA, IDA),
    eponyms, place names, ambiguous acronyms.
 5. Terms you deliberately left out, and why.
+6. Possibly disfavored: strings the documents say were replaced by rule or
+   as offensive, with the page that says so.
 
 ## Before you answer, check
 

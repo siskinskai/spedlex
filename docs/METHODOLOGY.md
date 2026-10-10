@@ -19,6 +19,15 @@ a name. No shared vocabulary of those terms existed.
 that are safe to protect from redaction. Attach enough evidence that a person
 can check each one.
 
+**A second use.** The structure that serves redaction (one concept, every
+form it takes, each form tagged to the states whose documents use it, a
+citation) is also what AI and writing tools need to name terms consistently:
+to answer a Texas parent in Texas's words, expand an acronym correctly, avoid
+a term the law replaced, and cite where a term comes from.
+[USING-WITH-AI.md](USING-WITH-AI.md) describes that use. It adds no new
+inclusion rule: a term is in the list for the reasons below, and the second
+use takes the list as it is. What it adds is the `disfavored` flag (§4).
+
 **What belongs in the list.** A term belongs if two things are true. It
 appears in a regulation, a state document or (later) an evaluation instrument
 or IEP corpus as a special-education concept. And a scrubber would plausibly
@@ -144,6 +153,19 @@ type, a placement model.
 forms are kept on purpose. Several states' rules still say "mental
 retardation" or "serious emotional disturbance". A safelist that dropped
 those forms would strip a state's own citations from an IEP.
+
+**Disfavored forms.** A few strings carry `disfavored: true`, with a
+`usage_note` and a `usage_basis`. The flag means the form shouldn't be used
+in new writing, because the law replaced it or it is widely considered
+stigmatizing. It doesn't change matching: the string is still protected
+from redaction, because older documents and some state rules print it. The
+flags live in one file, `sources/disfavored.tsv`, rather than in the layer
+modules, because they are a judgment about usage, not a fact a single state
+document attests. Each row names its basis, and a person checks it before it
+is merged. The list starts small on purpose (three forms in 0.46.0) and
+grows only with a basis: a statute or rule that replaced the term, or a
+state or federal agency's published decision to stop using it. A renamed
+agency or program is `legacy`, not disfavored.
 
 **Case.** Phrases match without regard to case. Acronyms match only in exact
 case. "ED" (emotional disturbance) is protected and the name "Ed" is not.
@@ -301,6 +323,17 @@ Zenodo with its own DOI.
   That would under-grade risk for a term that collides with one. Broader
   lists are welcome.
 - **English only.** Spanish-language notices and IEPs aren't covered.
+- **Regional tags aren't exhaustive.** A form tagged to Texas is known to
+  appear in the Texas documents that were read. Other states may use it,
+  and nothing is known about states not yet covered. Tools that say "this
+  is another state's term" should treat that as a hint.
+- **Currency isn't tracked.** The list aims to cover terms likely to appear
+  in documents, not to say which are legally current. `legacy` and
+  `disfavored` are recorded when a source or a law makes the change clear,
+  and both are incomplete.
+- **No definitions.** Records name concepts and cite sources; they don't
+  define them. AI tools that use the list should send people to the cited
+  source for meaning.
 - **Field use.** The list records terms from official documents. How
   teachers actually write ("sped", "resource room", "push-in") comes later,
   from a corpus.

@@ -5,7 +5,8 @@ A scrubber is software that removes personal information from a document.
 A caregiver might use one to share an IEP with an AI tool without sharing the
 child's identity. SPEDLex tells such a tool which words are special-education
 terms and should stay intact. Nothing here depends on any particular
-scrubber.
+scrubber. To use the same data to keep terms consistent in AI and writing
+tools, see [USING-WITH-AI.md](USING-WITH-AI.md).
 
 ## Where the safelist runs
 
@@ -114,5 +115,8 @@ Four collisions turn up often:
   nothing about whether the rest of the document is safe to release.
 - Candidates are unreviewed. If false protection is costly for you, use
   `statuses={"machine_validated", "expert_accepted"}`.
+- Disfavored strings (`disfavored: true`) are protected like any other.
+  They are flagged for tools that write text, not for redaction: an older
+  IEP that says "mental retardation" should keep saying it.
 - Pin a version. New releases add terms, and a term you didn't expect to be
   protected may become protected.

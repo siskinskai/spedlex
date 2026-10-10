@@ -4,13 +4,13 @@ build-backend = "hatchling.build"
 
 [project]
 name = "spedlex"
-version = "0.45.0"
-description = "An open, cited vocabulary of U.S. special-education terms that lets de-identification tools protect children's privacy without destroying meaning."
+version = "0.46.0"
+description = "An open, cited vocabulary of U.S. special-education terms: lets de-identification tools protect children's privacy without destroying meaning, and helps AI and writing tools name terms consistently across states."
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT (code); CC-BY-4.0 (data)" }
 authors = [{ name = "SPEDLex contributors" }]
-keywords = ["special education", "IEP", "IDEA", "de-identification", "PII", "safelist", "terminology"]
+keywords = ["special education", "IEP", "IDEA", "de-identification", "PII", "safelist", "terminology", "LLM", "MCP", "controlled vocabulary"]
 classifiers = [
   "Programming Language :: Python :: 3",
   "License :: OSI Approved :: MIT License",
@@ -23,6 +23,11 @@ dependencies = []
 [project.optional-dependencies]
 build = ["jsonschema>=4.18"]
 dev = ["jsonschema>=4.18", "pytest>=7"]
+mcp = ["mcp>=1.2; python_version >= '3.10'"]
+
+[project.scripts]
+spedlex = "spedlex.__main__:main"
+spedlex-mcp = "spedlex.mcp_server:main"
 
 [project.urls]
 Homepage = "https://github.com/SiskinSkai/spedlex"

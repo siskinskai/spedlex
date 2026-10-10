@@ -2,7 +2,8 @@
 
 SPEDLex is an open, cited vocabulary of U.S. special-education terms that
 de-identification tools use to protect a child's privacy without destroying
-a document's meaning (see the [README](../README.md)). The list is organized
+a document's meaning, and that AI and writing tools can use to name terms
+consistently (see the [README](../README.md)). The list is organized
 as concept records.
 
 Every line of `data/spedlex.jsonl` is one concept record. The record is
@@ -44,7 +45,19 @@ validated against
 | `text` | The exact surface form. |
 | `string_type` | `preferred`, `synonym`, `acronym`, `abbreviation`, `spelling_variant`, `plural`, or `legacy` (an outdated form that still appears in current documents). |
 | `match` | `phrase_ci`: the whole phrase, any case. `phrase_cs`: the whole phrase, exact case (used for acronyms). `token_cs`: reserved for single tokens with no risk. |
-| `regional` | Optional list of jurisdictions where this form is used, when narrower than the concept. "ARD committee" is `["US-TX"]` on the national IEP Team concept. |
+| `regional` | Optional list of jurisdictions where this form is used, when narrower than the concept. "ARD committee" is `["US-TX"]` on the national IEP Team concept. The list names the states whose documents were read and use the form; it is not exhaustive. |
+| `disfavored` | Optional, always `true` when present. The form shouldn't be used in new writing: the law replaced it, or it is considered stigmatizing. It is still matched, because older documents and some state rules print it. Set from `sources/disfavored.tsv`, never in a layer module. |
+| `usage_note` | Required with `disfavored`. Why, and what to say instead, in the project's own words. |
+| `usage_basis` | Required with `disfavored`. The law, rule or document behind the flag. |
+
+`legacy` (a string type) and `disfavored` (a flag) answer different
+questions. `legacy` says a form is older: a former name for a program, an
+agency or a category. `disfavored` says a form shouldn't be written any
+more. A string can be both ("mental retardation"), and a renamed agency is
+legacy without being disfavored. In terminology standards such as ISO 704
+and TBX, `legacy` is close to a *superseded* term and `disfavored` to a
+*deprecated* one; SPEDLex avoids "deprecated" because software readers
+take it to mean the string will be removed, and it won't be.
 
 "Whole phrase" means the match is not preceded or followed by a letter or digit.
 
@@ -100,7 +113,7 @@ validated against
 
 | File | Contents |
 |---|---|
-| `spedlex.csv` | One row per string with its concept ID and source key (the key layer modules use to refer to it), type, match rule, regional tags, attesting jurisdictions, first citation, risk and status. Good for spreadsheets. |
+| `spedlex.csv` | One row per string with its concept ID and source key (the key layer modules use to refer to it), type, match rule, regional tags, attesting jurisdictions, first citation, risk, status, and (last two columns) the disfavored flag and usage note. Good for spreadsheets. |
 | `concept_ids.tsv` | The permanent ID registry: key, ID, preferred term, `active` or `retired`. |
 | `collision_report.csv` | Every scrubber and name-list hit, one per row. |
 | `stats.json` | Counts by category, risk, status and state. |

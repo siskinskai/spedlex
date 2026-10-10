@@ -10,7 +10,8 @@ A summary of the dataset in the format of *Datasheets for Datasets*
   documents. Tools that remove a child's personal information before a
   document is shared need to know which words are special-education terms.
   SPEDLex gives them that list, so they can protect the terms without
-  sheltering personal names.
+  sheltering personal names. The same records help AI and writing tools
+  name terms the way each state does and avoid outdated ones.
 - **Gap.** Medicine has the UMLS, MeSH and SNOMED CT. Special education has
   no comparable open, cited, machine-readable vocabulary.
 - **Creators.** Started by Jeremy Evans. Contributors maintain it in the
@@ -28,7 +29,8 @@ A summary of the dataset in the format of *Datasheets for Datasets*
   run from legal and procedural terms (172 concepts at first release) to
   Section 504 (2). `data/stats.json` has counts by category.
 - **Labels.** Category, string type, match rule, regional tags, risk grade,
-  review status.
+  review status, and a `disfavored` flag (with a note and basis) on strings
+  that shouldn't be used in new writing.
 - **Personal information.** None. The dataset holds terms and public
   document citations. Name lists are used during the build to grade risk
   but aren't part of the published records beyond the colliding token
@@ -72,13 +74,21 @@ A summary of the dataset in the format of *Datasheets for Datasets*
   - Terminology research.
   - Cross-state comparison of special-education vocabulary.
   - A seed for NLP over IEPs.
+  - Keeping terminology consistent in AI and writing tools: naming concepts
+    in the reader's state's words, expanding acronyms, flagging disfavored
+    and other-state terms, grounding answers with a cited glossary, query
+    expansion, and evaluation sets (see USING-WITH-AI.md).
 - **Not intended.**
   - As a de-identification tool by itself.
   - As legal advice or an authoritative definition of any term.
   - To decide eligibility, services or placement for any student.
+  - As a record of what is legally current, or of every state's usage.
+    Regional tags list the documents read, not every state that uses a form.
 - **Risks.** Protecting a term that collides with a person's name. The
   grading, the household-names rule and CI's safety test exist to prevent
-  this. Report any case you find.
+  this. Report any case you find. For AI tools: presenting an unreviewed
+  candidate, or an other-state hint, as settled fact. Results carry the
+  review status for this reason.
 
 ## Distribution
 

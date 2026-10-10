@@ -22,6 +22,7 @@ body:
         - The citation doesn't support it
         - Wrong category or parent concept
         - It's tagged to the wrong state
+        - It's outdated or offensive and should be flagged as disfavored
         - It could shelter a person's name (privacy risk)
         - Something else
     validations:

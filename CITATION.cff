@@ -1,12 +1,12 @@
 cff-version: 1.2.0
-title: "SPEDLex: a cited, privacy-graded safelist of U.S. special-education terms"
+title: "SPEDLex: an open, cited vocabulary of U.S. special-education terms"
 message: "If you use SPEDLex, please cite it as below."
 type: dataset
 authors:
   - name: "Jeremy Evans"
   - name: "SPEDLex contributors"
-version: "0.45.0"
-date-released: "2026-10-09"
+version: "0.46.0"
+date-released: "2026-10-10"
 license: CC-BY-4.0
 repository-code: "https://github.com/SiskinSkai/spedlex"
 url: "https://SiskinSkai.github.io/spedlex/"
@@ -19,6 +19,9 @@ abstract: >-
   concept carries its surface forms, citations to the documents that attest
   it, and a privacy-risk grade that tells de-identification tools when the
   term can be protected from redaction without sheltering personal names.
+  Because each form is tagged to the states whose documents use it, and
+  older and disfavored forms are marked, the same records help AI and
+  writing tools name terms consistently for a reader's state.
 keywords:
   - special education
   - IEP
@@ -26,3 +29,5 @@ keywords:
   - de-identification
   - controlled vocabulary
   - safelist
+  - terminology
+  - large language models

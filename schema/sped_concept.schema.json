@@ -106,7 +106,34 @@
               "pattern": "^US(-[A-Z]{2})?$"
             },
             "description": "Jurisdictions where this surface form is in use, if narrower than the concept."
+          },
+          "disfavored": {
+            "type": "boolean",
+            "const": true,
+            "description": "The form is no longer acceptable in new writing (replaced in law, or considered stigmatizing). It is still matched, because older documents use it. Listed in sources/disfavored.tsv."
+          },
+          "usage_note": {
+            "type": "string",
+            "minLength": 10,
+            "description": "Why the form is disfavored and what to say instead, in the project's own words."
+          },
+          "usage_basis": {
+            "type": "string",
+            "minLength": 5,
+            "description": "The law, rule or document behind the disfavored flag."
           }
+        },
+        "dependentRequired": {
+          "disfavored": [
+            "usage_note",
+            "usage_basis"
+          ],
+          "usage_note": [
+            "disfavored"
+          ],
+          "usage_basis": [
+            "disfavored"
+          ]
         }
       }
     },
