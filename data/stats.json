@@ -3,10 +3,10 @@
   "concepts": 1401,
   "illustrative_placeholders": 13,
   "federal_concepts": 156,
-  "strings": 3120,
+  "strings": 3121,
   "disfavored_strings": 3,
   "legacy_strings": 22,
-  "regional_strings": 1084,
+  "regional_strings": 1085,
   "states": 40,
   "state_codes": [
     "AK",
@@ -72,8 +72,8 @@
   },
   "by_risk": {
     "high": 279,
-    "low": 210,
-    "none": 912
+    "low": 211,
+    "none": 911
   },
   "by_review_status": {
     "candidate": 735,

@@ -25,7 +25,10 @@ and the methods of measurement). Kentucky's Admissions and Release Committee
 and functional) under intellectual disability. Only 707 KAR 1:002 was
 available from the rules, and no Wayback snapshots were recorded. Drafted with
 Claude Sonnet 5.5 (`claude-sonnet-5-5`); `prompts/audit-layer.md` has not yet
-been run (report in `provenance/ky/ky-layer-report-2026-10-09.md`).
+been run (report in `provenance/ky/ky-layer-report-2026-10-09.md`). The acronym
+"CAP" (corrective action plan) is also a first name; it is case-sensitive and
+is added to the known all-caps collisions in `tests/test_match.py`, pending
+reviewer confirmation.
 
 Adds terminology helpers and the `disfavored` flag (0.46.0). SPEDLex's records
 already list every form a concept takes, tagged to the states whose

@@ -231,7 +231,7 @@ CONCEPTS = [
     # Kentucky rule terms
     ("ky_sped_mentor", "Special education mentor", "personnel_role", [], R(57),
      {**KYJ, "note": "Defined in the rule by reference to KRS 157.197."}),
-    ("ky_cap", "Corrective action plan", "legal_procedural", [], R(18), {}),
+    ("ky_cap", "Corrective action plan", "legal_procedural", [("CAP", A, KY)], R(18), {}),
     ("ky_compliance_report", "Compliance monitoring report", "legal_procedural", [], R(14), {}),
     ("ky_program_of_studies", "Program of Studies", "academic_skill", [], R(27), KYJ),
     # Kentucky assessments

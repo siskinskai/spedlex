@@ -882,6 +882,7 @@ SPED:001390,Kentucky Special Parent Involvement Network,candidate,high,name_list
 SPED:001390,Kentucky Special Parent Involvement Network,candidate,high,place_list,place:Kentucky <- 'Kentucky Special Parent Involvement Network'
 SPED:001390,Kentucky Special Parent Involvement Network,candidate,high,place_list,place:KY <- 'KY-SPIN'
 SPED:001391,Kentucky Administrative Regulations,candidate,high,place_list,place:Kentucky <- 'Kentucky Administrative Regulations'
+SPED:001393,Corrective action plan,machine_validated,low,name_list,first:CAP <- 'CAP'
 SPED:001396,Kentucky Summative Assessment,candidate,high,place_list,place:Kentucky <- 'Kentucky Summative Assessment'
 SPED:001397,Alternative Kentucky Summative Assessment,candidate,high,place_list,place:Kentucky <- 'Alternative Kentucky Summative Assessment'
 SPED:001397,Alternative Kentucky Summative Assessment,candidate,high,place_list,place:Kentucky <- 'Kentucky Alternate Assessment'
