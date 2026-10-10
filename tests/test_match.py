@@ -23,7 +23,7 @@ def test_all_caps_name_collisions_are_only_known_acronyms():
     """All-caps forms like LEA or ED are protected on purpose: they are
     matched case-sensitively, so the names Lea and Ed are not. Any new entry
     here needs a reviewer's eye."""
-    known = {"ADA", "ADD", "ALTA", "CAP", "ED", "ELL", "IDA", "LEA", "REED", "SOL", "TEA"}
+    known = {"ADA", "ADD", "ALTA", "ASHA", "CAP", "ED", "ELL", "IDA", "LEA", "REED", "SOL", "TEA"}
     hits = {n.upper() for n in FIRST_NAMES | SURNAMES if ALL.find(f"Today {n.upper()} came.")}
     assert hits <= known, f"new all-caps collisions to review: {sorted(hits - known)}"
 

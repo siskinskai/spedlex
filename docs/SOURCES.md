@@ -220,6 +220,16 @@ state modules in `sources/states/` say which documents could not be read and why
 | [Minn. Stat. §125A.091](https://www.revisor.mn.gov/statutes/cite/125A.091) | state regulation | 4 |
 | [Minnesota district Policy 615](https://www.isd622.org/about/policies/policy/~board/policies/post/615) | secondary guidance | 5 |
 
+## Mississippi (US-MS)
+
+| Document | Type | Records |
+|---|---|---|
+| [MDE Educator Guide to Special Education](https://mdek12.org/wp-content/uploads/sites/39/2026/05/Educator-Guide-to-Special-Education-V5.pdf) | state guidance | 21 |
+| [MDE Individualized Education Program (IEP) Development Guidance (3.3.20)](https://www.mdek12.org/sites/default/files/iep_guidance_final_3.3.20.pdf) | state guidance | 50 |
+| [MDE Procedural Safeguards: Your Family's Special Education Rights (rev. Oct. 2025)](https://mdek12.org/wp-content/uploads/sites/39/2025/10/procedural-safeguards-revised-10.21.25-RR.edits_v1.pdf) | procedural safeguards notice | 3 |
+| [MDE Procedures for State Board Policy 74.19](https://mdek12.org/sites/default/files/documents/vol-i-cf-eval-elig-final-volume-09-22-2015_20160708142156_277140.pdf) | state guidance | 24 |
+| [MS State Board Policy Chapter 74](https://www.mdek12.org/sites/default/files/documents/part-34-rule-74-19_20160614161027_365113.pdf) | state regulation | 266 |
+
 ## Missouri (US-MO)
 
 | Document | Type | Records |

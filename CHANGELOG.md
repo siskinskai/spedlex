@@ -6,6 +6,26 @@ patch for corrections and reviews. Concept IDs never change between versions.
 
 ## [Unreleased]
 
+Adds the Mississippi layer (`mississippi`, US-MS, 0.49.0) from Mississippi
+State Board of Education Policy Chapter 74, Rule 74.19 (the 2013 text as
+posted by the Mississippi Department of Education), the 2025 Procedural
+Safeguards notice, the Procedures for Policy 74.19 Volume I (child find,
+evaluation and eligibility), the IEP Development Guidance (2020) and the
+Educator Guide to Special Education (V5). It attests 364 concepts and adds 65
+(27 machine_validated, 38 candidate): the Mississippi Department of
+Education and its Office of Special Education, state agencies and schools
+named in the documents, the Mississippi Occupational and Alternate Diplomas,
+the MAAP, MAAP-A and other state assessments and standards, state IEP and
+monitoring forms, the Results-Driven Accountability determinations, and
+general terms such as co-teaching models, check-in/check-out and audiology
+screening terms. **Merge order: Kentucky (0.47.0), Maine (0.48.0), then
+Mississippi (0.49.0).** On the branch that merges all three, Kentucky keeps
+SPED:001381-001404, Maine is registered at SPED:001405-001459 and Mississippi
+at SPED:001460-001524 (each branch had numbered from SPED:001381 on its own),
+and coverage is 41 added, 15 pending. Source PDFs are not
+committed; they are listed in `sources/documents.tsv` and held in
+`.sources-cache/ms/`. The Safelist and its matching rules are unchanged.
+
 Adds the Maine layer (`maine`, US-ME, 0.48.0) from 05-071 Chapter 101, the
 Maine Unified Special Education Regulation (MUSER, effective July 26, 2024,
 posted 8.21.2024), including its Appendix 1 notice of procedural safeguards.

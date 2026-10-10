@@ -1458,6 +1458,71 @@ cerebral_palsy	SPED:001456	Cerebral palsy	active
 poliomyelitis	SPED:001457	Poliomyelitis	active
 bone_tuberculosis	SPED:001458	Bone tuberculosis	active
 schizophrenia	SPED:001459	Schizophrenia	active
+ms_mde	SPED:001460	Mississippi Department of Education	active
+ms_ose	SPED:001461	Mississippi Department of Education, Office of Special Education	active
+ms_parent_outreach	SPED:001462	Division of Parent Outreach	active
+ms_sbe	SPED:001463	State Board of Education	active
+ms_state_supt	SPED:001464	State Superintendent of Education	active
+ms_office_accred	SPED:001465	Office of Accreditation	active
+ms_csa	SPED:001466	Commission on School Accreditation	active
+ms_ecp	SPED:001467	Educable Child Program	active
+ms_msdh	SPED:001468	Mississippi State Department of Health	active
+ms_mdhs	SPED:001469	Mississippi Department of Human Services	active
+ms_dmh	SPED:001470	Mississippi Department of Mental Health	active
+ms_mdoc	SPED:001471	Mississippi Department of Corrections	active
+ms_mscdd	SPED:001472	Mississippi Council on Developmental Disabilities	active
+ms_school_blind	SPED:001473	Mississippi School for the Blind	active
+ms_school_deaf	SPED:001474	Mississippi School for the Deaf	active
+ms_school_arts	SPED:001475	Mississippi School of the Arts	active
+ms_school_math	SPED:001476	Mississippi School for Mathematics and Science	active
+ms_mod	SPED:001477	Mississippi Occupational Diploma	active
+ms_alt_diploma	SPED:001478	Mississippi Alternate Diploma	active
+ms_maap	SPED:001479	Mississippi Academic Assessment Program	active
+ms_maap_a	SPED:001480	Mississippi Academic Assessment Program-Alternate	active
+ms_aaas	SPED:001481	Mississippi Alternate Academic Achievement Standards	active
+ms_ccrs	SPED:001482	Mississippi College and Career Ready Standards	active
+ms_mtam	SPED:001483	Mississippi Testing Accommodations Manual	active
+ms_mkas2	SPED:001484	Mississippi Pre K-3 Assessment Support System	active
+ms_kra	SPED:001485	Kindergarten Readiness Assessment	active
+ms_cpas2	SPED:001486	Mississippi Career Planning and Assessment System	active
+ms_elpt	SPED:001487	English Language Proficiency Test	active
+ms_statewide_assess	SPED:001488	Mississippi Statewide Assessment System	active
+ms_accountability	SPED:001489	Mississippi Public School Accountability Standards	active
+ms_icap	SPED:001490	Individual Career and Academic Plan	active
+ms_irp	SPED:001491	Individual Reading Plan	active
+ms_clp	SPED:001492	Current level of performance	active
+ms_mom	SPED:001493	Method of measurement	active
+ms_pag	SPED:001494	Progress on annual goal	active
+ms_roi	SPED:001495	Rate of improvement	active
+ms_tst	SPED:001496	Teacher Support Team	active
+ms_msis	SPED:001497	Mississippi Student Information System	active
+ms_ropo	SPED:001498	Report of Physical Observation	active
+ms_child_find_contact	SPED:001499	Local/School Child Find Contact	active
+ms_teacher_narrative	SPED:001500	Teacher narrative	active
+ms_rda	SPED:001501	Results-Driven Accountability	active
+det_meets_req	SPED:001502	Meets Requirements	active
+det_needs_assist	SPED:001503	Needs Assistance	active
+det_needs_interv	SPED:001504	Needs Intervention	active
+det_needs_sub_interv	SPED:001505	Needs Substantial Intervention	active
+ms_audio_rec	SPED:001506	Audio recording of Individualized Education Program meeting	active
+elig_report	SPED:001507	Eligibility determination report	active
+push_in	SPED:001508	Push-in services	active
+team_teaching	SPED:001509	Team teaching	active
+station_teaching	SPED:001510	Station teaching	active
+parallel_teaching	SPED:001511	Parallel teaching	active
+alternative_teaching	SPED:001512	Alternative teaching	active
+cico	SPED:001513	Check-in/check-out	active
+simple_view_reading	SPED:001514	Simple View of Reading	active
+scarborough_rope	SPED:001515	Scarborough’s Reading Rope	active
+oae	SPED:001516	Otoacoustic emissions	active
+assr	SPED:001517	Auditory steady state response	active
+audiogram	SPED:001518	Audiogram	active
+immittance	SPED:001519	Acoustic immittance	active
+orofacial_exam	SPED:001520	Orofacial examination	active
+stimulability	SPED:001521	Stimulability	active
+corrected_age	SPED:001522	Corrected age	active
+asha	SPED:001523	American Speech-Language-Hearing Association	active
+icd	SPED:001524	International Statistical Classification of Diseases and Related Health Problems	active
 placeholder_phonological_awareness	SPED:900001	Phonological awareness (placeholder; now attested by the Texas Dyslexia Handbook)	retired
 exec_fn	SPED:900002	Executive functioning	active
 wisc5	SPED:900003	Wechsler Intelligence Scale for Children, Fifth Edition	active
