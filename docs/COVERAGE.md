@@ -11,10 +11,10 @@ were added in (from `VERSION_ADDED`).
 
 | Jurisdiction | Code | Status | Layers | Version added |
 |---|---|---|---|---|
-| Alabama | US-AL | added | `alabama` | 0.36.0 |
+| Alabama | US-AL | added | `alabama`, `alabama_supplement` | 0.36.0, 0.38.0 |
 | Alaska | US-AK | added | `alaska` | 0.35.0 |
 | American Samoa | US-AS | pending | | |
-| Arizona | US-AZ | added | `arizona` | 0.33.0 |
+| Arizona | US-AZ | added | `arizona`, `arizona_supplement` | 0.33.0, 0.38.0 |
 | Arkansas | US-AR | added | `arkansas` | 0.37.0 |
 | California | US-CA | added | `california` | 0.6.0 |
 | Colorado | US-CO | added | `colorado` | 0.39.0 |
@@ -27,15 +27,15 @@ were added in (from `VERSION_ADDED`).
 | Hawaii | US-HI | added | `hawaii` | 0.31.0 |
 | Idaho | US-ID | added | `idaho` | 0.20.0 |
 | Illinois | US-IL | added | `illinois` | 0.10.0 |
-| Indiana | US-IN | added | `indiana` | 0.32.0 |
+| Indiana | US-IN | added | `indiana`, `indiana_supplement` | 0.32.0, 0.38.0 |
 | Iowa | US-IA | added | `iowa`, `iowa_supplement` | 0.41.0, 0.41.0 |
 | Kansas | US-KS | added | `kansas` | 0.15.0 |
 | Kentucky | US-KY | added | `kentucky` | 0.47.0 |
 | Louisiana | US-LA | added | `louisiana` | 0.14.0 |
 | Maine | US-ME | added | `maine` | 0.48.0 |
-| Maryland | US-MD | added | `maryland` | 0.34.0 |
+| Maryland | US-MD | added | `maryland`, `maryland_supplement` | 0.34.0, 0.38.0 |
 | Massachusetts | US-MA | added | `massachusetts` | 0.11.0 |
-| Michigan | US-MI | added | `michigan` | 0.25.0 |
+| Michigan | US-MI | added | `michigan`, `michigan_supplement` | 0.25.0, 0.50.0 |
 | Minnesota | US-MN | added | `minnesota` | 0.12.0 |
 | Mississippi | US-MS | added | `mississippi` | 0.49.0 |
 | Missouri | US-MO | added | `missouri` | 0.13.0 |
@@ -46,10 +46,10 @@ were added in (from `VERSION_ADDED`).
 | New Jersey | US-NJ | added | `new_jersey` | 0.26.0 |
 | New Mexico | US-NM | added | `new_mexico` | 0.44.0 |
 | New York | US-NY | added | `new_york` | 0.7.0 |
-| North Carolina | US-NC | added | `north_carolina` | 0.30.0 |
+| North Carolina | US-NC | added | `north_carolina`, `north_carolina_supplement` | 0.30.0, 0.50.0 |
 | North Dakota | US-ND | pending | | |
 | Northern Mariana Islands | US-MP | pending | | |
-| Ohio | US-OH | added | `ohio` | 0.29.0 |
+| Ohio | US-OH | added | `ohio`, `ohio_supplement` | 0.29.0, 0.50.0 |
 | Oklahoma | US-OK | pending | | |
 | Oregon | US-OR | added | `oregon` | 0.21.0 |
 | Pennsylvania | US-PA | added | `pennsylvania`, `pennsylvania_supplement` | 0.9.0, 0.16.0 |

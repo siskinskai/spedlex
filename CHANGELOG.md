@@ -6,6 +6,29 @@ patch for corrections and reviews. Concept IDs never change between versions.
 
 ## [Unreleased]
 
+Audits and consistency additions (0.50.0), drafted with Claude Opus 5.5
+(`claude-opus-5-5`) and awaiting the maintainer's check. `prompts/audit-layer.md`
+was run on the Kentucky, Maine and Mississippi layers (audits in
+`provenance/ky/`, `provenance/me/` and `provenance/ms/`). All 707 entries
+were found in the documents; two Mississippi citations were corrected. Fixes:
+Kentucky's "mental disability" is typed as a synonym (it is the rule's current
+name); Maine's "fetal alcohol syndrome" is its own concept under fetal alcohol
+spectrum disorder; the documents' own variant forms are added; and terms
+missing from SPEDLex everywhere are added, including ESEA, SSI, SSDI, the
+Social Security Administration, PASS, the IPE, ASVAB, the ACT, English
+language arts, Unified English Braille, Nemeth Code (eponym), RESNA and
+targeted case management. A consistency audit of all layers
+(`provenance/consistency-audit-2026-10-10.md`) compared the early layers with
+the newer ones. It adds `ohio_supplement`, `north_carolina_supplement` and
+`michigan_supplement`, read from those layers' own documents (state agency
+acronyms and older names, rule and statute names, other agencies, preschool
+settings, McKinney-Vento and the Rehabilitation Act of 1973). It lists
+candidate terms for Texas, California, New York, Florida, Pennsylvania,
+Illinois and Georgia, whose documents are not in the manifest, and flags
+for review two-letter all-caps acronyms that could shelter a student's
+initials. `docs/COVERAGE.md` now lists every supplement. No concept ID that
+was on `main` changed, and the Safelist's rules are unchanged.
+
 Adds the Mississippi layer (`mississippi`, US-MS, 0.49.0) from Mississippi
 State Board of Education Policy Chapter 74, Rule 74.19 (the 2013 text as
 posted by the Mississippi Department of Education), the 2025 Procedural
