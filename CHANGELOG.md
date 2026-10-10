@@ -6,12 +6,12 @@ patch for corrections and reviews. Concept IDs never change between versions.
 
 ## [Unreleased]
 
-Adds the Maine layer (`maine`, US-ME, 0.47.0) from 05-071 Chapter 101, the
+Adds the Maine layer (`maine`, US-ME, 0.48.0) from 05-071 Chapter 101, the
 Maine Unified Special Education Regulation (MUSER, effective July 26, 2024,
 posted 8.21.2024), including its Appendix 1 notice of procedural safeguards.
 It attests 150 concepts and adds 55 (all machine_validated): Maine's
 school administrative unit (SAU, attested on the existing New Hampshire
-concept), Child Development Services (CDS) and the State Intermediate
+concept; the single-state tag is dropped because both states use it), Child Development Services (CDS) and the State Intermediate
 Educational Unit, the Maine Department of Education and its Due Process
 Office and Due Process Coordinator, the primary service provider (PSP) model,
 educational technicians, tutorial instruction, special purpose and general
@@ -20,7 +20,8 @@ Neurocognitive Testing Assistants, Maine's licensing boards and parent and legal
 organizations, and general terms such as informed clinical opinion, diagnostic
 impression and the health conditions the rule lists. The Maine procedural
 safeguards notice, procedural manual and glossary were not provided, so Maine
-has no safeguards-notice or guide records yet. Drafted with Claude Sonnet 5.5
+has no safeguards-notice or guide records yet. Kentucky (0.47.0) is
+added in a separate change, so the version here is 0.48.0. Drafted with Claude Sonnet 5.5
 (`claude-sonnet-5-5`); see `provenance/me/`.
 
 Adds terminology helpers and the `disfavored` flag (0.46.0). SPEDLex's records

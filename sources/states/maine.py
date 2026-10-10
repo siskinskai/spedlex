@@ -47,7 +47,7 @@ MEJ = {"jurisdiction": "US-ME"}   # opts for concepts that only exist in Maine
 R = lambda sec, page: src("RULE", f"{sec}, p. {page}")
 
 STRINGS = [
-    ("nh_sau", [("SAU", A, ME), ("SAUs", P, ME), ("school administrative units", P, ME)], R("Section I", 1)),
+    ("nh_sau", [("SAU", A, None), ("SAUs", P, None), ("school administrative units", P, None)], R("Section I", 1)),
     ("wy_ieu", [("IEU", A, ME), ("State Intermediate Educational Unit", S, ME)], R("Section II(21)", 7)),
     ("co_abbrev_day", [], R("Section II(1)", 3)),
     ("test_accom", [], R("Section II(2)", 3)),
@@ -206,6 +206,6 @@ JURISDICTION = "US-ME"
 LAYER_NAME = "Maine"
 RETRIEVED = "2026-10-09"
 ASSISTED_BY = "claude-sonnet-5-5"
-VERSION_ADDED = "0.47.0"  # tools/add_state.py sets this
+VERSION_ADDED = "0.48.0"  # tools/add_state.py sets this
 
 UNCITED_DOCS = {"me-muser-emergency-2026": "Emergency-changes copy of the same chapter; compared with the cited posting, it adds or removes no term, so no record cites it."}

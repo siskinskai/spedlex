@@ -2,7 +2,7 @@
 
 Drafted with `claude-sonnet-5-5` on 2026-10-09 following `prompts/add-state.md`
 (v1.4). A person must review it before merge. Module: `sources/states/maine.py`
-(v0.47.0, 150 concepts attested, 55 new).
+(v0.48.0, 150 concepts attested, 55 new).
 
 ## 1. Documents read
 
@@ -92,8 +92,8 @@ Not in the table: 95 attestations of concepts that already exist (see section 3)
 - **Existing or new.** `School administrative unit` already exists as `nh_sau`
   (New Hampshire) and `Intermediate educational unit` as `wy_ieu` (Wyoming);
   Maine's `SAU`, `SAUs`, `IEU` and `State Intermediate Educational Unit` are added
-  to those keys, tagged US-ME. SAU is used by both New Hampshire and Maine;
-  the maintainers may want to drop the single-state tag on `nh_sau`. `wy_ieu`
+  to those keys, tagged US-ME, except `SAU`, `SAUs` and `school administrative units`, which carry no
+  regional tag because both New Hampshire and Maine use them. `wy_ieu`
   is the IDEA term (20 USC 1402(23), as the rule says) and is general.
   `Abbreviated school day` is attested on `co_abbrev_day`, which carries a
   Colorado tag, although the idea is general.

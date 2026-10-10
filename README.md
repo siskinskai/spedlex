@@ -77,12 +77,12 @@ the data, a reference matcher and the terminology helpers are below, and
 nothing here is tied to any one tool or model.
 
 <!-- stats:start -->
-## What's in it (v0.47.0)
+## What's in it (v0.48.0)
 
 | | |
 |---|---|
 | Concepts | 1,432: 156 from 34 CFR Part 300, 1276 added by state layers |
-| Surface strings | 3,130 (phrases, acronyms, plurals, legacy and regional forms): 1,067 tagged to the states that use them, 21 older forms, 3 flagged as disfavored |
+| Surface strings | 3,130 (phrases, acronyms, plurals, legacy and regional forms): 1,064 tagged to the states that use them, 21 older forms, 3 flagged as disfavored |
 | States | 40: AK, AL, AR, AZ, CA, CO, CT, DC, DE, FL, GA, HI, IA, ID, IL, IN, KS, LA, MA, MD, ME, MI, MN, MO, NC, NH, NJ, NM, NV, NY, OH, OR, PA, TN, TX, UT, VA, WA, WV, WY |
 | Documents cited | 190, listed in [docs/SOURCES.md](docs/SOURCES.md) |
 | Review status | 715 checked against regulation text, 717 candidates awaiting a human check, 0 expert-accepted |
