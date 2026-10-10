@@ -7,7 +7,7 @@ This file is kept by hand. When you add a state, change its row from
 `pending` to `added` and fill in its layer modules and the version they
 were added in (from `VERSION_ADDED`).
 
-**37 added, 19 pending.**
+**38 added, 18 pending.**
 
 | Jurisdiction | Code | Status | Layers | Version added |
 |---|---|---|---|---|
@@ -32,7 +32,7 @@ were added in (from `VERSION_ADDED`).
 | Kansas | US-KS | added | `kansas` | 0.15.0 |
 | Kentucky | US-KY | pending | | |
 | Louisiana | US-LA | added | `louisiana` | 0.14.0 |
-| Maine | US-ME | pending | | |
+| Maine | US-ME | added | `maine` | 0.47.0 |
 | Maryland | US-MD | added | `maryland` | 0.34.0 |
 | Massachusetts | US-MA | added | `massachusetts` | 0.11.0 |
 | Michigan | US-MI | added | `michigan` | 0.25.0 |
