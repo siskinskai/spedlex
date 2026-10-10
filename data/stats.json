@@ -1,12 +1,12 @@
 {
   "version": "0.49.0",
-  "concepts": 1530,
+  "concepts": 1541,
   "illustrative_placeholders": 13,
   "federal_concepts": 156,
-  "strings": 3342,
+  "strings": 3366,
   "disfavored_strings": 3,
-  "legacy_strings": 22,
-  "regional_strings": 1149,
+  "legacy_strings": 23,
+  "regional_strings": 1150,
   "states": 42,
   "state_codes": [
     "AK",
@@ -54,7 +54,7 @@
   ],
   "documents_cited": 199,
   "by_category": {
-    "academic_skill": 82,
+    "academic_skill": 83,
     "accommodation_modification": 60,
     "disability_category": 26,
     "discipline": 37,
@@ -63,27 +63,27 @@
     "functional_skill": 17,
     "health_condition": 42,
     "iep_component": 159,
-    "instrument": 20,
-    "legal_procedural": 508,
+    "instrument": 22,
+    "legal_procedural": 510,
     "personnel_role": 91,
     "placement_setting": 153,
     "related_service": 40,
-    "score_metric": 5,
+    "score_metric": 6,
     "section_504": 3,
-    "transition": 115
+    "transition": 120
   },
   "by_risk": {
-    "high": 318,
-    "low": 227,
-    "none": 985
+    "high": 319,
+    "low": 229,
+    "none": 993
   },
   "by_review_status": {
-    "candidate": 775,
-    "machine_validated": 755
+    "candidate": 785,
+    "machine_validated": 756
   },
   "sources_by_assisting_model": {
     "claude-opus-5-5": 4104,
-    "claude-sonnet-5-5": 1465
+    "claude-sonnet-5-5": 1477
   },
   "collision_adapter": "scrub",
   "concepts_with_scrubber_collisions": 3

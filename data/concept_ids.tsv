@@ -1532,6 +1532,17 @@ special_instruction	SPED:001530	Special instruction	active
 tcm	SPED:001531	Targeted case management	active
 resna	SPED:001532	Rehabilitation Engineering and Assistive Technology Society of North America	active
 me_cbhs	SPED:001533	Children's Behavioral Health Services	active
+bia	SPED:001534	Bureau of Indian Affairs	active
+ssi	SPED:001535	Supplemental Security Income	active
+ssdi	SPED:001536	Social Security Disability Insurance	active
+soc_sec_admin	SPED:001537	Social Security Administration	active
+pass_plan	SPED:001538	Plan to Achieve Self-Support	active
+ipe	SPED:001539	Individualized Plan for Employment	active
+asvab	SPED:001540	Armed Services Vocational Aptitude Battery	active
+act_test	SPED:001541	American College Test	active
+ela	SPED:001542	English language arts	active
+srt	SPED:001543	Speech reception threshold	active
+ms_cmhc	SPED:001544	Regional Community Mental Health Centers	active
 placeholder_phonological_awareness	SPED:900001	Phonological awareness (placeholder; now attested by the Texas Dyslexia Handbook)	retired
 exec_fn	SPED:900002	Executive functioning	active
 wisc5	SPED:900003	Wechsler Intelligence Scale for Children, Fifth Edition	active

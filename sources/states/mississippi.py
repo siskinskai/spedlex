@@ -46,6 +46,15 @@ recorded.
 
 Records from the rule text are 'machine_validated'; records from the other
 PDFs are 'candidate'.
+
+Audited 2026-10-10 (provenance/ms/ms-layer-audit-2026-10-10.md): every entry
+confirmed. Fixes from the audit: the documents' own names for ASHA are added
+(the preferred "American Speech-Language-Hearing Association" is not in
+them); ESEA, the Bureau of Indian Affairs, the Social Security programs
+(SSI, SSDI, SSA, PASS), the Individualized Plan for Employment, ASVAB, the ACT, English language arts,
+speech reception threshold and the Regional Community Mental Health Centers
+are added; "Mississippi Kindergarten Readiness Assessment" is added to the
+Kindergarten Readiness Assessment.
 """
 
 _DOCS = {
@@ -322,6 +331,7 @@ STRINGS = [
     ('s504', [], RU('Reference Guide, p. 336')),
     ('explicit', [], RU('Reference Guide, p. 337')),
     ('weapon', [], PS('p. 35')),
+    ('esea', [], RU('§300.7, p. 22')),
     ('head_start', [], V1('p. 8')),
     ('in_first_steps', [('EIP', A, MS), ('EIPs', P, MS)], V1('p. 8')),
     ('co_child_find_coord', [], V1('p. 9')),
@@ -344,7 +354,7 @@ STRINGS = [
     ('test_accom', [], IE('p. 22')),
     ('child_outcomes', [], IE('p. 23')),
     ('sig_cog', [('SCD', A, MS), ('SCDs', P, MS)], IE('p. 26')),
-    ('sto', [('STIO', A, MS), ('STIO/B', AB, MS), ('STIO/Bs', P, MS), ('Short-term instructional objectives and benchmarks', S, MS)], IE('p. 27')),
+    ('sto', [('STIO', A, MS), ('STIO/B', AB, MS), ('STIO/Bs', P, MS), ('Short-term instructional objectives and benchmarks', S, MS)], IE("p. 27 ('STIO/B' is on p. 35 and the full form on p. 32)")),
     ('decoding', [], IE('p. 33')),
     ('letter_know', [], IE('p. 33')),
     ('syllab', [], IE('p. 33')),
@@ -385,7 +395,7 @@ STRINGS = [
 
 CONCEPTS = [
     ('ms_mde', 'Mississippi Department of Education', 'legal_procedural', [('MDE', A, MS)], RU('§300.2(b)(1)(i), p. 20'), {**MSJ, "broader": 'sea', "flags": ['place_name']}),
-    ('ms_ose', 'Mississippi Department of Education, Office of Special Education', 'legal_procedural', [('OSE', A, MS)], RU('Program Improvement Monitoring, Introduction, p. 330'), {**MSJ, "broader": 'ms_mde', "flags": ['place_name']}),
+    ('ms_ose', 'Mississippi Department of Education, Office of Special Education', 'legal_procedural', [('OSE', A, MS)], RU("Program Improvement Monitoring, Introduction, p. 330 (the full name is on p. 210)"), {**MSJ, "broader": 'ms_mde', "flags": ['place_name']}),
     ('ms_parent_outreach', 'Division of Parent Outreach', 'legal_procedural', [], PS('p. 3'), {**MSJ, "broader": 'ms_ose'}),
     ('ms_sbe', 'State Board of Education', 'legal_procedural', [('SBE', A, MS)], RU('§300.18(b)(2)(i)(D), p. 35'), {**MSJ, "broader": 'sea'}),
     ('ms_state_supt', 'State Superintendent of Education', 'personnel_role', [], RU('§300.168(a), p. 119'), {**MSJ}),
@@ -409,7 +419,8 @@ CONCEPTS = [
     ('ms_ccrs', 'Mississippi College and Career Ready Standards', 'academic_skill', [('MS CCRS', AB, MS)], IE('p. 26'), {**MSJ, "flags": ['place_name']}),
     ('ms_mtam', 'Mississippi Testing Accommodations Manual', 'accommodation_modification', [], IE('p. 50'), {**MSJ, "broader": 'test_accom', "flags": ['place_name']}),
     ('ms_mkas2', 'Mississippi Pre K-3 Assessment Support System', 'instrument', [('MKAS2', A, MS)], IE('p. 63'), {**MSJ, "flags": ['place_name']}),
-    ('ms_kra', 'Kindergarten Readiness Assessment', 'instrument', [], IE('p. 58'), {**MSJ}),
+    ('ms_kra', 'Kindergarten Readiness Assessment', 'instrument', [('Mississippi Kindergarten Readiness Assessment', S, MS)],
+     IE("p. 58 ('Mississippi Kindergarten Readiness Assessment' is on p. 55)"), {**MSJ}),
     ('ms_cpas2', 'Mississippi Career Planning and Assessment System', 'instrument', [('MS-CPAS2', A, MS)], IE('p. 63'), {**MSJ, "flags": ['place_name']}),
     ('ms_elpt', 'English Language Proficiency Test', 'instrument', [('ELPT', A, MS)], IE('p. 56'), {**MSJ}),
     ('ms_statewide_assess', 'Mississippi Statewide Assessment System', 'iep_component', [], IE('p. 55'), {**MSJ, "broader": 'statewide_assess', "flags": ['place_name']}),
@@ -447,7 +458,24 @@ CONCEPTS = [
     ('orofacial_exam', 'Orofacial examination', 'evaluation_eligibility', [], RU('Eligibility Guidelines, p. 315'), {}),
     ('stimulability', 'Stimulability', 'instrument', [], RU('Eligibility Guidelines, p. 316'), {}),
     ('corrected_age', 'Corrected age', 'score_metric', [], RU('Eligibility Guidelines, p. 304'), {}),
-    ('asha', 'American Speech-Language-Hearing Association', 'legal_procedural', [('ASHA', A, None)], RU('Eligibility Guidelines, p. 310'), {}),
+    ('asha', 'American Speech-Language-Hearing Association', 'legal_procedural',
+     [('ASHA', A, None), ('American Speech Language and Hearing Association', V, None), ('American Speech and Hearing Association', L, None)],
+     RU("Eligibility Guidelines, p. 310 ('American Speech Language and Hearing Association' is on p. 313; Vol. I, PDF p. 45, has 'American Speech and Hearing Association (ASHA)')"),
+     {"note": "The preferred form is the association's own name; the Mississippi documents write it the two other ways recorded here."}),
+    ('bia', 'Bureau of Indian Affairs', 'legal_procedural', [('BIA', A, None)], RU('§300.28(c), p. 42'), {}),
+    ('ssi', 'Supplemental Security Income', 'transition', [('SSI', A, None)], IE('p. 71'), {}),
+    ('ssdi', 'Social Security Disability Insurance', 'transition', [('SSDI', A, None)], IE('p. 80'), {}),
+    ('soc_sec_admin', 'Social Security Administration', 'transition', [('SSA', A, None)], IE('p. 80'), {}),
+    ('pass_plan', 'Plan to Achieve Self-Support', 'transition', [('Plans to Achieve Self-Support', P, None)], IE('p. 80'),
+     {"note": "The guidance writes 'Plans to Achieve Self-Support (PASS)'. The all-caps 'PASS' is not recorded: it also marks results on hearing and vision screening forms."}),
+    ('ipe', 'Individualized Plan for Employment', 'transition', [('IPE', A, None)], IE('p. 72'), {}),
+    ('asvab', 'Armed Services Vocational Aptitude Battery', 'instrument', [('ASVAB', A, None)], IE('p. 74'), {}),
+    ('act_test', 'American College Test', 'instrument', [('ACT', A, None)], IE('p. 55'),
+     {"note": "The guidance writes 'ACT (American College Test)'."}),
+    ('ela', 'English language arts', 'academic_skill', [], IE('p. 93'),
+     {"note": "'English Language Arts/Literacy' is on p. 55. The acronym 'ELA' is not recorded: 'Ela' is a first name, and an all-caps collision needs a reviewer."}),
+    ('srt', 'Speech reception threshold', 'score_metric', [('Speech Reception Thresholds', P, None), ('SRT', A, None)], V1('p. 76'), {}),
+    ('ms_cmhc', 'Regional Community Mental Health Centers', 'legal_procedural', [], V1('p. 8'), {**MSJ}),
     ('icd', 'International Statistical Classification of Diseases and Related Health Problems', 'instrument', [('ICD', A, None), ('ICD-9', AB, None)], RU('Eligibility Guidelines, p. 297'), {}),
 ]
 
