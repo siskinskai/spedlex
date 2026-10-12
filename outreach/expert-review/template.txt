@@ -11,20 +11,24 @@ Could you spend {{MINUTES_A}} minutes checking {{STATE}} special-education terms
 @@ opening
 Dear {{GREETING}},
 
-My name is {{SENDER}}. I'm helping with SPEDLex, a free, open-source project, and I'm writing because I need someone who knows {{STATE}} special education from the inside. You can answer everything below by replying to this email. There is nothing to install, no account to create, and no website to learn.
+My name is {{SENDER}}. I'm helping with SPEDLex, a free, open-source vocabulary of special-education terms, and I'm writing because I need someone who knows {{STATE}} special education from the inside. You can answer everything below by replying to this email. There is nothing to install, no account to create, and no website to learn.
 
 If you only have {{MINUTES_A}} minutes, Part A is the most useful thing you can do. Everything after it is a bonus (about {{MINUTES}} minutes for the whole thing).
 
 @@ what
 WHAT SPEDLEX IS
 
-Parents, teachers and advocates increasingly use AI tools to understand an evaluation report, prepare for an IEP meeting, or draft a letter. But those documents are full of a child's private information. The safe way to use an AI tool is to remove the personal details (names, birth dates, school) from the document first, before anything is pasted in.
+SPEDLex is a free, open list of U.S. special-education terms. Each entry is one concept (for example, "IEP Team") and records every name that official documents use for it: the federal term, each state's own name (Texas says "ARD committee," New York says "CSE," Connecticut says "PPT"), abbreviations and acronyms, and older names that still turn up in paperwork. Every entry cites the regulation or state document it came from. It currently holds {{N_CONCEPTS}} concepts across {{N_STATES}} jurisdictions (states and D.C.), and {{STATE}} is one of them. It contains no student information of any kind.
 
-The software that does this has a hard time with special education, because it can't tell a child's name from the jargon. A careful tool blacks out "ARD committee" or "present levels" along with the names, and the AI can no longer make sense of the document. A careless tool lets a name slip through.
+What it is not: a dictionary or a legal guide. It records how documents name things, not what the law requires. It is not complete, and it does not claim that a name is the only one or the current one. That is part of what we are asking you about.
 
-SPEDLex is the missing piece: an open, cited list of special-education terms (the federal ones, plus each state's own names for things) that these tools can consult. They remove the child's identity and leave the vocabulary alone. Every entry cites the regulation or state document it came from. The list contains no student information of any kind. It currently holds {{N_CONCEPTS}} terms across {{N_STATES}} jurisdictions (states and D.C.), and {{STATE}} is one of them.
+Software that works with special-education documents needs to recognize this vocabulary. SPEDLex serves two uses:
 
-If the list is right, a family can use an AI tool to understand their child's paperwork without exposing their child. That is the whole point.
+  1. Protecting a child's privacy. Parents, teachers and advocates increasingly use AI tools to understand an evaluation report, prepare for an IEP meeting, or draft a letter. Those documents are full of a child's private information, so the safe way is to remove the personal details (names, birth dates, school) before anything is pasted in. The software that does this can't tell a child's name from the jargon. A careful tool blacks out "ARD committee" or "present levels" along with the names, and the AI can no longer make sense of the document. A careless tool lets a name slip through. SPEDLex lets these tools remove the child's identity and leave the vocabulary alone.
+
+  2. Getting the wording right. AI assistants, summarizers, search tools, and translation and plain-language tools often use another state's term, an outdated one, or the wrong meaning of an acronym (CDE is a different agency in California and in Colorado). With SPEDLex, a tool can answer a {{STATE}} family in {{STATE}}'s own words, spell out acronyms correctly, flag older names, and keep terms intact when it summarizes, searches or translates.
+
+If the list is right, a family can use an AI tool to understand their child's paperwork without exposing their child, and have it explained in their own state's words. That is the whole point.
 
 @@ why
 WHY WE NEED YOUR EXPERTISE
@@ -34,10 +38,12 @@ The {{STATE}} entries were drafted by an AI model (the project says so openly) r
 Only a person in the field can tell us:
   - whether a term is really used in {{STATE}} the way a document suggests,
   - whether a form or a name is still current (some documents we used are years old),
-  - whether two different names mean the same thing in practice, and
+  - whether two different names mean the same thing in practice (this is how a tool decides to say "IEP Team" or "ARD committee" to a family), and
   - what is missing, because the paperwork families actually see is not always what the published rules describe.
 
-A wrong entry hurts in both directions: a tool may expose something it should have hidden, or black out something a family needed to read.
+A wrong entry causes harm in three ways: a privacy tool may expose something it should have hidden, it may black out something a family needed to read, or an AI assistant may give a family another state's word or an outdated one.
+
+We are not asking you to define terms or interpret the law. We are asking whether a name is real, current and used the way we say.
 
 Of the {{N_STATE}} {{STATE}} entries, {{N_VALIDATED}} are already checked against the text of a regulation, so we aren't asking whether those terms exist (Part B asks only about {{STATE}}'s names for some of them). {{N_CAND}} are "candidates": read from a form or notice, never confirmed by a person. Those are what we need you for.
 
@@ -92,7 +98,7 @@ PART D. WHAT ARE WE MISSING? ({{N_D}})
 Free text. A few words is fine. Type your answer after "Answer:".
 
 @@ close
-Thank you. You are helping make AI tools safer for the families who rely on them. If a colleague knows {{STATE}} better than you on any of this, please forward this email. They can reply to me directly.
+Thank you. You are helping make AI tools safer and more accurate for the families who rely on them. If a colleague knows {{STATE}} better than you on any of this, please forward this email. They can reply to me directly.
 
 {{SIGNATURE}}
 

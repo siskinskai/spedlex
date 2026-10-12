@@ -87,10 +87,11 @@ take it to mean the string will be removed, and it won't be.
 |---|---|
 | `level` | `none`, `low`, or `high`. |
 | `protect_rule` | `phrase_or_token` (safe anywhere), `phrase_only` (only the full string), or `never_bare` (the risky word is protected only inside the full phrase). |
-| `reasons` | Why: `eponym`, `common_first_name`, `surname`, `place_name`, `common_english_word`, `contains_number`, `collides_with_scrubber_pattern`. |
+| `reasons` | Why: `eponym`, `common_first_name`, `surname`, `place_name`, `common_english_word`, `contains_number`, `collides_with_scrubber_pattern`, `possible_initials`. |
 | `scrubber_collisions` | Which patterns of the reference scrubber (the build's collision adapter, described in [USING.md](USING.md)) fire on which string, e.g. `NAME_COMMON_DICT:Rosa <- 'Rosa's Law'`. |
 | `name_list_hits` | Which tokens appear in the SSA first-name or Census surname lists, e.g. `surname:English <- 'Limited English proficient'`. |
 | `place_list_hits` | Which U.S. state or territory names or postal codes appear in the strings, e.g. `place:DC <- 'Strong Start DC'`. |
+| `possible_initials` | Two-letter all-caps strings that could be a person's initials, each as `{"text": "LS", "ask_in": ["US-MS"]}`. `ask_in` is where the string is an acronym: its `regional` tags, or else the concept's jurisdiction (`US` means every state). A scrubber may ask the user there; otherwise the bare string is not protected. Empty for most concepts. |
 
 [METHODOLOGY.md §5](METHODOLOGY.md#5-grading-privacy-risk) explains how the grade is assigned.
 
@@ -113,7 +114,7 @@ take it to mean the string will be removed, and it won't be.
 
 | File | Contents |
 |---|---|
-| `spedlex.csv` | One row per string with its concept ID and source key (the key layer modules use to refer to it), type, match rule, regional tags, attesting jurisdictions, first citation, risk, status, and (last two columns) the disfavored flag and usage note. Good for spreadsheets. |
+| `spedlex.csv` | One row per string with its concept ID and source key (the key layer modules use to refer to it), type, match rule, regional tags, attesting jurisdictions, first citation, risk, status, the disfavored flag, the usage note and (last column) `ask_if_initials_in`: for a two-letter acronym that could be initials, the jurisdictions where a scrubber may ask the user about it. Good for spreadsheets. |
 | `concept_ids.tsv` | The permanent ID registry: key, ID, preferred term, `active` or `retired`. |
 | `collision_report.csv` | Every scrubber and name-list hit, one per row. |
 | `stats.json` | Counts by category, risk, status and state. |

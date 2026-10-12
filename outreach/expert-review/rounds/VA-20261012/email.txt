@@ -1,0 +1,445 @@
+Subject: Could you spend 10 minutes checking Virginia special-education terms? (reply by email)
+
+Dear POAC-NOVA families and colleagues,
+
+My name is [YOUR NAME]. I'm helping with SPEDLex, a free, open-source vocabulary of special-education terms, and I'm writing because I need someone who knows Virginia special education from the inside. You can answer everything below by replying to this email. There is nothing to install, no account to create, and no website to learn.
+
+If you only have 10 minutes, Part A is the most useful thing you can do. Everything after it is a bonus (about 40 minutes for the whole thing).
+
+==============================================================================
+
+WHAT SPEDLEX IS
+
+SPEDLex is a free, open list of U.S. special-education terms. Each entry is one concept (for example, "IEP Team") and records every name that official documents use for it: the federal term, each state's own name (Texas says "ARD committee," New York says "CSE," Connecticut says "PPT"), abbreviations and acronyms, and older names that still turn up in paperwork. Every entry cites the regulation or state document it came from. It currently holds 1,670 concepts across 42 jurisdictions (states and D.C.), and Virginia is one of them. It contains no student information of any kind.
+
+What it is not: a dictionary or a legal guide. It records how documents name things, not what the law requires. It is not complete, and it does not claim that a name is the only one or the current one. That is part of what we are asking you about.
+
+Software that works with special-education documents needs to recognize this vocabulary. SPEDLex serves two uses:
+
+  1. Protecting a child's privacy. Parents, teachers and advocates increasingly use AI tools to understand an evaluation report, prepare for an IEP meeting, or draft a letter. Those documents are full of a child's private information, so the safe way is to remove the personal details (names, birth dates, school) before anything is pasted in. The software that does this can't tell a child's name from the jargon. A careful tool blacks out "ARD committee" or "present levels" along with the names, and the AI can no longer make sense of the document. A careless tool lets a name slip through. SPEDLex lets these tools remove the child's identity and leave the vocabulary alone.
+
+  2. Getting the wording right. AI assistants, summarizers, search tools, and translation and plain-language tools often use another state's term, an outdated one, or the wrong meaning of an acronym (CDE is a different agency in California and in Colorado). With SPEDLex, a tool can answer a Virginia family in Virginia's own words, spell out acronyms correctly, flag older names, and keep terms intact when it summarizes, searches or translates.
+
+If the list is right, a family can use an AI tool to understand their child's paperwork without exposing their child, and have it explained in their own state's words. That is the whole point.
+
+==============================================================================
+
+WHY WE NEED YOUR EXPERTISE
+
+The Virginia entries were drafted by an AI model (the project says so openly) reading Virginia's published documents: VDOE Virginia Family's Guide to Special Education (May 2023); VDOE Virginia Procedural Safeguards Notice (rev. Sept. 2024); 8VAC20-81-10; VDOE Virginia Procedural Safeguards Notice (Town Hall copy, rev. Sept. 2013); Fairfax County Public Schools; VDOE Special Education for Families page; VDOE Virginia Family's Guide to Special Education (May 2023), pp. 19-20; VDOE Virginia Procedural Safeguards Notice (rev. Sept. 2024), cover; rule sections cited as "VDOE SPLAVC fact sheet (Aug. ...", "VDOE VAAP FAQ for Parents ...". Automated tests check the data's structure and safety rules. But no independent expert in Virginia special education has confirmed it yet. Across the whole project, 0 of 1,670 entries have been confirmed by an expert.
+
+Only a person in the field can tell us:
+  - whether a term is really used in Virginia the way a document suggests,
+  - whether a form or a name is still current (some documents we used are years old),
+  - whether two different names mean the same thing in practice (this is how a tool decides to say "IEP Team" or "ARD committee" to a family), and
+  - what is missing, because the paperwork families actually see is not always what the published rules describe.
+
+A wrong entry causes harm in three ways: a privacy tool may expose something it should have hidden, it may black out something a family needed to read, or an AI assistant may give a family another state's word or an outdated one.
+
+We are not asking you to define terms or interpret the law. We are asking whether a name is real, current and used the way we say.
+
+Of the 176 Virginia entries, 106 are already checked against the text of a regulation, so we aren't asking whether those terms exist (Part B asks only about Virginia's names for some of them). 70 are "candidates": read from a form or notice, never confirmed by a person. Those are what we need you for.
+
+==============================================================================
+
+HOW TO ANSWER
+
+  1. Hit Reply and keep this message in your reply. Just type in the
+     brackets.
+  2. Put Y (yes), N (no) or ? (not sure) inside the brackets, like [Y].
+  3. To add a comment or a correction, start a new line under the item with
+     "Comment:". Corrections are the most valuable thing you can send.
+  4. Skip anything you like. Partial answers are welcome. If you have only
+     a few minutes, do Part A and stop.
+  5. Please don't include anything about a real student: no names, schools,
+     birth dates or text from a real IEP. Tell us about terms, not children.
+
+You don't need to open any document. Answer from your own experience. The documents we used are listed at the end if you want to check one.
+
+WHAT HAPPENS TO YOUR ANSWERS: a maintainer enters them in the project's public review log. Terms you confirm are marked "expert-accepted". Terms you correct are fixed or removed. Crediting you is entirely your choice (see "Credit" below). If you opt in, your name and role are written into the review log, which is part of the open dataset and stays public. We'll also add you to the project's CONTRIBUTORS list on GitHub. If you choose, your affiliation appears there too, but never in the review log. If you'd rather not be named, we record you as anonymous. The data is open (CC BY 4.0).
+
+==============================================================================
+
+ABOUT YOU (so we can weigh your answers)
+
+Name:
+Role (teacher, school psychologist, SLP, administrator, advocate, parent, attorney, other):
+Setting and years in Virginia special education:
+Affiliation (organization; shown only if you choose A below):
+
+Credit. Put A, B or C in the brackets:   [   ]
+  A = list me by name, role and affiliation
+  B = list me by name and role only
+  C = keep me anonymous (your answers still count)
+
+==============================================================================
+
+PART A. KEY QUESTIONS (7)
+
+The points where the list most needs a person's judgment.
+
+A1.  [   ] The Virginia Family's Guide to Special Education we worked from is
+           the May 2023 edition. Is that still the current version? (N = it
+           has been replaced; please give the new title or date in a comment.)
+           Comment:
+
+A2.  [   ] The Virginia Procedural Safeguards Notice we worked from is the
+           "Revised September 2024" edition (form SS/SE-4 (1/25)). Is that
+           still the current version? (N = it has been replaced; please give
+           the new date in a comment.)
+           Comment:
+
+A3.  [   ] Our list shows "Level I services" as services delivered for less
+           than half the school day and "Level II services" as half the school
+           day or more. We wrote those thresholds from memory and have not
+           confirmed them. Are they right? (N = wrong; please explain.)
+           Comment:
+
+A4.  [   ] Our list says Virginia separates three things: "home-based
+           instruction" (an IEP placement), "homebound instruction" (for a
+           medical confinement), and "home instruction" or "home tutoring"
+           (parent-chosen alternatives to school). Is that how the terms are
+           used? (N = no; please explain.)
+           Comment:
+
+A5.  [   ] Our list records the "Modified Standard Diploma" as discontinued,
+           but still found in older records, and the "Applied Studies Diploma"
+           as the diploma earned by completing IEP requirements. We could not
+           open VDOE's own fact sheets for these, and the September 2024
+           notice names only the standard and advanced studies diplomas. Is
+           that accurate? (N = wrong or out of date; please explain.)
+           Comment:
+
+A6.  [   ] Our list has "campus-based student support team" with "school-based
+           team" and "child study" as other names for it. Which of these do
+           Northern Virginia school divisions actually say? (N = none of them,
+           or the real name is different; please give it in a comment.)
+           Comment:
+
+A7.  [   ] We know "Special Permission Locally Awarded Verified Credit"
+           (SPLAVC, also "SPLAVC-A") only from the title and scope of an
+           August 2024 VDOE fact sheet. Is that the right name, and is it used
+           in IEP meetings? (N = wrong or not used; please explain.)
+           Comment:
+
+==============================================================================
+
+PART B. SAME THING, DIFFERENT NAME? (23)
+
+Each line says that the Virginia name on the left is another name for the term on the right. Y = people in Virginia really use it that way. N = they don't, or it means something different (please say what in a comment).
+
+B1.  [   ] "school division" = "Local educational agency" (doc 1, throughout)
+B2.  [   ] "request for due process" = "Due process complaint" (doc 2, p. 3)
+B3.  [   ] "special education hearing officer" = "Impartial due process
+           hearing" (doc 3, 'Special education hearing officer')
+B4.  [   ] "impartial special education hearing officer" = "Impartial due
+           process hearing" (doc 3, 'Special education hearing officer')
+B5.  [   ] "emotional disability" = "Emotional disturbance" (doc 3, 'Emotional
+           disability')
+B6.  [   ] "mental retardation" = "Intellectual disability" (doc 3, 'Mental
+           retardation')
+B7.  [   ] "eligibility group" = "Eligibility determination" (doc 1, p. 17)
+B8.  [   ] "State Special Education Advisory Committee" = "State advisory
+           panel" (doc 4, p. 28)
+B9.  [   ] "school-based team" = "Campus-based student support team" (doc 1,
+           p. 12)
+B10. [   ] "existing data review" = "Review of existing evaluation data" (doc
+           1, p. 14)
+B11. [   ] "scholastic records" = "Education records" (doc 2, pp. 11-12)
+B12. [   ] "scholastic record" = "Education records" (doc 2, pp. 11-12)
+B13. [   ] "Virginia Administrative Code" = "Regulations Governing Special
+           Education Programs for Children with Disabilities in Virginia" (doc
+           1, p. 7)
+B14. [   ] "Virginia School for the Deaf and the Blind at Staunton" =
+           "Virginia School for the Deaf and the Blind" (doc 3, 'Virginia
+           School for the Deaf and the Blind at Staunton')
+B15. [   ] "state facilities" = "State-operated programs" (doc 3,
+           'State-operated programs')
+B16. [   ] "audio recording devices at meetings" = "Audio recording of
+           meetings" (doc 1, pp. 39-40)
+B17. [   ] "video recording of meetings" = "Audio recording of meetings" (doc
+           1, pp. 39-40)
+B18. [   ] "SOL test" = "Standards of Learning" (doc 1, p. 25)
+B19. [   ] "Virginia Standards of Learning" = "Standards of Learning" (doc 1,
+           p. 25)
+B20. [   ] "Essentialized Standards of Learning" = "Virginia Essentialized
+           Standards of Learning" (doc 1, p. 25)
+B21. [   ] "diploma credit accommodations" = "Credit accommodations" (doc 5,
+           Special Education Graduation Requirements (Nov. 2023))
+B22. [   ] "expanded expedited retake" = "Expedited retake" (doc 5, Special
+           Education Graduation Requirements (Nov. 2023))
+B23. [   ] "Management of Student Scholastic Records" = "Management of the
+           Student's Scholastic Record in the Public Schools of Virginia" (doc
+           2, pp. 11-12)
+
+==============================================================================
+
+PART C. REAL TERM? (70)
+
+Each of these appears in a Virginia form or notice. Y = it is a real term in Virginia special-education paperwork and the description is about right. N = it's wrong, obsolete or not used (please say why in a comment).
+
+C1.  [   ] "State advisory panel", also written "State Special Education
+           Advisory Committee", "SSEAC" (doc 4, p. 28)
+
+C2.  [   ] "IEP facilitation" (doc 1, p. 44)
+
+C3.  [   ] "Campus-based student support team", also written "school-based
+           team", "child study" (doc 1, p. 12)
+
+C4.  [   ] "Review of existing evaluation data", also written "existing data
+           review" (doc 1, p. 14)
+
+C5.  [   ] "Revocation of consent" (doc 2, p. 4)
+
+C6.  [   ] "Summary of academic achievement and functional performance" (doc
+           1, p. 24)
+
+C7.  [   ] "Basis of knowledge" (doc 2, p. 38)
+
+C8.  [   ] "Expedited due process hearing" (doc 2, p. 37)
+
+C9.  [   ] "Foster parent" (doc 1, p. 10)
+
+C10. [   ] "Unaccompanied homeless youth" (doc 1, p. 10)
+
+C11. [   ] "Education records", also written "scholastic records", "scholastic
+           record" (doc 2, pp. 11-12)
+
+C12. [   ] "Participating agency" (doc 2, p. 13)
+
+C13. [   ] "Family Educational Rights and Privacy Act" (doc 2, p. 11)
+
+C14. [   ] "Individuals with Disabilities Education Act" (doc 2, p. 1)
+
+C15. [   ] "Section 504" (doc 3, 'Section 504')
+
+C16. [   ] "Americans with Disabilities Act" (doc 2, p. 31)
+
+C17. [   ] "Interim IEP" (doc 2, p. 9)
+
+C18. [   ] "Community experiences" (doc 1, p. 24)
+
+C19. [   ] "Standard high school diploma" (doc 1, p. 27)
+
+C20. [   ] "End-of-course assessment" (doc 1, p. 27)
+
+C21. [   ] "Most significant cognitive disability" (VDOE VAAP FAQ for Parents)
+
+C22. [   ] "Multidisciplinary team" (doc 3, 'Multidisciplinary team')
+
+C23. [   ] "Virginia Department of Education", also written "VDOE" (doc 4,
+           cover)
+
+C24. [   ] "Regulations Governing Special Education Programs for Children with
+           Disabilities in Virginia", also written "Virginia Regulations",
+           "8VAC20-81", "Virginia Administrative Code" (doc 1, p. 7)
+
+C25. [   ] "Office of Dispute Resolution and Administrative Services" (doc 4,
+           p. i)
+
+C26. [   ] "Parent Ombudsman for Special Education", also written "Parent
+           Ombudsman" (doc 1, p. 43)
+
+C27. [   ] "Parent Educational Advocacy Training Center", also written "PEATC"
+           (doc 4, p. 1)
+
+C28. [   ] "Local special education advisory committee" (doc 6, Guide for
+           Local Special Education Advisory Committees (2020))
+           Our description: Virginia requires one in each school division; the
+           term is used nationally.
+
+C29. [   ] "Integrated service delivery" (doc 1, p. 30)
+
+C30. [   ] "Comparable services" (doc 1, p. 22)
+           Our description: Federal term for services to transfer students (34
+           CFR 300.323(e)).
+
+C31. [   ] "Surgically implanted medical device" (doc 7, 28)
+           Our description: Federal term (34 CFR 300.34(b), 300.113).
+
+C32. [   ] "Special education administrator" (doc 1, p. 12)
+
+C33. [   ] "Service coordinator" (doc 1, p. 21)
+
+C34. [   ] "Short-term removal" (doc 1, p. 34)
+
+C35. [   ] "Long-term removal" (doc 1, p. 35)
+
+C36. [   ] "Disability harassment" (doc 1, p. 27)
+
+C37. [   ] "Audio recording of meetings", also written "audio recording
+           devices at meetings", "video recording of meetings" (doc 1, pp.
+           39-40)
+           Our description: Some states, including Virginia and California,
+           give parents a right to audio record IEP meetings.
+
+C38. [   ] "Emancipated minor" (doc 1, p. 10)
+
+C39. [   ] "Standards of Learning", also written "SOL", "SOL test", "SOLs",
+           "Virginia Standards of Learning" (doc 1, p. 25)
+
+C40. [   ] "Virginia Alternate Assessment Program", also written "VAAP" (doc
+           1, p. 25)
+
+C41. [   ] "Virginia Essentialized Standards of Learning", also written
+           "VESOL", "Essentialized Standards of Learning" (doc 1, p. 25)
+           Our description: Reduced-complexity standards behind VAAP; compare
+           Texas essence statements.
+
+C42. [   ] "Age-appropriate transition assessments" (doc 1, p. 24)
+           Our description: Federal term (34 CFR 300.320(b)(1)).
+
+C43. [   ] "Interagency responsibilities and linkages" (doc 1, p. 24)
+
+C44. [   ] "Advanced Studies Diploma" (doc 1, p. 27)
+
+C45. [   ] "Applied Studies Diploma" (doc 1, p. 27)
+           Our description: Earned by completing IEP requirements; compare
+           Nevada's adjusted diploma.
+
+C46. [   ] "Modified Standard Diploma", also written "Modified Diploma" (doc
+           4, p. 7)
+           Our description: Discontinued Virginia diploma that still appears
+           in older records. The September 2024 procedural safeguards notice
+           (p. 7) names only the standard and advanced studies diplomas.
+
+C47. [   ] "Certificate of Program Completion" (doc 1, p. 27)
+           Our description: A non-diploma credential for completing a program.
+           General concept: Maryland issues one by the same name.
+
+C48. [   ] "General Educational Development certificate" (doc 1, p. 27)
+
+C49. [   ] "Standard credit", also written "standard credits" (doc 5, Special
+           Education Graduation Requirements (Nov. 2023))
+
+C50. [   ] "Verified credit", also written "verified credits" (doc 1, p. 27)
+
+C51. [   ] "Locally awarded verified credit", also written "LAVC", "locally
+           awarded verified credits" (doc 1, p. 27)
+
+C52. [   ] "Special Permission Locally Awarded Verified Credit", also written
+           "SPLAVC", "SPLAVC-A" (VDOE SPLAVC fact sheet (Aug. 2024))
+
+C53. [   ] "Credit accommodations", also written "diploma credit
+           accommodations" (doc 5, Special Education Graduation Requirements
+           (Nov. 2023))
+
+C54. [   ] "Substitute tests", also written "substitute test" (doc 1, p. 27)
+
+C55. [   ] "Expedited retake", also written "expanded expedited retake" (doc
+           5, Special Education Graduation Requirements (Nov. 2023))
+
+C56. [   ] "Alternative dispute resolution" (doc 2, p. 17)
+
+C57. [   ] "Record of access" (doc 2, p. 13)
+
+C58. [   ] "Case-by-case determination" (doc 2, p. 33)
+
+C59. [   ] "Community Parent Resource Center" (doc 2, p. 17)
+
+C60. [   ] "Agreement review period" (doc 2, p. 27)
+
+C61. [   ] "Attorneys' fees" (doc 2, p. 31)
+
+C62. [   ] "Civil action" (doc 2, p. 30)
+
+C63. [   ] "Destruction of information" (doc 2, p. 16)
+
+C64. [   ] "Parental consent to access public benefits or insurance" (doc 2,
+           p. 41)
+
+C65. [   ] "Protection and advocacy agency" (doc 2, p. 19)
+
+C66. [   ] "Parent-initiated evaluation" (doc 2, p. 10)
+
+C67. [   ] "Complaint Appeal Reviewer" (doc 2, p. 21)
+           Our description: The person whose decision is final when a party
+           appeals VDOE's decision on a state complaint.
+
+C68. [   ] "IEP Coordinator" (doc 2, p. 7)
+           Our description: Named, with the local director of special
+           education and the principal, as a person to whom a parent sends a
+           written revocation of consent.
+
+C69. [   ] "Parent Resource Center" (doc 8, p. 1)
+           Our description: Named as a place to ask questions about special
+           education; the cover calls it the local school division's. Compare
+           Community Parent Resource Center.
+
+C70. [   ] "Management of the Student's Scholastic Record in the Public
+           Schools of Virginia", also written "Management of Student
+           Scholastic Records" (doc 2, pp. 11-12)
+           Our description: The Board of Education regulation (8 VAC
+           20-150-10) the notice cites for how school divisions keep student
+           records.
+
+==============================================================================
+
+PART D. WHAT ARE WE MISSING? (7)
+
+Free text. A few words is fine. Type your answer after "Answer:".
+
+D1.  Differences between school divisions in Northern Virginia (for example
+     Fairfax, Arlington, Loudoun, Prince William, Alexandria or Falls Church):
+     names for forms, teams, meetings or programs that one division says and
+     another does not.
+     Answer:
+
+D2.  Statewide tests and alternate assessments: which names appear on Virginia
+     IEPs today? (Our list has SOL, VAAP and the Virginia Essentialized
+     Standards of Learning.)
+     Answer:
+
+D3.  Diplomas and other completion documents: which ones appear on Virginia
+     IEPs and transition plans today? (Our list has Standard, Advanced
+     Studies, Applied Studies and the discontinued Modified Standard diploma,
+     a Certificate of Program Completion and the GED.)
+     Answer:
+
+D4.  Acronyms and abbreviations you see constantly in Virginia paperwork that
+     you would expect on a list like this.
+     Answer:
+
+D5.  Places where Virginia says something differently from the national term
+     (a different name for a category, a team, a meeting or a form).
+     Answer:
+
+D6.  Anything above that looks wrong, or any term that could be mistaken for a
+     person's name or a place name.
+     Answer:
+
+D7.  Anything else: a document we should read, or a person or organization we
+     should ask.
+     Answer:
+
+==============================================================================
+
+Thank you. You are helping make AI tools safer and more accurate for the families who rely on them. If a colleague knows Virginia better than you on any of this, please forward this email. They can reply to me directly.
+
+[YOUR NAME]
+Reply to: [YOUR EMAIL]
+
+==============================================================================
+SPEDLex: https://github.com/SiskinSkai/spedlex
+Browse every term: https://SiskinSkai.github.io/spedlex/
+
+Documents we used for Virginia:
+  [1] VDOE Virginia Family's Guide to Special Education (May 2023)
+      https://www.doe.virginia.gov/programs-services/special-education/information-for-families/virginia-family-s-guide-to-special-education
+  [2] VDOE Virginia Procedural Safeguards Notice (rev. Sept. 2024)
+      https://www.doe.virginia.gov/home/showpublisheddocument/922
+  [3] 8VAC20-81-10
+      https://law.lis.virginia.gov/admincode/title8/agency20/chapter81/section10/
+  [4] VDOE Virginia Procedural Safeguards Notice (Town Hall copy, rev. Sept. 2013)
+      https://www.townhall.virginia.gov/L/GetFile.cfm?File=C:\TownHall\docroot\GuidanceDocs\201\GDoc_DOE_866_v4.pdf
+  [5] Fairfax County Public Schools
+      https://www.fcps.edu/sites/default/files/media/forms/SpecialEducationGraduationRequirementsEnglish.pdf
+  [6] VDOE Special Education for Families page
+      https://www.doe.virginia.gov/programs-services/special-education/information-for-families
+  [7] VDOE Virginia Family's Guide to Special Education (May 2023), pp. 19-20
+      https://www.doe.virginia.gov/programs-services/special-education/information-for-families/virginia-family-s-guide-to-special-education
+  [8] VDOE Virginia Procedural Safeguards Notice (rev. Sept. 2024), cover
+      https://www.doe.virginia.gov/home/showpublisheddocument/922
+  Rule sections cited by number (for example VDOE VAAP FAQ for Parents) are in the state's administrative code.
+
+Form ID: VA-20261012 (SPEDLex v0.52.0). Please leave this line in your reply.

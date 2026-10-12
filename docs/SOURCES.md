@@ -400,6 +400,7 @@ state modules in `sources/states/` say which documents could not be read and why
 | [VDOE VAAP FAQ for Parents](https://www.doe.virginia.gov/home/showpublisheddocument/3232/637982610954100000) | state guidance | 1 |
 | [VDOE Virginia Family's Guide to Special Education (May 2023)](https://www.doe.virginia.gov/programs-services/special-education/information-for-families/virginia-family-s-guide-to-special-education) | state guidance | 47 |
 | [VDOE Virginia Procedural Safeguards Notice (Town Hall copy](https://www.townhall.virginia.gov/L/GetFile.cfm?File=C:\TownHall\docroot\GuidanceDocs\201\GDoc_DOE_866_v4.pdf) | procedural safeguards notice | 5 |
+| [VDOE Virginia Procedural Safeguards Notice (rev. Sept. 2024)](https://www.doe.virginia.gov/home/showpublisheddocument/922) | procedural safeguards notice | 75 |
 
 ## Washington (US-WA)
 

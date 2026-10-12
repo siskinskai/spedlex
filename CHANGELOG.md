@@ -6,6 +6,48 @@ patch for corrections and reviews. Concept IDs never change between versions.
 
 ## [Unreleased]
 
+Virginia supplement (0.52.0), drafted with Claude Sonnet 5.5
+(`claude-sonnet-5-5`) and awaiting the maintainer's check. The first Virginia
+pass read the 2013 Town Hall copy of the procedural safeguards notice because
+the September 2024 edition could not be opened; `virginia_supplement` reads the
+2024 edition (47 pp.). It attests 64 existing concepts for Virginia, re-attests
+seven the first pass cited to older sources, adds three string variants
+("request for due process", "wards of the State", "scholastic records") and four
+candidate concepts (Complaint Appeal Reviewer, IEP Coordinator, Parent Resource
+Center, and the Board of Education regulation on student scholastic records).
+The Modified Standard Diploma note now records that the 2024 notice names only
+the standard and advanced studies diplomas. Cited by URL, not doc_id, like the
+rest of the early Virginia layer; details and a flag about the PDF's authorship
+are in `provenance/va/va-psn-2024-sources-2026-10-12.md`.
+
+Expert-review email wording (`outreach/expert-review/template.txt`) now
+describes SPEDLex's second use, helping AI and writing tools name terms the way
+the reader's state does, and says what an entry holds and what the list is not
+(not a dictionary or legal guide, not complete, not a statement of what is
+current). The Nevada sample is regenerated as `rounds/NV-20261010/`; the
+never-sent `NV-20261008` round is removed. Drafted with Claude Sonnet 5.5
+(`claude-sonnet-5-5`).
+
+Two-letter acronyms and initials, drafted with Claude Opus 5.5
+(`claude-opus-5-5`) and awaiting the maintainer's check. This answers the
+policy question in the Mississippi audit and the consistency audit. IEPs
+often use a student's initials ("LS will..."), and 18 of the 26 two-letter
+all-caps acronyms (LS, DB, LD, OT, PT, ID, HI and others) were protected as
+bare tokens. They stay in the lexicon. `spedlex/risk.py` now lists every
+two-letter all-caps string in a new `pii_risk.possible_initials` field. Each
+entry has `ask_in`: the jurisdictions where it is an acronym (its regional
+tags, or else the concept's jurisdiction; `US` means every state). A scrubber
+can ask the user there. These concepts are graded at least `low`, which moves
+15 concepts from `none`. The `Safelist` matcher no longer protects a bare
+two-letter acronym unless the caller passes it in the new `confirmed_acronyms`
+argument. Longer strings that contain one are unaffected. The CSV gains an
+`ask_if_initials_in` column, and the JSON schema adds the field and the
+`possible_initials` reason. The Lexicon (terminology helpers) is unchanged.
+Three-letter acronyms are not covered yet (ROADMAP). Tests in
+`tests/test_match.py`; METHODOLOGY §4 and §5, USING and SCHEMA are updated.
+
+## [0.51.0] - 2026-10-10
+
 Re-read the early layers' sources (0.51.0), drafted with Claude Opus 5.5
 (`claude-opus-5-5`) and awaiting the maintainer's check. The text of the
 documents the 19 Oct. 3 layers cite, plus a few more sections of the same rules,
@@ -19,6 +61,8 @@ superintendent's hearing, Florida's BEESS, PaTTAN, Georgia's Babies Can't Wait
 and Massachusetts state agencies. The sources were read through a web fetch,
 not from saved copies, so every new record is `candidate` and cites by URL;
 see `provenance/early-layers-reread-2026-10-10.md`.
+
+## [0.50.0] - 2026-10-10
 
 Audits and consistency additions (0.50.0), drafted with Claude Opus 5.5
 (`claude-opus-5-5`) and awaiting the maintainer's check. `prompts/audit-layer.md`
@@ -43,6 +87,8 @@ for review two-letter all-caps acronyms that could shelter a student's
 initials. `docs/COVERAGE.md` now lists every supplement. No concept ID that
 was on `main` changed, and the Safelist's rules are unchanged.
 
+## [0.49.0] - 2026-10-10
+
 Adds the Mississippi layer (`mississippi`, US-MS, 0.49.0) from Mississippi
 State Board of Education Policy Chapter 74, Rule 74.19 (the 2013 text as
 posted by the Mississippi Department of Education), the 2025 Procedural
@@ -63,6 +109,8 @@ and coverage is 41 added, 15 pending. Source PDFs are not
 committed; they are listed in `sources/documents.tsv` and held in
 `.sources-cache/ms/`. The Safelist and its matching rules are unchanged.
 
+## [0.48.0] - 2026-10-10
+
 Adds the Maine layer (`maine`, US-ME, 0.48.0) from 05-071 Chapter 101, the
 Maine Unified Special Education Regulation (MUSER, effective July 26, 2024,
 posted 8.21.2024), including its Appendix 1 notice of procedural safeguards.
@@ -80,6 +128,8 @@ safeguards notice, procedural manual and glossary were not provided, so Maine
 has no safeguards-notice or guide records yet. Kentucky (0.47.0) is
 added in a separate change, so the version here is 0.48.0. Drafted with Claude Sonnet 5.5
 (`claude-sonnet-5-5`); see `provenance/me/`.
+
+## [0.47.0] - 2026-10-10
 
 Adds the Kentucky layer (`kentucky`, US-KY, 0.47.0) from 707 KAR 1:002
 (Definitions), KDE's Part B Procedural Safeguards Notice, KDE's IDEA Part B
@@ -104,6 +154,8 @@ been run (report in `provenance/ky/ky-layer-report-2026-10-09.md`). The acronym
 "CAP" (corrective action plan) is also a first name; it is case-sensitive and
 is added to the known all-caps collisions in `tests/test_match.py`, pending
 reviewer confirmation.
+
+## [0.46.0] - 2026-10-09
 
 Adds terminology helpers and the `disfavored` flag (0.46.0). SPEDLex's records
 already list every form a concept takes, tagged to the states whose
@@ -131,6 +183,8 @@ and `regional_strings`. The explorer strikes through disfavored forms.
 README, METHODOLOGY, SCHEMA, USING, DATA_CARD, ROADMAP, AGENTS.md,
 CONTRIBUTING.md, CITATION.cff and `prompts/add-state.md` (v1.4) describe the
 wider use. No concept, string or ID changed.
+
+## [0.45.0] - 2026-10-09
 
 Initial public commit of v0.45.0. Earlier development history (Oct 3-9, 2026,
 drafted with claude-opus-5-5 and claude-sonnet-5-5) is kept privately. Source
@@ -163,26 +217,6 @@ The removal of "Doe" from the surname list is confirmed. `prompts/add-state.md`
 is now v1.2: the goal is to cover terms likely to be screened, not to track
 what is legally current. No strings changed.
 
-Adds New Mexico (US-NM, 0.44.0): 6.31.2 NMAC, Children with Disabilities (as
-amended 7/31/2023), the NMPED Special Education Procedural Safeguards notice
-(rev. Dec. 2020), the IEP manual Developing Quality IEPs (rev. Oct. 2011) and
-the High School Graduation Requirements Guidance (April 2025). The layer
-attests 245 concepts and adds 47 new ones (45 New Mexico-specific). It was
-drafted with Claude Opus 5.5 (`claude-opus-5-5`) and has not yet been audited;
-see `provenance/nm/nm-layer-report-2026-10-09.md`. New regional ambiguities: SED
-(US-NY, US-NM) and DVR (US-DE, US-NM).
-
-Adds West Virginia (US-WV, 0.43.0): Board Policy 2419 (126CSR16, eff.
-March 2023, a scanned rule read through OCR) and the WVDE Procedural
-Safeguards notice (rev. Aug. 2024). The layer attests 277 concepts and adds 86
-new ones (61 West Virginia-specific). It was drafted with Claude Sonnet 5.5
-(`claude-sonnet-5-5`) and independently audited and corrected with Claude
-Opus 5.5 (`claude-opus-5-5`); see `provenance/wv/wv-layer-audit-2026-10-09.md`.
-The audit removed two variants neither document prints, the "Augmentative/
-Alternative Communication Evaluation" string and two weak attestations;
-fixed 16 page citations; changed the `wv_osp` preferred term to the notice's
-wording; and added 22 existing concepts the documents use.
-
 Matcher: a match that is a month name or abbreviation is no longer
 protected when a number sits next to it, so the matcher cannot shelter part
 of a date of birth. This came from the West Virginia audit: "APR" (Annual
@@ -205,6 +239,30 @@ Opted-in names go in the new `CONTRIBUTORS.md`; affiliation is kept out of
 the review log. README and CONTRIBUTING link to both. Adds
 `tests/test_expert_review.py`. No data changes. Drafted
 with Claude Sonnet 5.5 (`claude-sonnet-5-5`).
+
+## [0.44.0] - 2026-10-09
+
+Adds New Mexico (US-NM, 0.44.0): 6.31.2 NMAC, Children with Disabilities (as
+amended 7/31/2023), the NMPED Special Education Procedural Safeguards notice
+(rev. Dec. 2020), the IEP manual Developing Quality IEPs (rev. Oct. 2011) and
+the High School Graduation Requirements Guidance (April 2025). The layer
+attests 245 concepts and adds 47 new ones (45 New Mexico-specific). It was
+drafted with Claude Opus 5.5 (`claude-opus-5-5`) and has not yet been audited;
+see `provenance/nm/nm-layer-report-2026-10-09.md`. New regional ambiguities: SED
+(US-NY, US-NM) and DVR (US-DE, US-NM).
+
+## [0.43.0] - 2026-10-09
+
+Adds West Virginia (US-WV, 0.43.0): Board Policy 2419 (126CSR16, eff.
+March 2023, a scanned rule read through OCR) and the WVDE Procedural
+Safeguards notice (rev. Aug. 2024). The layer attests 277 concepts and adds 86
+new ones (61 West Virginia-specific). It was drafted with Claude Sonnet 5.5
+(`claude-sonnet-5-5`) and independently audited and corrected with Claude
+Opus 5.5 (`claude-opus-5-5`); see `provenance/wv/wv-layer-audit-2026-10-09.md`.
+The audit removed two variants neither document prints, the "Augmentative/
+Alternative Communication Evaluation" string and two weak attestations;
+fixed 16 page citations; changed the `wv_osp` preferred term to the notice's
+wording; and added 22 existing concepts the documents use.
 
 ## [0.42.0] - 2026-10-08
 

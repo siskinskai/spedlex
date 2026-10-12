@@ -2,8 +2,8 @@
 
 import pytest
 
-from spedlex import Safelist
-from spedlex.risk import FIRST_NAMES, PLACE_NAMES, POSTAL_CODES, SURNAMES, assess_risk
+from spedlex import Safelist, load
+from spedlex.risk import FIRST_NAMES, PLACE_NAMES, POSTAL_CODES, SURNAMES, assess_risk, is_possible_initials
 
 ALL = Safelist.from_default(statuses={"candidate", "machine_validated", "expert_accepted", "illustrative"})
 
@@ -65,7 +65,59 @@ def test_place_names_make_a_concept_high_risk():
 
 
 def test_acronyms_are_case_sensitive():
-    assert protected(ALL, "ED is met; Ed attends.") == ["ED"]
+    assert protected(ALL, "LEA is met; Lea attends.") == ["LEA"]
+    confirmed = Safelist.from_default(confirmed_acronyms={"ED"})
+    assert protected(confirmed, "ED is met; Ed attends.") == ["ED"]
+
+
+TWO_LETTER = sorted({s["text"] for r in load() for s in r["strings"] if is_possible_initials(s["text"])})
+
+
+def test_two_letter_acronyms_are_never_protected_bare_by_default():
+    """Two capital letters may be a student's initials ("LS will attend"), so
+    no two-letter acronym is protected unless the user confirms it."""
+    assert TWO_LETTER, "expected two-letter acronyms in the data"
+    sheltered = [t for t in TWO_LETTER if ALL.find(f"{t} will attend. Today {t} came.")]
+    assert sheltered == []
+
+
+def test_every_two_letter_acronym_says_where_to_ask():
+    """Each two-letter acronym lists the jurisdictions where it is an acronym,
+    so a scrubber knows where to ask, and its concept is never graded none."""
+    for r in load():
+        listed = {p["text"]: p["ask_in"] for p in r["pii_risk"]["possible_initials"]}
+        for s in r["strings"]:
+            if is_possible_initials(s["text"]):
+                assert listed.get(s["text"]), (r["concept_id"], s["text"])
+                assert listed[s["text"]] == sorted(s.get("regional") or [r["jurisdiction"]])
+        if listed:
+            assert r["pii_risk"]["level"] != "none" and "possible_initials" in r["pii_risk"]["reasons"]
+
+
+def test_ask_in_names_the_states_that_use_the_acronym():
+    by_text = {p["text"]: p["ask_in"] for r in load() for p in r["pii_risk"]["possible_initials"]}
+    assert by_text["LS"] == ["US-MS"]  # speech or language impairment, Mississippi
+    assert by_text["DB"] == ["US-MS"]  # deaf-blindness, Mississippi
+    assert by_text["LD"] == ["US"]     # national: ask in every state
+    assert by_text["IU"] == ["US-PA"]
+
+
+def test_confirmed_two_letter_acronym_is_protected_in_its_state_only():
+    text = "LS will attend. Eligibility: LS."
+    ms = Safelist.from_default(jurisdictions={"US-MS"}, confirmed_acronyms={"LS"})
+    assert protected(ms, text) == ["LS", "LS"]
+    tx = Safelist.from_default(jurisdictions={"US-TX"}, confirmed_acronyms={"LS"})
+    assert protected(tx, text) == []
+    assert protected(Safelist.from_default(jurisdictions={"US-MS"}), text) == []
+
+
+def test_two_letter_acronym_inside_a_longer_phrase_is_still_protected():
+    """Only the bare two-letter string needs confirming; longer strings that
+    contain one are unaffected."""
+    longer = [s["text"] for r in load() if r["review"]["status"] != "illustrative" for s in r["strings"]
+              if len(s["text"]) > 2 and any(w in TWO_LETTER for w in s["text"].replace("-", " ").split())]
+    for t in longer[:20]:
+        assert t in protected(ALL, f"Notes: {t} today."), t
 
 
 def test_eponym_alone_is_not_protected_but_full_title_is():

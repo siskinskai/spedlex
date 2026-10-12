@@ -72,7 +72,14 @@ def place_hits(text):
     return hits
 
 
-def assess_risk(strings, manual_flags, adapter):
+def is_possible_initials(text):
+    """True for a two-letter all-caps string such as "LS" or "OT". IEPs often
+    refer to a student by initials ("LS will..."), so a bare two-letter
+    acronym can't be told apart from a person without asking."""
+    return len(text) == 2 and text.isalpha() and text.isupper()
+
+
+def assess_risk(strings, manual_flags, adapter, jurisdiction="US"):
     """Grade a concept from its strings.
 
     high  a single-word string is itself a name (unless it is an all-caps
@@ -84,9 +91,16 @@ def assess_risk(strings, manual_flags, adapter):
     low   any other name-list hit, scrubber hit, number, or manual flag.
           Rule: phrase_only.
     none  nothing found. Rule: phrase_or_token.
+
+    A two-letter all-caps string ("LS", "OT") could be a person's initials.
+    It is listed in possible_initials with ask_in: the jurisdictions where it
+    is an acronym (its regional tags, or else the concept's jurisdiction).
+    A scrubber in one of those jurisdictions can ask the user whether it is
+    an acronym; anywhere else, or unasked, the bare string is redacted. Such a
+    concept is graded at least low.
     """
     reasons = list(manual_flags)
-    hits, names, places = [], [], []
+    hits, names, places, initials = [], [], [], []
     bare_name = False
     for s in strings:
         for h in adapter.collisions(s["text"]):
@@ -114,6 +128,10 @@ def assess_risk(strings, manual_flags, adapter):
                 reasons.append("place_name")
         if any(c.isdigit() for c in s["text"]) and "contains_number" not in reasons:
             reasons.append("contains_number")
+        if is_possible_initials(s["text"]):
+            initials.append({"text": s["text"], "ask_in": sorted(s.get("regional") or [jurisdiction])})
+            if "possible_initials" not in reasons:
+                reasons.append("possible_initials")
     if (bare_name or {"eponym", "place_name"} & set(reasons)
             or any(h.startswith(adapter.NAME_DICT_PREFIX) for h in hits)):
         level = "high"
@@ -123,4 +141,5 @@ def assess_risk(strings, manual_flags, adapter):
         level = "none"
     rule = {"high": "never_bare", "low": "phrase_only", "none": "phrase_or_token"}[level]
     return {"level": level, "reasons": reasons, "protect_rule": rule,
-            "scrubber_collisions": hits, "name_list_hits": names, "place_list_hits": places}
+            "scrubber_collisions": hits, "name_list_hits": names, "place_list_hits": places,
+            "possible_initials": initials}

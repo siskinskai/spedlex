@@ -1668,6 +1668,10 @@ parent_initiated_eval	SPED:001666	Parent-initiated evaluation	active
 or_oya	SPED:001667	Oregon Youth Authority	active
 mn_tses	SPED:001668	Total special education system	active
 mn_pelsb	SPED:001669	Professional Educator Licensing and Standards Board	active
+va_complaint_appeal_reviewer	SPED:001670	Complaint Appeal Reviewer	active
+va_iep_coordinator	SPED:001671	IEP Coordinator	active
+va_prc	SPED:001672	Parent Resource Center	active
+va_scholastic_regs	SPED:001673	Management of the Student's Scholastic Record in the Public Schools of Virginia	active
 placeholder_phonological_awareness	SPED:900001	Phonological awareness (placeholder; now attested by the Texas Dyslexia Handbook)	retired
 exec_fn	SPED:900002	Executive functioning	active
 wisc5	SPED:900003	Wechsler Intelligence Scale for Children, Fifth Edition	active

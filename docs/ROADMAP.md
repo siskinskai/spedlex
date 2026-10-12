@@ -41,6 +41,12 @@ a large item.
   their own rules (New York's "emotional disability", 2022). A way to mark a
   state's current preferred form, not just a form it uses, would sharpen the
   terminology helpers.
+- **Three-letter acronyms and initials.** Two-letter acronyms are now
+  protected only when the user confirms them (METHODOLOGY §4). The 259
+  three-letter all-caps strings (IEP, LRE, OHI and others) could also be a
+  student's three initials. Covering them all would mean many prompts, so
+  this needs a policy decision: all of them, only those that are also common
+  initials, or none.
 - **Broader name lists.** Name lists that better represent recent immigrant
   families, to tighten risk grading.
 

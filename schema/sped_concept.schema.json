@@ -266,7 +266,8 @@
               "place_name",
               "common_english_word",
               "contains_number",
-              "collides_with_scrubber_pattern"
+              "collides_with_scrubber_pattern",
+              "possible_initials"
             ]
           }
         },
@@ -299,6 +300,32 @@
             "type": "string"
           },
           "description": "U.S. state or territory names and postal codes found in the concept's strings (reference/places). Any hit makes the concept high risk."
+        },
+        "possible_initials": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "text",
+              "ask_in"
+            ],
+            "properties": {
+              "text": {
+                "type": "string",
+                "pattern": "^[A-Z]{2}$"
+              },
+              "ask_in": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "pattern": "^US(-[A-Z]{2})?$"
+                }
+              }
+            }
+          },
+          "description": "Two-letter all-caps strings that could be a person's initials (\"LS will...\"). ask_in lists the jurisdictions where the string is an acronym (US means every state). A scrubber working on a document from one of them may ask the user whether the string is an acronym; otherwise the bare string is not protected."
         }
       }
     },

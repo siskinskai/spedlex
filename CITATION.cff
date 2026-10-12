@@ -5,8 +5,8 @@ type: dataset
 authors:
   - name: "Jeremy Evans"
   - name: "SPEDLex contributors"
-version: "0.51.0"
-date-released: "2026-10-10"
+version: "0.52.0"
+date-released: "2026-10-12"
 license: CC-BY-4.0
 repository-code: "https://github.com/SiskinSkai/spedlex"
 url: "https://SiskinSkai.github.io/spedlex/"
