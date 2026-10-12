@@ -6,6 +6,20 @@ patch for corrections and reviews. Concept IDs never change between versions.
 
 ## [Unreleased]
 
+Virginia supplement (0.52.0), drafted with Claude Sonnet 5.5
+(`claude-sonnet-5-5`) and awaiting the maintainer's check. The first Virginia
+pass read the 2013 Town Hall copy of the procedural safeguards notice because
+the September 2024 edition could not be opened; `virginia_supplement` reads the
+2024 edition (47 pp.). It attests 64 existing concepts for Virginia, re-attests
+seven the first pass cited to older sources, adds three string variants
+("request for due process", "wards of the State", "scholastic records") and four
+candidate concepts (Complaint Appeal Reviewer, IEP Coordinator, Parent Resource
+Center, and the Board of Education regulation on student scholastic records).
+The Modified Standard Diploma note now records that the 2024 notice names only
+the standard and advanced studies diplomas. Cited by URL, not doc_id, like the
+rest of the early Virginia layer; details and a flag about the PDF's authorship
+are in `provenance/va/va-psn-2024-sources-2026-10-12.md`.
+
 Two-letter acronyms and initials, drafted with Claude Opus 5.5
 (`claude-opus-5-5`) and awaiting the maintainer's check. This answers the
 policy question in the Mississippi audit and the consistency audit. IEPs

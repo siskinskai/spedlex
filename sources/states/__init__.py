@@ -70,4 +70,5 @@ LAYERS = [
     "washington_supplement",
     "oregon_supplement",
     "minnesota_supplement",
+    "virginia_supplement",
 ]

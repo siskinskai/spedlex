@@ -182,7 +182,7 @@ CONCEPTS = [
     ("applied_studies", "Applied Studies Diploma", "transition", [], src("FG", "p. 27"),
      {**VAJ, "note": "Earned by completing IEP requirements; compare Nevada's adjusted diploma."}),
     ("mod_std", "Modified Standard Diploma", "transition", [("Modified Diploma", AB, VA)], src("PSN", "p. 7"),
-     {**VAJ, "note": "Discontinued Virginia diploma that still appears in older records."}),
+     {**VAJ, "note": "Discontinued Virginia diploma that still appears in older records. The September 2024 procedural safeguards notice (p. 7) names only the standard and advanced studies diplomas."}),
     ("cert_completion", "Certificate of Program Completion", "transition", [], src("FG", "p. 27"),
      {"note": "A non-diploma credential for completing a program. General concept: Maryland issues one by the same name."}),
     ("ged", "General Educational Development certificate", "transition", [("GED", A, None)], src("FG", "p. 27"), {}),
