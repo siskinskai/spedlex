@@ -5,7 +5,8 @@ Special-education professionals shouldn't have to learn GitHub to help.
 email. The expert hits Reply and types `Y`, `N` or `?` in brackets. A
 maintainer then reads the reply back into the repository.
 
-Nevada is the worked example: [rounds/NV-20261008/email.txt](rounds/NV-20261008/email.txt).
+Nevada is the worked example: [rounds/NV-20261010/email.txt](rounds/NV-20261010/email.txt)
+(a sample with the sender fields left in `[BRACKETS]`; it has not been sent).
 
 ## Send a request
 
@@ -30,7 +31,7 @@ the choice of expert and the greeting are yours.
 
 | Part | Where it comes from in the repo | The expert answers |
 |---|---|---|
-| Intro, "what it is", "why experts" | `template.txt`, plus live counts from `data/` | nothing |
+| Intro, "what SPEDLex is" (what an entry holds, what it is not, and its two uses: privacy tools and AI wording tools), "why experts" | `template.txt`, plus live counts from `data/` | nothing |
 | **A. Key questions** | (1) documents dated 3+ years ago (`--stale-years`), (2) concepts the state layer defined whose `note` says *verify*, *may differ*, *ambiguous* or *name from the ... form*, (3) hand-written questions in `extras/<state>.tsv` | Y / N / ? and a comment |
 | **B. Same thing, different name?** | every state-tagged `synonym` or `legacy` string on a concept | Y / N / ? |
 | **C. Real term?** | every concept with `review.status = candidate` that cites the state | Y / N / ? |
@@ -61,7 +62,7 @@ Save the reply as plain text (quoted original included; the reader copes with
 `>` quoting), then:
 
 ```bash
-python tools/expert_review.py reply rounds/NV-20261008/key.json some-reply.txt
+python tools/expert_review.py reply rounds/NV-20261010/key.json some-reply.txt
 ```
 
 It writes two files next to the reply:

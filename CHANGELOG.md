@@ -20,6 +20,14 @@ the standard and advanced studies diplomas. Cited by URL, not doc_id, like the
 rest of the early Virginia layer; details and a flag about the PDF's authorship
 are in `provenance/va/va-psn-2024-sources-2026-10-12.md`.
 
+Expert-review email wording (`outreach/expert-review/template.txt`) now
+describes SPEDLex's second use, helping AI and writing tools name terms the way
+the reader's state does, and says what an entry holds and what the list is not
+(not a dictionary or legal guide, not complete, not a statement of what is
+current). The Nevada sample is regenerated as `rounds/NV-20261010/`; the
+never-sent `NV-20261008` round is removed. Drafted with Claude Sonnet 5.5
+(`claude-sonnet-5-5`).
+
 Two-letter acronyms and initials, drafted with Claude Opus 5.5
 (`claude-opus-5-5`) and awaiting the maintainer's check. This answers the
 policy question in the Mississippi audit and the consistency audit. IEPs

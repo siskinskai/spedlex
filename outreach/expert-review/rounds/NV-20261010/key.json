@@ -1,9 +1,9 @@
 {
- "form_id": "NV-20261008",
+ "form_id": "NV-20261010",
  "state": "NV",
  "state_name": "Nevada",
- "spedlex_version": "0.36.0",
- "generated": "2026-10-08",
+ "spedlex_version": "0.51.0",
+ "generated": "2026-10-10",
  "items": {
   "A1": {
    "kind": "yn",

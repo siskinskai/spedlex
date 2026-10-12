@@ -1,0 +1,888 @@
+{
+ "form_id": "VA-20261012",
+ "state": "VA",
+ "state_name": "Virginia",
+ "spedlex_version": "0.52.0",
+ "generated": "2026-10-12",
+ "items": {
+  "A1": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "The Virginia Family's Guide to Special Education we worked from is the May 2023 ",
+   "text": "The Virginia Family's Guide to Special Education we worked from is the May 2023 edition. Is that still the current version? (N = it has been replaced; please give the new title or date in a comment.)"
+  },
+  "A2": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "The Virginia Procedural Safeguards Notice we worked from is the \"Revised Septemb",
+   "text": "The Virginia Procedural Safeguards Notice we worked from is the \"Revised September 2024\" edition (form SS/SE-4 (1/25)). Is that still the current version? (N = it has been replaced; please give the new date in a comment.)"
+  },
+  "A3": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Our list shows \"Level I services\" as services delivered for less than half the s",
+   "text": "Our list shows \"Level I services\" as services delivered for less than half the school day and \"Level II services\" as half the school day or more. We wrote those thresholds from memory and have not confirmed them. Are they right? (N = wrong; please explain.)"
+  },
+  "A4": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Our list says Virginia separates three things: \"home-based instruction\" (an IEP ",
+   "text": "Our list says Virginia separates three things: \"home-based instruction\" (an IEP placement), \"homebound instruction\" (for a medical confinement), and \"home instruction\" or \"home tutoring\" (parent-chosen alternatives to school). Is that how the terms are used? (N = no; please explain.)"
+  },
+  "A5": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Our list records the \"Modified Standard Diploma\" as discontinued, but still foun",
+   "text": "Our list records the \"Modified Standard Diploma\" as discontinued, but still found in older records, and the \"Applied Studies Diploma\" as the diploma earned by completing IEP requirements. We could not open VDOE's own fact sheets for these, and the September 2024 notice names only the standard and advanced studies diplomas. Is that accurate? (N = wrong or out of date; please explain.)"
+  },
+  "A6": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Our list has \"campus-based student support team\" with \"school-based team\" and \"c",
+   "text": "Our list has \"campus-based student support team\" with \"school-based team\" and \"child study\" as other names for it. Which of these do Northern Virginia school divisions actually say? (N = none of them, or the real name is different; please give it in a comment.)"
+  },
+  "A7": {
+   "kind": "yn",
+   "part": "A",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "We know \"Special Permission Locally Awarded Verified Credit\" (SPLAVC, also \"SPLA",
+   "text": "We know \"Special Permission Locally Awarded Verified Credit\" (SPLAVC, also \"SPLAVC-A\") only from the title and scope of an August 2024 VDOE fact sheet. Is that the right name, and is it used in IEP meetings? (N = wrong or not used; please explain.)"
+  },
+  "B1": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000010",
+   "string": "school division",
+   "maps_to_review": false,
+   "label": "\"school division\" = \"Local educational agency\"",
+   "text": "\"school division\" = \"Local educational agency\""
+  },
+  "B2": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000033",
+   "string": "request for due process",
+   "maps_to_review": false,
+   "label": "\"request for due process\" = \"Due process complaint\"",
+   "text": "\"request for due process\" = \"Due process complaint\""
+  },
+  "B3": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000035",
+   "string": "special education hearing officer",
+   "maps_to_review": false,
+   "label": "\"special education hearing officer\" = \"Impartial due process hearing\"",
+   "text": "\"special education hearing officer\" = \"Impartial due process hearing\""
+  },
+  "B4": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000035",
+   "string": "impartial special education hearing officer",
+   "maps_to_review": false,
+   "label": "\"impartial special education hearing officer\" = \"Impartial due process hearing\"",
+   "text": "\"impartial special education hearing officer\" = \"Impartial due process hearing\""
+  },
+  "B5": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000054",
+   "string": "emotional disability",
+   "maps_to_review": false,
+   "label": "\"emotional disability\" = \"Emotional disturbance\"",
+   "text": "\"emotional disability\" = \"Emotional disturbance\""
+  },
+  "B6": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000056",
+   "string": "mental retardation",
+   "maps_to_review": false,
+   "label": "\"mental retardation\" = \"Intellectual disability\"",
+   "text": "\"mental retardation\" = \"Intellectual disability\""
+  },
+  "B7": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000127",
+   "string": "eligibility group",
+   "maps_to_review": false,
+   "label": "\"eligibility group\" = \"Eligibility determination\"",
+   "text": "\"eligibility group\" = \"Eligibility determination\""
+  },
+  "B8": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000164",
+   "string": "State Special Education Advisory Committee",
+   "maps_to_review": false,
+   "label": "\"State Special Education Advisory Committee\" = \"State advisory panel\"",
+   "text": "\"State Special Education Advisory Committee\" = \"State advisory panel\""
+  },
+  "B9": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000169",
+   "string": "school-based team",
+   "maps_to_review": false,
+   "label": "\"school-based team\" = \"Campus-based student support team\"",
+   "text": "\"school-based team\" = \"Campus-based student support team\""
+  },
+  "B10": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000172",
+   "string": "existing data review",
+   "maps_to_review": false,
+   "label": "\"existing data review\" = \"Review of existing evaluation data\"",
+   "text": "\"existing data review\" = \"Review of existing evaluation data\""
+  },
+  "B11": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000211",
+   "string": "scholastic records",
+   "maps_to_review": false,
+   "label": "\"scholastic records\" = \"Education records\"",
+   "text": "\"scholastic records\" = \"Education records\""
+  },
+  "B12": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000211",
+   "string": "scholastic record",
+   "maps_to_review": false,
+   "label": "\"scholastic record\" = \"Education records\"",
+   "text": "\"scholastic record\" = \"Education records\""
+  },
+  "B13": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000338",
+   "string": "Virginia Administrative Code",
+   "maps_to_review": false,
+   "label": "\"Virginia Administrative Code\" = \"Regulations Governing Special Education Programs for Children with Disabilities in Virginia\"",
+   "text": "\"Virginia Administrative Code\" = \"Regulations Governing Special Education Programs for Children with Disabilities in Virginia\""
+  },
+  "B14": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000346",
+   "string": "Virginia School for the Deaf and the Blind at Staunton",
+   "maps_to_review": false,
+   "label": "\"Virginia School for the Deaf and the Blind at Staunton\" = \"Virginia School for the Deaf and the Blind\"",
+   "text": "\"Virginia School for the Deaf and the Blind at Staunton\" = \"Virginia School for the Deaf and the Blind\""
+  },
+  "B15": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000347",
+   "string": "state facilities",
+   "maps_to_review": false,
+   "label": "\"state facilities\" = \"State-operated programs\"",
+   "text": "\"state facilities\" = \"State-operated programs\""
+  },
+  "B16": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000367",
+   "string": "audio recording devices at meetings",
+   "maps_to_review": false,
+   "label": "\"audio recording devices at meetings\" = \"Audio recording of meetings\"",
+   "text": "\"audio recording devices at meetings\" = \"Audio recording of meetings\""
+  },
+  "B17": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000367",
+   "string": "video recording of meetings",
+   "maps_to_review": false,
+   "label": "\"video recording of meetings\" = \"Audio recording of meetings\"",
+   "text": "\"video recording of meetings\" = \"Audio recording of meetings\""
+  },
+  "B18": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000369",
+   "string": "SOL test",
+   "maps_to_review": false,
+   "label": "\"SOL test\" = \"Standards of Learning\"",
+   "text": "\"SOL test\" = \"Standards of Learning\""
+  },
+  "B19": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000369",
+   "string": "Virginia Standards of Learning",
+   "maps_to_review": false,
+   "label": "\"Virginia Standards of Learning\" = \"Standards of Learning\"",
+   "text": "\"Virginia Standards of Learning\" = \"Standards of Learning\""
+  },
+  "B20": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000371",
+   "string": "Essentialized Standards of Learning",
+   "maps_to_review": false,
+   "label": "\"Essentialized Standards of Learning\" = \"Virginia Essentialized Standards of Learning\"",
+   "text": "\"Essentialized Standards of Learning\" = \"Virginia Essentialized Standards of Learning\""
+  },
+  "B21": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000383",
+   "string": "diploma credit accommodations",
+   "maps_to_review": false,
+   "label": "\"diploma credit accommodations\" = \"Credit accommodations\"",
+   "text": "\"diploma credit accommodations\" = \"Credit accommodations\""
+  },
+  "B22": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:000385",
+   "string": "expanded expedited retake",
+   "maps_to_review": false,
+   "label": "\"expanded expedited retake\" = \"Expedited retake\"",
+   "text": "\"expanded expedited retake\" = \"Expedited retake\""
+  },
+  "B23": {
+   "kind": "yn",
+   "part": "B",
+   "concept_id": "SPED:001673",
+   "string": "Management of Student Scholastic Records",
+   "maps_to_review": false,
+   "label": "\"Management of Student Scholastic Records\" = \"Management of the Student's Scholastic Record in the Public Schools of Virginia\"",
+   "text": "\"Management of Student Scholastic Records\" = \"Management of the Student's Scholastic Record in the Public Schools of Virginia\""
+  },
+  "C1": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000164",
+   "maps_to_review": true,
+   "label": "State advisory panel",
+   "text": "\"State advisory panel\", also written \"State Special Education Advisory Committee\", \"SSEAC\""
+  },
+  "C2": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000165",
+   "maps_to_review": true,
+   "label": "IEP facilitation",
+   "text": "\"IEP facilitation\""
+  },
+  "C3": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000169",
+   "maps_to_review": true,
+   "label": "Campus-based student support team",
+   "text": "\"Campus-based student support team\", also written \"school-based team\", \"child study\""
+  },
+  "C4": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000172",
+   "maps_to_review": true,
+   "label": "Review of existing evaluation data",
+   "text": "\"Review of existing evaluation data\", also written \"existing data review\""
+  },
+  "C5": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000175",
+   "maps_to_review": true,
+   "label": "Revocation of consent",
+   "text": "\"Revocation of consent\""
+  },
+  "C6": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000200",
+   "maps_to_review": true,
+   "label": "Summary of academic achievement and functional performance",
+   "text": "\"Summary of academic achievement and functional performance\""
+  },
+  "C7": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000206",
+   "maps_to_review": true,
+   "label": "Basis of knowledge",
+   "text": "\"Basis of knowledge\""
+  },
+  "C8": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000207",
+   "maps_to_review": true,
+   "label": "Expedited due process hearing",
+   "text": "\"Expedited due process hearing\""
+  },
+  "C9": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000209",
+   "maps_to_review": true,
+   "label": "Foster parent",
+   "text": "\"Foster parent\""
+  },
+  "C10": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000210",
+   "maps_to_review": true,
+   "label": "Unaccompanied homeless youth",
+   "text": "\"Unaccompanied homeless youth\""
+  },
+  "C11": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000211",
+   "maps_to_review": true,
+   "label": "Education records",
+   "text": "\"Education records\", also written \"scholastic records\", \"scholastic record\""
+  },
+  "C12": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000212",
+   "maps_to_review": true,
+   "label": "Participating agency",
+   "text": "\"Participating agency\""
+  },
+  "C13": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000213",
+   "maps_to_review": true,
+   "label": "Family Educational Rights and Privacy Act",
+   "text": "\"Family Educational Rights and Privacy Act\""
+  },
+  "C14": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000214",
+   "maps_to_review": true,
+   "label": "Individuals with Disabilities Education Act",
+   "text": "\"Individuals with Disabilities Education Act\""
+  },
+  "C15": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000215",
+   "maps_to_review": true,
+   "label": "Section 504",
+   "text": "\"Section 504\""
+  },
+  "C16": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000216",
+   "maps_to_review": true,
+   "label": "Americans with Disabilities Act",
+   "text": "\"Americans with Disabilities Act\""
+  },
+  "C17": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000230",
+   "maps_to_review": true,
+   "label": "Interim IEP",
+   "text": "\"Interim IEP\""
+  },
+  "C18": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000237",
+   "maps_to_review": true,
+   "label": "Community experiences",
+   "text": "\"Community experiences\""
+  },
+  "C19": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000249",
+   "maps_to_review": true,
+   "label": "Standard high school diploma",
+   "text": "\"Standard high school diploma\""
+  },
+  "C20": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000256",
+   "maps_to_review": true,
+   "label": "End-of-course assessment",
+   "text": "\"End-of-course assessment\""
+  },
+  "C21": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000259",
+   "maps_to_review": true,
+   "label": "Most significant cognitive disability",
+   "text": "\"Most significant cognitive disability\""
+  },
+  "C22": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000295",
+   "maps_to_review": true,
+   "label": "Multidisciplinary team",
+   "text": "\"Multidisciplinary team\""
+  },
+  "C23": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000337",
+   "maps_to_review": true,
+   "label": "Virginia Department of Education",
+   "text": "\"Virginia Department of Education\", also written \"VDOE\""
+  },
+  "C24": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000338",
+   "maps_to_review": true,
+   "label": "Regulations Governing Special Education Programs for Children with Disabilities in Virginia",
+   "text": "\"Regulations Governing Special Education Programs for Children with Disabilities in Virginia\", also written \"Virginia Regulations\", \"8VAC20-81\", \"Virginia Administrative Code\""
+  },
+  "C25": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000339",
+   "maps_to_review": true,
+   "label": "Office of Dispute Resolution and Administrative Services",
+   "text": "\"Office of Dispute Resolution and Administrative Services\""
+  },
+  "C26": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000340",
+   "maps_to_review": true,
+   "label": "Parent Ombudsman for Special Education",
+   "text": "\"Parent Ombudsman for Special Education\", also written \"Parent Ombudsman\""
+  },
+  "C27": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000341",
+   "maps_to_review": true,
+   "label": "Parent Educational Advocacy Training Center",
+   "text": "\"Parent Educational Advocacy Training Center\", also written \"PEATC\""
+  },
+  "C28": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000342",
+   "maps_to_review": true,
+   "label": "Local special education advisory committee",
+   "text": "\"Local special education advisory committee\""
+  },
+  "C29": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000351",
+   "maps_to_review": true,
+   "label": "Integrated service delivery",
+   "text": "\"Integrated service delivery\""
+  },
+  "C30": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000357",
+   "maps_to_review": true,
+   "label": "Comparable services",
+   "text": "\"Comparable services\""
+  },
+  "C31": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000359",
+   "maps_to_review": true,
+   "label": "Surgically implanted medical device",
+   "text": "\"Surgically implanted medical device\""
+  },
+  "C32": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000360",
+   "maps_to_review": true,
+   "label": "Special education administrator",
+   "text": "\"Special education administrator\""
+  },
+  "C33": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000363",
+   "maps_to_review": true,
+   "label": "Service coordinator",
+   "text": "\"Service coordinator\""
+  },
+  "C34": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000364",
+   "maps_to_review": true,
+   "label": "Short-term removal",
+   "text": "\"Short-term removal\""
+  },
+  "C35": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000365",
+   "maps_to_review": true,
+   "label": "Long-term removal",
+   "text": "\"Long-term removal\""
+  },
+  "C36": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000366",
+   "maps_to_review": true,
+   "label": "Disability harassment",
+   "text": "\"Disability harassment\""
+  },
+  "C37": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000367",
+   "maps_to_review": true,
+   "label": "Audio recording of meetings",
+   "text": "\"Audio recording of meetings\", also written \"audio recording devices at meetings\", \"video recording of meetings\""
+  },
+  "C38": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000368",
+   "maps_to_review": true,
+   "label": "Emancipated minor",
+   "text": "\"Emancipated minor\""
+  },
+  "C39": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000369",
+   "maps_to_review": true,
+   "label": "Standards of Learning",
+   "text": "\"Standards of Learning\", also written \"SOL\", \"SOL test\", \"SOLs\", \"Virginia Standards of Learning\""
+  },
+  "C40": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000370",
+   "maps_to_review": true,
+   "label": "Virginia Alternate Assessment Program",
+   "text": "\"Virginia Alternate Assessment Program\", also written \"VAAP\""
+  },
+  "C41": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000371",
+   "maps_to_review": true,
+   "label": "Virginia Essentialized Standards of Learning",
+   "text": "\"Virginia Essentialized Standards of Learning\", also written \"VESOL\", \"Essentialized Standards of Learning\""
+  },
+  "C42": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000372",
+   "maps_to_review": true,
+   "label": "Age-appropriate transition assessments",
+   "text": "\"Age-appropriate transition assessments\""
+  },
+  "C43": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000373",
+   "maps_to_review": true,
+   "label": "Interagency responsibilities and linkages",
+   "text": "\"Interagency responsibilities and linkages\""
+  },
+  "C44": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000374",
+   "maps_to_review": true,
+   "label": "Advanced Studies Diploma",
+   "text": "\"Advanced Studies Diploma\""
+  },
+  "C45": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000375",
+   "maps_to_review": true,
+   "label": "Applied Studies Diploma",
+   "text": "\"Applied Studies Diploma\""
+  },
+  "C46": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000376",
+   "maps_to_review": true,
+   "label": "Modified Standard Diploma",
+   "text": "\"Modified Standard Diploma\", also written \"Modified Diploma\""
+  },
+  "C47": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000377",
+   "maps_to_review": true,
+   "label": "Certificate of Program Completion",
+   "text": "\"Certificate of Program Completion\""
+  },
+  "C48": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000378",
+   "maps_to_review": true,
+   "label": "General Educational Development certificate",
+   "text": "\"General Educational Development certificate\""
+  },
+  "C49": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000379",
+   "maps_to_review": true,
+   "label": "Standard credit",
+   "text": "\"Standard credit\", also written \"standard credits\""
+  },
+  "C50": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000380",
+   "maps_to_review": true,
+   "label": "Verified credit",
+   "text": "\"Verified credit\", also written \"verified credits\""
+  },
+  "C51": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000381",
+   "maps_to_review": true,
+   "label": "Locally awarded verified credit",
+   "text": "\"Locally awarded verified credit\", also written \"LAVC\", \"locally awarded verified credits\""
+  },
+  "C52": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000382",
+   "maps_to_review": true,
+   "label": "Special Permission Locally Awarded Verified Credit",
+   "text": "\"Special Permission Locally Awarded Verified Credit\", also written \"SPLAVC\", \"SPLAVC-A\""
+  },
+  "C53": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000383",
+   "maps_to_review": true,
+   "label": "Credit accommodations",
+   "text": "\"Credit accommodations\", also written \"diploma credit accommodations\""
+  },
+  "C54": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000384",
+   "maps_to_review": true,
+   "label": "Substitute tests",
+   "text": "\"Substitute tests\", also written \"substitute test\""
+  },
+  "C55": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000385",
+   "maps_to_review": true,
+   "label": "Expedited retake",
+   "text": "\"Expedited retake\", also written \"expanded expedited retake\""
+  },
+  "C56": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:000393",
+   "maps_to_review": true,
+   "label": "Alternative dispute resolution",
+   "text": "\"Alternative dispute resolution\""
+  },
+  "C57": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:001047",
+   "maps_to_review": true,
+   "label": "Record of access",
+   "text": "\"Record of access\""
+  },
+  "C58": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:001176",
+   "maps_to_review": true,
+   "label": "Case-by-case determination",
+   "text": "\"Case-by-case determination\""
+  },
+  "C59": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:001179",
+   "maps_to_review": true,
+   "label": "Community Parent Resource Center",
+   "text": "\"Community Parent Resource Center\""
+  },
+  "C60": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:001316",
+   "maps_to_review": true,
+   "label": "Agreement review period",
+   "text": "\"Agreement review period\""
+  },
+  "C61": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:001317",
+   "maps_to_review": true,
+   "label": "Attorneys' fees",
+   "text": "\"Attorneys' fees\""
+  },
+  "C62": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:001318",
+   "maps_to_review": true,
+   "label": "Civil action",
+   "text": "\"Civil action\""
+  },
+  "C63": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:001319",
+   "maps_to_review": true,
+   "label": "Destruction of information",
+   "text": "\"Destruction of information\""
+  },
+  "C64": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:001320",
+   "maps_to_review": true,
+   "label": "Parental consent to access public benefits or insurance",
+   "text": "\"Parental consent to access public benefits or insurance\""
+  },
+  "C65": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:001622",
+   "maps_to_review": true,
+   "label": "Protection and advocacy agency",
+   "text": "\"Protection and advocacy agency\""
+  },
+  "C66": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:001666",
+   "maps_to_review": true,
+   "label": "Parent-initiated evaluation",
+   "text": "\"Parent-initiated evaluation\""
+  },
+  "C67": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:001670",
+   "maps_to_review": true,
+   "label": "Complaint Appeal Reviewer",
+   "text": "\"Complaint Appeal Reviewer\""
+  },
+  "C68": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:001671",
+   "maps_to_review": true,
+   "label": "IEP Coordinator",
+   "text": "\"IEP Coordinator\""
+  },
+  "C69": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:001672",
+   "maps_to_review": true,
+   "label": "Parent Resource Center",
+   "text": "\"Parent Resource Center\""
+  },
+  "C70": {
+   "kind": "yn",
+   "part": "C",
+   "concept_id": "SPED:001673",
+   "maps_to_review": true,
+   "label": "Management of the Student's Scholastic Record in the Public Schools of Virginia",
+   "text": "\"Management of the Student's Scholastic Record in the Public Schools of Virginia\", also written \"Management of Student Scholastic Records\""
+  },
+  "D1": {
+   "kind": "text",
+   "part": "D",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Differences between school divisions in Northern Virginia (for example Fairfax, ",
+   "text": "Differences between school divisions in Northern Virginia (for example Fairfax, Arlington, Loudoun, Prince William, Alexandria or Falls Church): names for forms, teams, meetings or programs that one division says and another does not."
+  },
+  "D2": {
+   "kind": "text",
+   "part": "D",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Statewide tests and alternate assessments: which names appear on Virginia IEPs t",
+   "text": "Statewide tests and alternate assessments: which names appear on Virginia IEPs today? (Our list has SOL, VAAP and the Virginia Essentialized Standards of Learning.)"
+  },
+  "D3": {
+   "kind": "text",
+   "part": "D",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Diplomas and other completion documents: which ones appear on Virginia IEPs and ",
+   "text": "Diplomas and other completion documents: which ones appear on Virginia IEPs and transition plans today? (Our list has Standard, Advanced Studies, Applied Studies and the discontinued Modified Standard diploma, a Certificate of Program Completion and the GED.)"
+  },
+  "D4": {
+   "kind": "text",
+   "part": "D",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Acronyms and abbreviations you see constantly in Virginia paperwork that you wou",
+   "text": "Acronyms and abbreviations you see constantly in Virginia paperwork that you would expect on a list like this."
+  },
+  "D5": {
+   "kind": "text",
+   "part": "D",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Places where Virginia says something differently from the national term (a diffe",
+   "text": "Places where Virginia says something differently from the national term (a different name for a category, a team, a meeting or a form)."
+  },
+  "D6": {
+   "kind": "text",
+   "part": "D",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Anything above that looks wrong, or any term that could be mistaken for a person",
+   "text": "Anything above that looks wrong, or any term that could be mistaken for a person's name or a place name."
+  },
+  "D7": {
+   "kind": "text",
+   "part": "D",
+   "concept_id": null,
+   "maps_to_review": false,
+   "label": "Anything else: a document we should read, or a person or organization we should ",
+   "text": "Anything else: a document we should read, or a person or organization we should ask."
+  }
+ }
+}
