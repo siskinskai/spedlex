@@ -23,7 +23,7 @@ def src(doc, loc=""):
     return {"source_type": "state_guidance", "citation": "LDOE Parent Guide to the LEAP Connect Assessments (rev. Dec. 2024)", "url": LC_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 LA = ["US-LA"]
 LAJ = {"jurisdiction": "US-LA"}
 REG = {"status": "machine_validated"}
@@ -65,10 +65,10 @@ STRINGS = [
 
 CONCEPTS = [
     ("ldoe", "Louisiana Department of Education", "legal_procedural", [("LDOE", A, LA)], src("LC"), {**LAJ, "broader": "sea"}),
-    ("b1508", "Bulletin 1508", "legal_procedural", [("Pupil Appraisal Handbook", S, LA)], src("B1508", "CI-101"), {**LAJ, **REG,
+    ("b1508", "Bulletin 1508", "legal_procedural", [("Pupil Appraisal Handbook", REL, LA)], src("B1508", "CI-101"), {**LAJ, **REG,
      "note": "Louisiana numbers its education rules as Board bulletins; 1508 covers evaluation and eligibility."}),
     ("b1530", "Bulletin 1530", "legal_procedural", [], src("LC"), {**LAJ, "note": "Louisiana's rules for students with disabilities in statewide assessment."}),
-    ("pupil_appraisal", "Pupil appraisal", "personnel_role", [("pupil appraisal personnel", S, LA), ("pupil appraisal services", S, LA)], src("B1508", "CI-303"),
+    ("pupil_appraisal", "Pupil appraisal", "personnel_role", [("pupil appraisal personnel", REL, LA), ("pupil appraisal services", S, LA)], src("B1508", "CI-303"),
      {**LAJ, **REG, "note": "Louisiana's name for the evaluation staff (school psychologists, educational diagnosticians, and others)."}),
     ("exceptionality", "Exceptionality", "legal_procedural", [("exceptionalities", P, None)], src("B1508", "CI-303"),
      {**REG, "note": "Louisiana's umbrella word covering disabilities and giftedness or talent."}),

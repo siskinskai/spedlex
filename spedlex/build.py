@@ -104,6 +104,12 @@ def norm(s):
     return s["text"] if s["match"] == "phrase_cs" else s["text"].lower()
 
 
+def merge_key(s):
+    """Two strings merge when their text matches, unless one is 'related' and the other is not:
+    a term can be the same name in one state and a related term in another."""
+    return (norm(s), "related" if s["string_type"] == "related" else "other")
+
+
 def federal_records(reg, register, adapter):
     records, keys, flags = [], {}, {}
     for key, pref, *_ in federal.SEED:
@@ -156,16 +162,16 @@ def apply_layer(mod, records, keys, flags, reg, register, adapter):
             raise SystemExit(f"{mod.__name__}: STRINGS refers to unknown concept key {key!r}")
         rec = by_id[keys[key]]
         add_source(rec, source)
-        have = {norm(s): s for s in rec["strings"]}
+        have = {merge_key(s): s for s in rec["strings"]}
         for text, stype, regional in strings:
             s = make_string(text, stype, regional)
-            if norm(s) in have:
+            if merge_key(s) in have:
                 if regional:
-                    old = have[norm(s)]
+                    old = have[merge_key(s)]
                     old["regional"] = sorted(set(old.get("regional", [])) | set(regional))
                 continue
             rec["strings"].append(s)
-            have[norm(s)] = s
+            have[merge_key(s)] = s
         rec["pii_risk"] = assess_risk(rec["strings"], flags.get(key, []), adapter, rec["jurisdiction"])
 
     for key, pref, *_ in mod.CONCEPTS:

@@ -29,7 +29,7 @@ def src(doc, loc=""):
     return {"source_type": stype, "citation": f"{title}, {loc}" if loc else title, "url": url}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 MA = ["US-MA"]
 MAJ = {"jurisdiction": "US-MA"}
 REG = {"status": "machine_validated"}
@@ -41,7 +41,7 @@ STRINGS = [
     ("id", [("intellectual impairment", S, MA), ("mental retardation", L, MA)], src("R02", "(7)")),
     ("ed", [("emotional impairment", S, MA)], src("R02", "(7)")),
     ("sli", [("communication impairment", S, MA)], src("R02", "(7)")),
-    ("oi", [("physical impairment", S, MA)], src("R02", "(7)")),
+    ("oi", [("physical impairment", REL, MA)], src("R02", "(7)")),
     ("ohi", [("health impairment", S, MA)], src("R02", "(7)")),
     ("sld", [], src("R02", "(7)")),
     ("hi", [("hearing impairment/deaf", V, MA)], src("R02", "(7)")),
@@ -51,7 +51,7 @@ STRINGS = [
     ("lre", [], src("R02", "(12)")),
     ("related", [], src("R02", "(18)")),
     ("special_ed", [], src("R02", "(20)")),
-    ("iep_team", [("Team meeting", S, MA)], src("R02", "(21)")),
+    ("iep_team", [("Team meeting", REL, MA)], src("R02", "(21)")),
     ("sped_teacher", [("certified special educator", S, MA)], src("R02", "(3)")),
     ("approved_priv", [("approved private special education school", S, MA)], src("R02", "(1)")),
     # Parent's notice of procedural safeguards
@@ -82,7 +82,7 @@ STRINGS = [
 CONCEPTS = [
     ("dese_ma", "Massachusetts Department of Elementary and Secondary Education", "legal_procedural",
      [("DESE", A, MA), ("Massachusetts Department of Education", L, MA)], src("PNPS", "p. 1"), {**MAJ, "broader": "sea"}),
-    ("bsea", "Bureau of Special Education Appeals", "legal_procedural", [("BSEA", A, MA), ("BSEA Hearing Request Form", S, MA)], src("PNPS", "p. 10"),
+    ("bsea", "Bureau of Special Education Appeals", "legal_procedural", [("BSEA", A, MA), ("BSEA Hearing Request Form", REL, MA)], src("PNPS", "p. 10"),
      {**MAJ, "broader": "dp_hearing", "note": "Runs Massachusetts's mediations and due process hearings."}),
     ("prs", "Problem Resolution System", "legal_procedural", [("PRS", A, MA), ("Problem Resolution System Office", S, MA)], src("PNPS", "p. 8"),
      {**MAJ, "broader": "state_complaint", "note": "DESE's state complaint office."}),
@@ -105,7 +105,7 @@ CONCEPTS = [
     ("pre_eval_conf", "Pre-evaluation conference", "evaluation_eligibility", [], src("PG", "p. 12"), MAJ),
     ("home_assess", "Home assessment", "evaluation_eligibility", [], src("PG", "p. 14"), MAJ),
     ("spec_assess", "Specialist assessment", "evaluation_eligibility", [], src("PG", "p. 14"), MAJ),
-    ("ch688", "Chapter 688 referral", "transition", [("Chapter 688", AB, MA), ("Chapter 688 planning", S, MA)], src("PG", "pp. 26-27"),
+    ("ch688", "Chapter 688 referral", "transition", [("Chapter 688", AB, MA), ("Chapter 688 planning", REL, MA)], src("PG", "pp. 26-27"),
      {**MAJ, "note": "Massachusetts's referral of students with severe disabilities to adult service agencies."}),
     ("tpf", "Transition Planning Form", "transition", [("TPF", A, MA)], src("PNPS", "p. 13"), {**MAJ, "note": "'TPF' is practitioner usage."}),
     ("mcas", "Massachusetts Comprehensive Assessment System", "iep_component", [("MCAS", A, MA)], src("PG", "pp. 23-24"), MAJ),

@@ -14,14 +14,14 @@ Sources reviewed 2026-10-10:
   T55   19 TAC §89.1055 (content of the IEP), cited by subsection
 """
 
-from .texas import src, A, S, V, L, AB, P, TX
+from .texas import src, A, S, V, L, AB, P, REL, TX
 
 TXJ = {"jurisdiction": "US-TX"}
 T55 = lambda loc: {"source_type": "state_regulation", "citation": f"19 TAC §89.1055{loc}",
                    "url": "https://www.law.cornell.edu/regulations/texas/19-Tex-Admin-Code-SS-89-1055"}
 
 STRINGS = [
-    ("iep_facil", [("State IEP Facilitation Project", S, TX)], src("NPS", "p. 21")),
+    ("iep_facil", [("State IEP Facilitation Project", REL, TX)], src("NPS", "p. 21")),
     ("fva", [("functional vision evaluation", V, None)], src("TAC", "(c)(12)")),
     ("hats", [("hearing assistive technology", AB, None)], src("TAC", "(c)(3)")),
 ]

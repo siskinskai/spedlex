@@ -69,7 +69,7 @@ prompt_context = lex.glossary(document_text)    # Markdown, one cited line per c
 | `check(text)` | `Issue`s of kind `disfavored`, `legacy`, `other_state` or `ambiguous`, each with a message and, where possible, a suggestion. |
 | `glossary(text, max_terms=40)` | A Markdown glossary of the terms in the text, for a prompt. Empty string if there are none. |
 | `state_terms(concept_id, jurisdiction=None)` | The forms a state's documents use for the concept. |
-| `best_term(concept_id, jurisdiction=None)` | One form to write: the state's own phrase if it has one, else the national preferred term. |
+| `best_term(concept_id, jurisdiction=None)` | One form to write: the state's own phrase for the same thing if it has one, else the national preferred term. It never returns an acronym, a plural or a `related` form, and it prefers a current name over a legacy one. |
 | `forms_by_jurisdiction(concept_id)` | `{'US': [...], 'US-TX': [...], ...}`, without disfavored forms. |
 | `concept(concept_id)` | The full record. |
 

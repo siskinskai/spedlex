@@ -33,7 +33,7 @@ def src(doc, loc):
     }[doc]
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 NV = ["US-NV"]
 
 # (existing concept key, [(text, type, regional or None)], source)
@@ -51,8 +51,8 @@ STRINGS = [
     ("oi", [], src("NAC", "388.400")),
     ("tbi", [], src("NAC", "388.407")),
     ("sld", [("specific learning disabilities", P, None)], src("NAC", "388.420")),
-    ("id", [("mild intellectual disability", S, NV), ("moderate intellectual disability", S, NV),
-            ("severe intellectual disability", S, NV), ("profound intellectual disability", S, NV)], src("NAC", "388.410")),
+    ("id", [("mild intellectual disability", REL, NV), ("moderate intellectual disability", REL, NV),
+            ("severe intellectual disability", REL, NV), ("profound intellectual disability", REL, NV)], src("NAC", "388.410")),
     ("ed", [], src("NAC", "388.415")),
     ("dd", [("developmental delays", P, None), ("developmentally delayed", V, None)], src("NAC", "388.430")),
     ("dyslexia", [], src("NAC", "388.0415")),
@@ -71,7 +71,7 @@ STRINGS = [
     ("fba", [("assessment of functional behavior", S, NV)], src("NAC", "388.386")),
     ("iee", [], src("NAC", "388.450")),
     ("gen_teacher", [("regular classroom teacher", S, NV)], src("NAC", "388.095")),
-    ("state_complaint", [("State complaint investigation", S, NV)], src("PSN", "pp. 9-10")),
+    ("state_complaint", [("State complaint investigation", REL, NV)], src("PSN", "pp. 9-10")),
     ("exp_hearing", [], src("PSN", "pp. 21-22")),
     ("basis_know", [], src("PSN", "pp. 22-23")),
     ("ward", [], src("PSN", "pp. 3-4")),
@@ -87,7 +87,7 @@ STRINGS = [
     ("transition", [("coordinated activities", S, None)], src("IEP", "p. 6")),
     ("fve", [], src("IEP", "p. 6")),
     ("sdi", [], src("IEP", "p. 8")),
-    ("program_mods", [("modification, accommodation, or support for student or personnel", S, NV)], src("IEP", "p. 8")),
+    ("program_mods", [("modification, accommodation, or support for student or personnel", REL, NV)], src("IEP", "p. 8")),
     ("amendment", [("IEP revision without a meeting", S, NV), ("revision to IEP", S, NV)], src("IEP", "p. 1")),
     ("annual_review", [("annual IEP", S, None)], src("IEP", "p. 1")),
 ]
@@ -110,12 +110,12 @@ CONCEPTS = [
      {"jurisdiction": "US-NV", "note": "Nevada's per-category eligibility form, e.g. 'Statement of Eligibility - Specific Learning Disabilities'."}),
     ("gifted", "Gifted and talented", "evaluation_eligibility", [("gifted and talented pupil", S, NV)], src("NAC", "388.435"),
      {"status": "machine_validated", "note": "Not an IDEA category, but Nevada determines it under the same chapter, so it appears in the same paperwork."}),
-    ("cog", "Cognitive abilities", "evaluation_eligibility", [("assessment of cognitive abilities", S, NV)], src("NAC", "388.031"), {"status": "machine_validated"}),
-    ("socemo", "Social and emotional condition", "evaluation_eligibility", [("assessment of social and emotional condition", S, NV)], src("NAC", "388.111"), {"status": "machine_validated"}),
+    ("cog", "Cognitive abilities", "evaluation_eligibility", [("assessment of cognitive abilities", REL, NV)], src("NAC", "388.031"), {"status": "machine_validated"}),
+    ("socemo", "Social and emotional condition", "evaluation_eligibility", [("assessment of social and emotional condition", REL, NV)], src("NAC", "388.111"), {"status": "machine_validated"}),
     ("devfx", "Developmental functioning", "evaluation_eligibility", [], src("NAC", "388.041"), {"status": "machine_validated"}),
     ("cba", "Classroom-based assessment", "evaluation_eligibility", [("classroom-based assessments", P, None)], src("NAC", "388.029"), {"status": "machine_validated"}),
-    ("pces", "Performance in the current educational setting", "evaluation_eligibility", [("assessment of performance in current educational setting", S, NV)], src("NAC", "388.075"), {"status": "machine_validated"}),
-    ("eoi", "Evidence of intervention", "evaluation_eligibility", [("assessment of evidence of intervention", S, NV)], src("NAC", "388.385"), {"status": "machine_validated"}),
+    ("pces", "Performance in the current educational setting", "evaluation_eligibility", [("assessment of performance in current educational setting", REL, NV)], src("NAC", "388.075"), {"status": "machine_validated"}),
+    ("eoi", "Evidence of intervention", "evaluation_eligibility", [("assessment of evidence of intervention", REL, NV)], src("NAC", "388.385"), {"status": "machine_validated"}),
     ("consult", "Collaborative or consulting services", "related_service", [("consultative services", S, None), ("direct services", S, None)], src("NAC", "388.033"),
      {"status": "machine_validated", "note": "The IEP form codes service type as A (assessment), C (consultative) or D (direct). Single letters are never safelisted."}),
 
@@ -149,7 +149,7 @@ CONCEPTS = [
      {"jurisdiction": "US-NV", "note": "Name from the 2018 form; Nevada's current assessment names may differ."}),
     ("ccra", "College and Career Readiness Assessment", "iep_component", [], src("IEP", "p. 9"), {"jurisdiction": "US-NV", "note": "Name from the 2018 form."}),
     ("nvpep", "Nevada Proficiency Examination Program", "iep_component", [], src("IEP", "p. 9"), {"jurisdiction": "US-NV", "note": "Name from the 2018 form."}),
-    ("std_diploma", "Standard high school diploma", "transition", [("advanced high school diploma", S, NV)], src("IEP", "p. 5"), {}),
+    ("std_diploma", "Standard high school diploma", "transition", [("advanced high school diploma", REL, NV)], src("IEP", "p. 5"), {}),
     ("adj_diploma", "Adjusted high school diploma", "transition", [("adjusted diploma", AB, NV)], src("IEP", "p. 5"), {"jurisdiction": "US-NV", "note": "Earned by completing IEP requirements."}),
     ("alt_diploma", "Alternative high school diploma", "transition", [("alternative diploma", AB, None)], src("IEP", "p. 5"),
      {"note": "Federal concept (ESSA) for students assessed on the alternate assessment."}),

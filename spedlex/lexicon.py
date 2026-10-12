@@ -170,13 +170,22 @@ class Lexicon:
 
     def best_term(self, concept_id, jurisdiction=None):
         """The single form to write for this reader: the state's own first
-        form if it has one (a phrase before an acronym), else the national
-        preferred term."""
-        terms = self.state_terms(concept_id, jurisdiction)
+        phrase for the concept if it has one, else the national preferred term.
+        A phrase that names the same thing comes first, and an older (legacy)
+        form only if nothing current exists. Acronyms, abbreviations, plurals
+        and 'related' forms (a narrower or broader term, a person, a document,
+        a level) are never chosen, because they are not the same thing."""
+        j = _jur(jurisdiction) or self.jurisdiction
         r = self._records[concept_id]
-        types = {s["text"]: s["string_type"] for s in r["strings"]}
-        phrases = [t for t in terms if types.get(t) not in ("acronym", "abbreviation", "plural")]
-        return (phrases or terms or [r["preferred_term"]])[0]
+        if not j or j == "US":
+            return r["preferred_term"]
+        mine = [s for s in r["strings"] if j in (s.get("regional") or []) and not s.get("disfavored")]
+        for skip in (("acronym", "abbreviation", "plural", "related", "legacy"),
+                     ("acronym", "abbreviation", "plural", "related")):
+            for s in mine:
+                if s["string_type"] not in skip:
+                    return s["text"]
+        return r["preferred_term"]
 
     def lookup(self, term):
         """Every concept a surface form names, as plain dicts, best match

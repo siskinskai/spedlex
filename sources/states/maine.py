@@ -49,7 +49,7 @@ def src(doc, loc=""):
             "doc_id": "me-muser-2024", "url": RULE_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 ME = ["US-ME"]                    # regional tag for strings only used in Maine
 MEJ = {"jurisdiction": "US-ME"}   # opts for concepts that only exist in Maine
 
@@ -158,7 +158,7 @@ CONCEPTS = [
     ("me_doe", "Maine Department of Education", "legal_procedural", [], R("Section I(3)", 2), {**MEJ, "broader": "sea", "flags": ["place_name"]}),
     ("me_state_agency_client", "State agency client", "legal_procedural", [], R("Section II(40)", 11), {**MEJ}),
     ("me_psp", "Primary service provider", "early_intervention", [("PSP", A, ME)], R("Section X(1)", 107), {**MEJ}),
-    ("me_ed_tech", "Educational technician", "personnel_role", [("educational technicians", P, ME), ("Educational Technician III", S, ME)], R("Section X(1)", 109), {**MEJ, "broader": "para"}),
+    ("me_ed_tech", "Educational technician", "personnel_role", [("educational technicians", P, ME), ("Educational Technician III", REL, ME)], R("Section X(1)", 109), {**MEJ, "broader": "para"}),
     ("me_tutorial", "Tutorial instruction", "placement_setting", [], R("Section X(2)(A)(4)", 114), {**MEJ}),
     ("me_special_purpose_school", "Special purpose private school", "placement_setting", [], R("Section XII(3)(A)", 147), {**MEJ}),
     ("me_general_purpose_school", "General purpose private school", "placement_setting", [], R("Section XII(3)(A)", 147), {**MEJ}),

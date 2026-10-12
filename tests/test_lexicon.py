@@ -76,6 +76,34 @@ def test_best_term_falls_back_to_the_national_term():
     assert TX.best_term(cid) == NATIONAL.concept(cid)["preferred_term"]
 
 
+def test_best_term_never_returns_a_related_form():
+    """A 'related' string (a level, person, document, or narrower or broader term) is not the
+    same thing as the concept, so it is never the term to write for a reader."""
+    for r in RECORDS:
+        related = {s["text"] for s in r["strings"] if s["string_type"] == "related"}
+        same = {s["text"] for s in r["strings"] if s["string_type"] != "related"}
+        for s in r["strings"]:
+            if s["string_type"] != "related":
+                continue
+            for j in s.get("regional", []):
+                got = Lexicon(RECORDS, jurisdiction=j).best_term(r["concept_id"])
+                assert got in same or got == r["preferred_term"], (r["concept_id"], j, got)
+                assert got not in related - same
+
+
+def test_best_term_prefers_a_current_name_over_a_legacy_one():
+    for r in RECORDS:
+        for s in r["strings"]:
+            if s["string_type"] != "legacy":
+                continue
+            for j in s.get("regional", []):
+                got = Lexicon(RECORDS, jurisdiction=j).best_term(r["concept_id"])
+                current = [t for t in r["strings"] if j in (t.get("regional") or []) and not t.get("disfavored")
+                           and t["string_type"] not in ("acronym", "abbreviation", "plural", "related", "legacy")]
+                if current:
+                    assert got == current[0]["text"]
+
+
 # --- annotate --------------------------------------------------------------
 
 def test_annotate_finds_terms_with_citations():

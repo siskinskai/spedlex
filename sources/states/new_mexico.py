@@ -73,7 +73,7 @@ def src(doc, loc, page=None):
             "doc_id": "nm-grad-2025", "url": GRAD_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 NM = ["US-NM"]
 NMJ = {"jurisdiction": "US-NM"}
 R = lambda loc, page: src("RULE", loc, page)
@@ -291,7 +291,7 @@ CONCEPTS = [
      [("continuing or transitioning IEP", V, NM)], G(45),
      {**NMJ, "note": "The IEP a student keeps after the conditional certificate of transition, until a diploma or age 22."}),
     ("nm_comm_considerations", "Addendum for Students who are Deaf or Hard of Hearing", "iep_component",
-     [("Communication Considerations Form", S, NM), ("Communication Considerations", AB, NM)], G(93),
+     [("Communication Considerations Form", REL, NM), ("Communication Considerations", AB, NM)], G(93),
      {**NMJ, "broader": "comm_mode",
       "note": "A required IEP addendum on language and communication needs for any student who is deaf or hard of hearing."}),
     ("nm_esy_addendum", "Addendum for Determining Eligibility for Extended School Year Services", "iep_component",

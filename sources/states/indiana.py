@@ -44,7 +44,7 @@ def src(doc, loc=""):
             "citation": f"IDOE Notice of Procedural Safeguards (Aug. 2025), PDF p. {loc}", "doc_id": "in-nops-2025", "url": PSN_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 IN = ["US-IN"]
 INJ = {"jurisdiction": "US-IN"}
 R = lambda loc: src("RULE", loc)
@@ -98,7 +98,7 @@ STRINGS = [
     ("special_ed", [], R("7-32-86")), ("sdi", [], R("7-32-88")),
     ("sig_cog", [], R("7-32-93.5")), ("sop", [], R("7-32-94")),
     ("saas", [], R("7-32-95")),
-    ("part_c_transition", [("transition planning", S, IN)], R("7-32-99")),
+    ("part_c_transition", [("transition planning", REL, IN)], R("7-32-99")),
     ("transition", [], R("7-32-100")),
     ("universal_design", [], R("7-32-102")),
     ("voc_ed", [], R("7-32-104")), ("ward", [], R("7-32-105")), ("weapon", [], R("7-32-106")),

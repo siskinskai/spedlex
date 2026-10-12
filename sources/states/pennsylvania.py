@@ -38,7 +38,7 @@ def src(doc, loc=""):
     return {"source_type": stype, "citation": f"{title}, {loc}" if loc else title, "url": url}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 PA = ["US-PA"]
 PAJ = {"jurisdiction": "US-PA"}
 REG = {"status": "machine_validated"}
@@ -52,7 +52,7 @@ STRINGS = [
     ("eval_report", [("ER", A, PA)], src("PG", "pp. 4, 29")),
     ("dp_hearing", [], src("PG", "pp. 19-21")),
     ("dp_complaint", [], src("PG", "p. 20")),
-    ("resolution", [("resolution meeting facilitation", S, PA)], src("DR")),
+    ("resolution", [("resolution meeting facilitation", REL, PA)], src("DR")),
     ("iep_facil", [], src("DR")),
     ("adr", [], src("DR")),
     ("mediation", [], src("PG", "p. 19")),
@@ -108,14 +108,14 @@ CONCEPTS = [
      {**PAJ, "broader": "pti", "flags": ["common_english_word"], "note": "'PEN' is protected only as an all-caps match."}),
 
     # --- Evaluation forms ---
-    ("pte", "Permission to Evaluate", "evaluation_eligibility", [("Permission to Evaluate Consent Form", S, PA), ("Permission to Evaluate Evaluation Request Form", S, PA),
+    ("pte", "Permission to Evaluate", "evaluation_eligibility", [("Permission to Evaluate Consent Form", REL, PA), ("Permission to Evaluate Evaluation Request Form", REL, PA),
                                                                 ("Permission to Reevaluate", S, PA), ("PTE", A, PA)], src("PG", "pp. 3, 5"),
      {**PAJ, "broader": "consent", "note": "'PTE' is practitioner usage, not from the guide."}),
 
     # --- Support types and levels ---
     ("type_support", "Type of support", "placement_setting", [("types of support", P, PA)], src("R105", "(c)(2)"), {**PAJ, **REG, "broader": "continuum"}),
-    ("level_support", "Level of support", "placement_setting", [("levels of support", P, PA), ("itinerant support", S, PA), ("supplemental support", S, PA),
-                                                               ("full-time support", S, PA)], src("R105", "(c)(1)"),
+    ("level_support", "Level of support", "placement_setting", [("levels of support", P, PA), ("itinerant support", REL, PA), ("supplemental support", REL, PA),
+                                                               ("full-time support", REL, PA)], src("R105", "(c)(1)"),
      {**PAJ, **REG, "broader": "continuum",
       "note": "Itinerant is 20% of the day or less, supplemental more than 20% but less than 80%, full-time 80% or more. Compare Virginia's Level I and Level II."}),
     ("mech_restraint", "Mechanical restraints", "discipline", [("mechanical restraint", P, None)], src("PG", "p. 15"), {}),
@@ -132,7 +132,7 @@ CONCEPTS = [
 
 # Generate one concept per type of support, with its level combinations.
 for key, pref, extra in TYPES:
-    strings = list(extra) + [(f"{lvl} {pref.lower()}", S, PA) for lvl in LEVELS]
+    strings = list(extra) + [(f"{lvl} {pref.lower()}", REL, PA) for lvl in LEVELS]
     CONCEPTS.append((key, pref, "placement_setting", strings, src("R105", "(c)(2)"), {**PAJ, **REG, "broader": "type_support"}))
 
 JURISDICTION = "US-PA"

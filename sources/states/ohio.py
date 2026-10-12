@@ -40,7 +40,7 @@ def src(doc, loc=""):
             "citation": f"DEW A Guide to Parent Rights in Special Education (Apr. 2025), PDF p. {loc}", "doc_id": "oh-psn-2025", "url": PR_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 OH = ["US-OH"]
 OHJ = {"jurisdiction": "US-OH"}
 R = lambda loc: src("RULE", loc)
@@ -101,7 +101,7 @@ CONCEPTS = [
      {**OHJ, "broader": "ohi"}),
     # personnel
     ("oh_intervention_specialist", "Intervention specialist", "personnel_role",
-     [("early childhood intervention specialist", S, OH)], R("3301-51-11"),
+     [("early childhood intervention specialist", REL, OH)], R("3301-51-11"),
      {**OHJ, "broader": "sped_teacher", "note": "Ohio's title for a licensed special education teacher."}),
     ("oh_ttw", "Transition to Work endorsement", "transition", [], R("3301-51-09(H)(7)"), OHJ),
     # dispute resolution

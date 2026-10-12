@@ -28,7 +28,7 @@ def src(doc, loc=""):
     return {"source_type": "state_guidance", "citation": "TDOE TCAP-Alt Fact Sheet", "url": TCAP_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 TN = ["US-TN"]
 TNJ = {"jurisdiction": "US-TN"}
 REG = {"status": "machine_validated"}
@@ -40,7 +40,7 @@ STRINGS = [
     ("dd", [], src("R03")), ("ed", [], src("R03")), ("hi", [], src("R03")), ("id", [], src("R03")),
     ("md", [], src("R03")), ("oi", [], src("R03")), ("ohi", [], src("R03")), ("sld", [], src("R03")),
     ("sli", [], src("R03")), ("tbi", [], src("R03")), ("vi", [], src("R03")),
-    ("gifted", [("intellectually gifted", S, TN)], src("R03")),
+    ("gifted", [("intellectually gifted", REL, TN)], src("R03")),
     ("consent", [], src("OV", "p. 1")),
     ("lre", [("peers without disabilities", S, None)], src("OV", "p. 1")),
     ("mediation", [], src("OV", "p. 2")),

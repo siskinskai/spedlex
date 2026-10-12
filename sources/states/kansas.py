@@ -24,7 +24,7 @@ def src(doc, loc=""):
     return {"source_type": stype, "citation": f"{title}, {loc}" if loc else title, "url": url}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 KS = ["US-KS"]
 KSJ = {"jurisdiction": "US-KS"}
 
@@ -55,7 +55,7 @@ STRINGS = [
     ("fba", [], src("PSN", "pp. 26-27")),
     ("iaes", [], src("PSN", "pp. 26-29")),
     ("gen_ed_int", [("General Education Intervention", S, KS), ("GEI", A, KS)], src("PH", "ch. 2")),
-    ("surrogate", [("education advocate", S, KS)], src("PH")),
+    ("surrogate", [("education advocate", REL, KS)], src("PH")),
     ("exit_sped", [("discontinuing special education services", S, KS)], src("PH", "ch. 8")),
     ("ifsp", [], src("PH")),
     ("lre", [], src("PH", "ch. 6")),

@@ -87,7 +87,8 @@
               "abbreviation",
               "spelling_variant",
               "plural",
-              "legacy"
+              "legacy",
+              "related"
             ]
           },
           "match": {

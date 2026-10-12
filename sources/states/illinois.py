@@ -24,7 +24,7 @@ def src(doc, loc=""):
     return {"source_type": "state_guidance", "citation": f"ISBE Parent Guide, Educational Rights and Responsibilities (May 2025), {loc}", "url": PG_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 IL = ["US-IL"]
 ILJ = {"jurisdiction": "US-IL"}
 REG = {"status": "machine_validated"}
@@ -94,14 +94,14 @@ CONCEPTS = [
      {**ILJ, **REG, "note": "Illinois's list of special education documents that must be translated."}),
     ("student_record", "Student record", "legal_procedural", [("school student records", S, IL)], src("R75", "'Student record'"), {**ILJ, **REG}),
     ("dlm_aa", "Dynamic Learning Maps Alternate Assessment", "iep_component", [("DLM-AA", A, IL), ("Illinois Alternate Assessment", S, IL),
-                                                                              ("DLM-AA Participation Guidelines", S, IL)], src("PG", "p. 42"),
+                                                                              ("DLM-AA Participation Guidelines", REL, IL)], src("PG", "p. 42"),
      {**ILJ, "broader": "dlm"}),
     ("access_ell", "ACCESS for ELLs", "iep_component", [("ACCESS", A, None), ("Alternate ACCESS", S, None)], src("PG", "p. 46"),
      {"flags": ["common_english_word"], "note": "English language proficiency test used in many states; 'ACCESS' is protected only as an all-caps match."}),
-    ("delegation", "Delegation of Rights", "transition", [("Delegation of Rights form", S, IL)], src("PG", "p. 43"),
+    ("delegation", "Delegation of Rights", "transition", [("Delegation of Rights form", REL, IL)], src("PG", "p. 43"),
      {"broader": "age_majority", "note": "Lets a student who has reached 18 delegate educational decisions to a parent or other adult (in Illinois on ISBE form 34-57k). General concept: Arizona uses the term too."}),
     ("restraint", "Physical restraint", "discipline", [("physical restraints", P, None)], src("PG", "p. 69"), {}),
-    ("time_out", "Time out", "discipline", [("isolated time out", S, IL), ("time-out", V, None)], src("PG", "p. 69"), {}),
+    ("time_out", "Time out", "discipline", [("isolated time out", REL, IL), ("time-out", V, None)], src("PG", "p. 69"), {}),
     ("inclusive", "Inclusive education", "placement_setting", [("inclusion", AB, None)], src("PG", "p. 57"), {"broader": "lre"}),
     ("gen_ed_env", "General education environment", "placement_setting", [], src("PG", "p. 58"), {"broader": "lre"}),
     ("nonpublic_fac", "Nonpublic facility", "placement_setting", [("nonpublic facilities", P, IL)], src("PG", "p. 105"), ILJ),

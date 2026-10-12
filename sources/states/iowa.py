@@ -48,7 +48,7 @@ def src(doc, loc=""):
             "doc_id": "ia-psn-2023", "url": PSN_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 IA = ["US-IA"]
 IAJ = {"jurisdiction": "US-IA"}
 R = lambda loc: src("RULE", loc)
@@ -182,7 +182,7 @@ STRINGS = [
     ("pbis", [], G(6)),
     ("postsecondary", [("postsecondary expectations", S, IA), ("PSE", A, IA)], G(6)),
     ("sop", [("Postsecondary Summary", S, IA), ("PSS", A, IA),
-             ("Student Accommodation Request", L, IA), ("SAR", A, IA)], G(6)),
+             ("Student Accommodation Request", REL, IA), ("SAR", A, IA)], G(6)),
     ("plaafp", [], G(6)), ("pwn", [], G(6)), ("safeguards_notice", [], G(7)), ("reeval", [], G(7)),
     ("transition", [], G(7)),
     ("special_ed", [("Sp.Ed.", AB, None)], G(7)),

@@ -48,7 +48,7 @@ def src(doc, loc=""):
             "doc_id": "al-psn-2025", "url": PSN_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 AL = ["US-AL"]
 ALJ = {"jurisdiction": "US-AL"}
 R = lambda loc: src("RULE", loc)
@@ -95,7 +95,7 @@ STRINGS = [
     ("voice", [], R(".03(11)")), ("fluency_dis", [], R(".03(11)")), ("lang_dis", [], R(".03(11)")),
     ("tbi", [], R(".03(12)")), ("vi", [], R(".03(13)")), ("lma", [], R(".03(13)")), ("fva", [], R(".03(13)")),
     # .04 eligibility and consent
-    ("eligibility", [("Eligibility Committee", S, AL)], R(".04(1)")),
+    ("eligibility", [("Eligibility Committee", REL, AL)], R(".04(1)")),
     ("eval_report", [("eligibility report", S, AL)], R(".04(2)")),
     ("revoke", [], R(".04(4)")),
     # .05 IEP
@@ -136,7 +136,7 @@ STRINGS = [
     ("cert_completion", [("graduation certificate", S, AL)], R(".10(9)")),
     ("disprop", [], R(".10(13)")),
     # .12 gifted
-    ("gifted", [("intellectually gifted", S, AL)], R(".12(1)")),
+    ("gifted", [("intellectually gifted", REL, AL)], R(".12(1)")),
     # Procedural Safeguards Notice
     ("safeguards_notice", [("Alabama's Procedural Safeguards", S, AL)], PS(1)),
     ("pwn", [], PS(4)), ("consent", [], PS(5)), ("revoke", [], PS(5)), ("ward", [], PS(6)),
@@ -164,7 +164,7 @@ STRINGS = [
     ("sop", [("SAAFP", A, AL)], G(106)), ("fba", [], G(112)), ("mdr", [], G(116)),
     ("revoke", [("Notice of Revocation of Consent for Continued Provision of Special Education and Related Services", S, AL)], G(122)),
     ("amendment", [], G(126)), ("annual_review", [], G(75)),
-    ("pe", [], G(78)), ("part_c_transition", [("Transition Planning Meeting", S, AL)], G(188)),
+    ("pe", [], G(78)), ("part_c_transition", [("Transition Planning Meeting", REL, AL)], G(188)),
 ]
 
 CONCEPTS = [

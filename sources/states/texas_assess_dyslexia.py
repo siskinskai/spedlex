@@ -26,17 +26,17 @@ def src(doc, loc):
     return {"source_type": "state_guidance", "citation": f"{title}, {loc}", "url": url}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 TX = ["US-TX"]
 TXJ = {"jurisdiction": "US-TX"}
 
 STRINGS = [
     ("alt_assess", [], src("ALT2", "p. 5")),
-    ("test_accom", [("testing accommodations", S, None), ("STAAR accommodations", S, TX)], src("ACC", "p. 6")),
+    ("test_accom", [("testing accommodations", S, None), ("STAAR accommodations", REL, TX)], src("ACC", "p. 6")),
     ("teks", [], src("ALT2", "p. 19")),
     ("lpac", [], src("ACC", "p. 34")),
     ("sst", [("student assistance team", S, None)], src("ACC", "p. 34")),
-    ("s504", [("Section 504 committee", S, None), ("individual accommodation plan", S, TX), ("IAP", A, TX)], src("ACC", "p. 34")),
+    ("s504", [("Section 504 committee", S, None), ("individual accommodation plan", REL, TX), ("IAP", A, TX)], src("ACC", "p. 34")),
     ("lep", [("EB", A, TX)], src("ACC", "p. 34")),
     ("plaafp", [], src("ALT2", "p. 6")),
     ("adaptive", [("adaptive behavior deficits", S, None)], src("ALT2", "p. 6")),
@@ -84,8 +84,8 @@ CONCEPTS = [
 
     # --- Accessibility tiers and supports (STAAR Accommodations Educator Guide) ---
     ("acc_feat", "Accessibility features", "accommodation_modification", [("accessibility feature", P, None)], src("ACC", "p. 8"), {"broader": "test_accom"}),
-    ("des_sup", "Designated supports", "accommodation_modification", [("designated support", P, None), ("locally-approved designated supports", S, TX),
-                                                                    ("designated supports requiring TEA approval", S, TX)], src("ACC", "pp. 7, 16"),
+    ("des_sup", "Designated supports", "accommodation_modification", [("designated support", P, None), ("locally-approved designated supports", REL, TX),
+                                                                    ("designated supports requiring TEA approval", REL, TX)], src("ACC", "pp. 7, 16"),
      {"broader": "test_accom", "note": "TEA's tier names for testing supports; the guide still uses 'accommodations' for the decisions."}),
     ("acc_req", "Accommodation Request Form", "accommodation_modification", [], src("ACC", "p. 7"), {**TXJ, "broader": "des_sup"}),
     ("tts", "Text-to-speech", "accommodation_modification", [("TTS", A, None), ("auto text-to-speech", S, None)], src("ACC", "pp. 17-19"), {"broader": "des_sup"}),
@@ -113,8 +113,8 @@ CONCEPTS = [
 
     # --- Dyslexia and dysgraphia (Dyslexia Handbook, 2024 update) ---
     ("dysgraphia", "Dysgraphia", "health_condition", [("developmental dysgraphia", S, None)], src("DH", "p. 7; ch. 5"), {"broader": "related_dis"}),
-    ("dys_screen", "Dyslexia screening", "evaluation_eligibility", [("kindergarten and first grade screening", S, TX)], src("DH", "p. 14"), {"broader": "screening"}),
-    ("reading_instr", "Reading instrument", "evaluation_eligibility", [("Commissioner's List of Reading Instruments", S, TX)], src("DH", "p. 13"), TXJ),
+    ("dys_screen", "Dyslexia screening", "evaluation_eligibility", [("kindergarten and first grade screening", REL, TX)], src("DH", "p. 14"), {"broader": "screening"}),
+    ("reading_instr", "Reading instrument", "evaluation_eligibility", [("Commissioner's List of Reading Instruments", REL, TX)], src("DH", "p. 13"), TXJ),
     ("at_risk_dys", "At risk for dyslexia", "evaluation_eligibility", [], src("DH", "p. 18"), {}),
     ("mdt", "Multidisciplinary team", "personnel_role", [("MDT", A, None)], src("DH", "p. 28"), {}),
     ("ldt", "Licensed dyslexia therapist", "personnel_role", [("LDT", A, TX)], src("DH", "p. 28"), TXJ),

@@ -37,17 +37,17 @@ def src(doc, loc):
     return {"source_type": stype, "citation": cit, "url": url}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 TX = ["US-TX"]
 
 # (existing concept key, [(text, string_type, regional or None)], source)
 # regional None = national usage; the source is still recorded on the concept.
 TX_STRINGS = [
-    ("iep_team", [("Admission, Review, and Dismissal committee", S, TX), ("ARD committee meeting", S, TX), ("ARD", A, TX)], src("ARD", "p. 7")),
+    ("iep_team", [("Admission, Review, and Dismissal committee", S, TX), ("ARD committee meeting", REL, TX), ("ARD", A, TX)], src("ARD", "p. 7")),
     ("iep", [("individualized educational program", V, None)], src("NPS", "p. 1")),
     ("hi", [("deaf or hard of hearing", S, None), ("auditory impairment", L, TX)], src("TAC", "(c)(3)")),
     ("ed", [("emotional disability", S, TX)], src("TAC", "(c)(4)")),
-    ("sli", [("speech impairment", S, TX)], src("TAC", "(c)(10)")),
+    ("sli", [("speech impairment", REL, TX)], src("TAC", "(c)(10)")),
     ("vi", [], src("TAC", "(c)(12)")),
     ("dd", [], src("TAC", "(c)(13)")),
     ("autism", [], src("TAC", "(c)(1)")),
@@ -98,7 +98,7 @@ TX_CONCEPTS = [
      {"note": "Federal concept (34 CFR 300.167); Texas's panel is the Continuing Advisory Committee."}),
     ("iep_facil", "IEP facilitation", "legal_procedural", [("state IEP facilitation", S, TX), ("facilitated IEP", S, None), ("FIEP", A, None)], src("NPS", "p. 12"),
      {"note": "Texas runs a state facilitation program under 19 TAC §89.1197."}),
-    ("ard_recess", "ARD recess and reconvene", "legal_procedural", [("recess and reconvene", S, TX), ("mutual agreement", S, TX), ("ten-day recess", S, TX)], src("ARD", "p. 15"),
+    ("ard_recess", "ARD recess and reconvene", "legal_procedural", [("recess and reconvene", S, TX), ("mutual agreement", REL, TX), ("ten-day recess", S, TX)], src("ARD", "p. 15"),
      {"jurisdiction": "US-TX", "note": "When the ARD committee does not reach mutual agreement it may recess and reconvene. 'Ten-day recess' is practitioner usage, not from the guide."}),
     ("disagree_stmt", "Written statement of disagreement", "legal_procedural", [], src("ARD", "p. 15"), {"jurisdiction": "US-TX"}),
     ("lpac", "Language Proficiency Assessment Committee", "personnel_role", [("LPAC", A, TX)], src("ARD", "p. 7"), {}),
@@ -124,7 +124,7 @@ TX_CONCEPTS = [
     ("dys_handbook", "Dyslexia Handbook", "legal_procedural", [("Texas Dyslexia Handbook", S, TX)], src("ARD", "p. 6"), {"jurisdiction": "US-TX"}),
 
     # --- Autism strategies (19 TAC §89.1055) ---
-    ("autism_strat", "Strategies for students with autism", "iep_component", [("autism supplement", S, TX)], src("ARD", "p. 13"),
+    ("autism_strat", "Strategies for students with autism", "iep_component", [("autism supplement", REL, TX)], src("ARD", "p. 13"),
      {"jurisdiction": "US-TX", "broader": "autism", "note": "Texas requires the ARD committee to consider a set of strategies for students with autism. 'Autism supplement' is practitioner usage."}),
     ("ext_ed_prog", "Extended educational programming", "iep_component", [], src("ARD", "p. 13"), {"jurisdiction": "US-TX", "broader": "autism_strat"}),
     ("in_home_cbt", "In-home and community-based training", "iep_component", [("community-based training", AB, None)], src("ARD", "p. 13"), {"jurisdiction": "US-TX", "broader": "autism_strat"}),
