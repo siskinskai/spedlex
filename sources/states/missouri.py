@@ -35,7 +35,7 @@ def src(doc, loc=""):
     return {"source_type": stype, "citation": f"{title}, {loc}" if loc else title, "url": url}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 MO = ["US-MO"]
 MOJ = {"jurisdiction": "US-MO"}
 
@@ -85,7 +85,7 @@ CONCEPTS = [
      {**MOJ, "flags": ["place_name"], "note": "A county-wide district that serves special education students for 22 St. Louis County districts. Contains a place name and a first name, so only the full phrase is protected."}),
     ("prof_judgment", "Professional judgment", "evaluation_eligibility", [], src("SSD"),
      {"note": "Missouri allows eligibility by documented professional judgment when scores do not meet the criteria; compare Minnesota's team override."}),
-    ("mo_map", "Missouri Assessment Program", "iep_component", [("MAP", A, MO), ("MAP Grade-Level", S, MO)], src("MAPA"),
+    ("mo_map", "Missouri Assessment Program", "iep_component", [("MAP", A, MO), ("MAP Grade-Level", REL, MO)], src("MAPA"),
      {**MOJ, "flags": ["common_english_word"], "note": "'MAP' is protected only as an all-caps match."}),
     ("mapa", "Missouri Assessment Program-Alternate", "iep_component", [("MAP-A", A, MO)], src("MAPA"), {**MOJ, "broader": "dlm"}),
     ("ess_elements", "Essential Elements", "academic_skill", [], src("MAPA"),

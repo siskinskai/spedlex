@@ -42,7 +42,7 @@ def src(doc, loc=""):
     return {"source_type": stype, "citation": f"{title}, {loc}" if loc else title, "url": url}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 NY = ["US-NY"]
 NYJ = {"jurisdiction": "US-NY"}
 REG = {"status": "machine_validated"}
@@ -110,7 +110,7 @@ STRINGS = [
     ("iaes", [], src("PSN", "pp. 30-34")),
     ("exp_hearing", [], src("PSN", "p. 35")),
     ("basis_know", [], src("PSN", "pp. 35-36")),
-    ("sro", [("Office of State Review", S, NY), ("SRO", A, NY)], src("PSN", "pp. 25-26")),
+    ("sro", [("Office of State Review", REL, NY), ("SRO", A, NY)], src("PSN", "pp. 25-26")),
     # Testing accommodations guide
     ("alt_assess", [], src("TAG")),
     ("test_accom", [("testing accommodations", S, None)], src("TAG")),
@@ -157,10 +157,10 @@ CONCEPTS = [
     # --- Preschool ---
     ("preschool_swd", "Preschool student with a disability", "early_intervention", [("preschool students with disabilities", P, NY)], src("R1", "(mm)"), {**REG, "broader": "cwd"}),
     ("seit", "Special education itinerant teacher services", "early_intervention", [("SEIT", A, NY), ("special education itinerant services", S, NY),
-                                                                                     ("special education itinerant teacher", S, NY)], src("SEIT"), NYJ),
+                                                                                     ("special education itinerant teacher", REL, NY)], src("SEIT"), NYJ),
     ("approved_presch", "Approved preschool program", "early_intervention", [("Section 4410", AB, NY), ("4410 program", S, NY)], src("SEIT"),
      {**NYJ, "note": "'4410 program' is practitioner shorthand for programs approved under Education Law §4410."}),
-    ("fullday_presch", "Full-day preschool program", "early_intervention", [("half-day preschool program", S, NY)], src("R1", "(p), (u)"), {**NYJ, **REG}),
+    ("fullday_presch", "Full-day preschool program", "early_intervention", [("half-day preschool program", REL, NY)], src("R1", "(p), (u)"), {**NYJ, **REG}),
 
     # --- Evaluation and discipline ---
     ("ind_psych", "Individual psychological evaluation", "evaluation_eligibility", [("psychological evaluation", AB, None)], src("R1", "(bb)"), REG),
@@ -171,7 +171,7 @@ CONCEPTS = [
     # --- Assessment, diplomas, credentials ---
     ("nysaa", "New York State Alternate Assessment", "iep_component", [("NYSAA", A, NY)], src("GRAD"), {**NYJ, "broader": "alt_assess"}),
     ("regents_exam", "Regents examinations", "iep_component", [("Regents exams", S, NY), ("Regents exam", P, NY)], src("GRAD"), NYJ),
-    ("regents_dip", "Regents diploma", "transition", [("Regents diploma with advanced designation", S, NY)], src("GRAD"), NYJ),
+    ("regents_dip", "Regents diploma", "transition", [("Regents diploma with advanced designation", REL, NY)], src("GRAD"), NYJ),
     ("local_dip", "Local diploma", "transition", [], src("GRAD"), NYJ),
     ("safety_net", "Safety net", "transition", [("Low Pass Safety Net", S, NY), ("Compensatory Safety Net", S, NY), ("Low Pass Safety Net with Appeal", S, NY)], src("GRAD"),
      {**NYJ, "note": "Lower passing options on Regents exams for students with disabilities."}),

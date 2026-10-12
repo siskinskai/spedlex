@@ -30,7 +30,7 @@ def src(doc, loc=""):
     return {"source_type": "secondary_guidance", "citation": "Minnesota district Policy 615, Testing Accommodations (rev. 2026)", "url": POL_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 MN = ["US-MN"]
 MNJ = {"jurisdiction": "US-MN"}
 REG = {"status": "machine_validated"}
@@ -42,15 +42,15 @@ STRINGS = [
     ("hi", [("deaf and hard of hearing", S, MN)], src("ELIG", "3525.1331")),
     ("id", [("developmental cognitive disability", S, MN), ("DCD", A, MN)], src("ELIG", "3525.1333")),
     ("ohi", [("other health disabilities", S, MN), ("other health disability", P, MN)], src("ELIG", "3525.1335")),
-    ("oi", [("physically impaired", S, MN)], src("ELIG", "3525.1337")),
+    ("oi", [("physically impaired", REL, MN)], src("ELIG", "3525.1337")),
     ("md", [("severely multiply impaired", S, MN)], src("ELIG", "3525.1339")),
     ("sld", [], src("ELIG", "3525.1341")),
     ("sli", [("speech or language impairments", P, None)], src("ELIG", "3525.1343")),
     ("vi", [("visually impaired", S, MN)], src("ELIG", "3525.1345")),
     ("tbi", [], src("ELIG", "3525.1348")),
-    ("itd", [("infant and toddler intervention services", S, MN)], src("ELIG", "3525.1350")),
+    ("itd", [("infant and toddler intervention services", REL, MN)], src("ELIG", "3525.1350")),
     ("ecse", [], src("ELIG", "3525.1351")),
-    ("pe", [("developmental adapted physical education", S, MN), ("DAPE", A, MN)], src("ELIG", "3525.1352")),
+    ("pe", [("developmental adapted physical education", REL, MN), ("DAPE", A, MN)], src("ELIG", "3525.1352")),
     ("adr", [], src("DEF", "3525.0210, subp. 4")),
     ("iep_facil", [("facilitated IEP meeting", S, None), ("facilitated team meeting", S, MN)], src("DEF", "3525.0210, subp. 20")),
     ("dp_hearing", [], src("DEF", "3525.0210, subps. 16, 25")),
@@ -78,7 +78,7 @@ STRINGS = [
 CONCEPTS = [
     ("mde_mn", "Minnesota Department of Education", "legal_procedural", [], src("DEF", "3525.0210, subp. 12"),
      {**MNJ, **REG, "broader": "sea", "note": "The rules call it 'the department'. Its acronym MDE is shared with other states, so it is not safelisted alone."}),
-    ("conciliation", "Conciliation conference", "legal_procedural", [("conciliation conference memorandum", S, MN)], src("STAT", "subd. 7"),
+    ("conciliation", "Conciliation conference", "legal_procedural", [("conciliation conference memorandum", REL, MN)], src("STAT", "subd. 7"),
      {**MNJ, **REG, "broader": "adr", "note": "Minnesota's meeting with IEP team members to resolve a dispute before mediation or a hearing."}),
     ("iiip", "Individualized Interagency Intervention Plan", "iep_component", [("IIIP", A, MN)], src("DEF", "3525.0210"),
      {**MNJ, **REG, "note": "Minnesota's plan for a child who receives services from several agencies."}),

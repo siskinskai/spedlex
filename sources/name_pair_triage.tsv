@@ -1,0 +1,595 @@
+# Maintainer triage of the Part B name pairs (2026-10-12), used by tools/expert_review.py.
+# Drafted by Claude Haiku 5.5 (claude-haiku-5-5), audited by Claude Sonnet 5.5 (claude-sonnet-5-5).
+# decision: judge = experts decide same/different; keep = same concept, skim;
+#           retype = related but not the same (now type 'related' in the layer); fix = wrong or garbled, held back from email.
+jurisdiction	concept_id	preferred_term	string	string_type	decision	row	reason
+US-AK	SPED:000033	Due process complaint	complaint for a due process hearing	synonym	keep	1	my reading: same concept (name variant, title, or legacy form)
+US-AK	SPED:000036	State complaint	administrative complaint	synonym	judge	2	administrative complaint may mean a state complaint or a different administrative process
+US-AK	SPED:000052	Deaf-blindness	deaf and blind	synonym	keep	3	my reading: same concept (name variant, title, or legacy form)
+US-AK	SPED:000056	Intellectual disability	cognitive impairment	synonym	judge	4	cognitive impairment is broader than intellectual disability in most state definitions
+US-AK	SPED:000056	Intellectual disability	cognitively impaired	synonym	judge	5	same as row 4
+US-AK	SPED:000061	Speech or language impairment	speech impairment	synonym	retype	6	speech impairment drops language; narrower than speech or language impairment
+US-AK	SPED:000064	Developmental delay	early childhood developmental delay	synonym	judge	7	early childhood developmental delay is an age-limited subset of developmental delay
+US-AK	SPED:000164	State advisory panel	state special education advisory panel	synonym	keep	8	my reading: same concept (name variant, title, or legacy form)
+US-AK	SPED:000193	Teacher of students with visual impairments	teacher of children with visual impairment	synonym	keep	9	my reading: same concept (name variant, title, or legacy form)
+US-AK	SPED:000481	General education intervention procedures	alternative intervention strategies	synonym	retype	10	strategies are the interventions; procedures are the process around them
+US-AK	SPED:000949	Alaska Department of Education and Early Development	Department of Education and Early Development	synonym	keep	11	my reading: same concept (name variant, title, or legacy form)
+US-AK	SPED:000953	Alaska Infant Learning Program	infant learning program	synonym	keep	12	my reading: same concept (name variant, title, or legacy form)
+US-AL	SPED:000029	Prior written notice	Notice of Proposal or Refusal to Take Action	synonym	keep	13	my reading: same concept (name variant, title, or legacy form)
+US-AL	SPED:000030	Procedural safeguards notice	Special Education Rights	synonym	keep	14	my reading: same concept (name variant, title, or legacy form)
+US-AL	SPED:000030	Procedural safeguards notice	Alabama's Procedural Safeguards	synonym	keep	15	my reading: same concept (name variant, title, or legacy form)
+US-AL	SPED:000036	State complaint	special education complaint	synonym	keep	16	my reading: same concept (name variant, title, or legacy form)
+US-AL	SPED:000054	Emotional disturbance	emotional disability	synonym	keep	17	my reading: same concept (name variant, title, or legacy form)
+US-AL	SPED:000092	Transportation	special transportation	synonym	keep	18	my reading: same concept (name variant, title, or legacy form)
+US-AL	SPED:000105	Periodic reports on progress	Annual Goal Progress Report	synonym	keep	19	my reading: same concept (name variant, title, or legacy form)
+US-AL	SPED:000127	Eligibility determination	Eligibility Committee	synonym	retype	20	an eligibility committee is the group; eligibility determination is the decision
+US-AL	SPED:000156	Transition from Part C to preschool programs	Transition Planning Meeting	synonym	retype	21	a transition planning meeting is an event, not the transition process
+US-AL	SPED:000164	State advisory panel	Special Education Advisory Panel	synonym	keep	22	my reading: same concept (name variant, title, or legacy form)
+US-AL	SPED:000169	Campus-based student support team	Problem Solving Team	synonym	judge	23	problem solving team may be a different team from campus-based student support team
+US-AL	SPED:000173	Evaluation report	eligibility report	synonym	judge	24	eligibility report may be narrower than evaluation report
+US-AL	SPED:000175	Revocation of consent	Notice of Revocation of Consent for Continued Provision of Special Education and Related Services	synonym	keep	25	a notice of revocation is a document; revocation of consent is the act but can also be shorthand for the notice itself
+US-AL	SPED:000222	Gifted and talented	intellectually gifted	synonym	retype	26	intellectually gifted is one category within gifted and talented
+US-AL	SPED:000377	Certificate of Program Completion	graduation certificate	synonym	judge	27	graduation certificate may not be the same credential as a certificate of program completion
+US-AL	SPED:000406	Articulation disorder	articulation/phonological disorder	synonym	judge	28	articulation/phonological may be broader than articulation disorder
+US-AR	SPED:000029	Prior written notice	Notice of Action	synonym	judge	29	notice of action may or may not be the state's prior written notice
+US-AR	SPED:000030	Procedural safeguards notice	Your Rights Under IDEA	synonym	keep	30	my reading: same concept (name variant, title, or legacy form)
+US-AR	SPED:000094	Special class	special class services	synonym	retype	31	special class services is a service; special class is a placement
+US-AR	SPED:000095	Special school	special day school, private	synonym	retype	32	private special day school is one type of special school
+US-AR	SPED:000095	Special school	special day school, public	synonym	retype	33	public special day school is one type of special school
+US-AR	SPED:000095	Special school	Special Day School	synonym	keep	34	my reading: same concept (name variant, title, or legacy form)
+US-AR	SPED:000097	Instruction in hospitals and institutions	Hospital Program	synonym	retype	35	hospital program names a program; the concept is a type of instruction
+US-AR	SPED:000098	Resource room	resource services	synonym	judge	36	resource services may or may not be the same as resource room
+US-AR	SPED:000100	Residential placement	Residential School	synonym	retype	37	residential school is one kind of residential placement
+US-AR	SPED:000172	Review of existing evaluation data	existing data review	synonym	keep	38	my reading: same concept (name variant, title, or legacy form)
+US-AR	SPED:000350	Co-teaching	co-taught services	synonym	keep	39	my reading: same concept (name variant, title, or legacy form)
+US-AR	SPED:000360	Special education administrator	Special Education Supervisor	synonym	judge	40	supervisor may be a different role level from administrator
+US-AR	SPED:000360	Special education administrator	Special Education Director	synonym	judge	41	may be different role. Ask
+US-AR	SPED:000428	Consultant teacher services	consulting teacher	synonym	retype	42	consulting teacher is a person; consultant teacher services is the service
+US-AR	SPED:001025	Special Education Unit of the Division of Elementary and Secondary Education	Special Education Unit	synonym	keep	43	my reading: same concept (name variant, title, or legacy form)
+US-AR	SPED:001048	Early Childhood Outcomes	Early Childhood Outcomes Process	synonym	keep	44	my reading: same concept (name variant, title, or legacy form)
+US-AZ	SPED:000005	Parental consent	informed written consent	synonym	keep	45	my reading: same concept (name variant, title, or legacy form)
+US-AZ	SPED:000010	Local educational agency	public education agency	synonym	retype	46	public education agency is broader (includes state agencies)
+US-AZ	SPED:000054	Emotional disturbance	emotional disability	synonym	keep	47	my reading: same concept (name variant, title, or legacy form)
+US-AZ	SPED:000056	Intellectual disability	mild intellectual disability	synonym	retype	48	mild intellectual disability is a level within intellectual disability
+US-AZ	SPED:000056	Intellectual disability	moderate intellectual disability	synonym	retype	49	moderate intellectual disability is a level within intellectual disability
+US-AZ	SPED:000056	Intellectual disability	severe intellectual disability	synonym	retype	50	severe intellectual disability is a level within intellectual disability
+US-AZ	SPED:000295	Multidisciplinary team	multidisciplinary evaluation team	synonym	keep	51	my reading: same concept (name variant, title, or legacy form)
+US-AZ	SPED:000388	Office of Administrative Hearings	Arizona Office of Administrative Hearings	synonym	keep	52	my reading: same concept (name variant, title, or legacy form)
+US-AZ	SPED:000919	Encircle Families	Raising Special Kids	legacy	keep	53	my reading: same concept (name variant, title, or legacy form)
+US-AZ	SPED:001079	Institutional voucher	special education institutional voucher	synonym	keep	54	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000004	Child with a disability	individuals with exceptional needs	synonym	judge	55	a child with a disability is a type of individual with exceptional needs
+US-CA	SPED:000004	Child with a disability	students with exceptional needs	synonym	judge	56	a child with a disability is a type of individual with exceptional needs and may or may not be a student
+US-CA	SPED:000006	Evaluation	initial assessment	synonym	judge	57	initial assessment is not necessarily the initial evaluation
+US-CA	SPED:000013	Native language	primary language	synonym	judge	58	primary language is not always native language
+US-CA	SPED:000019	Ward of the State	adjudicated dependent or ward of the court	synonym	judge	59	juvenile-court ward status may differ from ward of the State
+US-CA	SPED:000026	Continuum of alternative placements	continuum of program options	synonym	keep	60	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000031	Independent educational evaluation	independent educational assessment	synonym	keep	61	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000032	Mediation	prehearing mediation conference	synonym	judge	62	prehearing mediation conference may be a different procedure from mediation
+US-CA	SPED:000036	State complaint	state compliance complaint	synonym	keep	63	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000049	Vocational education	specially designed vocational education and career development	synonym	judge	64	may name a program rather than the vocational education category
+US-CA	SPED:000061	Speech or language impairment	language or speech disorder	synonym	keep	65	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000075	Related services	designated instruction and services	synonym	keep	66	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000077	Counseling services	counseling and guidance services	synonym	keep	67	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000089	School health services and school nurse services	health and nursing services	synonym	keep	68	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000090	Social work services in schools	social worker services	synonym	keep	69	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000091	Speech-language pathology services	language and speech development and remediation	synonym	keep	70	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000094	Special class	special day class	synonym	keep	71	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000096	Home instruction	instruction in the home or hospital	synonym	judge	72	home and hospital instruction: states may treat homebound and home instruction as different placements
+US-CA	SPED:000096	Home instruction	home or hospital instruction	synonym	judge	73	same as row 72
+US-CA	SPED:000164	State advisory panel	Advisory Commission on Special Education	synonym	keep	74	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000367	Audio recording of meetings	electronically audiotape	synonym	keep	75	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000377	Certificate of Program Completion	certificate of completion	synonym	keep	76	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000392	Family Empowerment Center	Family Empowerment Centers on Disability	synonym	keep	77	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000396	State special schools	California School for the Deaf	synonym	retype	78	a named school is one instance of a state special school, not the category
+US-CA	SPED:000396	State special schools	California School for the Blind	synonym	retype	79	a named school is one instance of a state special school, not the category
+US-CA	SPED:000399	Resource specialist program	resource specialist	synonym	retype	80	resource specialist is a person; resource specialist program is the program
+US-CA	SPED:000400	Nonpublic, nonsectarian school	nonpublic school	synonym	retype	81	drops nonsectarian; narrower or different category
+US-CA	SPED:000401	Nonpublic, nonsectarian agency	nonpublic agency	synonym	retype	82	drops nonsectarian; narrower or different category
+US-CA	SPED:000415	Alternate ELPAC	Alternate English Language Proficiency Assessments for California	synonym	keep	83	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000420	Alternative pathway to a high school diploma	diploma pathway for students who qualify for the California Alternate Assessment	synonym	keep	84	my reading: same concept (name variant, title, or legacy form)
+US-CA	SPED:000420	Alternative pathway to a high school diploma	state standards aligned coursework	synonym	fix	85	describes the content of a pathway rather than naming it
+US-CO	SPED:000038	Surrogate parent	educational surrogate parent	synonym	keep	86	my reading: same concept (name variant, title, or legacy form)
+US-CO	SPED:000054	Emotional disturbance	Serious Emotional Disability	synonym	judge	87	serious emotional disability may be a state category, not federal emotional disturbance
+US-CO	SPED:000055	Hearing impairment	Hearing Impairment, Including Deafness	synonym	judge	88	including deafness changes scope relative to IDEA hearing impairment
+US-CO	SPED:000118	Language and communication mode	Communication Mode or Language	synonym	keep	89	my reading: same concept (name variant, title, or legacy form)
+US-CO	SPED:000164	State advisory panel	Colorado Special Education Advisory Committee	synonym	keep	90	my reading: same concept (name variant, title, or legacy form)
+US-CO	SPED:000165	IEP facilitation	special education facilitation	synonym	keep	91	my reading: same concept (name variant, title, or legacy form)
+US-CO	SPED:000222	Gifted and talented	gifted children	synonym	keep	92	my reading: same concept (name variant, title, or legacy form)
+US-CO	SPED:000360	Special education administrator	Special Education Director	synonym	keep	93	my reading: same concept (name variant, title, or legacy form)
+US-CO	SPED:000787	Referral	special education referral	synonym	keep	94	my reading: same concept (name variant, title, or legacy form)
+US-CO	SPED:001096	State Charter School Institute	Charter School Institute	synonym	keep	95	my reading: same concept (name variant, title, or legacy form)
+US-CO	SPED:001105	Protection of Persons from Restraint Act	Protection of Individuals from Restraint and Seclusion Act	synonym	keep	96	my reading: same concept (name variant, title, or legacy form)
+US-CO	SPED:001109	THRIVE Center	Denver Metro Community Parent Resource Center	legacy	judge	97	legacy label may name a different center
+US-CO	SPED:001125	Special Education Temporary Authorization	Temporary Educator Eligibility	legacy	judge	98	temporary educator eligibility may be a different credential
+US-CO	SPED:001125	Special Education Temporary Authorization	TEE	legacy	judge	99	same as row 98
+US-CT	SPED:000003	IEP Team	Planning and placement team	synonym	keep	100	my reading: same concept (name variant, title, or legacy form)
+US-CT	SPED:000063	Visual impairment including blindness	vision impairment	synonym	keep	101	my reading: same concept (name variant, title, or legacy form)
+US-CT	SPED:000065	Attention deficit hyperactivity disorder	OHI/ADD/ADHD	synonym	fix	102	compound string OHI/ADD/ADHD; split and check each part
+US-CT	SPED:000069	Dyslexia	Specific Learning Disability/Dyslexia	synonym	judge	103	SLD is broader than dyslexia; the slash form may be a name dyslexia is sometimes called. Ask whether they are the same.
+US-CT	SPED:000096	Home instruction	homebound and hospitalized instruction	synonym	judge	104	homebound/hospitalized instruction vs home instruction
+US-CT	SPED:000435	Approved private school	approved private special education program	synonym	judge	105	approved program vs approved school
+US-CT	SPED:000828	Birth to Three System	Connecticut Birth to Three System	synonym	keep	106	my reading: same concept (name variant, title, or legacy form)
+US-DC	SPED:000030	Procedural safeguards notice	IDEA Part B Notice of Procedural Safeguards	synonym	keep	107	my reading: same concept (name variant, title, or legacy form)
+US-DC	SPED:000030	Procedural safeguards notice	Rights of Parents of Students with Disabilities	synonym	keep	108	my reading: same concept (name variant, title, or legacy form)
+US-DC	SPED:000054	Emotional disturbance	emotional disability	synonym	keep	109	my reading: same concept (name variant, title, or legacy form)
+US-DC	SPED:000095	Special school	special education day program	synonym	retype	110	a special education day program is a program; special school is a school
+US-DC	SPED:000100	Residential placement	special education residential program	synonym	keep	111	my reading: same concept (name variant, title, or legacy form)
+US-DC	SPED:000164	State advisory panel	State Education Agency Advisory Panel	synonym	keep	112	my reading: same concept (name variant, title, or legacy form)
+US-DC	SPED:000172	Review of existing evaluation data	analysis of existing data	synonym	keep	113	my reading: same concept (name variant, title, or legacy form)
+US-DC	SPED:000173	Evaluation report	evaluation summary report	synonym	keep	114	my reading: same concept (name variant, title, or legacy form)
+US-DC	SPED:000357	Comparable services	comparable services plan	synonym	retype	115	comparable services plan is a plan; the concept is the services
+US-DC	SPED:000457	Small group administration	small group testing	synonym	keep	116	my reading: same concept (name variant, title, or legacy form)
+US-DC	SPED:000458	Individual administration	individual testing	synonym	keep	117	my reading: same concept (name variant, title, or legacy form)
+US-DC	SPED:000506	Dynamic Learning Maps	DLM Science Alternate Assessment	synonym	retype	118	DLM Science is one subject version of DLM
+US-DC	SPED:000709	LEA-of-right	geographical LEA-of-right	synonym	judge	119	geographical LEA-of-right may be a different category
+US-DE	SPED:000030	Procedural safeguards notice	Delaware Procedural Safeguards Parent and Child Rights in Special Education	synonym	keep	120	my reading: same concept (name variant, title, or legacy form)
+US-DE	SPED:000038	Surrogate parent	educational surrogate parent	synonym	keep	121	my reading: same concept (name variant, title, or legacy form)
+US-DE	SPED:000052	Deaf-blindness	dual sensory impairment	synonym	judge	122	dual sensory impairment may not match the federal deaf-blindness definition
+US-DE	SPED:000054	Emotional disturbance	emotional disability	synonym	keep	123	my reading: same concept (name variant, title, or legacy form)
+US-DE	SPED:000056	Intellectual disability	mental disability	legacy	keep	124	my reading: same concept (name variant, title, or legacy form)
+US-DE	SPED:000061	Speech or language impairment	Preschool Speech Delay	legacy	retype	125	preschool speech delay is a delay, not an impairment (legacy term)
+US-DE	SPED:000074	Adversely affects educational performance	Adverse Effect on Educational Performance	synonym	keep	126	my reading: same concept (name variant, title, or legacy form)
+US-DE	SPED:000096	Home instruction	Homebound or Hospital Placement	synonym	judge	127	homebound or hospital placement vs home instruction
+US-DE	SPED:000169	Campus-based student support team	Intervention Support Team	synonym	judge	128	intervention support team may not equal campus-based student support team
+US-DE	SPED:000173	Evaluation report	evaluation summary report	synonym	keep	129	my reading: same concept (name variant, title, or legacy form)
+US-DE	SPED:000350	Co-teaching	team classrooms	synonym	judge	130	team classrooms may not equal the co-teaching model
+US-DE	SPED:000360	Special education administrator	supervisor of special education	synonym	keep	131	my reading: same concept (name variant, title, or legacy form)
+US-DE	SPED:000360	Special education administrator	Special Education Coordinator	synonym	judge	132	coordinator may be a different role level from administrator
+US-DE	SPED:000502	Exiting special education	Exit Criteria	synonym	retype	133	exit criteria are rules; exiting is the event
+US-DE	SPED:000711	Primary disability	primary educational classification	synonym	judge	134	primary educational classification may differ from primary disability
+US-DE	SPED:000816	School psychologist	certified school psychologist	synonym	keep	135	my reading: same concept (name variant, title, or legacy form)
+US-DE	SPED:000056	Intellectual disability	mild intellectual disability	synonym	retype		mild intellectual disability is a level within intellectual disability (Delaware 6.12.1; untagged before, now related like AZ and NV)
+US-DE	SPED:000056	Intellectual disability	moderate intellectual disability	synonym	retype		moderate intellectual disability is a level within intellectual disability (Delaware 6.12.1; untagged before, now related like AZ and NV)
+US-DE	SPED:000056	Intellectual disability	severe intellectual disability	synonym	retype		severe intellectual disability is a level within intellectual disability (Delaware 6.12.1; untagged before, now related like AZ and NV)
+US-FL	SPED:000046	Special education	exceptional student education	synonym	keep	136	my reading: same concept (name variant, title, or legacy form)
+US-FL	SPED:000052	Deaf-blindness	dual sensory impairment	synonym	judge	137	same as row 122
+US-FL	SPED:000054	Emotional disturbance	emotional/behavioral disabilities	synonym	keep	138	my reading: same concept (name variant, title, or legacy form)
+US-FL	SPED:000061	Speech or language impairment	speech impairment	synonym	keep	139	my reading: same concept (name variant, title, or legacy form)
+US-FL	SPED:000063	Visual impairment including blindness	visually impaired	synonym	keep	140	my reading: same concept (name variant, title, or legacy form)
+US-FL	SPED:000096	Home instruction	homebound or hospitalized	synonym	judge	141	homebound or hospitalized vs home instruction
+US-FL	SPED:000096	Home instruction	hospital/homebound	synonym	judge	142	hospital/homebound vs home instruction
+US-FL	SPED:000409	Language disorder	language impairment	synonym	keep	143	my reading: same concept (name variant, title, or legacy form)
+US-FL	SPED:000471	ESE center	exceptional student education center	synonym	keep	144	my reading: same concept (name variant, title, or legacy form)
+US-FL	SPED:000471	ESE center	ESE center school	synonym	keep	145	my reading: same concept (name variant, title, or legacy form)
+US-FL	SPED:000477	Deferral of diploma	diploma deferral	synonym	keep	146	my reading: same concept (name variant, title, or legacy form)
+US-FL	SPED:000477	Deferral of diploma	defer receipt of the diploma	synonym	keep	147	my reading: same concept (name variant, title, or legacy form)
+US-FL	SPED:000478	Florida Alternate Assessment	FAA Performance Task	synonym	keep	148	my reading: same concept (name variant, title, or legacy form)
+US-FL	SPED:000478	Florida Alternate Assessment	FAA Datafolio	synonym	retype	149	FAA Performance Task is one component of the FAA
+US-FL	SPED:000478	Florida Alternate Assessment	Florida Standards Alternate Assessment	legacy	retype	150	FAA Datafolio is one component of the FAA
+US-FL	SPED:000480	Benchmarks for Excellent Student Thinking	B.E.S.T. Standards	synonym	keep	151	my reading: same concept (name variant, title, or legacy form)
+US-FL	SPED:000486	Family Empowerment Scholarship	Family Empowerment Scholarship Program	synonym	keep	152	maintainer decided the term can be used as a synonym (2026-10-12)
+US-FL	SPED:000488	Gardiner Scholarship	Gardiner Scholarship Program	synonym	retype	153	"Gardiner Scholarship Program is the program that grants the Gardiner Scholarship. Sometimes the words ""Gardiner Scholarship"" may be used to describe the program"
+US-GA	SPED:000054	Emotional disturbance	emotional and behavioral disorder	synonym	keep	154	my reading: same concept (name variant, title, or legacy form)
+US-GA	SPED:000064	Developmental delay	significant developmental delay	synonym	judge	155	significant developmental delay is a qualified subset
+US-GA	SPED:000173	Evaluation report	eligibility report	synonym	keep	156	my reading: same concept (name variant, title, or legacy form)
+US-HI	SPED:000054	Emotional disturbance	emotional disability	synonym	keep	157	my reading: same concept (name variant, title, or legacy form)
+US-HI	SPED:000058	Orthopedic impairment	orthopedic disability	synonym	keep	158	my reading: same concept (name variant, title, or legacy form)
+US-HI	SPED:000061	Speech or language impairment	speech or language disability	synonym	keep	159	my reading: same concept (name variant, title, or legacy form)
+US-HI	SPED:000063	Visual impairment including blindness	visual disability including blindness	synonym	keep	160	my reading: same concept (name variant, title, or legacy form)
+US-IA	SPED:000030	Procedural safeguards notice	Procedural Safeguards Manual	synonym	keep	161	my reading: same concept (name variant, title, or legacy form)
+US-IA	SPED:000032	Mediation	preappeal conference	legacy	judge	162	preappeal conference may not be mediation
+US-IA	SPED:000032	Mediation	special education mediation conference	synonym	keep	163	my reading: same concept (name variant, title, or legacy form)
+US-IA	SPED:000033	Due process complaint	request for due process hearing	synonym	keep	164	my reading: same concept (name variant, title, or legacy form)
+US-IA	SPED:000050	Physical education	special physical education	synonym	keep	165	my reading: same concept (name variant, title, or legacy form)
+US-IA	SPED:000054	Emotional disturbance	emotional disability	synonym	keep	166	my reading: same concept (name variant, title, or legacy form)
+US-IA	SPED:000054	Emotional disturbance	behavior disorder	synonym	judge	167	behavior disorder may be a different category or a legacy term
+US-IA	SPED:000054	Emotional disturbance	emotional disorder	synonym	keep	168	my reading: same concept (name variant, title, or legacy form)
+US-IA	SPED:000062	Traumatic brain injury	head injury	synonym	judge	169	head injury may be broader or older than traumatic brain injury
+US-IA	SPED:000113	Measurable postsecondary goals	postsecondary expectations	synonym	judge	170	expectations vs goals may differ
+US-IA	SPED:000164	State advisory panel	Iowa Special Education Advisory Panel	synonym	keep	171	my reading: same concept (name variant, title, or legacy form)
+US-IA	SPED:000173	Evaluation report	Educational Evaluation Report	synonym	keep	172	my reading: same concept (name variant, title, or legacy form)
+US-IA	SPED:000174	Suspected disability	Disability Suspect	synonym	fix	173	Disability Suspect looks garbled; check the intended meaning
+US-IA	SPED:000200	Summary of academic achievement and functional performance	Postsecondary Summary	synonym	judge	174	postsecondary summary may be SAAFP under another name, or a different document
+US-IA	SPED:000200	Summary of academic achievement and functional performance	Student Accommodation Request	legacy	retype	175	student accommodation request is a different document
+US-IA	SPED:000360	Special education administrator	Special Education Coordinator	synonym	judge	176	coordinator vs administrator
+US-IA	SPED:000360	Special education administrator	AEA director of special education	synonym	keep	177	my reading: same concept (name variant, title, or legacy form)
+US-IA	SPED:000377	Certificate of Program Completion	certificate of completion	synonym	keep	178	my reading: same concept (name variant, title, or legacy form)
+US-IA	SPED:000575	Resident district	school district of the child's residence	synonym	keep	179	my reading: same concept (name variant, title, or legacy form)
+US-IA	SPED:000575	Resident district	district of residence of the child	synonym	keep	180	my reading: same concept (name variant, title, or legacy form)
+US-IA	SPED:001048	Early Childhood Outcomes	Child Outcome Summary Process	synonym	judge	181	child outcome summary process vs outcomes
+US-IA	SPED:001207	Classroom clearance	clearing classrooms	synonym	keep	182	my reading: same concept (name variant, title, or legacy form)
+US-IA	SPED:001211	Special education support services	support services	synonym	keep	183	my reading: same concept (name variant, title, or legacy form)
+US-ID	SPED:000054	Emotional disturbance	emotional behavioral disorder	synonym	keep	184	my reading: same concept (name variant, title, or legacy form)
+US-ID	SPED:000061	Speech or language impairment	speech or language impairment: speech	synonym	fix	185	label text leaked into the string
+US-ID	SPED:000164	State advisory panel	Special Education Advisory Panel	synonym	keep	186	my reading: same concept (name variant, title, or legacy form)
+US-ID	SPED:000165	IEP facilitation	special education facilitation	synonym	keep	187	my reading: same concept (name variant, title, or legacy form)
+US-ID	SPED:000393	Alternative dispute resolution	informal conflict resolution	synonym	judge	188	informal conflict resolution may be narrower than alternative dispute resolution
+US-ID	SPED:000409	Language disorder	speech or language impairment: language	synonym	fix	189	label text leaked into the string
+US-ID	SPED:000655	Idaho Parents Unlimited	Idaho Parents Unlimited, Inc.	synonym	keep	190	my reading: same concept (name variant, title, or legacy form)
+US-IL	SPED:000054	Emotional disturbance	emotional disability	synonym	keep	191	my reading: same concept (name variant, title, or legacy form)
+US-IL	SPED:000056	Intellectual disability	mental retardation	legacy	keep	192	my reading: same concept (name variant, title, or legacy form)
+US-IL	SPED:000127	Eligibility determination	eligibility conference	synonym	judge	193	eligibility conference vs eligibility determination
+US-IL	SPED:000164	State advisory panel	Advisory Council on the Education of Children with Disabilities	synonym	keep	194	my reading: same concept (name variant, title, or legacy form)
+US-IL	SPED:000519	Domain	assessment domains	synonym	keep	195	my reading: same concept (name variant, title, or legacy form)
+US-IL	SPED:000521	Less common language	common languages	synonym	fix	196	less common language is not a synonym of common languages
+US-IL	SPED:000523	Student record	school student records	synonym	keep	197	my reading: same concept (name variant, title, or legacy form)
+US-IL	SPED:000524	Dynamic Learning Maps Alternate Assessment	Illinois Alternate Assessment	synonym	judge	198	Illinois Alternate Assessment may be DLM-AA under another name
+US-IL	SPED:000524	Dynamic Learning Maps Alternate Assessment	DLM-AA Participation Guidelines	synonym	retype	199	participation guidelines are a document about the assessment
+US-IL	SPED:000526	Delegation of Rights	Delegation of Rights form	synonym	retype	200	Delegation of Rights form is a form, not the right
+US-IL	SPED:000528	Time out	isolated time out	synonym	retype	201	isolated time out is one type of time out
+US-IL	SPED:000538	Division of Rehabilitation Services	Illinois Department of Human Services, Division of Rehabilitation Services	synonym	keep	202	my reading: same concept (name variant, title, or legacy form)
+US-IN	SPED:000003	IEP Team	case conference committee	synonym	keep	203	my reading: same concept (name variant, title, or legacy form)
+US-IN	SPED:000006	Evaluation	educational evaluation	synonym	keep	204	my reading: same concept (name variant, title, or legacy form)
+US-IN	SPED:000035	Impartial due process hearing	independent hearing officer	synonym	keep	205	my reading: same concept (name variant, title, or legacy form)
+US-IN	SPED:000038	Surrogate parent	educational surrogate parent	synonym	keep	206	my reading: same concept (name variant, title, or legacy form)
+US-IN	SPED:000040	Parentally-placed private school children with disabilities	parentally-placed nonpublic school students with disabilities	synonym	keep	207	my reading: same concept (name variant, title, or legacy form)
+US-IN	SPED:000052	Deaf-blindness	dual sensory impaired	synonym	judge	208	dual sensory impaired vs federal deaf-blindness definition
+US-IN	SPED:000054	Emotional disturbance	emotional disability	synonym	keep	209	my reading: same concept (name variant, title, or legacy form)
+US-IN	SPED:000056	Intellectual disability	cognitive disability	legacy	judge	210	cognitive disability (legacy) may not equal intellectual disability
+US-IN	SPED:000061	Speech or language impairment	language or speech impairment	synonym	keep	211	my reading: same concept (name variant, title, or legacy form)
+US-IN	SPED:000063	Visual impairment including blindness	blind or low vision	synonym	keep	212	my reading: same concept (name variant, title, or legacy form)
+US-IN	SPED:000124	Representative of the public agency	public agency representative	synonym	keep	213	my reading: same concept (name variant, title, or legacy form)
+US-IN	SPED:000156	Transition from Part C to preschool programs	transition planning	synonym	retype	214	transition planning is broader than transition from Part C
+US-IN	SPED:000229	Collaborative or consulting services	consultation	synonym	judge	215	consultation is one of several consulting services
+US-IN	SPED:000251	Alternative high school diploma	alternate diploma	synonym	judge	216	alternate diploma may be a different diploma
+US-IN	SPED:001070	Indiana education scholarship account	education scholarship account	synonym	keep	217	my reading: same concept (name variant, title, or legacy form)
+US-KS	SPED:000036	State complaint	formal complaint	synonym	judge	218	formal complaint may be a state complaint or another procedure
+US-KS	SPED:000038	Surrogate parent	education advocate	synonym	retype	219	education advocate has no decision-making authority; surrogate parent does
+US-KS	SPED:000054	Emotional disturbance	emotional disability	synonym	keep	220	my reading: same concept (name variant, title, or legacy form)
+US-KS	SPED:000220	State review officer	review officer	synonym	keep	221	my reading: same concept (name variant, title, or legacy form)
+US-KS	SPED:000469	Exceptional student	exceptional child	synonym	keep	222	my reading: same concept (name variant, title, or legacy form)
+US-KS	SPED:000481	General education intervention procedures	General Education Intervention	synonym	keep	223	my reading: same concept (name variant, title, or legacy form)
+US-KS	SPED:000502	Exiting special education	discontinuing special education services	synonym	keep	224	my reading: same concept (name variant, title, or legacy form)
+US-KS	SPED:000605	Special Education and Title Services	KSDE SETS	synonym	keep	225	my reading: same concept (name variant, title, or legacy form)
+US-KS	SPED:000609	Families Together	Families Together, Inc.	synonym	keep	226	my reading: same concept (name variant, title, or legacy form)
+US-KS	SPED:000615	Interrelated	interrelated classroom	synonym	keep	227	my reading: same concept (name variant, title, or legacy form)
+US-KS	SPED:000615	Interrelated	interrelated special education	synonym	keep	228	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000003	IEP Team	Admissions and Release Committee	synonym	keep	229	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000003	IEP Team	ARC meeting	synonym	retype	230	ARC meeting is an event; IEP Team is the group
+US-KY	SPED:000030	Procedural safeguards notice	Kentucky Procedural Safeguards Notice	synonym	keep	231	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000030	Procedural safeguards notice	Procedural Safeguard Notice	synonym	keep	232	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000040	Parentally-placed private school children with disabilities	private school children with disabilities	synonym	keep	233	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000054	Emotional disturbance	emotional-behavioral disability	synonym	keep	234	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000054	Emotional disturbance	emotional-behavior disability	synonym	keep	235	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000056	Intellectual disability	mental disability	legacy	keep	236	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000056	Intellectual disability	mild mental disability	synonym	retype	237	mild mental disability is a level
+US-KY	SPED:000056	Intellectual disability	functional mental disability	synonym	retype	238	functional mental disability is a level or category under intellectual disability, not a synonym (maintainer, 2026-10-12)
+US-KY	SPED:000071	Perceptual disabilities	perceptual/motor disabilities	synonym	judge	239	perceptual/motor may be narrower or different
+US-KY	SPED:000098	Resource room	resource classes	synonym	keep	240	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000104	Benchmarks or short-term objectives	short-term instructional objectives	synonym	keep	241	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000104	Benchmarks or short-term objectives	short term instructional objectives	synonym	keep	242	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000107	Program modifications or supports for school personnel	supports for school personnel	synonym	keep	243	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000123	Special education teacher	teacher of exceptional children	synonym	keep	244	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000164	State advisory panel	state special education advisory panel	synonym	keep	245	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000249	Standard high school diploma	high school diploma	synonym	judge	246	high school diploma is generic; standard diploma is specific
+US-KY	SPED:000406	Articulation disorder	impaired articulation	synonym	keep	247	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000714	Functional vision assessment	functional vision/learning media assessment	synonym	judge	248	functional vision assessment may not include learning media assessment
+US-KY	SPED:000714	Functional vision assessment	functional vision and learning media assessment	synonym	judge	249	same as row 248
+US-KY	SPED:000811	Home education	home school	synonym	keep	250	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:000895	Multi-tiered system of support	Kentucky Multi-Tiered System of Supports	synonym	keep	251	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:001385	Cabinet for Health and Family Services	Cabinet for Families and Children	legacy	keep	252	my reading: same concept (name variant, title, or legacy form)
+US-KY	SPED:001389	Kentucky Student Information System	Infinite Campus	synonym	fix	253	Infinite Campus is a vendor product; KSIS is the state system
+US-KY	SPED:001397	Alternative Kentucky Summative Assessment	Kentucky Alternate Assessment	synonym	judge	254	alternative KY summative assessment vs Kentucky Alternate Assessment
+US-LA	SPED:000006	Evaluation	required initial individual evaluation	synonym	keep	255	my reading: same concept (name variant, title, or legacy form)
+US-LA	SPED:000055	Hearing impairment	deaf and/or hard of hearing	synonym	judge	256	deaf and/or hard of hearing vs hearing impairment scope
+US-LA	SPED:000169	Campus-based student support team	School Building Level Committee	synonym	keep	257	my reading: same concept (name variant, title, or legacy form)
+US-LA	SPED:000595	Bulletin 1508	Pupil Appraisal Handbook	synonym	retype	258	Pupil Appraisal Handbook is a document about Bulletin 1508
+US-LA	SPED:000597	Pupil appraisal	pupil appraisal personnel	synonym	retype	259	personnel are people; pupil appraisal is the process
+US-LA	SPED:000597	Pupil appraisal	pupil appraisal services	synonym	judge	260	pupil appraisal services vs process
+US-MA	SPED:000003	IEP Team	Team meeting	synonym	retype	261	team meeting is an event; IEP Team is the group
+US-MA	SPED:000029	Prior written notice	Notice of Proposed School District Action	synonym	keep	262	my reading: same concept (name variant, title, or legacy form)
+US-MA	SPED:000038	Surrogate parent	special education surrogate parent	synonym	keep	263	my reading: same concept (name variant, title, or legacy form)
+US-MA	SPED:000054	Emotional disturbance	emotional impairment	synonym	keep	264	my reading: same concept (name variant, title, or legacy form)
+US-MA	SPED:000056	Intellectual disability	mental retardation	legacy	keep	265	my reading: same concept (name variant, title, or legacy form)
+US-MA	SPED:000056	Intellectual disability	intellectual impairment	synonym	keep	266	my reading: same concept (name variant, title, or legacy form)
+US-MA	SPED:000058	Orthopedic impairment	physical impairment	synonym	retype	267	physical impairment is broader than orthopedic impairment
+US-MA	SPED:000059	Other health impairment	health impairment	synonym	keep	268	my reading: same concept (name variant, title, or legacy form)
+US-MA	SPED:000061	Speech or language impairment	communication impairment	synonym	judge	269	communication impairment may differ from speech or language impairment
+US-MA	SPED:000063	Visual impairment including blindness	vision impairment	synonym	keep	270	my reading: same concept (name variant, title, or legacy form)
+US-MA	SPED:000123	Special education teacher	certified special educator	synonym	keep	271	my reading: same concept (name variant, title, or legacy form)
+US-MA	SPED:000342	Local special education advisory committee	Parent Advisory Council	synonym	judge	272	parent advisory council may or may not be the local SEAC
+US-MA	SPED:000435	Approved private school	approved private special education school	synonym	keep	273	my reading: same concept (name variant, title, or legacy form)
+US-MA	SPED:000545	Massachusetts Department of Elementary and Secondary Education	Massachusetts Department of Education	legacy	keep	274	my reading: same concept (name variant, title, or legacy form)
+US-MA	SPED:000546	Bureau of Special Education Appeals	BSEA Hearing Request Form	synonym	retype	275	BSEA hearing request form is a form; BSEA is the agency
+US-MA	SPED:000547	Problem Resolution System	Problem Resolution System Office	synonym	keep	276	my reading: same concept (name variant, title, or legacy form)
+US-MA	SPED:000549	Chapter 766	Chapter 71B	synonym	judge	277	Chapter 71B vs Chapter 766 may be a legacy name rather than a synonym
+US-MA	SPED:000555	Effective progress	progress effectively in the general education program	synonym	judge	278	progress effectively is criterion language, not a name
+US-MA	SPED:000558	Out-of-district program	out-of-district placement	synonym	judge	279	out-of-district placement vs program
+US-MA	SPED:000562	Chapter 688 referral	Chapter 688 planning	synonym	retype	280	referral and planning are different steps
+US-MD	SPED:000010	Local educational agency	local school system	synonym	keep	281	my reading: same concept (name variant, title, or legacy form)
+US-MD	SPED:000030	Procedural safeguards notice	Maryland Procedural Safeguards Notice	synonym	keep	282	my reading: same concept (name variant, title, or legacy form)
+US-MD	SPED:000049	Vocational education	career and technology education	synonym	keep	283	my reading: same concept (name variant, title, or legacy form)
+US-MD	SPED:000054	Emotional disturbance	emotional disability	synonym	keep	284	my reading: same concept (name variant, title, or legacy form)
+US-MD	SPED:000064	Developmental delay	student with a developmental delay	synonym	keep	285	my reading: same concept (name variant, title, or legacy form)
+US-MD	SPED:000229	Collaborative or consulting services	consultation	synonym	judge	286	consultation vs collaborative or consulting services
+US-MD	SPED:000720	Critical skill	critical life skill	synonym	keep	287	my reading: same concept (name variant, title, or legacy form)
+US-ME	SPED:000019	Ward of the State	state ward	synonym	keep	288	my reading: same concept (name variant, title, or legacy form)
+US-ME	SPED:000116	Positive behavioral interventions and supports	positive reinforcement interventions and supports	synonym	judge	289	positive reinforcement interventions may differ from PBIS
+US-ME	SPED:000194	Teacher of students who are deaf or hard of hearing	Teacher of the Deaf/Hearing Impaired	synonym	keep	290	my reading: same concept (name variant, title, or legacy form)
+US-ME	SPED:001242	Intermediate educational unit	State Intermediate Educational Unit	synonym	keep	291	my reading: same concept (name variant, title, or legacy form)
+US-ME	SPED:001410	Educational technician	Educational Technician III	synonym	retype	292	Educational Technician III is one level
+US-MI	SPED:000054	Emotional disturbance	emotional impairment	synonym	keep	293	my reading: same concept (name variant, title, or legacy form)
+US-MI	SPED:000056	Intellectual disability	cognitive impairment	synonym	judge	294	cognitive impairment is broader (see row 4)
+US-MI	SPED:000057	Multiple disabilities	severe multiple impairment	synonym	judge	295	severe multiple impairment vs multiple disabilities
+US-MI	SPED:000058	Orthopedic impairment	physical impairment	synonym	retype	296	physical impairment is broader than orthopedic impairment
+US-MI	SPED:000061	Speech or language impairment	speech and language impairment	synonym	keep	297	my reading: same concept (name variant, title, or legacy form)
+US-MI	SPED:000064	Developmental delay	early childhood developmental delay	synonym	judge	298	same as row 7
+US-MI	SPED:000092	Transportation	special transportation	synonym	keep	299	my reading: same concept (name variant, title, or legacy form)
+US-MI	SPED:000096	Home instruction	homebound and hospitalized services	synonym	judge	300	homebound and hospitalized services vs home instruction
+US-MI	SPED:000098	Resource room	resource program	synonym	keep	301	my reading: same concept (name variant, title, or legacy form)
+US-MI	SPED:000194	Teacher of students who are deaf or hard of hearing	teacher of students with hearing impairment	synonym	keep	302	my reading: same concept (name variant, title, or legacy form)
+US-MI	SPED:000295	Multidisciplinary team	multidisciplinary evaluation team	synonym	keep	303	my reading: same concept (name variant, title, or legacy form)
+US-MI	SPED:000749	Michigan Office of Administrative Hearings and Rules	State Office of Administrative Hearings and Rules	legacy	keep	304	my reading: same concept (name variant, title, or legacy form)
+US-MN	SPED:000050	Physical education	developmental adapted physical education	synonym	retype	305	developmental adapted PE is narrower than physical education
+US-MN	SPED:000054	Emotional disturbance	emotional or behavioral disorders	synonym	keep	306	my reading: same concept (name variant, title, or legacy form)
+US-MN	SPED:000055	Hearing impairment	deaf and hard of hearing	synonym	judge	307	deaf and hard of hearing vs hearing impairment scope
+US-MN	SPED:000056	Intellectual disability	developmental cognitive disability	synonym	keep	308	my reading: same concept (name variant, title, or legacy form)
+US-MN	SPED:000057	Multiple disabilities	severely multiply impaired	synonym	judge	309	severely multiply impaired vs multiple disabilities
+US-MN	SPED:000058	Orthopedic impairment	physically impaired	synonym	retype	310	physically impaired is broader than orthopedic impairment
+US-MN	SPED:000059	Other health impairment	other health disabilities	synonym	keep	311	my reading: same concept (name variant, title, or legacy form)
+US-MN	SPED:000063	Visual impairment including blindness	visually impaired	synonym	keep	312	my reading: same concept (name variant, title, or legacy form)
+US-MN	SPED:000123	Special education teacher	IEP manager	synonym	fix	313	IEP manager is not a role term in the category; check the intended meaning
+US-MN	SPED:000155	Infant or toddler with a disability	infant and toddler intervention services	synonym	retype	314	infant and toddler intervention services are services; the concept is the child
+US-MN	SPED:000165	IEP facilitation	facilitated team meeting	synonym	keep	315	my reading: same concept (name variant, title, or legacy form)
+US-MN	SPED:000568	Conciliation conference	conciliation conference memorandum	synonym	retype	316	memorandum is a document; conciliation conference is the event
+US-MN	SPED:000575	Resident district	providing district	synonym	judge	317	providing district may differ from resident district
+US-MN	SPED:000577	Team override	team override on eligibility decisions	synonym	keep	318	my reading: same concept (name variant, title, or legacy form)
+US-MN	SPED:000579	Minnesota Test of Academic Skills	Alt MCA	synonym	fix	319	MTAS and Alt MCA are different tests
+US-MN	SPED:000579	Minnesota Test of Academic Skills	Alternate Minnesota Comprehensive Assessment	synonym	fix	320	same as row 319
+US-MO	SPED:000055	Hearing impairment	hearing impairment and deafness	synonym	judge	321	hearing impairment and deafness vs IDEA scope
+US-MO	SPED:000064	Developmental delay	young child with a developmental delay	synonym	keep	322	my reading: same concept (name variant, title, or legacy form)
+US-MO	SPED:000406	Articulation disorder	sound system disorder	synonym	judge	323	sound system disorder may be broader than articulation
+US-MO	SPED:000407	Abnormal voice	speech/voice	synonym	judge	324	speech/voice vs voice disorder
+US-MO	SPED:000408	Fluency disorder	speech/fluency	synonym	judge	325	speech/fluency vs fluency disorder
+US-MO	SPED:000409	Language disorder	language impairment	synonym	keep	326	my reading: same concept (name variant, title, or legacy form)
+US-MO	SPED:000580	Missouri Department of Elementary and Secondary Education	MO DESE	synonym	keep	327	my reading: same concept (name variant, title, or legacy form)
+US-MO	SPED:000590	Missouri Assessment Program	MAP Grade-Level	synonym	retype	328	MAP Grade-Level is one form of MAP
+US-MS	SPED:000104	Benchmarks or short-term objectives	Short-term instructional objectives and benchmarks	synonym	keep	329	my reading: same concept (name variant, title, or legacy form)
+US-MS	SPED:001485	Kindergarten Readiness Assessment	Mississippi Kindergarten Readiness Assessment	synonym	keep	330	my reading: same concept (name variant, title, or legacy form)
+US-MS	SPED:001499	Local/School Child Find Contact	School Child Find Contact	synonym	keep	331	my reading: same concept (name variant, title, or legacy form)
+US-NC	SPED:000030	Procedural safeguards notice	Parent Rights and Responsibilities in Special Education	synonym	keep	332	my reading: same concept (name variant, title, or legacy form)
+US-NC	SPED:000054	Emotional disturbance	emotional disability	synonym	keep	333	my reading: same concept (name variant, title, or legacy form)
+US-NC	SPED:000099	Itinerant instruction	Itinerant Preschool Services	synonym	judge	334	itinerant preschool services vs itinerant instruction
+US-NC	SPED:000129	Response to scientific, research-based intervention	responsiveness to instruction	synonym	keep	335	my reading: same concept (name variant, title, or legacy form)
+US-NC	SPED:000129	Response to scientific, research-based intervention	responsiveness to intervention	synonym	keep	336	my reading: same concept (name variant, title, or legacy form)
+US-NC	SPED:000164	State advisory panel	Council on Educational Services for Exceptional Children	synonym	judge	337	council may differ from advisory panel
+US-NC	SPED:000220	State review officer	impartial review officer	synonym	keep	338	my reading: same concept (name variant, title, or legacy form)
+US-NH	SPED:000030	Procedural safeguards notice	Special Education Procedural Safeguards Handbook	synonym	keep	339	my reading: same concept (name variant, title, or legacy form)
+US-NH	SPED:000164	State advisory panel	State advisory committee	synonym	keep	340	my reading: same concept (name variant, title, or legacy form)
+US-NH	SPED:000164	State advisory panel	State Advisory Committee on the Education of Students/Children with Disabilities	synonym	keep	341	my reading: same concept (name variant, title, or legacy form)
+US-NJ	SPED:000030	Procedural safeguards notice	Parental Rights in Special Education	synonym	keep	342	my reading: same concept (name variant, title, or legacy form)
+US-NJ	SPED:000054	Emotional disturbance	emotional regulation impairment	synonym	judge	343	emotional regulation impairment is a different label
+US-NJ	SPED:000055	Hearing impairment	auditory impairment	legacy	keep	344	my reading: same concept (name variant, title, or legacy form)
+US-NJ	SPED:000055	Hearing impairment	auditorily handicapped	legacy	keep	345	my reading: same concept (name variant, title, or legacy form)
+US-NJ	SPED:000061	Speech or language impairment	communication impairment	synonym	judge	346	communication impairment may differ from speech or language impairment
+US-NJ	SPED:000209	Foster parent	resource family parent	synonym	judge	347	resource family parent may not equal foster parent
+US-NJ	SPED:000249	Standard high school diploma	State-endorsed diploma	synonym	judge	348	state-endorsed diploma may differ from standard diploma
+US-NJ	SPED:000435	Approved private school	approved private school for students with disabilities	synonym	keep	349	my reading: same concept (name variant, title, or legacy form)
+US-NJ	SPED:000439	Preschool student with a disability	preschool child with a disability	synonym	keep	350	my reading: same concept (name variant, title, or legacy form)
+US-NM	SPED:000029	Prior written notice	Prior Written Notice of Proposed Actions	synonym	keep	351	my reading: same concept (name variant, title, or legacy form)
+US-NM	SPED:000030	Procedural safeguards notice	Parent and Child Rights in Special Education	synonym	keep	352	my reading: same concept (name variant, title, or legacy form)
+US-NM	SPED:000036	State complaint	state-level complaint	synonym	keep	353	my reading: same concept (name variant, title, or legacy form)
+US-NM	SPED:000164	State advisory panel	state IDEA advisory panel	synonym	keep	354	my reading: same concept (name variant, title, or legacy form)
+US-NM	SPED:000164	State advisory panel	New Mexico IDEA Advisory Panel	synonym	keep	355	my reading: same concept (name variant, title, or legacy form)
+US-NM	SPED:000164	State advisory panel	New Mexico Individuals with Disabilities Education Act Advisory Panel	synonym	keep	356	my reading: same concept (name variant, title, or legacy form)
+US-NM	SPED:000236	Student's vision for the future	Student/Family Vision	synonym	keep	357	my reading: same concept (name variant, title, or legacy form)
+US-NM	SPED:000741	Common Core State Standards	New Mexico Common Core State Standards	synonym	keep	358	my reading: same concept (name variant, title, or legacy form)
+US-NM	SPED:000895	Multi-tiered system of support	multi-layered system of supports	synonym	keep	359	my reading: same concept (name variant, title, or legacy form)
+US-NM	SPED:001334	New Mexico Public Education Department	Public Education Department	synonym	keep	360	my reading: same concept (name variant, title, or legacy form)
+US-NM	SPED:001335	PED Special Education Division	Special Education Bureau	legacy	keep	361	my reading: same concept (name variant, title, or legacy form)
+US-NM	SPED:001359	Addendum for Students who are Deaf or Hard of Hearing	Communication Considerations Form	synonym	retype	362	communication considerations form is a form within an addendum
+US-NM	SPED:001362	Addendum for Determining Eligibility for the New Mexico Alternate Assessment	Alternate Assessment Addendum	synonym	keep	363	my reading: same concept (name variant, title, or legacy form)
+US-NM	SPED:001371	New Mexico Diploma of Excellence	Diploma of Excellence	synonym	keep	364	my reading: same concept (name variant, title, or legacy form)
+US-NM	SPED:001372	Standard program of study	Standard Graduation Option	legacy	judge	365	legacy graduation option vs program of study
+US-NM	SPED:001373	Ability program of study	Ability Alternative Graduation Option	legacy	judge	366	legacy graduation option vs program of study
+US-NV	SPED:000003	IEP Team	IEP committee	synonym	keep	367	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000004	Child with a disability	pupil with a disability	synonym	keep	368	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000007	Reevaluation	periodic reevaluation	synonym	keep	369	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000036	State complaint	State complaint investigation	synonym	retype	370	state complaint investigation is a step within the state complaint
+US-NV	SPED:000056	Intellectual disability	mild intellectual disability	synonym	retype	371	mild intellectual disability is a level
+US-NV	SPED:000056	Intellectual disability	moderate intellectual disability	synonym	retype	372	moderate intellectual disability is a level
+US-NV	SPED:000056	Intellectual disability	severe intellectual disability	synonym	retype	373	severe intellectual disability is a level
+US-NV	SPED:000056	Intellectual disability	profound intellectual disability	synonym	retype	374	profound intellectual disability is a level
+US-NV	SPED:000057	Multiple disabilities	multiple impairments	synonym	judge	375	multiple impairments vs multiple disabilities
+US-NV	SPED:000059	Other health impairment	health impairment	synonym	keep	376	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000059	Other health impairment	health impairment other than orthopedic impairment	synonym	keep	377	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000061	Speech or language impairment	speech and language impairment	synonym	keep	378	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000094	Special class	self-contained program	synonym	keep	379	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000098	Resource room	regular class and special education class combination	synonym	fix	380	describes a placement combination rather than naming the resource room
+US-NV	SPED:000105	Periodic reports on progress	specialized progress report	synonym	keep	381	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000107	Program modifications or supports for school personnel	modification, accommodation, or support for student or personnel	synonym	retype	382	broader category
+US-NV	SPED:000109	Explanation of the extent of nonparticipation	justification for placement	synonym	judge	383	justification for placement vs explanation of nonparticipation
+US-NV	SPED:000116	Positive behavioral interventions and supports	positive behavioral strategies, supports and interventions	synonym	keep	384	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000120	IEP amendment	IEP revision without a meeting	synonym	keep	385	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000120	IEP amendment	revision to IEP	synonym	keep	386	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000122	Regular education teacher	regular classroom teacher	synonym	keep	387	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000130	Scientific, research-based intervention	targeted scientific, research-based intervention	synonym	keep	388	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000146	Functional behavioral assessment	assessment of functional behavior	synonym	keep	389	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000172	Review of existing evaluation data	review of evaluation data	synonym	keep	390	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000221	Statement of eligibility	eligibility statement	synonym	keep	391	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000222	Gifted and talented	gifted and talented pupil	synonym	keep	392	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000223	Cognitive abilities	assessment of cognitive abilities	synonym	retype	393	assessment of X is the assessment; X is the area assessed
+US-NV	SPED:000224	Social and emotional condition	assessment of social and emotional condition	synonym	retype	394	assessment of X is the assessment; X is the area assessed
+US-NV	SPED:000227	Performance in the current educational setting	assessment of performance in current educational setting	synonym	retype	395	assessment of X is the assessment; X is the area assessed
+US-NV	SPED:000228	Evidence of intervention	assessment of evidence of intervention	synonym	retype	396	assessment of X is the assessment; X is the area assessed
+US-NV	SPED:000230	Interim IEP	interim individualized educational program	synonym	keep	397	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000234	Parent educational concerns	statement of parent educational concerns	synonym	keep	398	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000235	Student preferences and interests	statement of student's preferences and interests	synonym	keep	399	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000240	Communication access	equal opportunity for communication access	synonym	keep	400	my reading: same concept (name variant, title, or legacy form)
+US-NV	SPED:000249	Standard high school diploma	advanced high school diploma	synonym	retype	401	advanced diploma is a different diploma
+US-NY	SPED:000003	IEP Team	Committee on Special Education	synonym	keep	402	my reading: same concept (name variant, title, or legacy form)
+US-NY	SPED:000006	Evaluation	individual evaluation	synonym	keep	403	my reading: same concept (name variant, title, or legacy form)
+US-NY	SPED:000024	Extended school year services	twelve-month special service and/or program	synonym	keep	404	my reading: same concept (name variant, title, or legacy form)
+US-NY	SPED:000024	Extended school year services	twelve-month services	synonym	keep	405	my reading: same concept (name variant, title, or legacy form)
+US-NY	SPED:000024	Extended school year services	12-month services	synonym	keep	406	my reading: same concept (name variant, title, or legacy form)
+US-NY	SPED:000029	Prior written notice	Notice of Recommendation	synonym	judge	407	notice of recommendation may or may not be prior written notice
+US-NY	SPED:000054	Emotional disturbance	emotional disability	synonym	keep	408	my reading: same concept (name variant, title, or legacy form)
+US-NY	SPED:000096	Home instruction	home and hospital instruction	synonym	judge	409	home and hospital instruction vs home instruction
+US-NY	SPED:000220	State review officer	Office of State Review	synonym	retype	410	Office of State Review is an office; state review officer is a person
+US-NY	SPED:000288	Oral and signed administration	tests read	synonym	judge	411	expert to decide: read-aloud accommodation vs oral administration (maintainer, 2026-10-12)
+US-NY	SPED:000361	Paraprofessional	supplementary school personnel	synonym	judge	412	supplementary school personnel is broader than paraprofessional
+US-NY	SPED:000428	Consultant teacher services	CT services	synonym	keep	413	my reading: same concept (name variant, title, or legacy form)
+US-NY	SPED:000440	Special education itinerant teacher services	special education itinerant services	synonym	keep	414	my reading: same concept (name variant, title, or legacy form)
+US-NY	SPED:000440	Special education itinerant teacher services	special education itinerant teacher	synonym	retype	415	itinerant teacher is a person; itinerant teacher services is the service
+US-NY	SPED:000441	Approved preschool program	4410 program	synonym	keep	416	my reading: same concept (name variant, title, or legacy form)
+US-NY	SPED:000442	Full-day preschool program	half-day preschool program	synonym	retype	417	half-day preschool is the opposite of full-day
+US-NY	SPED:000448	Regents examinations	Regents exams	synonym	keep	418	my reading: same concept (name variant, title, or legacy form)
+US-NY	SPED:000449	Regents diploma	Regents diploma with advanced designation	synonym	retype	419	advanced-designation diploma is narrower
+US-NY	SPED:000451	Safety net	Low Pass Safety Net	synonym	judge	420	safety net variant; check which safety net is meant
+US-NY	SPED:000451	Safety net	Compensatory Safety Net	synonym	judge	421	safety net variant; check which safety net is meant
+US-NY	SPED:000451	Safety net	Low Pass Safety Net with Appeal	synonym	judge	422	safety net variant; check which safety net is meant
+US-NY	SPED:001095	Board of Cooperative Services	board of cooperative educational services	synonym	keep	423	my reading: same concept (name variant, title, or legacy form)
+US-OH	SPED:000012	Educational service agency	educational service center	synonym	keep	424	my reading: same concept (name variant, title, or legacy form)
+US-OH	SPED:000030	Procedural safeguards notice	A Guide to Parent Rights in Special Education	synonym	keep	425	my reading: same concept (name variant, title, or legacy form)
+US-OH	SPED:000040	Parentally-placed private school children with disabilities	parentally placed nonpublic school children with disabilities	synonym	keep	426	my reading: same concept (name variant, title, or legacy form)
+US-OH	SPED:000173	Evaluation report	evaluation team report	synonym	keep	427	my reading: same concept (name variant, title, or legacy form)
+US-OH	SPED:000396	State special schools	state residential school	synonym	judge	428	state residential school is one type of state special school
+US-OH	SPED:000575	Resident district	school district of residence	synonym	keep	429	my reading: same concept (name variant, title, or legacy form)
+US-OH	SPED:000850	Ohio Department of Education and Workforce	Ohio Department of Education	legacy	keep	430	my reading: same concept (name variant, title, or legacy form)
+US-OH	SPED:000858	Charter school	community school	synonym	keep	431	my reading: same concept (name variant, title, or legacy form)
+US-OH	SPED:000865	Intervention specialist	early childhood intervention specialist	synonym	retype	432	early childhood intervention specialist is narrower
+US-OH	SPED:001545	Operating Standards for the Education of Children with Disabilities	Ohio Operating Standards	synonym	keep	433	my reading: same concept (name variant, title, or legacy form)
+US-OR	SPED:000054	Emotional disturbance	emotional behavior disability	synonym	keep	434	my reading: same concept (name variant, title, or legacy form)
+US-OR	SPED:000675	Qualified Assessor	Qualified Training Coordinator	synonym	judge	435	qualified training coordinator vs qualified assessor
+US-PA	SPED:000029	Prior written notice	Notice of Recommended Educational Placement	synonym	keep	436	my reading: same concept (name variant, title, or legacy form)
+US-PA	SPED:000034	Resolution meeting	resolution meeting facilitation	synonym	retype	437	resolution meeting facilitation is a service within the meeting
+US-PA	SPED:000056	Intellectual disability	mental retardation	legacy	keep	438	my reading: same concept (name variant, title, or legacy form)
+US-PA	SPED:000147	Behavioral intervention plan	behavior management plan	synonym	judge	439	behavior management plan vs BIP
+US-PA	SPED:000222	Gifted and talented	mentally gifted	synonym	keep	440	my reading: same concept (name variant, title, or legacy form)
+US-PA	SPED:000498	Permission to Evaluate	Permission to Evaluate Consent Form	synonym	retype	441	consent form is a document
+US-PA	SPED:000498	Permission to Evaluate	Permission to Evaluate Evaluation Request Form	synonym	retype	442	evaluation request form is a document
+US-PA	SPED:000498	Permission to Evaluate	Permission to Reevaluate	synonym	judge	443	permission to reevaluate may be a separate consent
+US-PA	SPED:000500	Level of support	itinerant support	synonym	retype	444	level-of-support variant of a broader category
+US-PA	SPED:000500	Level of support	supplemental support	synonym	retype	445	level-of-support variant of a broader category
+US-PA	SPED:000500	Level of support	full-time support	synonym	retype	446	level-of-support variant of a broader category
+US-PA	SPED:000505	Pennsylvania Alternate System of Assessment	PASA DLM	synonym	fix	447	PASA and DLM are two different assessments merged into one string
+US-PA	SPED:000507	Act 158 pathways to graduation	pathways to graduation	synonym	keep	448	my reading: same concept (name variant, title, or legacy form)
+US-PA	SPED:000508	Learning support	itinerant learning support	synonym	retype	449	level-of-support variant
+US-PA	SPED:000508	Learning support	supplemental learning support	synonym	retype	450	level-of-support variant
+US-PA	SPED:000508	Learning support	full-time learning support	synonym	retype	451	level-of-support variant
+US-PA	SPED:000509	Life skills support	itinerant life skills support	synonym	retype	452	level-of-support variant
+US-PA	SPED:000509	Life skills support	supplemental life skills support	synonym	retype	453	level-of-support variant
+US-PA	SPED:000509	Life skills support	full-time life skills support	synonym	retype	454	level-of-support variant
+US-PA	SPED:000510	Emotional support	itinerant emotional support	synonym	retype	455	level-of-support variant
+US-PA	SPED:000510	Emotional support	supplemental emotional support	synonym	retype	456	level-of-support variant
+US-PA	SPED:000510	Emotional support	full-time emotional support	synonym	retype	457	level-of-support variant
+US-PA	SPED:000511	Deaf and hearing impaired support	deaf and hard of hearing support	synonym	keep	458	my reading: same concept (name variant, title, or legacy form)
+US-PA	SPED:000511	Deaf and hearing impaired support	itinerant deaf and hearing impaired support	synonym	retype	459	level-of-support variant
+US-PA	SPED:000511	Deaf and hearing impaired support	supplemental deaf and hearing impaired support	synonym	retype	460	level-of-support variant
+US-PA	SPED:000511	Deaf and hearing impaired support	full-time deaf and hearing impaired support	synonym	retype	461	level-of-support variant
+US-PA	SPED:000512	Blind and visually impaired support	itinerant blind and visually impaired support	synonym	retype	462	level-of-support variant
+US-PA	SPED:000512	Blind and visually impaired support	supplemental blind and visually impaired support	synonym	retype	463	level-of-support variant
+US-PA	SPED:000512	Blind and visually impaired support	full-time blind and visually impaired support	synonym	retype	464	level-of-support variant
+US-PA	SPED:000513	Speech and language support	itinerant speech and language support	synonym	retype	465	level-of-support variant
+US-PA	SPED:000513	Speech and language support	supplemental speech and language support	synonym	retype	466	level-of-support variant
+US-PA	SPED:000513	Speech and language support	full-time speech and language support	synonym	retype	467	level-of-support variant
+US-PA	SPED:000514	Physical support	itinerant physical support	synonym	retype	468	level-of-support variant
+US-PA	SPED:000514	Physical support	supplemental physical support	synonym	retype	469	level-of-support variant
+US-PA	SPED:000514	Physical support	full-time physical support	synonym	retype	470	level-of-support variant
+US-PA	SPED:000515	Autistic support	itinerant autistic support	synonym	retype	471	level-of-support variant
+US-PA	SPED:000515	Autistic support	supplemental autistic support	synonym	retype	472	level-of-support variant
+US-PA	SPED:000515	Autistic support	full-time autistic support	synonym	retype	473	level-of-support variant
+US-PA	SPED:000516	Multiple disabilities support	itinerant multiple disabilities support	synonym	retype	474	level-of-support variant
+US-PA	SPED:000516	Multiple disabilities support	supplemental multiple disabilities support	synonym	retype	475	level-of-support variant
+US-PA	SPED:000516	Multiple disabilities support	full-time multiple disabilities support	synonym	retype	476	level-of-support variant
+US-TN	SPED:000036	State complaint	administrative complaint	synonym	judge	477	administrative complaint (TN) - same as row 2
+US-TN	SPED:000222	Gifted and talented	intellectually gifted	synonym	retype	478	intellectually gifted is narrower than gifted and talented
+US-TN	SPED:000649	TCAP-Alt	TCAP Alternate Assessment	synonym	keep	479	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000003	IEP Team	ARD committee	synonym	keep	480	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000003	IEP Team	Admission, Review, and Dismissal committee	synonym	keep	481	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000003	IEP Team	ARD committee meeting	synonym	retype	482	ARD committee meeting is an event; IEP Team is the group
+US-TX	SPED:000009	Limited English proficient	emergent bilingual	synonym	judge	483	emergent bilingual vs limited English proficient: different legal definition
+US-TX	SPED:000009	Limited English proficient	emergent bilingual student	synonym	judge	484	same as row 483
+US-TX	SPED:000012	Educational service agency	education service center	synonym	keep	485	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000012	Educational service agency	regional education service center	synonym	keep	486	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000035	Impartial due process hearing	special education due process hearing	synonym	keep	487	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000036	State complaint	special education complaint	synonym	keep	488	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000036	State complaint	special education complaint resolution process	synonym	judge	489	complaint resolution process may be a step rather than the complaint
+US-TX	SPED:000054	Emotional disturbance	emotional disability	synonym	keep	490	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000055	Hearing impairment	auditory impairment	legacy	keep	491	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000061	Speech or language impairment	speech impairment	synonym	retype	492	speech impairment is narrower than speech or language impairment
+US-TX	SPED:000110	Testing accommodations	STAAR accommodations	synonym	retype	493	STAAR accommodations are a state subset of testing accommodations
+US-TX	SPED:000147	Behavioral intervention plan	behavior improvement plan	synonym	judge	494	behavior improvement plan vs BIP
+US-TX	SPED:000159	Texas Administrative Code	commissioner's rules	synonym	fix	495	commissioner's rules are part of the code, not a synonym for it
+US-TX	SPED:000164	State advisory panel	Continuing Advisory Committee	synonym	keep	496	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000165	IEP facilitation	state IEP facilitation	synonym	keep	497	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000165	IEP facilitation	State IEP Facilitation Project	synonym	retype	498	project name, not the process
+US-TX	SPED:000166	ARD recess and reconvene	recess and reconvene	synonym	keep	499	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000166	ARD recess and reconvene	mutual agreement	synonym	retype	500	mutual agreement is an outcome of recess and reconvene
+US-TX	SPED:000166	ARD recess and reconvene	ten-day recess	synonym	keep	501	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000176	Dyslexia instruction	evidence-based dyslexia program	synonym	judge	502	evidence-based dyslexia program vs dyslexia instruction
+US-TX	SPED:000176	Dyslexia instruction	direct dyslexia instruction	synonym	keep	503	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000176	Dyslexia instruction	standard protocol dyslexia instruction	legacy	keep	504	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000178	Dyslexia Handbook	Texas Dyslexia Handbook	synonym	keep	505	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000178	Dyslexia Handbook	The Dyslexia Handbook	synonym	keep	506	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000178	Dyslexia Handbook	Procedures Concerning Dyslexia and Related Disorders	synonym	keep	507	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000179	Strategies for students with autism	autism supplement	synonym	retype	508	autism supplement is a document; strategies are its content
+US-TX	SPED:000182	Staff-to-child ratio	suitable staff-to-child ratio	synonym	keep	509	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000193	Teacher of students with visual impairments	teacher certified in the education of students with visual impairments	synonym	keep	510	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000194	Teacher of students who are deaf or hard of hearing	teacher certified in the education of students who are deaf or hard of hearing	synonym	keep	511	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000203	Early childhood special education	Preschool Program for Children with Disabilities	legacy	judge	512	preschool program name vs the field of early childhood special education
+US-TX	SPED:000215	Section 504	individual accommodation plan	synonym	retype	513	individual accommodation plan is a plan; Section 504 is the law
+US-TX	SPED:000261	Medical exception	medical exception eligibility requirements	synonym	keep	514	my reading: same concept (name variant, title, or legacy form)
+US-TX	SPED:000264	Essence statement	strand statement	synonym	judge	515	strand statement vs essence statement
+US-TX	SPED:000269	Designated supports	locally-approved designated supports	synonym	retype	516	locally-approved designated supports is narrower
+US-TX	SPED:000269	Designated supports	designated supports requiring TEA approval	synonym	retype	517	designated supports requiring TEA approval is narrower
+US-TX	SPED:000292	Dyslexia screening	kindergarten and first grade screening	synonym	retype	518	kindergarten and first grade screening is narrower
+US-TX	SPED:000293	Reading instrument	Commissioner's List of Reading Instruments	synonym	retype	519	a list is a document; reading instrument is an item on it
+US-TX	SPED:000300	Reading by Design	Texas Dyslexia Program	synonym	judge	520	Texas Dyslexia Program vs Reading by Design
+US-TX	SPED:000306	Accelerated reading instruction	accelerated reading program	synonym	judge	521	accelerated reading program vs accelerated reading instruction
+US-TX	SPED:000306	Accelerated reading instruction	intensive reading program	synonym	judge	522	intensive reading program vs accelerated reading instruction
+US-UT	SPED:000009	Limited English proficient	EL student	synonym	judge	523	EL student vs limited English proficient
+US-UT	SPED:000037	Child's status during proceedings	student's status during proceedings	synonym	keep	524	my reading: same concept (name variant, title, or legacy form)
+US-UT	SPED:000039	Transfer of rights at age of majority	student who is an adult	synonym	retype	525	student who is an adult is a person; transfer of rights is the event
+US-UT	SPED:000054	Emotional disturbance	emotional-behavioral disability	synonym	keep	526	my reading: same concept (name variant, title, or legacy form)
+US-UT	SPED:000055	Hearing impairment	hearing loss including deafness	synonym	judge	527	hearing loss including deafness vs hearing impairment scope
+US-UT	SPED:000114	Transition services	postsecondary transition services	synonym	keep	528	my reading: same concept (name variant, title, or legacy form)
+US-UT	SPED:000164	State advisory panel	Utah Special Education Advisory Panel	synonym	keep	529	my reading: same concept (name variant, title, or legacy form)
+US-VA	SPED:000010	Local educational agency	school division	synonym	keep	530	my reading: same concept (name variant, title, or legacy form)
+US-VA	SPED:000033	Due process complaint	request for due process	synonym	keep	531	my reading: same concept (name variant, title, or legacy form)
+US-VA	SPED:000035	Impartial due process hearing	special education hearing officer	synonym	retype	532	hearing officer is a person; due process hearing is the proceeding
+US-VA	SPED:000035	Impartial due process hearing	impartial special education hearing officer	synonym	retype	533	hearing officer is a person; due process hearing is the proceeding
+US-VA	SPED:000054	Emotional disturbance	emotional disability	synonym	keep	534	my reading: same concept (name variant, title, or legacy form)
+US-VA	SPED:000056	Intellectual disability	mental retardation	legacy	keep	535	my reading: same concept (name variant, title, or legacy form)
+US-VA	SPED:000127	Eligibility determination	eligibility group	synonym	retype	536	eligibility group is the group; determination is the decision
+US-VA	SPED:000164	State advisory panel	State Special Education Advisory Committee	synonym	keep	537	my reading: same concept (name variant, title, or legacy form)
+US-VA	SPED:000169	Campus-based student support team	school-based team	synonym	judge	538	school-based team may or may not equal campus-based student support team
+US-VA	SPED:000172	Review of existing evaluation data	existing data review	synonym	keep	539	my reading: same concept (name variant, title, or legacy form)
+US-VA	SPED:000211	Education records	scholastic records	synonym	keep	540	my reading: same concept (name variant, title, or legacy form)
+US-VA	SPED:000211	Education records	scholastic record	synonym	keep	541	my reading: same concept (name variant, title, or legacy form)
+US-VA	SPED:000338	Regulations Governing Special Education Programs for Children with Disabilities in Virginia	Virginia Administrative Code	synonym	fix	542	Virginia Administrative Code is the compilation that contains the regulations
+US-VA	SPED:000346	Virginia School for the Deaf and the Blind	Virginia School for the Deaf and the Blind at Staunton	synonym	keep	543	my reading: same concept (name variant, title, or legacy form)
+US-VA	SPED:000347	State-operated programs	state facilities	synonym	judge	544	state facilities vs state-operated programs
+US-VA	SPED:000367	Audio recording of meetings	audio recording devices at meetings	synonym	keep	545	my reading: same concept (name variant, title, or legacy form)
+US-VA	SPED:000367	Audio recording of meetings	video recording of meetings	synonym	fix	546	video recording is not audio recording
+US-VA	SPED:000369	Standards of Learning	SOL test	synonym	fix	547	SOL test is an assessment; Standards of Learning are the standards
+US-VA	SPED:000369	Standards of Learning	Virginia Standards of Learning	synonym	keep	548	my reading: same concept (name variant, title, or legacy form)
+US-VA	SPED:000371	Virginia Essentialized Standards of Learning	Essentialized Standards of Learning	synonym	keep	549	my reading: same concept (name variant, title, or legacy form)
+US-VA	SPED:000383	Credit accommodations	diploma credit accommodations	synonym	keep	550	my reading: same concept (name variant, title, or legacy form)
+US-VA	SPED:000385	Expedited retake	expanded expedited retake	synonym	keep	551	my reading: same concept (name variant, title, or legacy form)
+US-VA	SPED:001673	Management of the Student's Scholastic Record in the Public Schools of Virginia	Management of Student Scholastic Records	synonym	keep	552	my reading: same concept (name variant, title, or legacy form)
+US-WA	SPED:000036	State complaint	community complaint	synonym	judge	553	community complaint may or may not be a state complaint
+US-WA	SPED:000036	State complaint	special education community complaint	synonym	judge	554	special education community complaint
+US-WA	SPED:000037	Child's status during proceedings	student placement while due process pending	synonym	keep	555	my reading: same concept (name variant, title, or legacy form)
+US-WA	SPED:000053	Deafness	deafness including hard of hearing	synonym	judge	556	deafness including hard of hearing vs deafness
+US-WA	SPED:000644	Graduation pathway	graduation pathway requirement	synonym	keep	557	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:000004	Child with a disability	eligible students with disabilities	synonym	judge	558	eligible students vs child with a disability (age and status scope)
+US-WV	SPED:000026	Continuum of alternative placements	Continuum of Services/Placements	synonym	keep	559	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:000040	Parentally-placed private school children with disabilities	Special Education: Parentally-Placed in Private School	synonym	keep	560	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:000054	Emotional disturbance	emotional disorder	synonym	keep	561	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:000055	Hearing impairment	deaf and hard of hearing	synonym	judge	562	deaf and hard of hearing vs hearing impairment scope
+US-WV	SPED:000063	Visual impairment including blindness	blindness and low vision	synonym	keep	563	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:000095	Special school	special education: special school	synonym	fix	564	label merged into the string
+US-WV	SPED:000100	Residential placement	special education: residential facility	synonym	keep	565	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:000120	IEP amendment	IEP Amendment Form	synonym	retype	566	IEP Amendment Form is a document
+US-WV	SPED:000132	Exclusionary factors	exclusion factors	synonym	keep	567	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:000222	Gifted and talented	exceptional gifted	synonym	keep	568	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:000469	Exceptional student	students with exceptionalities	synonym	keep	569	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:000469	Exceptional student	eligible students with exceptionalities	synonym	keep	570	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:001261	Policy 2419	Policy 2419: Regulations for the Education of Students with Exceptionalities	synonym	keep	571	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:001261	Policy 2419	Regulations for the Education of Students with Exceptionalities	synonym	keep	572	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:001261	Policy 2419	West Virginia Procedures Manual for the Education of Students with Exceptionalities	synonym	judge	573	Procedures Manual vs Policy 2419 (may be a companion document)
+US-WV	SPED:001262	Policy 4350	Procedures for the Collection, Maintenance and Disclosure of Student Information	synonym	keep	574	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:001262	Policy 4350	Regulations for the Collection, Maintenance and Disclosure of Student Data	synonym	keep	575	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:001263	Policy 4373	Expected Behavior in Safe and Supportive Schools	synonym	keep	576	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:001265	WVDE Online IEP	Online IEP	synonym	keep	577	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:001271	West Virginia Alternate Summative Assessment	WV Alternate Assessment	synonym	keep	578	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:001271	West Virginia Alternate Summative Assessment	West Virginia Alternate Assessment	synonym	keep	579	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:001274	West Virginia Alternate Academic Achievement Standards	Policy 2520.16	synonym	retype	580	Policy 2520.16 is the policy that sets the standards
+US-WV	SPED:001275	West Virginia Pre-K	Universal Pre-K	synonym	judge	581	Universal Pre-K vs West Virginia Pre-K
+US-WV	SPED:001277	Eligibility Committee Report	EC Report	synonym	keep	582	my reading: same concept (name variant, title, or legacy form)
+US-WV	SPED:001309	Targeted IEP review	Targeted IEP meeting	synonym	judge	583	targeted IEP meeting vs targeted IEP review
+US-WV	SPED:001325	Educational Sign Language Interpreter	educational sign language interpreter I	synonym	retype	584	interpreter level I is a level
+US-WV	SPED:001325	Educational Sign Language Interpreter	educational sign language interpreter II	synonym	retype	585	interpreter level II is a level
+US-WY	SPED:000056	Intellectual disability	cognitive disability	legacy	judge	586	cognitive disability (legacy) vs intellectual disability
+US-WY	SPED:000811	Home education	home based education	synonym	keep	587	my reading: same concept (name variant, title, or legacy form)

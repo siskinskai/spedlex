@@ -76,7 +76,7 @@ def src(doc, loc=""):
             "citation": f"DDOE Delaware Procedural Safeguards (July 2026), PDF p. {loc}", "doc_id": "de-psn-2026", "url": PSN_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 DE = ["US-DE"]
 DEJ = {"jurisdiction": "US-DE"}
 R2 = lambda loc: src("RULE922", loc)
@@ -126,7 +126,7 @@ STRINGS = [
     ("eligibility", [], R5("6.1")), ("exclusionary", [], R5("6.2")), ("adaptive", [], R5("6.3.1")),
     ("school_psych", [("certified school psychologist", S, DE)], R5("6.3.2")),
     ("primary_disability", [("primary educational classification", S, DE)], R5("6.5.4")),
-    ("exit_sped", [("Exit Criteria", S, DE)], R5("6.5.5")),
+    ("exit_sped", [("Exit Criteria", REL, DE)], R5("6.5.5")),
     ("std_diploma", [], R5("6.5.5.2")), ("ged", [], R5("6.5.5.2")),
     ("autism", [], R5("6.6")), ("dd", [], R5("6.7")),
     ("deafblind", [("Dual Sensory Impairment", S, DE)], R5("6.8")),
@@ -138,8 +138,8 @@ STRINGS = [
     ("math_calc", [], R5("6.11.1.1.7")), ("math_ps", [], R5("6.11.1.1.8")),
     ("psw", [], R5("6.11.1.3")), ("discrepancy", [], R5("6.11.1.4")),
     ("data_doc", [], R5("6.11.3.7.2")), ("observation", [], R5("6.11.4.2")),
-    ("id", [("Mild Intellectual Disability", S, None), ("Moderate Intellectual Disability", S, None),
-            ("Severe Intellectual Disability", S, None)], R5("6.12.1")),
+    ("id", [("Mild Intellectual Disability", REL, DE), ("Moderate Intellectual Disability", REL, DE),
+            ("Severe Intellectual Disability", REL, DE)], R5("6.12.1")),
     ("oi", [], R5("6.13")), ("ohi", [], R5("6.14")), ("adhd", [], R5("6.14.1.2")),
     ("epilepsy", [], R5("6.14.1")), ("sickle", [], R5("6.14.1")), ("tourette", [], R5("6.14.1")),
     ("sli", [], R5("6.15")), ("tbi", [], R5("6.16")), ("vi", [], R5("6.17")),
@@ -198,7 +198,7 @@ STRINGS = [
     ("ceis", [], G(53)), ("nimac", [], G(54)), ("pti", [], G(54)), ("universal_design", [], G(56)),
     # Former Delaware labels in the 2013 GUIDE glossary (not in the current rule)
     ("id", [("mental disability", L, DE)], G(52)),
-    ("sli", [("Preschool Speech Delay", L, DE), ("Speech and/or Language Impairment", V, DE)], G(52)),
+    ("sli", [("Preschool Speech Delay", REL, DE), ("Speech and/or Language Impairment", V, DE)], G(52)),
     ("sld", [], G(52)),
 ]
 

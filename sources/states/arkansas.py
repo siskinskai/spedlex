@@ -50,7 +50,7 @@ def src(doc, loc=""):
             "doc_id": "ar-psn-2006", "url": PSN_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 AR = ["US-AR"]
 ARJ = {"jurisdiction": "US-AR"}
 R = lambda loc: src("RULE", loc)
@@ -66,7 +66,7 @@ STRINGS = [
     ("ceis", [("early intervening services", S, None)], R("218")),
     ("ed_records", [], R("220")), ("esa", [], R("222")), ("evaluation", [], R("226")), ("esy", [], R("227")),
     ("fape", [], R("228")), ("homeless", [], R("229")), ("iee", [], R("231")),
-    ("indirect_svc", [], R("232")), ("consult_teacher", [("consulting teacher", S, AR)], R("232")),
+    ("indirect_svc", [], R("232")), ("consult_teacher", [("consulting teacher", REL, AR)], R("232")),
     ("interpreting", [], R("234")), ("itinerant", [], R("235")), ("iep", [], R("236")), ("iep_team", [], R("237")),
     ("idea", [], R("238")), ("lep", [], R("241")), ("lea", [], R("242")), ("mediation", [], R("243")),
     ("native_language", [], R("245")), ("braille", [], R("245")), ("foster", [], R("246")), ("surrogate", [], R("246")),
@@ -75,9 +75,9 @@ STRINGS = [
     ("related", [], R("256")), ("implant", [], R("256")), ("transport", [], R("256")),
     ("resource_room", [("resource services", S, AR)], R("257")),
     ("rti", [], R("258")), ("nursing", [], R("261")), ("screening", [], R("262")), ("services_plan", [], R("264")),
-    ("special_class", [("special class services", S, AR)], R("265")),
-    ("special_school", [("special day school, private", S, AR)], R("266")),
-    ("special_school", [("special day school, public", S, AR)], R("267")),
+    ("special_class", [("special class services", REL, AR)], R("265")),
+    ("special_school", [("special day school, private", REL, AR)], R("266")),
+    ("special_school", [("special day school, public", REL, AR)], R("267")),
     ("special_ed", [], R("268")), ("sdi", [], R("269")), ("sea", [], R("270")), ("saas", [], R("271")),
     ("transition", [], R("272")), ("travel_training", [], R("273")), ("voc_ed", [], R("274")),
     ("universal_design", [], R("275")), ("ward", [], R("276")),
@@ -106,8 +106,8 @@ STRINGS = [
     ("saas", [], G(59)), ("esy", [], G(60)), ("plaafp", [], G(61)), ("lep", [], G(61)),
     ("coteach", [("co-taught services", S, AR)], G(66)), ("lre", [], G(66)),
     ("special_school", [("Special Day School", S, AR)], G(70)),
-    ("residential", [("Residential School", S, AR)], G(70)),
-    ("hospital_instr", [("Hospital Program", S, AR)], G(70)),
+    ("residential", [("Residential School", REL, AR)], G(70)),
+    ("hospital_instr", [("Hospital Program", REL, AR)], G(70)),
     ("home_instr", [], G(70)),
     ("alt_assess", [], G(72)), ("sig_cog", [], G(72)),
     ("pwn", [("Notice of Action", S, AR)], G(78)), ("age_majority", [], G(80)),

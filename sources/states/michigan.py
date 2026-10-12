@@ -47,7 +47,7 @@ def src(doc, loc=""):
             "citation": f"MDE Procedural Safeguards Notice (updated 10/16/18){tail}", "doc_id": "mi-psn-2018", "url": PSN_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 MI = ["US-MI"]
 MIJ = {"jurisdiction": "US-MI"}
 R = lambda rule: src("RULE", rule)
@@ -62,7 +62,7 @@ STRINGS = [
     ("vi", [], R("340.1708")),
     ("fva", [], R("340.1708")), ("lma", [], R("340.1708")),
     ("tvi", [("teacher of students with visual impairment", V, None)], R("340.1708")),
-    ("oi", [("physical impairment", S, MI)], R("340.1709")),
+    ("oi", [("physical impairment", REL, MI)], R("340.1709")),
     ("ohi", [], R("340.1709a")),
     ("adhd", [], R("340.1709a")), ("epilepsy", [], R("340.1709a")), ("sickle", [], R("340.1709a")),
     ("sli", [("speech and language impairment", S, MI)], R("340.1710")),

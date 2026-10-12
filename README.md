@@ -82,7 +82,7 @@ nothing here is tied to any one tool or model.
 | | |
 |---|---|
 | Concepts | 1,670: 156 from 34 CFR Part 300, 1514 added by state layers |
-| Surface strings | 3,541 (phrases, acronyms, plurals, legacy and regional forms): 1,185 tagged to the states that use them, 25 older forms, 3 flagged as disfavored |
+| Surface strings | 3,542 (phrases, acronyms, plurals, legacy and regional forms): 1,186 tagged to the states that use them, 22 older forms, 3 flagged as disfavored |
 | States | 42: AK, AL, AR, AZ, CA, CO, CT, DC, DE, FL, GA, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, ME, MI, MN, MO, MS, NC, NH, NJ, NM, NV, NY, OH, OR, PA, TN, TX, UT, VA, WA, WV, WY |
 | Documents cited | 205, listed in [docs/SOURCES.md](docs/SOURCES.md) |
 | Review status | 779 checked against regulation text, 891 candidates awaiting a human check, 0 expert-accepted |

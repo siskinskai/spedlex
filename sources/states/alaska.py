@@ -55,7 +55,7 @@ def src(doc, loc=""):
             "doc_id": "ak-psn-2024", "url": PSN_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 AK = ["US-AK"]
 AKJ = {"jurisdiction": "US-AK"}
 R = lambda loc: src("RULE", loc)
@@ -131,7 +131,7 @@ STRINGS = [
     ("at_device", [], R(".790(1)")), ("at_service", [], R(".790(2)")),
     ("cwd", [], R(".790(3)")),
     ("sld", [("learning disabilities", P, None)], R(".790(3)")),
-    ("sli", [("speech impairment", S, AK)], R(".790(3)")),
+    ("sli", [("speech impairment", REL, AK)], R(".790(3)")),
     ("dd", [("early childhood development delay", V, AK)], R(".790(3)")),
     ("adverse", [], R(".790(4)")),
     ("ed", [("emotionally disturbed", S, None)], R(".790(5)")),
@@ -181,7 +181,7 @@ STRINGS = [
     ("pe", [("adaptive physical education", V, None)], G(6)),
     ("mediation", [], G(7)), ("state_complaint", [], G(7)), ("dp_hearing", [], G(7)),
     ("comp_services", [], G(8)),
-    ("gen_ed_int", [("alternative intervention strategies", S, AK), ("pre-referral strategies", S, None)], G(9)),
+    ("gen_ed_int", [("alternative intervention strategies", REL, AK), ("pre-referral strategies", S, None)], G(9)),
     ("adaptive", [], G(9)), ("artic", [], G(9)), ("autism", [], G(9)), ("cop", [], G(9)),
     ("id", [], G(9)), ("deafness", [], G(9)), ("deafblind", [], G(9)), ("dyslexia", [], G(9)),
     ("dd", [], G(10)), ("ed", [], G(10)), ("evaluation", [], G(10)), ("ferpa", [], G(10)),

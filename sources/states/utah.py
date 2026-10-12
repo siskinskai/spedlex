@@ -23,7 +23,7 @@ def src(doc, loc=""):
     return {"source_type": "procedural_safeguards_notice", "citation": f"USBE Procedural Safeguards Notice (Jan. 2023){(', ' + loc) if loc else ''}", "url": PSN_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 UT = ["US-UT"]
 UTJ = {"jurisdiction": "US-UT"}
 REG = {"status": "machine_validated"}
@@ -66,7 +66,7 @@ STRINGS = [
     ("special_ed", [], R(50)),
     ("sdi", [], R(51)),
     ("homeless", [("student experiencing homelessness", S, None), ("students experiencing homelessness", P, None)], R(55)),
-    ("age_majority", [("student who is an adult", S, UT)], R(56)),
+    ("age_majority", [("student who is an adult", REL, UT)], R(56)),
     ("saas", [], R(57)),
     ("travel_training", [], R(58)),
     ("ward", [], R(59)),

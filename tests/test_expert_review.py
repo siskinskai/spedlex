@@ -130,3 +130,33 @@ def test_name_and_role_only_leaves_affiliation_out(nevada, tmp_path):
     er.reply(argparse.Namespace(key=str(tmp_path / "key.json"), reply=str(tmp_path / "r.txt"), reviewer=None))
     followups = (tmp_path / "r.followups.md").read_text()
     assert "| Nevada | Pat Educator, school psychologist |" in followups and "Example District" not in followups.split("CONTRIBUTORS")[1]
+
+
+def test_name_pairs_are_triaged(tmp_path, monkeypatch):
+    """Held-back (fix) pairs are never asked; judgment pairs come before the quick check;
+    retyped pairs are worded as related, never as the same thing."""
+    monkeypatch.setattr(er, "ROUNDS", tmp_path)
+    er.request(argparse.Namespace(state="VA", sender=None, greeting=None, reply_to=None, limit=0, stale_years=3))
+    (rnd,) = list(tmp_path.iterdir())
+    key = json.loads((rnd / "key.json").read_text())
+    triage = er.load_triage()
+    fix_pairs = {(c, s) for (j, c, s), d in triage.items() if j == "US-VA" and d == "fix"}
+    asked = {(it["concept_id"], it["string"]) for it in key["items"].values() if it["part"] == "B"}
+    assert not (fix_pairs & asked)
+    rows = {i: (triage.get(("US-VA", it["concept_id"], it["string"]), "keep"), it)
+            for i, it in key["items"].items() if it["part"] == "B"}
+    judge_nums = [int(i[1:]) for i, (d, _) in rows.items() if d == "judge"]
+    skim_nums = [int(i[1:]) for i, (d, _) in rows.items() if d != "judge"]
+    assert judge_nums and skim_nums and max(judge_nums) < min(skim_nums)
+    for d, it in rows.values():
+        if d == "retype":
+            assert "is related to" in it["text"]
+
+
+def test_related_strings_in_data_match_triage_retypes():
+    """Every string typed 'related' in the data is a retype decision in the triage file, and vice versa."""
+    triage = er.load_triage()
+    related = {(j, r["concept_id"], s["text"]) for r in RECORDS for s in r["strings"]
+               if s["string_type"] == "related" for j in s.get("regional", [])}
+    retypes = {k for k, d in triage.items() if d == "retype"}
+    assert related == retypes

@@ -23,6 +23,7 @@ Details: outreach/expert-review/README.md
 """
 
 import argparse
+import csv
 import datetime as dt
 import hashlib
 import json
@@ -38,12 +39,13 @@ ROUNDS = OUTDIR / "rounds"
 DATA = ROOT / "data" / "spedlex.jsonl"
 STATS = ROOT / "data" / "stats.json"
 COVERAGE = ROOT / "docs" / "COVERAGE.md"
+TRIAGE = ROOT / "sources" / "name_pair_triage.tsv"
 WIDTH = 78
 RULE = "=" * WIDTH
 BOX = "[   ]"
 # Notes (written by the people who drafted a layer) that signal an open question.
 CUES = re.compile(r"verify|may differ|ambiguous|name from the|out of date|outdated", re.I)
-EQUIVALENT_TYPES = {"synonym", "legacy"}
+EQUIVALENT_TYPES = {"synonym", "legacy", "related"}
 
 
 # ---------------------------------------------------------------- loading
@@ -102,6 +104,14 @@ def wrap(text, first, rest):
 
 # ---------------------------------------------------------------- items
 
+def load_triage():
+    """Maintainer decisions per name pair: {(jurisdiction, concept_id, string): decision}."""
+    if not TRIAGE.exists():
+        return {}
+    lines = [l for l in TRIAGE.read_text(encoding="utf-8").splitlines() if l.strip() and not l.startswith("#")]
+    return {(r["jurisdiction"], r["concept_id"], r["string"]): r["decision"] for r in csv.DictReader(lines, delimiter="\t")}
+
+
 def build_items(recs, code, name, stale_years, limit, extras, today):
     j = f"US-{code}"
     mine = [r for r in recs if any(s.get("jurisdiction") == j for s in r["sources"])]
@@ -147,14 +157,27 @@ def build_items(recs, code, name, stale_years, limit, extras, today):
         if e["part"] == "key":
             A.append({"kind": e["kind"], "part": "A", "concept_id": None, "maps_to_review": False, "label": e["text"][:80], "text": e["text"]})
 
-    # Part B: another name for a known term.
+    # Part B: name pairs. "judge" pairs need a person's decision (same or not). "keep" and "retype"
+    # pairs are a quick check. "fix" pairs are held back until the layer is corrected.
+    triage = load_triage()
     for r in mine:
         for s in r["strings"]:
-            if j in s.get("regional", []) and s["string_type"] in EQUIVALENT_TYPES and f"{r['concept_id']}|{s['text']}" not in skip_pairs:
-                src = nv_sources(r)[0]
-                B.append({"kind": "yn", "part": "B", "concept_id": r["concept_id"], "string": s["text"], "maps_to_review": False,
-                          "label": f"\"{s['text']}\" = \"{r['preferred_term']}\"",
-                          "_src": src, "text": f"\"{s['text']}\" = \"{r['preferred_term']}\""})
+            if j not in s.get("regional", []) or s["string_type"] not in EQUIVALENT_TYPES:
+                continue
+            if f"{r['concept_id']}|{s['text']}" in skip_pairs:
+                continue
+            decision = triage.get((j, r["concept_id"], s["text"]),
+                                  "retype" if s["string_type"] == "related" else "keep")
+            if decision == "fix":
+                continue
+            src = nv_sources(r)[0]
+            pair = f"\"{s['text']}\" = \"{r['preferred_term']}\""
+            if decision == "retype":
+                text = f"\"{s['text']}\" is related to \"{r['preferred_term']}\" but is not the same thing"
+            else:
+                text = pair
+            B.append({"kind": "yn", "part": "B", "concept_id": r["concept_id"], "string": s["text"], "maps_to_review": False,
+                      "label": pair, "_src": src, "text": text, "_group": "judge" if decision == "judge" else "skim"})
 
     # Part C: candidates nobody has confirmed.
     for r in mine:
@@ -251,7 +274,12 @@ def request(args):
     n_val = sum(r["review"]["status"] == "machine_validated" for r in mine)
 
     # Render numbered items first (this fixes the document numbering).
-    ids_a, ids_b, ids_c, ids_d = (render_items(x, l) for x, l in ((A, "A"), (B, "B"), (C, "C"), (D, "D")))
+    judge = [b for b in B if b["_group"] == "judge"]
+    skim = [b for b in B if b["_group"] != "judge"]
+    held = sum(1 for (jur, _, _), dec in load_triage().items() if jur == f"US-{code}" and dec == "fix")
+    ids_a, ids_c, ids_d = (render_items(x, l) for x, l in ((A, "A"), (C, "C"), (D, "D")))
+    ids_b_judge = render_items(judge, "B", 1)
+    ids_b_skim = render_items(skim, "B", len(judge) + 1)
     minutes_a = max(5, int(math.ceil(len(A) * 1.0 / 5.0) * 5))
     minutes = max(minutes_a, int(math.ceil((len(A) * 1.0 + (len(B) + len(C)) * 0.2 + len(D) * 1.5) / 5.0) * 5))
     doc_lines = [f"  [{i + 1}] {label}\n      {url}" if url else f"  [{i + 1}] {label}" for i, (label, url) in enumerate(docs.order)]
@@ -268,6 +296,7 @@ def request(args):
     vals = {"STATE": name, "SENDER": sender, "GREETING": greeting, "MINUTES_A": minutes_a, "MINUTES": minutes,
             "N_CONCEPTS": f"{stats['concepts']:,}", "N_STATES": stats["states"], "N_EXPERT": n_expert, "N_STATE": len(mine),
             "N_VALIDATED": n_val, "N_CAND": n_cand, "N_A": len(A), "N_B": len(B), "N_C": len(C), "N_D": len(D),
+            "N_JUDGE": len(judge), "N_SKIM": len(skim),
             "DOC_LIST": doc_short, "SIGNATURE": signature}
 
     def section(key, body=None):
@@ -277,9 +306,16 @@ def request(args):
         return "\n\n".join(parts)
 
     pieces = [section("opening"), section("what"), section("why"), section("how"), section("about")]
-    for key, blocks in (("part_a", ids_a), ("part_b", ids_b), ("part_c", ids_c), ("part_d", ids_d)):
-        if blocks:
-            pieces.append(section(key, blocks if key != "part_b" else ["\n".join(blocks)]))
+    if ids_a:
+        pieces.append(section("part_a", ids_a))
+    if ids_b_judge:
+        pieces.append(section("part_b", ["\n".join(ids_b_judge)]))
+    if ids_b_skim:
+        pieces.append(section("part_b_skim", ["\n".join(ids_b_skim)]))
+    if ids_c:
+        pieces.append(section("part_c", ids_c))
+    if ids_d:
+        pieces.append(section("part_d", ids_d))
     pieces.append(RULE + "\n\n" + fill(tpl["close"], vals))
     footer = [RULE, f"SPEDLex: {stats_url('repo')}", f"Browse every term: {stats_url('explorer')}", "",
               f"Documents we used for {name}:"] + doc_lines
@@ -296,7 +332,8 @@ def request(args):
            "items": {it["id"]: {k: v for k, v in it.items() if not k.startswith("_") and k not in ("id", "text")} | {"text": it["text"]}
                      for it in A + B + C + D}}
     (rounds / "key.json").write_text(json.dumps(key, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"{name}: {len(A)} key questions, {len(B)} name pairs, {len(C)} candidate terms, {len(D)} open questions "
+    print(f"{name}: {len(A)} key questions, {len(judge)} name pairs to judge, {len(skim)} to skim, "
+          f"{held} held back (fix), {len(C)} candidate terms, {len(D)} open questions "
           f"(~{minutes_a} min for Part A, ~{minutes} min in all)\nwrote {rounds / 'email.txt'}\nwrote {rounds / 'key.json'}")
     if not args.sender or not args.reply_to or not args.greeting:
         print("note: fill in the [BRACKETED] sender, greeting and reply-to before sending (or pass --sender/--greeting/--reply-to).")

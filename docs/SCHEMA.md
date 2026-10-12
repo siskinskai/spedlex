@@ -43,7 +43,7 @@ validated against
 | Field | Meaning |
 |---|---|
 | `text` | The exact surface form. |
-| `string_type` | `preferred`, `synonym`, `acronym`, `abbreviation`, `spelling_variant`, `plural`, or `legacy` (an outdated form that still appears in current documents). |
+| `string_type` | `preferred`, `synonym`, `acronym`, `abbreviation`, `spelling_variant`, `plural`, `legacy` (an outdated form that still appears in current documents), or `related` (a term linked to the concept that is not the same thing: a narrower or broader term, a person, a document, a process or event, or a level). A `related` string is recognised by the matcher but is never asked of experts as a same-thing question. |
 | `match` | `phrase_ci`: the whole phrase, any case. `phrase_cs`: the whole phrase, exact case (used for acronyms). `token_cs`: reserved for single tokens with no risk. |
 | `regional` | Optional list of jurisdictions where this form is used, when narrower than the concept. "ARD committee" is `["US-TX"]` on the national IEP Team concept. The list names the states whose documents were read and use the form; it is not exhaustive. |
 | `disfavored` | Optional, always `true` when present. The form shouldn't be used in new writing: the law replaced it, or it is considered stigmatizing. It is still matched, because older documents and some state rules print it. Set from `sources/disfavored.tsv`, never in a layer module. |

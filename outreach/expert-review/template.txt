@@ -83,9 +83,16 @@ PART A. KEY QUESTIONS ({{N_A}})
 The points where the list most needs a person's judgment.
 
 @@ part_b
-PART B. SAME THING, DIFFERENT NAME? ({{N_B}})
+PART B. NAME PAIRS THAT NEED YOUR JUDGMENT ({{N_JUDGE}})
 
-Each line says that the {{STATE}} name on the left is another name for the term on the right. Y = people in {{STATE}} really use it that way. N = they don't, or it means something different (please say what in a comment).
+These are the pairs where the answer depends on how {{STATE}} uses the terms. Please spend most of your time here.
+
+Y = the two names are the same thing in {{STATE}}. N = they are not the same thing (for example, one is a person and the other is a process, or one is broader than the other). Please say what the difference is in a comment.
+
+@@ part_b_skim
+PART B, QUICK CHECK ({{N_SKIM}}): SAME OR RELATED?
+
+These pairs are already believed to be right. Skim them and answer only where something is wrong. Each line says either that two names are the same thing, or that they are related but not the same. Y = right as written. N = wrong; please say what it is in a comment.
 
 @@ part_c
 PART C. REAL TERM? ({{N_C}})

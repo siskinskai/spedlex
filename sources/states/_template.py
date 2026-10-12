@@ -34,7 +34,7 @@ def src(doc, loc=""):
 
 
 # string types
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 XX = ["US-XX"]                    # regional tag for strings only used in this state
 XXJ = {"jurisdiction": "US-XX"}   # opts for concepts that only exist in this state
 

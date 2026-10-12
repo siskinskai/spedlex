@@ -66,7 +66,7 @@ def src(doc, loc=""):
             "doc_id": "ky-youth-iep-2025", "url": YOUTH_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 KY = ["US-KY"]                    # regional tag for strings only used in Kentucky
 KYJ = {"jurisdiction": "US-KY"}   # opts for concepts that only exist in Kentucky
 
@@ -84,7 +84,7 @@ STRINGS = [
     ("ed", [("emotional-behavioral disability", S, KY)], R(24)),
     ("ed", [("emotional-behavior disability", S, KY)], R(5)),
     ("hi", [], R(29)),
-    ("id", [("mental disability", S, KY), ("mild mental disability", S, KY), ("functional mental disability", S, KY),
+    ("id", [("mental disability", S, KY), ("mild mental disability", REL, KY), ("functional mental disability", REL, KY),
             ("MMD", A, KY), ("FMD", A, KY)], R(37)),
     ("md", [], R(39)),
     ("oi", [], R(41)),
@@ -182,7 +182,7 @@ STRINGS = [
     ("osep", [], G(6)),
     # A Youth Guide to the IEP
     ("iep", [], Y(3)),
-    ("iep_team", [("ARC meeting", S, KY)], Y(5)),
+    ("iep_team", [("ARC meeting", REL, KY)], Y(5)),
     ("lea_rep", [], Y(6)),
     ("sped_teacher", [], Y(6)),
     ("plaafp", [], Y(11)),

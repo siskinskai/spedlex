@@ -149,7 +149,7 @@ with no federal equivalent: a state agency, a state assessment, a diploma
 type, a placement model.
 
 **String types.** Each string has one type: `preferred`, `synonym`,
-`acronym`, `abbreviation`, `spelling_variant`, `plural` or `legacy`. Legacy
+`acronym`, `abbreviation`, `spelling_variant`, `plural`, `legacy` or `related` (see SCHEMA.md). Legacy
 forms are kept on purpose. Several states' rules still say "mental
 retardation" or "serious emotional disturbance". A safelist that dropped
 those forms would strip a state's own citations from an IEP.

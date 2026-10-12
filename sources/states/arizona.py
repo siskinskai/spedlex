@@ -58,7 +58,7 @@ def src(doc, loc=""):
             "citation": f"ADE IDEA Part B Procedural Safeguards Notice (Rev. 08-28-25), PDF p. {loc}", "doc_id": "az-psn-2025", "url": PSN_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 AZ = ["US-AZ"]
 AZJ = {"jurisdiction": "US-AZ"}
 R = lambda loc: src("RULE", loc)
@@ -73,7 +73,7 @@ STRINGS = [
     ("consent", [("informed written consent", S, AZ)], R("(B)(10)")),
     ("mdt", [("Multidisciplinary Evaluation Team", S, AZ)], R("(B)(12)")),
     ("mdt", [("MET", A, AZ)], R("(E)(3)")),
-    ("lea", [("public education agency", S, AZ), ("PEA", A, AZ)], R("(B)(16)")),
+    ("lea", [("public education agency", REL, AZ), ("PEA", A, AZ)], R("(B)(16)")),
     ("sdi", [], R("(B)(18)")),
     ("sped_teacher", [], R("(B)(19)")),
     # R7-2-401(D)-(L)
@@ -96,8 +96,8 @@ STRINGS = [
     ("ohi", [], H(7)), ("sld", [], H(7)), ("tbi", [], H(7)), ("vi", [], H(7)),
     ("sli", [("Speech/Language Impairment", V, AZ)], H(7)),
     # Arizona's three intellectual disability categories, filed under `id` as Nevada's are
-    ("id", [("mild intellectual disability", S, AZ), ("MIID", A, AZ), ("moderate intellectual disability", S, AZ),
-            ("severe intellectual disability", S, AZ)], H(7)),
+    ("id", [("mild intellectual disability", REL, AZ), ("MIID", A, AZ), ("moderate intellectual disability", REL, AZ),
+            ("severe intellectual disability", REL, AZ)], H(7)),
     ("id", [("MOID", A, AZ)], G(34)),
     ("reeval", [], H(11)),
     ("mdr", [], H(12)), ("iaes", [], H(12)),

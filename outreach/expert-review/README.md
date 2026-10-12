@@ -33,7 +33,7 @@ the choice of expert and the greeting are yours.
 |---|---|---|
 | Intro, "what SPEDLex is" (what an entry holds, what it is not, and its two uses: privacy tools and AI wording tools), "why experts" | `template.txt`, plus live counts from `data/` | nothing |
 | **A. Key questions** | (1) documents dated 3+ years ago (`--stale-years`), (2) concepts the state layer defined whose `note` says *verify*, *may differ*, *ambiguous* or *name from the ... form*, (3) hand-written questions in `extras/<state>.tsv` | Y / N / ? and a comment |
-| **B. Same thing, different name?** | every state-tagged `synonym` or `legacy` string on a concept | Y / N / ? |
+| **B. Same thing, different name?** | every state-tagged `synonym`, `legacy` or `related` string on a concept, split into *judge* (asked in full) and *quick check* (skim and confirm); *fix* pairs are held back | Y / N / ? |
 | **C. Real term?** | every concept with `review.status = candidate` that cites the state | Y / N / ? |
 | **D. What are we missing?** | defaults in `template.txt` plus `missing` rows in `extras/<state>.tsv` | free text |
 
@@ -82,6 +82,21 @@ It writes two files next to the reply:
 accept, runs `python -m spedlex.build`, and turns the follow-ups into edits to
 `sources/states/<state>.py`. A *Yes* on a name pair (Part B) is recorded only by
 the lack of a correction; there is no per-string review status yet.
+
+### Part B triage (`sources/name_pair_triage.tsv`)
+
+Each Part B name pair has a maintainer decision in `sources/name_pair_triage.tsv`,
+keyed by jurisdiction, concept and string. The generator reads it to split the
+pairs:
+
+- **judge**: the pair may or may not be the same thing. Asked in full, with Y / N / ?.
+- **keep**: a name variant, title or legacy form. Listed in the quick-check section for a Y / N / ? skim.
+- **retype**: related but not the same (a level, a person, a document, a process or event, or a narrower or broader term). Listed in the quick-check section and recorded in the layer as type `related`, which is never asked as the same thing.
+- **fix**: wrong or garbled. Held back from the email until the maintainer corrects it.
+
+Pairs with no triage row default to *keep*, except `related` strings, which default
+to *retype*. A test (`tests/test_expert_review.py`) checks that the `related`
+strings in the data match the retype rows in the triage file.
 
 ## Credit
 

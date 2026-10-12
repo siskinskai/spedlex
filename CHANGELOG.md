@@ -6,6 +6,29 @@ patch for corrections and reviews. Concept IDs never change between versions.
 
 ## [Unreleased]
 
+Name-pair triage for the expert review. Every state-tagged synonym, legacy
+or related name pair now has a decision in `sources/name_pair_triage.tsv`
+(judge, keep, retype or fix), and the expert-review email is split into a
+judge section, asked in full, and a quick-check section to skim and confirm.
+Pairs that describe a level, person, document, process or event, or a narrower
+or broader term, are retyped from `synonym` to a new string type, `related`
+(documented in `docs/SCHEMA.md`). Examples: "mild intellectual disability" under
+intellectual disability in Arizona, Nevada and Delaware, and "speech impairment"
+under speech or language impairment in Alaska and Texas. Three strings that
+were typed `legacy` are also retyped to `related`: "Preschool Speech Delay"
+(Delaware), "Student Accommodation Request" (Iowa) and "Florida Standards
+Alternate Assessment" (Florida). That lowers the legacy count from 25 to 22.
+Delaware's level names were previously untagged synonyms and are now tagged to
+Delaware. "Speech impairment" is now split in two: `related` for Alaska and
+Texas, and still `synonym` for Florida, which adds one string (3,541 to 3,542
+in total). Kentucky's "functional mental disability" is retyped to `related`
+(a level, like "mild mental disability"), and New York's "tests read" stays a
+`synonym` and goes to the judge section for the expert to decide. Layer modules
+now use a `REL` constant for `related`, alongside `S`, `A` and the others. Fix
+pairs are held back from the email pending maintainer correction. Drafted by
+Claude Haiku 5.5 (`claude-haiku-5-5`), audited by Claude Sonnet 5.5
+(`claude-sonnet-5-5`).
+
 Virginia supplement (0.52.0), drafted with Claude Sonnet 5.5
 (`claude-sonnet-5-5`) and awaiting the maintainer's check. The first Virginia
 pass read the 2013 Town Hall copy of the procedural safeguards notice because

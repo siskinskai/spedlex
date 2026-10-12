@@ -56,7 +56,7 @@ def src(doc, loc=""):
 
 
 # string types
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 DC = ["US-DC"]                    # regional tag for strings only used in the District
 DCJ = {"jurisdiction": "US-DC"}   # opts for concepts that only exist in the District
 R = lambda loc: src("RULE", loc)
@@ -142,7 +142,7 @@ STRINGS = [
     ("continuum", [], R("3002")),
     ("regular_class", [("regular education classroom", S, None)], R("3002.3")),
     ("special_class", [("special education classroom", S, None)], R("3002.3")),
-    ("special_school", [("special education day program", S, DC)], R("3002.3")),
+    ("special_school", [("special education day program", REL, DC)], R("3002.3")),
     ("residential", [("special education residential program", S, DC)], R("3002.3")),
     ("residential", [("residential treatment facility", S, None)], R("3025.13")),
     ("home_instr", [], R("3024")),
@@ -207,7 +207,7 @@ STRINGS = [
     ("audiological_assess", [("audiological evaluation", S, None)], H(7)),
     ("voc_eval", [], H(7)),
     ("consult", [("consultation services", S, None)], H(24)),
-    ("comparable", [("comparable services plan", S, DC)], H(27)),
+    ("comparable", [("comparable services plan", REL, DC)], H(27)),
     ("coteach", [], H(26)),
     ("dys_screen", [], H(4)),
     ("ext_time", [], H(17)), ("large_print", [], H(17)), ("asl", [], H(17)),
@@ -215,7 +215,7 @@ STRINGS = [
     ("small_group", [("small group testing", S, DC)], H(17)),
     ("indiv_admin", [("individual testing", S, DC)], H(17)),
     ("msaa", [], src("ALT")),
-    ("dlm", [("DLM Science Alternate Assessment", S, DC)], src("ALT")),
+    ("dlm", [("DLM Science Alternate Assessment", REL, DC)], src("ALT")),
     ("ess_elements", [("EEs", A, None)], src("ALT")),
     ("sig_cog", [], src("ALT")),
 ]

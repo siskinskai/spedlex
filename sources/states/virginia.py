@@ -48,7 +48,7 @@ def src(doc, loc=""):
     return {"source_type": stype, "citation": cit, "url": url}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 VA = ["US-VA"]
 VAJ = {"jurisdiction": "US-VA"}
 REG = {"status": "machine_validated"}
@@ -71,7 +71,7 @@ STRINGS = [
     ("dd", [], src("VAC", "Developmental delay")),
     ("iep_team", [], src("VAC", "Individualized education program team")),
     ("lea", [("school division", S, VA), ("school divisions", P, VA)], src("FG", "throughout")),
-    ("eligibility", [("eligibility group", S, VA), ("eligibility determination meeting", S, None)], src("FG", "p. 17")),
+    ("eligibility", [("eligibility group", REL, VA), ("eligibility determination meeting", S, None)], src("FG", "p. 17")),
     ("sst", [("teacher assistance team", S, None), ("instructional support team", S, None), ("school-based team", S, VA), ("child study team", S, None), ("child study", AB, VA)], src("FG", "p. 12")),
     ("reeval", [("triennial reevaluation", S, None)], src("FG", "p. 32")),
     ("reed", [("existing data review", S, VA)], src("FG", "p. 14")),
@@ -97,7 +97,7 @@ STRINGS = [
     ("comm_exp", [], src("FG", "p. 24")),
     ("sig_cog", [("students with significant cognitive disabilities", S, None)], src("VAAP")),
     ("iep_facil", [], src("FG", "p. 44")),
-    ("dp_hearing", [("special education hearing officer", S, VA), ("impartial special education hearing officer", S, VA)], src("VAC", "Special education hearing officer")),
+    ("dp_hearing", [("special education hearing officer", REL, VA), ("impartial special education hearing officer", REL, VA)], src("VAC", "Special education hearing officer")),
     ("consent", [("informed parental consent", S, None)], src("VAC", "Informed parental consent")),
     ("surrogate", [("temporary surrogate", S, None)], src("FG", "p. 10")),
     ("uhy", [], src("FG", "p. 10")),

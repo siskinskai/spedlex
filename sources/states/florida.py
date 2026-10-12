@@ -38,7 +38,7 @@ def src(doc, loc=""):
     return {"source_type": stype, "citation": f"{title}, {loc}" if loc else title, "url": url}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 FL = ["US-FL"]
 FLJ = {"jurisdiction": "US-FL"}
 REG = {"status": "machine_validated"}
@@ -121,8 +121,8 @@ CONCEPTS = [
     ("emp_trans", "Employment transition plan", "transition", [], src("GRAD", "(2)(d)"), {**FLJ, **REG}),
     ("acad_emp", "Mastery of academic and employment competencies", "transition", [("academic and employment competencies", AB, FL)], src("GRAD", "(4)"), {**FLJ, **REG}),
     ("defer_dip", "Deferral of diploma", "transition", [("diploma deferral", S, FL), ("defer receipt of the diploma", S, FL)], src("GRAD", "(6)"), {**FLJ, **REG}),
-    ("faa", "Florida Alternate Assessment", "iep_component", [("FAA", A, FL), ("FAA Performance Task", S, FL), ("FAA Datafolio", S, FL),
-                                                             ("Florida Standards Alternate Assessment", L, FL), ("FSAA", A, FL)], src("FAA"),
+    ("faa", "Florida Alternate Assessment", "iep_component", [("FAA", A, FL), ("FAA Performance Task", S, FL), ("FAA Datafolio", REL, FL),
+                                                             ("Florida Standards Alternate Assessment", REL, FL), ("FSAA", A, FL)], src("FAA"),
      {**FLJ, "broader": "alt_assess", "note": "Renamed from the Florida Standards Alternate Assessment (FSAA); older IEPs use the old name."}),
     ("fast", "Florida Assessment of Student Thinking", "iep_component", [("FAST", A, FL)], src("FAA"),
      {**FLJ, "flags": ["common_english_word"], "note": "'FAST' is protected only as an all-caps match."}),
@@ -136,7 +136,7 @@ CONCEPTS = [
     ("fes", "Family Empowerment Scholarship", "legal_procedural", [("Family Empowerment Scholarship Program", S, FL)], src("FAC", "6A-6.0952"), {**FLJ, **REG}),
     ("mckay", "John M. McKay Scholarship for Students with Disabilities", "legal_procedural", [("McKay Scholarship", AB, FL)], src("FAC", "6A-6.0970"),
      {**FLJ, **REG, "flags": ["eponym", "surname"], "note": "Repealed program that still appears in older records; protected only as the full phrase."}),
-    ("gardiner", "Gardiner Scholarship", "legal_procedural", [("Gardiner Scholarship Program", S, FL)], src("FAC", "6A-6.0961"),
+    ("gardiner", "Gardiner Scholarship", "legal_procedural", [("Gardiner Scholarship Program", REL, FL)], src("FAC", "6A-6.0961"),
      {**FLJ, **REG, "flags": ["eponym", "surname"], "note": "Repealed program; protected only as the full phrase."}),
 ]
 

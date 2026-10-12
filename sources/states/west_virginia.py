@@ -82,7 +82,7 @@ def src(doc, loc=""):
             "doc_id": "wv-psn-2024", "url": PSN_URL}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 WV = ["US-WV"]
 WVJ = {"jurisdiction": "US-WV"}
 D = lambda pdf: src("RULE", f"Definitions, PDF p. {pdf}")          # the Definitions section
@@ -183,7 +183,7 @@ STRINGS = [
     ("nc_recp", [], C("Ch. 5, § 2.J", 88)),
     ("head_start", [], C("Ch. 5, § 2.J", 88)),
     ("revoke", [], C("Ch. 5, § 2.K", 89)),
-    ("amendment", [("IEP Amendment Form", S, WV)], C("Ch. 5, § 3.B", 90)),
+    ("amendment", [("IEP Amendment Form", REL, WV)], C("Ch. 5, § 3.B", 90)),
     ("annual_review", [], C("Ch. 5, § 3.A", 90)),
     ("part_c_transition", [], C("Ch. 5, § 5", 92)),
     # Chapters 6 to 10
@@ -306,7 +306,7 @@ CONCEPTS = [
     ("wv_ccrs", "West Virginia College- and Career-Readiness Standards", "iep_component", [("CCRS", A, WV)],
      D("17 (also Ch. 4, p. 50)"), {**WVJ, "note": "The grade-level standards that the general curriculum is built on."}),
     ("wv_aaas", "West Virginia Alternate Academic Achievement Standards", "iep_component",
-     [("Policy 2520.16", S, WV)], C("Ch. 5, § 2.E", "79 (also Ch. 1, § 3, p. 36)"),
+     [("Policy 2520.16", REL, WV)], C("Ch. 5, § 2.E", "79 (also Ch. 1, § 3, p. 36)"),
      {**WVJ, "broader": "alt_assess", "note": "The standards for students taught on the alternate curriculum; each goal needs at least two objectives."}),
     ("wv_prek", "West Virginia Pre-K", "placement_setting", [("Universal Pre-K", S, WV)], C("Ch. 6, § 3", "96 (also Ch. 5, p. 75)"),
      {**WVJ, "note": "The state's pre-kindergarten system, including classrooms that serve students with IEPs."}),
@@ -413,7 +413,7 @@ CONCEPTS = [
     ("intervener", "Intervener", "personnel_role", [], D(19),
      {"note": "A specially trained one-to-one person who helps a student who is deafblind."}),
     ("wv_esli", "Educational Sign Language Interpreter", "personnel_role",
-     [("educational sign language interpreter I", S, WV), ("educational sign language interpreter II", S, WV)],
+     [("educational sign language interpreter I", REL, WV), ("educational sign language interpreter II", REL, WV)],
      D("16 (also Ch. 9, § 3.A, p. 126)"),
      {**WVJ, "broader": "edu_interpreter"}),
     ("wv_sign_support", "Sign Support Specialist", "personnel_role", [], D(28),

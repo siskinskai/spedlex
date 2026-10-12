@@ -49,7 +49,7 @@ def src(doc, loc=""):
     return {"source_type": stype, "citation": f"{title}, {loc}" if loc else title, "url": url}
 
 
-A, S, V, L, AB, P = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural"
+A, S, V, L, AB, P, REL = "acronym", "synonym", "spelling_variant", "legacy", "abbreviation", "plural", "related"
 CA = ["US-CA"]
 CAJ = {"jurisdiction": "US-CA"}
 REG = {"status": "machine_validated"}
@@ -141,18 +141,18 @@ CONCEPTS = [
     ("assess_plan", "Assessment plan", "evaluation_eligibility", [], src("NPS", "sec. 6"),
      {**CAJ, "note": "California calls evaluations 'assessments'; the assessment plan is the consent form for one."}),
     ("nondisc", "Nondiscriminatory assessment", "evaluation_eligibility", [("nondiscriminatory evaluation", S, None)], src("NPS", "sec. 6"), {}),
-    ("state_sp_sch", "State special schools", "placement_setting", [("California School for the Deaf", S, CA), ("California School for the Blind", S, CA)], src("EC361", "(f)"),
+    ("state_sp_sch", "State special schools", "placement_setting", [("California School for the Deaf", REL, CA), ("California School for the Blind", REL, CA)], src("EC361", "(f)"),
      {**REG}),
     ("calpads", "California Longitudinal Pupil Achievement Data System", "legal_procedural", [("CALPADS", A, CA)], src("DIP"), CAJ),
     ("workability", "WorkAbility I", "transition", [("WorkAbility", AB, CA)], src("EQS"),
      {**CAJ, "note": "The page's abbreviation 'WAI' is too short and ambiguous to safelist."}),
 
     # --- Program options and services ---
-    ("rsp", "Resource specialist program", "placement_setting", [("RSP", A, CA), ("resource specialist", S, CA)], src("EC361", "(b)"),
+    ("rsp", "Resource specialist program", "placement_setting", [("RSP", A, CA), ("resource specialist", REL, CA)], src("EC361", "(b)"),
      {**CAJ, **REG, "broader": "continuum"}),
-    ("nps", "Nonpublic, nonsectarian school", "placement_setting", [("nonpublic school", S, CA), ("nonpublic schools", P, CA), ("NPS", A, CA)], src("EC361", "(e)"),
+    ("nps", "Nonpublic, nonsectarian school", "placement_setting", [("nonpublic school", REL, CA), ("nonpublic schools", P, CA), ("NPS", A, CA)], src("EC361", "(e)"),
      {**CAJ, **REG, "broader": "continuum", "note": "'NPS' also abbreviates 'Notice of Procedural Safeguards' in some documents."}),
-    ("npa", "Nonpublic, nonsectarian agency", "related_service", [("nonpublic agency", S, CA), ("NPA", A, CA)], src("NPS", "sec. 3"), CAJ),
+    ("npa", "Nonpublic, nonsectarian agency", "related_service", [("nonpublic agency", REL, CA), ("NPA", A, CA)], src("NPS", "sec. 3"), CAJ),
     ("telecom", "Instruction using telecommunication", "placement_setting", [], src("EC361", "(i)"), {**CAJ, **REG, "broader": "continuum"}),
     ("vision_svc", "Vision services", "related_service", [], src("EC363", "(b)(7)"), {**CAJ, **REG, "broader": "related"}),
     ("driver", "Specialized driver training instruction", "related_service", [], src("EC363", "(b)(8)"), {**CAJ, **REG, "broader": "related"}),
