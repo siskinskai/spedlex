@@ -42,7 +42,7 @@ state modules in `sources/states/` say which documents could not be read and why
 |---|---|---|
 | [6 CAR § 130-201; 6 CAR § 130-204; 6 CAR § 130-205; ...](https://dese.ade.arkansas.gov/Files/ADE_Spec._Ed._-_Definitions_6CARpt.130-Subpart2_Legal.pdf) | state regulation | 77 |
 | [ADE Part B Procedural Safeguards Notice (Special Education Unit; PDF created Sept. 2006)](https://arksped.ade.arkansas.gov/documents/grantsanddata/Procedural_Safeguards_Notice.pdf) | procedural safeguards notice | 37 |
-| [DESE Special Education Process Guide (Mar. 14](https://arksped.ade.arkansas.gov/documents/paperwork-reduction/sped-process-guide.pdf) | state guidance | 66 |
+| [DESE Special Education Process Guide (Mar. 14](https://arksped.ade.arkansas.gov/documents/paperwork-reduction/sped-process-guide.pdf) | state guidance | 65 |
 
 ## California (US-CA)
 
@@ -137,7 +137,7 @@ state modules in `sources/states/` say which documents could not be read and why
 | Document | Type | Records |
 |---|---|---|
 | [23 Ill. Adm. Code §226.75](https://www.law.cornell.edu/regulations/illinois/IL-Admin-Code-23-226-75) | state regulation | 24 |
-| [ISBE Parent Guide](https://www.isbe.net/Documents/Parent-Guide-Special-Ed.pdf) | state guidance | 68 |
+| [ISBE Parent Guide](https://www.isbe.net/Documents/Parent-Guide-Special-Ed.pdf) | state guidance | 69 |
 
 ## Indiana (US-IN)
 
@@ -204,7 +204,7 @@ state modules in `sources/states/` say which documents could not be read and why
 |---|---|---|
 | [603 CMR 28.02](https://www.doe.mass.edu/lawsregs/603CMR28.html?section=02) | state regulation | 23 |
 | [DESE Parent's Notice of Procedural Safeguards (updated May 2025)](https://www.doe.mass.edu/specialeducation/families/prb/pnps.pdf) | procedural safeguards notice | 23 |
-| [FCSN/Massachusetts DOE](https://www.mass.gov/doc/a-parents-guide-to-special-education/download) | state guidance | 30 |
+| [FCSN/Massachusetts DOE](https://www.mass.gov/doc/a-parents-guide-to-special-education/download) | state guidance | 31 |
 
 ## Michigan (US-MI)
 
@@ -325,7 +325,7 @@ state modules in `sources/states/` say which documents could not be read and why
 | [NYSED Graduation Requirements and Exiting Credentials for Students with Disabilities](https://www.nysed.gov/special-education/information-related-graduation-requirements-and-exiting-credentials-students) | state guidance | 8 |
 | [NYSED Procedural Safeguards Notice (July 2017)](https://www.nysed.gov/sites/default/files/special-education/nysed-procedural-safeguards-notice-july-2017.pdf) | procedural safeguards notice | 22 |
 | [NYSED SEIT Services and Related Services for Preschool Students with Disabilities](https://nysed.gov/special-education/special-education-itinerant-teacher-seit-services-and-related-services-preschool) | state guidance | 2 |
-| [NYSED Testing Accommodations for Students with Disabilities (updated Sept. 2025)](https://www.nysed.gov/sites/default/files/programs/special-education/testing-accommodations-guide.pdf) | state guidance | 22 |
+| [NYSED Testing Accommodations for Students with Disabilities (updated Sept. 2025)](https://www.nysed.gov/sites/default/files/programs/special-education/testing-accommodations-guide.pdf) | state guidance | 23 |
 
 ## North Carolina (US-NC)
 
@@ -379,7 +379,7 @@ state modules in `sources/states/` say which documents could not be read and why
 | [TEA Dyslexia Handbook (2024 update)](https://tea.texas.gov/academics/special-student-populations/special-education/texas-dyslexia-handbook.pdf) | state guidance | 67 |
 | [TEA Notice of Procedural Safeguards (Jan. 2025)](https://spedtex.tea.texas.gov/sites/spedtex.tea.texas.gov/files/2026-05/English%20Notice%20of%20Procedural%20Safeguards%20-%20English%202025%20ACC.pdf) | procedural safeguards notice | 27 |
 | [TEA Parent's Guide to the ARD Process (Jan. 2025)](https://spedtex.tea.texas.gov/sites/spedtex.tea.texas.gov/files/2026-05/ARD%20Guide%202025%20-%20English%20-%20ACC.pdf) | state guidance | 71 |
-| [TEA STAAR Accommodations Educator Guide (2025-26)](https://tea.texas.gov/data-reports/test-administration/2025-2026-staar-accommodations-educator-guide.pdf) | state guidance | 30 |
+| [TEA STAAR Accommodations Educator Guide (2025-26)](https://tea.texas.gov/data-reports/test-administration/2025-2026-staar-accommodations-educator-guide.pdf) | state guidance | 31 |
 | [TEA STAAR Alternate 2 Educator Guide (2025-26)](https://tea2.tea.texas.gov/data-reports/test-administration/2025-2026-staar-alternate-2-educator-guide.pdf) | state guidance | 15 |
 
 ## Utah (US-UT)

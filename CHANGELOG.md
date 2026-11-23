@@ -6,6 +6,42 @@ patch for corrections and reviews. Concept IDs never change between versions.
 
 ## [Unreleased]
 
+**0.53.0: Section 504 split.** SPED:000215 ("Section 504") had merged five
+things: the law, the plan, the committee, a complaint process and
+Pennsylvania's Chapter 15. It is now the law only, and three new concepts
+point to it: SPED:001674 Section 504 committee (Texas STAAR accommodations
+guide p. 34; New York testing accommodations guide p. 9), SPED:001675
+Section 504 plan (California, New York, Illinois, Massachusetts, Iowa, Texas;
+"504 plan" is a synonym, and Texas's "individual accommodation plan"/"IAP"
+are now synonyms tagged US-TX instead of `related`), and SPED:001676 504
+complaint (Illinois parent guide p. 116). Corrections found by reading every
+citation: "504 plan" was cited to Texas's safeguards notice, which doesn't
+use it; New York's string is now "Section 504 Accommodations Plan" (the
+guide's wording), with pages added to its citation. Pennsylvania's "Chapter
+15", Arkansas's attestation (a training-category name only) and Illinois's
+"504 hearing" are left out. Layer modules can now set `version_added` on a
+concept added in a later release. Evidence and decisions:
+provenance/verification/s504-split-2026-11-23.md. Drafted by Claude Opus 5.5
+(`claude-opus-5-5`); decisions by the maintainer.
+
+Source checks and an agent skill. A new review status, `source_verified`,
+records that a person opened the cited document at the cited page and
+confirmed the term there. It needs careful reading, not special-education
+expertise, so it sits between `candidate`/`machine_validated` and
+`expert_accepted`, and expert decisions still override it. Checks are
+recorded in a new file, `sources/verifications.tsv` (columns: concept_id,
+result, citation, verifier, date, note); the build validates each row and
+adds a `review.verified_against` list to the record. `tools/verify_queue.py`
+writes a worklist ranked by how many jurisdictions cite each record and turns
+a filled-in worklist into rows. The matcher and Lexicon include
+`source_verified` records by default. `tools/build_skill.py` packages the
+data and the standard-library lookup code with `skill/SKILL.md` as
+`dist/spedlex-skill.zip`, which the release workflow now attaches to each
+release. `docs/COVERAGE.md` now lists West Virginia (added in 0.43.0) as
+added; a test checks COVERAGE against the built data, and another rejects
+note-app wikilink lines (`[[SpedLex]]`) in tracked Markdown. Drafted by Claude
+Opus 5.5 (`claude-opus-5-5`).
+
 Name-pair triage for the expert review. Every state-tagged synonym, legacy
 or related name pair now has a decision in `sources/name_pair_triage.tsv`
 (judge, keep, retype or fix), and the expert-review email is split into a

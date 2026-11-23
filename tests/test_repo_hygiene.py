@@ -54,3 +54,15 @@ def test_add_state_guard_blocks_the_same_extensions():
     text = (ROOT / "tools" / "add_state.py").read_text(encoding="utf-8")
     missing = [e for e in sorted(BLOCKED_EXT) if f'"{e}"' not in text]
     assert not missing, f"tools/add_state.py's blocked list is out of sync with this test: {missing}"
+
+
+def test_no_note_app_wikilinks_in_tracked_markdown():
+    """Note apps (Obsidian) add lines like "[[SpedLex]]" to files in a vault.
+
+    They render as literal brackets on GitHub. Keep the repository outside the
+    vault, or remove the line before committing.
+    """
+    wikilink = re.compile(r"^\[\[[^\]]+\]\]\s*$", re.M)
+    bad = [p for p in tracked_files() if p.endswith(".md") and (ROOT / p).is_file()
+           and wikilink.search((ROOT / p).read_text(encoding="utf-8", errors="replace"))]
+    assert not bad, "Note-app wikilink lines in:\n  " + "\n  ".join(bad)

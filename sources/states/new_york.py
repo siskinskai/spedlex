@@ -122,7 +122,8 @@ STRINGS = [
     ("oral_admin", [("tests read", S, NY), ("tests read aloud", S, None)], src("TAG", "method of presentation")),
     ("calc_aids", [], src("TAG", "other accommodations")),
     ("spell_check", [("spell-checking device", S, None)], src("TAG", "method of response")),
-    ("s504", [("Section 504 Accommodation Plan", S, None)], src("TAG")),
+    ("s504_plan", [("504 plan", S, None), ("Section 504 Accommodations Plan", S, None)], src("TAG", "pp. 5, 9")),
+    ("s504_committee", [], src("TAG", "p. 9")),
 ]
 
 CONCEPTS = [

@@ -485,7 +485,7 @@ function render() {
   if (!rows.length) { list.innerHTML = `<div class="empty">No concepts match. Clear the search or pick another category.</div>`; return; }
   list.innerHTML = rows.map(r => {
     const others = r.strings.filter(s => s.string_type !== "preferred").slice(0, 4).map(s => s.text).join(" · ");
-    const statusChip = (isIllus(r) ? `<span class="chip illus">illustrative</span>` : "") + statesOf(r).map(st => `<span class="chip st ${st.c}" title="${st.name}">${st.c.toUpperCase()}</span>`).join("") + (r.review.status === "candidate" ? `<span class="chip cand">to verify</span>` : "");
+    const statusChip = (isIllus(r) ? `<span class="chip illus">illustrative</span>` : "") + statesOf(r).map(st => `<span class="chip st ${st.c}" title="${st.name}">${st.c.toUpperCase()}</span>`).join("") + (r.review.status === "candidate" ? `<span class="chip cand">to verify</span>` : "") + (r.review.status === "source_verified" ? `<span class="chip cand" title="A person confirmed the citation">source checked</span>` : "");
     return `<div class="row risk-${r.pii_risk.level}" data-id="${r.concept_id}">
       <button type="button" aria-expanded="false"><span class="cid">${r.concept_id}</span>
       <span class="term">${esc(r.preferred_term)}<small>${esc(others || r.sources[0].citation)}</small></span>

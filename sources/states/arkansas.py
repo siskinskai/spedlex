@@ -102,7 +102,7 @@ STRINGS = [
     ("annual_review", [], G(52)),
     ("amendment", [], G(53)), ("reeval", [], G(53)),
     ("sped_admin", [("Special Education Supervisor", S, AR), ("Special Education Director", S, AR)], G(58)),
-    ("fba", [], G(58)), ("bip", [], G(58)), ("pbis", [], G(58)), ("braille", [], G(58)), ("s504", [], G(58)),
+    ("fba", [], G(58)), ("bip", [], G(58)), ("pbis", [], G(58)), ("braille", [], G(58)),
     ("saas", [], G(59)), ("esy", [], G(60)), ("plaafp", [], G(61)), ("lep", [], G(61)),
     ("coteach", [("co-taught services", S, AR)], G(66)), ("lre", [], G(66)),
     ("special_school", [("Special Day School", S, AR)], G(70)),

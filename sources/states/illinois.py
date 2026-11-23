@@ -75,7 +75,7 @@ STRINGS = [
     ("stay_put", [("stay-put provision", S, None)], src("PG", "p. 91")),
     ("resolution", [], src("PG", "pp. 93-95")),
     ("ecse", [], src("PG", "p. 112")),
-    ("s504", [("504 complaint", S, None)], src("PG", "pp. 115-118")),
+    ("s504_plan", [], src("PG", "p. 116")),
     ("state_panel", [("Advisory Council on the Education of Children with Disabilities", S, IL)], src("PG", "p. 120")),
     ("sop", [], src("PG", "key definitions")),
     ("pti", [("PTIs", P, None)], src("PG", "p. 23")),
@@ -125,6 +125,9 @@ CONCEPTS = [
     ("cdd", "Childhood disintegrative disorder", "health_condition", [], src("PG", "pp. 30, 46-47"), {"broader": "autism"}),
     ("rett", "Rett syndrome", "health_condition", [("Rett's syndrome", V, None)], src("PG", "p. 47"),
      {"broader": "autism", "flags": ["eponym", "surname"], "note": "Eponym; protected only as the full phrase."}),
+    # Split from s504 (0.53.0). Covers the district 504 hearing and an OCR complaint.
+    ("s504_complaint", "504 complaint", "section_504", [], src("PG", "p. 116"),
+     {"broader": "s504", "version_added": "0.53.0"}),
 ]
 
 JURISDICTION = "US-IL"

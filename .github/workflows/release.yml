@@ -22,6 +22,8 @@ jobs:
           v=$(python -c "import spedlex; print(spedlex.__version__)")
           test "v$v" = "${GITHUB_REF_NAME}" || { echo "tag ${GITHUB_REF_NAME} != v$v"; exit 1; }
       - run: python -m build
+      - name: Package the agent skill
+        run: python tools/build_skill.py
       - name: Bundle the data
         run: |
           mkdir -p spedlex-data-${GITHUB_REF_NAME}

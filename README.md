@@ -77,16 +77,16 @@ the data, a reference matcher and the terminology helpers are below, and
 nothing here is tied to any one tool or model.
 
 <!-- stats:start -->
-## What's in it (v0.52.0)
+## What's in it (v0.53.0)
 
 | | |
 |---|---|
-| Concepts | 1,670: 156 from 34 CFR Part 300, 1514 added by state layers |
-| Surface strings | 3,542 (phrases, acronyms, plurals, legacy and regional forms): 1,186 tagged to the states that use them, 22 older forms, 3 flagged as disfavored |
+| Concepts | 1,673: 156 from 34 CFR Part 300, 1517 added by state layers |
+| Surface strings | 3,542 (phrases, acronyms, plurals, legacy and regional forms): 1,185 tagged to the states that use them, 22 older forms, 3 flagged as disfavored |
 | States | 42: AK, AL, AR, AZ, CA, CO, CT, DC, DE, FL, GA, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, ME, MI, MN, MO, MS, NC, NH, NJ, NM, NV, NY, OH, OR, PA, TN, TX, UT, VA, WA, WV, WY |
 | Documents cited | 205, listed in [docs/SOURCES.md](docs/SOURCES.md) |
-| Review status | 779 checked against regulation text, 891 candidates awaiting a human check, 0 expert-accepted |
-| Privacy risk | 1058 none, 265 low, 347 high |
+| Review status | 779 checked by the build against regulation text, 0 source-verified by a person, 894 candidates awaiting a source check, 0 expert-accepted |
+| Privacy risk | 1058 none, 268 low, 347 high |
 
 13 more records are **illustrative placeholders** for later work
 (test instruments, score terms). They're marked and excluded by default.
@@ -156,7 +156,9 @@ context = lex.glossary(document_text)              # a short, cited glossary for
 
 The same functions are on the command line (`spedlex check draft.txt
 --state TX`) and in an MCP server (`pip install "spedlex[mcp] @ git+https://github.com/SiskinSkai/spedlex"`,
-then `spedlex-mcp`). See [docs/USING-WITH-AI.md](docs/USING-WITH-AI.md).
+then `spedlex-mcp`). Agents that use skills can load the packaged skill
+(`spedlex-skill.zip` on each release, or `python tools/build_skill.py`). See
+[docs/USING-WITH-AI.md](docs/USING-WITH-AI.md).
 
 ## How it was built
 
@@ -174,8 +176,10 @@ then `spedlex-mcp`). See [docs/USING-WITH-AI.md](docs/USING-WITH-AI.md).
    `sources/disfavored.tsv` flags forms that shouldn't be used in new
    writing, each with the law or rule behind it. Both are still matched,
    because older documents use them.
-5. **Review.** Records start as `candidate` or `machine_validated` and move
-   to `expert_accepted` when a special-education professional confirms them.
+5. **Review.** Records start as `candidate` or `machine_validated`. They move
+   to `source_verified` when a person opens the cited document and confirms
+   the term there, and to `expert_accepted` when a special-education
+   professional confirms them.
 
 [docs/METHODOLOGY.md](docs/METHODOLOGY.md) explains each step, the
 decisions behind it and its known limits.
@@ -233,6 +237,10 @@ The most valuable contributions don't need code:
   can do it by email, with no GitHub account: see
   [outreach/expert-review/](outreach/expert-review/README.md). Reviewers who
   opt in are thanked in [CONTRIBUTORS.md](CONTRIBUTORS.md).
+- **Check sources.** Open a cited document and confirm the term is on the
+  cited page. No special-education background needed, just careful reading:
+  `python tools/verify_queue.py queue` writes a ranked worklist (see
+  [CONTRIBUTING.md](CONTRIBUTING.md#checking-sources)).
 - **Report a wrong or missing term** with the issue forms.
 - **Add a state.** [CONTRIBUTING.md](CONTRIBUTING.md) walks through it. Most
   of the work is reading three documents carefully.
@@ -251,6 +259,8 @@ data/            the published list (built, so don't edit by hand)
   collision_report.csv  strings that hit a name list or scrubber pattern
 sources/         what the list is built from
   disfavored.tsv strings flagged as not for new writing, with their basis
+  verifications.tsv  source checks: a person confirmed the citation
+  reviews.tsv    expert review decisions
   federal.py     34 CFR Part 300 core
   states/        one module per state layer, with its sources in the docstring
   documents.tsv  manifest of source documents: URL, hash, archived snapshot
@@ -262,6 +272,7 @@ spedlex/         Python package: build pipeline, risk grading, matcher (match.py
 schema/          JSON Schema for a concept record
 reference/names/ name lists used for risk grading
 site/            the explorer page
+skill/           SKILL.md for the packaged agent skill (tools/build_skill.py)
 docs/            methodology, schema guide, data card, usage, sources
 prompts/         instructions for AI models: draft, audit, pre-check
 AGENTS.md        rules for AI coding agents working in the repo
