@@ -33,8 +33,10 @@ name. The second worst is an uncited or invented term.
 - **Never weaken the safety tests** in `tests/test_match.py` to make a change
   pass. If a new all-caps acronym collides with a name, stop and tell the
   person. Adding it to the known list is a reviewer's decision.
-- **Never write to `sources/reviews.tsv` on your own.** It records human
-  expert decisions only.
+- **Never write to `sources/reviews.tsv` or `sources/verifications.tsv` on
+  your own.** They record human decisions only. Never fill in the `result`
+  column of a verification worklist. Run `tools/verify_queue.py apply
+  --append` only when the person asks you to, on a worklist they filled in.
 - **Add a row to `sources/disfavored.tsv` only when the person asks,** and
   only with a basis you can show from a document they gave you or a public
   law or rule: a statute or rule that replaced the term, or an agency's
@@ -62,7 +64,8 @@ name. The second worst is an uncited or invented term.
 sources/federal.py        34 CFR Part 300 core (SEED) and placeholders (ILLUSTRATIVE)
 sources/states/*.py       one module per state layer (_template.py shows the format)
 sources/states/__init__.py  LAYERS: the order layers are applied
-sources/reviews.tsv       human review decisions
+sources/reviews.tsv       human expert review decisions
+sources/verifications.tsv human source checks (citation confirmed at the cited page)
 sources/disfavored.tsv    strings flagged as not for new writing, with their basis
 sources/documents.tsv     source manifest: URL, hash and Wayback snapshot of every document read
 spedlex/build.py          builds data/ from sources/ and checks it
@@ -86,6 +89,8 @@ python -m spedlex.build            # rebuild data/ after editing sources/
 python -m spedlex.build --check    # must pass before you finish
 pytest -q                          # must pass before you finish
 python tools/add_state.py <state>  # register a new layer, assign IDs, rebuild, report
+python tools/verify_queue.py queue # ranked worklist for human source checks
+python tools/build_skill.py        # package the agent skill (skill/SKILL.md) into dist/
 python tools/fetch_sources.py      # download the source documents into .sources-cache/ and verify their hashes
 ```
 

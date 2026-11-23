@@ -24,7 +24,9 @@
 2. Tag and push: `git tag v0.24.0 && git push origin v0.24.0`.
 3. The release workflow checks the tag matches the package version, runs
    the build check and tests, builds the wheel, bundles the data
-   (`spedlex-data-v0.24.0.zip`), and creates the GitHub release. Zenodo
+   (`spedlex-data-v0.24.0.zip`), packages the agent skill
+   (`spedlex-skill.zip`, from `tools/build_skill.py`), and creates the GitHub
+   release. Zenodo
    picks it up from there.
 
 ## Versioning

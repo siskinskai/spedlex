@@ -95,6 +95,16 @@ spedlex glossary iep.txt --state NY
 
 `python -m spedlex` works the same way without installing the command.
 
+## Agent skill
+
+For agents that load skills (Claude and others that read a `SKILL.md`), each
+release has `spedlex-skill.zip`: the data, the lookup code (standard library
+only) and a SKILL.md that tells the agent when to look terms up, to use the
+reader's state's wording, to check drafts and to show citations. Build it
+yourself with `python tools/build_skill.py`; the text is in
+[skill/SKILL.md](../skill/SKILL.md). Inside the skill, the commands are the
+same as above: `python scripts/spedlex_cli.py lookup "PPT" --state CT`.
+
 ## MCP server
 
 Any assistant that speaks the [Model Context Protocol](https://modelcontextprotocol.io)

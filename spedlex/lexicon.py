@@ -102,7 +102,7 @@ class Lexicon:
                       that mean different things in different states are
                       reported as ambiguous.
         statuses      review statuses to include (default: candidate,
-                      machine_validated, expert_accepted).
+                      machine_validated, source_verified, expert_accepted).
         """
         self.jurisdiction = _jur(jurisdiction)
         self._records = {}

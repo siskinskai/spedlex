@@ -99,9 +99,10 @@ take it to mean the string will be removed, and it won't be.
 
 | Field | Meaning |
 |---|---|
-| `status` | `candidate`, `machine_validated`, `expert_accepted`, `expert_rejected`, or `illustrative`. |
-| `reviewers` | How many people have recorded a decision. |
-| `notes` | What a reviewer said, or what still needs checking. |
+| `status` | `candidate`, `machine_validated`, `source_verified`, `expert_accepted`, `expert_rejected`, or `illustrative`. |
+| `reviewers` | How many people have recorded an expert decision. |
+| `notes` | What a reviewer said, a source-check problem, or what still needs checking. |
+| `verified_against` | Optional. Source checks: each item has the `citation` a person opened, the `verifier` and the `date`. Set from `sources/verifications.tsv`. |
 
 ## `extraction`
 
