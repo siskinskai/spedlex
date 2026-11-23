@@ -12,15 +12,20 @@ Sources reviewed 2026-10-10:
   ARD   TEA Parent's Guide to the ARD Process (Jan. 2025), cited by page
   TAC   19 TAC §89.1040 (eligibility criteria), cited by subsection
   T55   19 TAC §89.1055 (content of the IEP), cited by subsection
+  ACC   TEA STAAR Accommodations Educator Guide (2025-26), p. 34 (from
+        texas_assess_dyslexia; IAP strings for s504_plan, added 2026-11-23)
 """
 
 from .texas import src, A, S, V, L, AB, P, REL, TX
+from .texas_assess_dyslexia import src as assess_src
 
 TXJ = {"jurisdiction": "US-TX"}
 T55 = lambda loc: {"source_type": "state_regulation", "citation": f"19 TAC §89.1055{loc}",
                    "url": "https://www.law.cornell.edu/regulations/texas/19-Tex-Admin-Code-SS-89-1055"}
 
 STRINGS = [
+    # Texas's name for the Section 504 plan, moved from s504 (0.53.0; re-read online 2026-11-23).
+    ("s504_plan", [("individual accommodation plan", S, TX), ("IAP", A, TX)], assess_src("ACC", "p. 34")),
     ("iep_facil", [("State IEP Facilitation Project", REL, TX)], src("NPS", "p. 21")),
     ("fva", [("functional vision evaluation", V, None)], src("TAC", "(c)(12)")),
     ("hats", [("hearing assistive technology", AB, None)], src("TAC", "(c)(3)")),

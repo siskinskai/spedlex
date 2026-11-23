@@ -67,7 +67,7 @@ STRINGS = [
     ("sld", [], src("PG", "pp. 1, 4, 29")),
     ("esy", [], src("NOREP", "sec. 1")),
     ("iee", [], src("NOREP", "sec. 1")),
-    ("s504", [("Chapter 15", AB, PA)], src("PG", "p. 1")),
+    ("s504", [], src("PG", "p. 1")),
     ("related", [], src("PG", "pp. 6, 30")),
     ("sdi", [], src("PG", "pp. 2, 30")),
     ("transition", [], src("PG", "pp. 9-10")),

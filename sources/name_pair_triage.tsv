@@ -518,7 +518,7 @@ US-TX	SPED:000182	Staff-to-child ratio	suitable staff-to-child ratio	synonym	kee
 US-TX	SPED:000193	Teacher of students with visual impairments	teacher certified in the education of students with visual impairments	synonym	keep	510	my reading: same concept (name variant, title, or legacy form)
 US-TX	SPED:000194	Teacher of students who are deaf or hard of hearing	teacher certified in the education of students who are deaf or hard of hearing	synonym	keep	511	my reading: same concept (name variant, title, or legacy form)
 US-TX	SPED:000203	Early childhood special education	Preschool Program for Children with Disabilities	legacy	judge	512	preschool program name vs the field of early childhood special education
-US-TX	SPED:000215	Section 504	individual accommodation plan	synonym	retype	513	individual accommodation plan is a plan; Section 504 is the law
+US-TX	SPED:001675	Section 504 plan	individual accommodation plan	synonym	keep	513	split in 0.53.0: the plan now has its own record, and this is Texas's name for it (maintainer decision 2026-11-23)
 US-TX	SPED:000261	Medical exception	medical exception eligibility requirements	synonym	keep	514	my reading: same concept (name variant, title, or legacy form)
 US-TX	SPED:000264	Essence statement	strand statement	synonym	judge	515	strand statement vs essence statement
 US-TX	SPED:000269	Designated supports	locally-approved designated supports	synonym	retype	516	locally-approved designated supports is narrower

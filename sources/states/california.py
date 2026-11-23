@@ -116,7 +116,6 @@ STRINGS = [
     ("sig_cog", [], src("CAA")),
     ("des_sup", [], src("ACC")),
     ("test_accom", [], src("ACC")),
-    ("s504", [], src("ACC")),
     ("alt_diploma", [("state-defined alternate diploma", S, None)], src("DIP")),
     ("cert_completion", [("certificate of completion", S, CA)], src("DIP")),
     ("state_panel", [("Advisory Commission on Special Education", S, CA), ("ACSE", A, CA)], src("EQS")),
@@ -186,6 +185,9 @@ CONCEPTS = [
     ("ca_alt_path", "Alternative pathway to a high school diploma", "transition",
      [("diploma pathway for students who qualify for the California Alternate Assessment", S, CA), ("state standards aligned coursework", S, CA)], src("DIP"),
      {**CAJ, "note": "Created by AB 181 (Educ. Code §§51225.31, 51225.32) for students eligible for the CAA."}),
+    # Split from s504 (0.53.0): the plan, not the law.
+    ("s504_plan", "Section 504 plan", "section_504", [], src("ACC"),
+     {"broader": "s504", "version_added": "0.53.0"}),
 ]
 
 JURISDICTION = "US-CA"

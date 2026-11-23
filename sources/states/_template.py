@@ -50,7 +50,8 @@ STRINGS = [
 # (new_key, preferred_term, category, [(string, type, regional)], source, opts)
 # opts may hold: jurisdiction (for concepts created by state law or
 # programs), broader (parent key, or a list of keys; the parent may come
-# from any layer), note, flags (manual pii reasons such as
+# from any layer), version_added (only for a concept added to an existing
+# layer in a later release; defaults to the layer's VERSION_ADDED), note, flags (manual pii reasons such as
 # "eponym" or "place_name"). State and territory names and postal codes
 # are flagged automatically; add "place_name" by hand only for other places
 # (cities, counties). Leave status out; the build assigns it.

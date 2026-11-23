@@ -194,7 +194,7 @@ def apply_layer(mod, records, keys, flags, reg, register, adapter):
                        **({} if is_reg else {"notes": "Page reference from text extraction; confirm against the PDF."})},
             "extraction": {"method": "regulatory_heading" if is_reg else "manual"},
             "jurisdiction": opts.get("jurisdiction", "US"),
-            "version_added": mod.VERSION_ADDED,
+            "version_added": opts.get("version_added", mod.VERSION_ADDED),
         }
         if opts.get("broader"):
             # Resolved in build() after every layer is applied, so a layer can

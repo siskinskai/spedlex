@@ -36,7 +36,6 @@ STRINGS = [
     ("teks", [], src("ALT2", "p. 19")),
     ("lpac", [], src("ACC", "p. 34")),
     ("sst", [("student assistance team", S, None)], src("ACC", "p. 34")),
-    ("s504", [("Section 504 committee", S, None), ("individual accommodation plan", REL, TX), ("IAP", A, TX)], src("ACC", "p. 34")),
     ("lep", [("EB", A, TX)], src("ACC", "p. 34")),
     ("plaafp", [], src("ALT2", "p. 6")),
     ("adaptive", [("adaptive behavior deficits", S, None)], src("ALT2", "p. 6")),
@@ -166,6 +165,10 @@ CONCEPTS = [
     ("keyboarding", "Keyboarding", "accommodation_modification", [], src("DH", "ch. 5"), {"broader": "dysgraphia"}),
     ("sentence_con", "Sentence construction", "academic_skill", [], src("DH", "ch. 5"), {"broader": "dysgraphia"}),
     ("ext_time", "Extended time", "accommodation_modification", [("extended time on tests", S, None), ("time and a half", S, None)], src("DH", "ch. 5"), {}),
+    # Split from s504 (0.53.0). The plan strings (IAP) are on s504_plan in texas_supplement,
+    # because s504_plan is defined by a later layer (california).
+    ("s504_committee", "Section 504 committee", "section_504", [], src("ACC", "p. 34"),
+     {"broader": "s504", "version_added": "0.53.0"}),
 ]
 
 JURISDICTION = "US-TX"

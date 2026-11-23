@@ -6,6 +6,24 @@ patch for corrections and reviews. Concept IDs never change between versions.
 
 ## [Unreleased]
 
+**0.53.0: Section 504 split.** SPED:000215 ("Section 504") had merged five
+things: the law, the plan, the committee, a complaint process and
+Pennsylvania's Chapter 15. It is now the law only, and three new concepts
+point to it: SPED:001674 Section 504 committee (Texas STAAR accommodations
+guide p. 34; New York testing accommodations guide p. 9), SPED:001675
+Section 504 plan (California, New York, Illinois, Massachusetts, Iowa, Texas;
+"504 plan" is a synonym, and Texas's "individual accommodation plan"/"IAP"
+are now synonyms tagged US-TX instead of `related`), and SPED:001676 504
+complaint (Illinois parent guide p. 116). Corrections found by reading every
+citation: "504 plan" was cited to Texas's safeguards notice, which doesn't
+use it; New York's string is now "Section 504 Accommodations Plan" (the
+guide's wording), with pages added to its citation. Pennsylvania's "Chapter
+15", Arkansas's attestation (a training-category name only) and Illinois's
+"504 hearing" are left out. Layer modules can now set `version_added` on a
+concept added in a later release. Evidence and decisions:
+provenance/verification/s504-split-2026-11-23.md. Drafted by Claude Opus 5.5
+(`claude-opus-5-5`); decisions by the maintainer.
+
 Source checks and an agent skill. A new review status, `source_verified`,
 records that a person opened the cited document at the cited page and
 confirmed the term there. It needs careful reading, not special-education
