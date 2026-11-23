@@ -3,10 +3,10 @@
   "concepts": 1673,
   "illustrative_placeholders": 13,
   "federal_concepts": 156,
-  "strings": 3542,
+  "strings": 3543,
   "disfavored_strings": 3,
   "legacy_strings": 22,
-  "regional_strings": 1185,
+  "regional_strings": 1186,
   "states": 42,
   "state_codes": [
     "AK",
@@ -78,9 +78,9 @@
     "none": 1058
   },
   "by_review_status": {
-    "candidate": 892,
+    "candidate": 886,
     "machine_validated": 779,
-    "source_verified": 2
+    "source_verified": 8
   },
   "sources_by_assisting_model": {
     "claude-opus-5-5": 4247,

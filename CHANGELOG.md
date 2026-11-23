@@ -105,6 +105,8 @@ argument. Longer strings that contain one are unaffected. The CSV gains an
 Three-letter acronyms are not covered yet (ROADMAP). Tests in
 `tests/test_match.py`; METHODOLOGY §4 and §5, USING and SCHEMA are updated.
 
+Source-check follow-up (2026-11-23): the "scholastic records" forms of SPED:000211 (Education records) were flagged because the DC citation does not contain them. Virginia's notice (p. 12), Va. Code § 22.1-289 and VDOE's guidelines treat "scholastic record" and "education record" as the same thing, so the forms stay. The note on the Virginia regulation title (8 VAC 20-150-10) now records that Virginia repealed it effective Feb. 26, 2026 and moved it to 8VAC20-720-220. Drafted by Claude Sonnet 5.5 (`claude-sonnet-5-5`); decision by the maintainer. Indiana's defined term "Student with the most significant cognitive disability" (511 IAC 7-32-93.5) is now a listed Indiana form of SPED:000259, since the source check found the cited rule names the student, not the disability.
+
 ## [0.51.0] - 2026-10-10
 
 Re-read the early layers' sources (0.51.0), drafted with Claude Opus 5.5
