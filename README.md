@@ -85,7 +85,7 @@ nothing here is tied to any one tool or model.
 | Surface strings | 3,543 (phrases, acronyms, plurals, legacy and regional forms): 1,186 tagged to the states that use them, 22 older forms, 3 flagged as disfavored |
 | States | 42: AK, AL, AR, AZ, CA, CO, CT, DC, DE, FL, GA, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, ME, MI, MN, MO, MS, NC, NH, NJ, NM, NV, NY, OH, OR, PA, TN, TX, UT, VA, WA, WV, WY |
 | Documents cited | 205, listed in [docs/SOURCES.md](docs/SOURCES.md) |
-| Review status | 779 checked by the build against regulation text, 18 source-verified by a person, 876 candidates awaiting a source check, 0 expert-accepted |
+| Review status | 779 checked by the build against regulation text, 28 source-verified by a person, 866 candidates awaiting a source check, 0 expert-accepted |
 | Privacy risk | 1058 none, 268 low, 347 high |
 
 13 more records are **illustrative placeholders** for later work

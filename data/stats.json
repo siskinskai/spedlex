@@ -78,9 +78,9 @@
     "none": 1058
   },
   "by_review_status": {
-    "candidate": 876,
+    "candidate": 866,
     "machine_validated": 779,
-    "source_verified": 18
+    "source_verified": 28
   },
   "sources_by_assisting_model": {
     "claude-opus-5-5": 4247,
