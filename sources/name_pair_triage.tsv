@@ -4,12 +4,12 @@
 #           retype = related but not the same (now type 'related' in the layer); fix = wrong or garbled, held back from email.
 jurisdiction	concept_id	preferred_term	string	string_type	decision	row	reason
 US-AK	SPED:000033	Due process complaint	complaint for a due process hearing	synonym	keep	1	my reading: same concept (name variant, title, or legacy form)
-US-AK	SPED:000036	State complaint	administrative complaint	synonym	judge	2	administrative complaint may mean a state complaint or a different administrative process
+US-AK	SPED:000036	State complaint	administrative complaint	synonym	keep	2	administrative complaint may mean a state complaint or a different administrative process
 US-AK	SPED:000052	Deaf-blindness	deaf and blind	synonym	keep	3	my reading: same concept (name variant, title, or legacy form)
-US-AK	SPED:000056	Intellectual disability	cognitive impairment	synonym	judge	4	cognitive impairment is broader than intellectual disability in most state definitions
-US-AK	SPED:000056	Intellectual disability	cognitively impaired	synonym	judge	5	same as row 4
+US-AK	SPED:000056	Intellectual disability	cognitive impairment	synonym	keep	4	cognitive impairment is broader than intellectual disability in most state definitions
+US-AK	SPED:000056	Intellectual disability	cognitively impaired	synonym	keep	5	same as row 4
 US-AK	SPED:000061	Speech or language impairment	speech impairment	synonym	retype	6	speech impairment drops language; narrower than speech or language impairment
-US-AK	SPED:000064	Developmental delay	early childhood developmental delay	synonym	judge	7	early childhood developmental delay is an age-limited subset of developmental delay
+US-AK	SPED:000064	Developmental delay	early childhood developmental delay	synonym	keep	7	early childhood developmental delay is an age-limited subset of developmental delay
 US-AK	SPED:000164	State advisory panel	state special education advisory panel	synonym	keep	8	my reading: same concept (name variant, title, or legacy form)
 US-AK	SPED:000193	Teacher of students with visual impairments	teacher of children with visual impairment	synonym	keep	9	my reading: same concept (name variant, title, or legacy form)
 US-AK	SPED:000481	General education intervention procedures	alternative intervention strategies	synonym	retype	10	strategies are the interventions; procedures are the process around them
@@ -25,7 +25,7 @@ US-AL	SPED:000105	Periodic reports on progress	Annual Goal Progress Report	synon
 US-AL	SPED:000127	Eligibility determination	Eligibility Committee	synonym	retype	20	an eligibility committee is the group; eligibility determination is the decision
 US-AL	SPED:000156	Transition from Part C to preschool programs	Transition Planning Meeting	synonym	retype	21	a transition planning meeting is an event, not the transition process
 US-AL	SPED:000164	State advisory panel	Special Education Advisory Panel	synonym	keep	22	my reading: same concept (name variant, title, or legacy form)
-US-AL	SPED:000169	Campus-based student support team	Problem Solving Team	synonym	judge	23	problem solving team may be a different team from campus-based student support team
+US-AL	SPED:000169	Campus-based student support team	Problem Solving Team	synonym	keep	23	problem solving team may be a different team from campus-based student support team
 US-AL	SPED:000173	Evaluation report	eligibility report	synonym	judge	24	eligibility report may be narrower than evaluation report
 US-AL	SPED:000175	Revocation of consent	Notice of Revocation of Consent for Continued Provision of Special Education and Related Services	synonym	keep	25	a notice of revocation is a document; revocation of consent is the act but can also be shorthand for the notice itself
 US-AL	SPED:000222	Gifted and talented	intellectually gifted	synonym	retype	26	intellectually gifted is one category within gifted and talented
