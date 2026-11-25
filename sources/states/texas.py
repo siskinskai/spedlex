@@ -183,7 +183,7 @@ TX_CONCEPTS = [
     ("ferpa", "Family Educational Rights and Privacy Act", "legal_procedural", [("FERPA", A, None)], src("NPS", "pp. 9-10"), {}),
     ("idea", "Individuals with Disabilities Education Act", "legal_procedural", [("IDEA", A, None), ("IDEA 2004", AB, None), ("IDEA Part B", S, None)], src("NPS", "p. 1"),
      {"flags": ["common_english_word"], "note": "'IDEA' is protected only as an all-caps match; 'idea' is an ordinary word."}),
-    ("s504", "Section 504", "section_504", [("Section 504 of the Rehabilitation Act", S, None), ("504 plan", S, None)], src("NPS", "p. 19"), {}),
+    ("s504", "Section 504", "section_504", [("Section 504 of the Rehabilitation Act", S, None)], src("NPS", "p. 19"), {}),
     ("ada", "Americans with Disabilities Act", "section_504", [("ADA", A, None)], src("NPS", "p. 19"), {}),
 ]
 

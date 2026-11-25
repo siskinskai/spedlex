@@ -10,6 +10,7 @@ Gemini, a local model, or a coding agent.
 | [add-state.md](add-state.md) | Draft a new state layer from the state's documents | You review the draft before opening a pull request |
 | [audit-layer.md](audit-layer.md) | Have a second model (or a fresh chat) check a drafted layer against its documents | You fix what it finds |
 | [precheck-review.md](precheck-review.md) | Find each candidate term in its cited document, to speed up a human review | A person with special-education expertise |
+| [guided-review.md](guided-review.md) | Walk the maintainer through source checks one record at a time (uses `tools/review_evidence.py`) | The maintainer (source checks) / a person (all review) |
 
 Coding agents that work inside the repository (Claude Code, Codex, Copilot,
 Cursor and others) also read [AGENTS.md](../AGENTS.md) at the root, which

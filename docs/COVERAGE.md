@@ -7,7 +7,7 @@ This file is kept by hand. When you add a state, change its row from
 `pending` to `added` and fill in its layer modules and the version they
 were added in (from `VERSION_ADDED`).
 
-**41 added, 15 pending.**
+**42 added, 14 pending.**
 
 | Jurisdiction | Code | Status | Layers | Version added |
 |---|---|---|---|---|
@@ -64,6 +64,6 @@ were added in (from `VERSION_ADDED`).
 | Vermont | US-VT | pending | | |
 | Virginia | US-VA | added | `virginia` | 0.5.0 |
 | Washington | US-WA | added | `washington`, `washington_supplement` | 0.18.0, 0.51.0 |
-| West Virginia | US-WV | pending | | |
+| West Virginia | US-WV | added | `west_virginia` | 0.43.0 |
 | Wisconsin | US-WI | pending | | |
 | Wyoming | US-WY | added | `wyoming` | 0.42.0 |

@@ -96,7 +96,7 @@ STRINGS = [
     ("resolution", [], R("7-32-80")), ("sbi", [], R("7-32-83")),
     ("services_plan", [("service plan", S, None)], R("7-32-84")),
     ("special_ed", [], R("7-32-86")), ("sdi", [], R("7-32-88")),
-    ("sig_cog", [], R("7-32-93.5")), ("sop", [], R("7-32-94")),
+    ("sig_cog", [("Student with the most significant cognitive disability", S, IN)], R("7-32-93.5")), ("sop", [], R("7-32-94")),
     ("saas", [], R("7-32-95")),
     ("part_c_transition", [("transition planning", REL, IN)], R("7-32-99")),
     ("transition", [], R("7-32-100")),

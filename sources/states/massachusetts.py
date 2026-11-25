@@ -75,6 +75,7 @@ STRINGS = [
     ("vision_future", [], src("PG", "pp. 19-20, 26")),
     ("seac", [("Parent Advisory Council", S, MA), ("PAC", A, MA)], src("PG", "p. 10")),
     ("s504", [], src("PG", "p. 31")),
+    ("s504_plan", [], src("PG", "p. 31")),
     ("gen_curr", [], src("PG", "pp. 20, 27")),
     ("annual_goals", [], src("PG", "pp. 21-22")),
 ]

@@ -155,7 +155,7 @@ STRINGS = [
     # Procedural Safeguards Manual
     ("safeguards_notice", [("Procedural Safeguards Manual", S, IA)], PS(7)),
     ("pti", [], PS(8)), ("ferpa", [], PS(10)), ("consent", [], PS(14)), ("ward", [], PS(14)),
-    ("revoke", [], PS(15)), ("s504", [], PS(15)), ("equitable", [], PS(16)), ("iee", [], PS(18)),
+    ("revoke", [], PS(15)), ("s504_plan", [], PS(15)), ("equitable", [], PS(16)), ("iee", [], PS(18)),
     ("dp_hearing", [], PS(18)), ("pwn", [], PS(19)), ("mediation", [], PS(20)), ("dp_complaint", [], PS(21)),
     ("cprc", [], PS(21)), ("resolution", [], PS(23)),
     ("state_panel", [("Iowa Special Education Advisory Panel", S, IA)], PS(25)),

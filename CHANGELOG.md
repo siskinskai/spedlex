@@ -6,6 +6,46 @@ patch for corrections and reviews. Concept IDs never change between versions.
 
 ## [Unreleased]
 
+Guided source checks, fourth round: 10 more records checked, all verified (SPED:000714, 001012, 000193, 000237, 000251, 001021, 001047, 000239, 000363, 000378; worklist provenance/verification/queue-2026-11-23-r3.csv, ranks 23-32). No layer module changed. source_verified: 38. Drafted by Claude Opus 5.5 (`claude-opus-5-5`); decisions by the maintainer.
+
+Guided source checks, second round: 10 more records checked, all verified (SPED:000213, 000249, 000200, 000214, 000209, 000165, 000203, 000215, 000393, 000210). Notes record better statute citations for FERPA (20 U.S.C. § 1232g), IDEA (20 U.S.C. § 1400) and unaccompanied homeless youth (42 U.S.C. § 11434a); no layer module changed. source_verified: 18. Worklist: provenance/verification/queue-2026-11-23-r3.csv. Drafted by Claude Sonnet 5.5 (`claude-sonnet-5-5`); decisions by the maintainer.
+
+**0.53.0: Section 504 split.** SPED:000215 ("Section 504") had merged five
+things: the law, the plan, the committee, a complaint process and
+Pennsylvania's Chapter 15. It is now the law only, and three new concepts
+point to it: SPED:001674 Section 504 committee (Texas STAAR accommodations
+guide p. 34; New York testing accommodations guide p. 9), SPED:001675
+Section 504 plan (California, New York, Illinois, Massachusetts, Iowa, Texas;
+"504 plan" is a synonym, and Texas's "individual accommodation plan"/"IAP"
+are now synonyms tagged US-TX instead of `related`), and SPED:001676 504
+complaint (Illinois parent guide p. 116). Corrections found by reading every
+citation: "504 plan" was cited to Texas's safeguards notice, which doesn't
+use it; New York's string is now "Section 504 Accommodations Plan" (the
+guide's wording), with pages added to its citation. Pennsylvania's "Chapter
+15", Arkansas's attestation (a training-category name only) and Illinois's
+"504 hearing" are left out. Layer modules can now set `version_added` on a
+concept added in a later release. Evidence and decisions:
+provenance/verification/s504-split-2026-11-23.md. Drafted by Claude Opus 5.5
+(`claude-opus-5-5`); decisions by the maintainer.
+
+Source checks and an agent skill. A new review status, `source_verified`,
+records that a person opened the cited document at the cited page and
+confirmed the term there. It needs careful reading, not special-education
+expertise, so it sits between `candidate`/`machine_validated` and
+`expert_accepted`, and expert decisions still override it. Checks are
+recorded in a new file, `sources/verifications.tsv` (columns: concept_id,
+result, citation, verifier, date, note); the build validates each row and
+adds a `review.verified_against` list to the record. `tools/verify_queue.py`
+writes a worklist ranked by how many jurisdictions cite each record and turns
+a filled-in worklist into rows. The matcher and Lexicon include
+`source_verified` records by default. `tools/build_skill.py` packages the
+data and the standard-library lookup code with `skill/SKILL.md` as
+`dist/spedlex-skill.zip`, which the release workflow now attaches to each
+release. `docs/COVERAGE.md` now lists West Virginia (added in 0.43.0) as
+added; a test checks COVERAGE against the built data, and another rejects
+note-app wikilink lines (`[[SpedLex]]`) in tracked Markdown. Drafted by Claude
+Opus 5.5 (`claude-opus-5-5`).
+
 Name-pair triage for the expert review. Every state-tagged synonym, legacy
 or related name pair now has a decision in `sources/name_pair_triage.tsv`
 (judge, keep, retype or fix), and the expert-review email is split into a
@@ -68,6 +108,8 @@ argument. Longer strings that contain one are unaffected. The CSV gains an
 `possible_initials` reason. The Lexicon (terminology helpers) is unchanged.
 Three-letter acronyms are not covered yet (ROADMAP). Tests in
 `tests/test_match.py`; METHODOLOGY §4 and §5, USING and SCHEMA are updated.
+
+Source-check follow-up (2026-11-23): the "scholastic records" forms of SPED:000211 (Education records) were flagged because the DC citation does not contain them. Virginia's notice (p. 12), Va. Code § 22.1-289 and VDOE's guidelines treat "scholastic record" and "education record" as the same thing, so the forms stay. The note on the Virginia regulation title (8 VAC 20-150-10) now records that Virginia repealed it effective Feb. 26, 2026 and moved it to 8VAC20-720-220. Drafted by Claude Sonnet 5.5 (`claude-sonnet-5-5`); decision by the maintainer. Indiana's defined term "Student with the most significant cognitive disability" (511 IAC 7-32-93.5) is now a listed Indiana form of SPED:000259, since the source check found the cited rule names the student, not the disability.
 
 ## [0.51.0] - 2026-10-10
 

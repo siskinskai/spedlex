@@ -292,12 +292,23 @@ list probably has the same problem. Run the collision report against yours
 |---|---|
 | `machine_validated` | Drawn from regulation text. The build checked the string and citation against that text. |
 | `candidate` | Drawn from a PDF or web page by text extraction. A human still needs to check the page reference. |
+| `source_verified` | A person opened the cited document at the cited page or paragraph and confirmed the term is there, used as the record says. |
 | `expert_accepted` | A reviewer with special-education expertise confirmed the term is used this way and the citation supports it. |
 | `expert_rejected` | A reviewer found it wrong. The record stays in the data so nobody re-adds it, and matching excludes it. |
 | `illustrative` | A placeholder showing the shape of a future record. Matching excludes it by default. |
 
-Reviews are recorded in `sources/reviews.tsv`, one row per decision, and the
-build applies them. [CONTRIBUTING.md](../CONTRIBUTING.md) explains how to
+There are two human steps, and they answer different questions. A **source
+check** asks whether the citation supports the record: is the term on that
+page, naming that concept? It needs careful reading, not special-education
+expertise, so a legal or research reviewer can do it alone. An **expert
+review** asks whether the term is really used this way in practice. Source
+checks are recorded in `sources/verifications.tsv` and move a `candidate` or
+`machine_validated` record to `source_verified`; a reported problem blocks
+the upgrade and is shown in the record's notes. `tools/verify_queue.py`
+writes a worklist ranked by how many jurisdictions cite each record.
+
+Expert reviews are recorded in `sources/reviews.tsv`, one row per decision,
+and override a source check. The build applies both. [CONTRIBUTING.md](../CONTRIBUTING.md) explains how to
 review.
 
 ## 7. Versioning

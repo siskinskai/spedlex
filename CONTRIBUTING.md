@@ -179,6 +179,35 @@ in `provenance/<xx>/`, and a CHANGELOG line. Never include the documents
 themselves. You can also add a state card and a
 comparison-table column to `site/template.html`.
 
+## Checking sources
+
+A source check confirms one thing: that the cited document, at the cited
+page or paragraph, contains the term and uses it for the concept the record
+says. It needs no special-education background, only careful reading, and it
+is the fastest way to move a record out of `candidate`.
+
+A check is recorded on the whole record but looks at one citation, so also
+glance at the record's forms: `verified` means nothing in them obviously names
+a different thing (a plan versus the law, a team versus a meeting). If one
+does, mark a `problem` and say so in the note.
+
+1. Write a worklist: `python tools/verify_queue.py queue` (add `--state TX`
+   for one state, `--limit 0` for all). It ranks records by how many
+   jurisdictions cite them and lists the citation, URL and, if you have run
+   `tools/fetch_sources.py`, the local copy.
+2. Open the CSV in a spreadsheet. For each row you check, set `result` to
+   `verified` or `problem`. A problem needs a `note` (wrong page, different
+   term, merged concepts). Leave rows you didn't check blank.
+3. Turn it into rows: `python tools/verify_queue.py apply <file.csv>
+   --verifier "Your Name" --append`, then `python -m spedlex.build`. Without
+   `--append` it only writes a `.proposed-verifications.tsv` beside the CSV
+   for you to look over.
+
+A verified row moves the record to `source_verified`. A problem keeps it
+where it is and shows your note. Only people check sources: a model may
+pre-check a worklist (prompts/precheck-review.md), but a person fills in
+`result`.
+
 ## Reviewing records
 
 Reviewing means confirming two things: that the term is really used this

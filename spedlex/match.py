@@ -39,7 +39,7 @@ _MONTHS = frozenset(
     "jan feb mar apr jun jul aug sep sept oct nov dec".split())
 _NUM_BEFORE = re.compile(r"\d(?:st|nd|rd|th)?[\s.,/-]*$", re.IGNORECASE)  # "14 APR", "14th-APR"
 _NUM_AFTER = re.compile(r"^\.?[\s,/-]*\d")  # "APR 14", "APR. 14", "APR-2015", "APR/14"
-DEFAULT_STATUSES = frozenset({"candidate", "machine_validated", "expert_accepted"})
+DEFAULT_STATUSES = frozenset({"candidate", "machine_validated", "source_verified", "expert_accepted"})
 
 
 def load(path=None):

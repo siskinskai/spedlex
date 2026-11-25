@@ -8,6 +8,7 @@
 Inputs
   sources/federal.py         34 CFR Part 300 core and illustrative placeholders
   sources/states/*.py        one module per state layer, applied in LAYERS order
+  sources/verifications.tsv  human source checks (citation confirmed)
   sources/reviews.tsv        human review decisions
   sources/disfavored.tsv     strings flagged as no longer acceptable in new writing
   sources/documents.tsv      manifest of source documents (URL, hash, snapshot); records cite rows by doc_id
@@ -193,7 +194,7 @@ def apply_layer(mod, records, keys, flags, reg, register, adapter):
                        **({} if is_reg else {"notes": "Page reference from text extraction; confirm against the PDF."})},
             "extraction": {"method": "regulatory_heading" if is_reg else "manual"},
             "jurisdiction": opts.get("jurisdiction", "US"),
-            "version_added": mod.VERSION_ADDED,
+            "version_added": opts.get("version_added", mod.VERSION_ADDED),
         }
         if opts.get("broader"):
             # Resolved in build() after every layer is applied, so a layer can
@@ -230,6 +231,70 @@ def illustrative_records(reg, register, adapter):
             "version_added": federal.VERSION_ADDED,
         })
     return out
+
+
+def apply_verifications(records, path=ROOT / "sources" / "verifications.tsv"):
+    """Apply source checks from sources/verifications.tsv.
+
+    A source check is a person reading the cited document at the cited page or
+    paragraph and confirming the term appears there, used as the record says.
+    It needs no special-education expertise, so it is a separate, lower step
+    than an expert review: it moves a `candidate` or `machine_validated`
+    record to `source_verified`, and an expert decision in reviews.tsv still
+    overrides it.
+
+    Columns: concept_id, result (verified | problem), citation, verifier,
+    date (YYYY-MM-DD), note. `citation` must be one of the record's own
+    source citations, exactly as written. A verifier's latest row for a
+    concept counts. Any open `problem` blocks the upgrade and is added to the
+    record's review notes.
+    """
+    if not path.exists():
+        return
+    by_id = {r["concept_id"]: r for r in records}
+    latest = {}
+    lines = path.read_text(encoding="utf-8").splitlines()
+    if not lines or lines[0].split("\t") != VERIFICATION_COLUMNS:
+        raise SystemExit(f"verifications.tsv: header must be {VERIFICATION_COLUMNS}")
+    for n, line in enumerate(lines[1:], start=2):
+        if not line.strip():
+            continue
+        cols = line.split("\t")
+        if len(cols) != len(VERIFICATION_COLUMNS):
+            raise SystemExit(f"verifications.tsv line {n}: expected {len(VERIFICATION_COLUMNS)} "
+                             f"tab-separated columns, got {len(cols)}")
+        cid, result, citation, verifier, date, note = (c.strip() for c in cols)
+        if cid not in by_id:
+            raise SystemExit(f"verifications.tsv line {n}: unknown concept {cid}")
+        if result not in ("verified", "problem"):
+            raise SystemExit(f"verifications.tsv line {n}: result must be verified or problem")
+        if result == "problem" and not note:
+            raise SystemExit(f"verifications.tsv line {n}: a problem needs a note saying what is wrong")
+        if not verifier:
+            raise SystemExit(f"verifications.tsv line {n}: verifier is required")
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
+            raise SystemExit(f"verifications.tsv line {n}: date must be YYYY-MM-DD")
+        rec = by_id[cid]
+        if rec["review"]["status"] == "illustrative":
+            raise SystemExit(f"verifications.tsv line {n}: {cid} is an illustrative placeholder")
+        if citation not in {s["citation"] for s in rec["sources"]}:
+            raise SystemExit(f"verifications.tsv line {n}: {citation!r} is not one of {cid}'s source citations")
+        latest[(cid, verifier)] = (result, citation, date, note)
+    per = defaultdict(list)
+    for (cid, verifier), (result, citation, date, note) in sorted(latest.items()):
+        per[cid].append((result, verifier, citation, date, note))
+    for cid, checks in per.items():
+        rev = by_id[cid]["review"]
+        problems = [c for c in checks if c[0] == "problem"]
+        if problems:
+            rev["notes"] = "; ".join(f"Source check by {c[1]} ({c[3]}), {c[2]}: {c[4]}" for c in problems)
+            continue
+        rev["verified_against"] = [{"citation": c[2], "verifier": c[1], "date": c[3]} for c in checks]
+        if rev["status"] in ("candidate", "machine_validated"):
+            rev["status"] = "source_verified"
+
+
+VERIFICATION_COLUMNS = ["concept_id", "result", "citation", "verifier", "date", "note"]
 
 
 def apply_reviews(records, path=ROOT / "sources" / "reviews.tsv"):
@@ -330,6 +395,7 @@ def build(adapter, register=False):
                 r["definition_note"] = r.pop("definition_note")
     apply_disfavored(records, keys)
     records += illustrative_records(reg, register, adapter)
+    apply_verifications(records)
     apply_reviews(records)
     seen = {r["concept_id"] for r in records}
     missing = [f"{k} ({cid})" for k, (cid, _, st) in reg.rows.items() if st == "active" and cid not in seen]
@@ -509,8 +575,9 @@ def readme_with_stats(st):
         f"{st['disfavored_strings']} flagged as disfavored |",
         f"| States | {st['states']}: {', '.join(st['state_codes'])} |",
         f"| Documents cited | {st['documents_cited']}, listed in [docs/SOURCES.md](docs/SOURCES.md) |",
-        f"| Review status | {reviewed.get('machine_validated', 0)} checked against regulation text, "
-        f"{reviewed.get('candidate', 0)} candidates awaiting a human check, "
+        f"| Review status | {reviewed.get('machine_validated', 0)} checked by the build against regulation text, "
+        f"{reviewed.get('source_verified', 0)} source-verified by a person, "
+        f"{reviewed.get('candidate', 0)} candidates awaiting a source check, "
         f"{reviewed.get('expert_accepted', 0)} expert-accepted |",
         f"| Privacy risk | {risk.get('none', 0)} none, {risk.get('low', 0)} low, {risk.get('high', 0)} high |",
         "",

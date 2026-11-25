@@ -148,7 +148,7 @@ CONCEPTS = [
      {**VAJ, "note": "Named as a place to ask questions about special education; the cover calls it the local school division's. Compare Community Parent Resource Center."}),
     ("va_scholastic_regs", "Management of the Student's Scholastic Record in the Public Schools of Virginia", "legal_procedural",
      [("Management of Student Scholastic Records", S, VA)], psn("pp. 11-12"),
-     {**VAJ, "note": "The Board of Education regulation (8 VAC 20-150-10) the notice cites for how school divisions keep student records."}),
+     {**VAJ, "note": "The Board of Education regulation (8 VAC 20-150-10) the notice cites for how school divisions keep student records. Virginia repealed that chapter effective Feb. 26, 2026 and moved its requirements to 8VAC20-720-220 (Virginia Administrative Code, checked online 2026-11-23); the September 2024 notice predates the repeal."}),
 ]
 
 JURISDICTION = "US-VA"
