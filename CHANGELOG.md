@@ -6,6 +6,10 @@ patch for corrections and reviews. Concept IDs never change between versions.
 
 ## [Unreleased]
 
+Guided source checks, fourth round: 10 more records checked, all verified (SPED:000714, 001012, 000193, 000237, 000251, 001021, 001047, 000239, 000363, 000378; worklist provenance/verification/queue-2026-11-23-r3.csv, ranks 23-32). No layer module changed. source_verified: 38. Drafted by Claude Opus 5.5 (`claude-opus-5-5`); decisions by the maintainer.
+
+Guided source checks, second round: 10 more records checked, all verified (SPED:000213, 000249, 000200, 000214, 000209, 000165, 000203, 000215, 000393, 000210). Notes record better statute citations for FERPA (20 U.S.C. § 1232g), IDEA (20 U.S.C. § 1400) and unaccompanied homeless youth (42 U.S.C. § 11434a); no layer module changed. source_verified: 18. Worklist: provenance/verification/queue-2026-11-23-r3.csv. Drafted by Claude Sonnet 5.5 (`claude-sonnet-5-5`); decisions by the maintainer.
+
 **0.53.0: Section 504 split.** SPED:000215 ("Section 504") had merged five
 things: the law, the plan, the committee, a complaint process and
 Pennsylvania's Chapter 15. It is now the law only, and three new concepts
@@ -104,6 +108,8 @@ argument. Longer strings that contain one are unaffected. The CSV gains an
 `possible_initials` reason. The Lexicon (terminology helpers) is unchanged.
 Three-letter acronyms are not covered yet (ROADMAP). Tests in
 `tests/test_match.py`; METHODOLOGY §4 and §5, USING and SCHEMA are updated.
+
+Source-check follow-up (2026-11-23): the "scholastic records" forms of SPED:000211 (Education records) were flagged because the DC citation does not contain them. Virginia's notice (p. 12), Va. Code § 22.1-289 and VDOE's guidelines treat "scholastic record" and "education record" as the same thing, so the forms stay. The note on the Virginia regulation title (8 VAC 20-150-10) now records that Virginia repealed it effective Feb. 26, 2026 and moved it to 8VAC20-720-220. Drafted by Claude Sonnet 5.5 (`claude-sonnet-5-5`); decision by the maintainer. Indiana's defined term "Student with the most significant cognitive disability" (511 IAC 7-32-93.5) is now a listed Indiana form of SPED:000259, since the source check found the cited rule names the student, not the disability.
 
 ## [0.51.0] - 2026-10-10
 

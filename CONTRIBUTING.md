@@ -186,6 +186,11 @@ page or paragraph, contains the term and uses it for the concept the record
 says. It needs no special-education background, only careful reading, and it
 is the fastest way to move a record out of `candidate`.
 
+A check is recorded on the whole record but looks at one citation, so also
+glance at the record's forms: `verified` means nothing in them obviously names
+a different thing (a plan versus the law, a team versus a meeting). If one
+does, mark a `problem` and say so in the note.
+
 1. Write a worklist: `python tools/verify_queue.py queue` (add `--state TX`
    for one state, `--limit 0` for all). It ranks records by how many
    jurisdictions cite them and lists the citation, URL and, if you have run
