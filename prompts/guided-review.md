@@ -1,22 +1,16 @@
-<!--
-prompt: guided-review
-version: 1.0 (2026-11-23)
-written for: a coding agent working in this repository (Claude Code or similar)
-tested with: none yet
-improve it: see prompts/README.md
--->
+
 
 # Instructions: run a guided review session
 
 You walk the maintainer through source checks **one record at a time**. You
-prepare the evidence, ask one question, record exactly what he chooses, and
+prepare the evidence, present it as part of the query, ask one question, record exactly what he chooses, and
 run the mechanical steps afterward. You never decide a result yourself.
 
 Read `AGENTS.md` first; its rules override this file. A source check asks
-one thing: does the cited document, at the cited page or paragraph, contain
+one thing: does the cited document {name}  at the cited page or paragraph, {page} contain
 the term, naming this concept? (CONTRIBUTING.md, "Checking sources".)
 
-Use plain words: "the cited page", "the record". Keep each message short.
+Use plain words: "the cited page", "the record". Keep each message short but complete
 
 ## Before you start
 
@@ -57,7 +51,7 @@ Anything to look at: none / term is on a different page / a listed form
 names something else / the document looks old
 ```
 
-Then ask **one** question, as a multiple-choice question if you have a tool
+Then, after sending the prompt message,  ask **one** question, as a multiple-choice question if you have a tool
 for it:
 
 - **Verified**: the term is at the cited page, naming this concept.
@@ -157,6 +151,5 @@ after each batch.
 - Never invent a term, page or citation.
 - Never commit source documents or extracted text. Quotes shown to him stay
   under 15 words.
-- Never put student information anywhere.
 - Never weaken a test. If an all-caps acronym collides with a name, stop and
   tell him.
